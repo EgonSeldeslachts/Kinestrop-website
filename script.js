@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (img) {
           lightbox.style.display = 'flex';
           lightboxImg.src = img.src;
-          lightboxCaption.textContent = img.alt || 'Kine Strop Praktijkfoto';
+          lightboxCaption.textContent = img.dataset.caption || img.alt || 'Kine Strop Praktijkfoto';
           document.body.style.overflow = 'hidden'; // Prevent background scroll
         }
       });
