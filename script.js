@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // Intercept all booking buttons EXCEPT the confirmation button inside the modal itself
-  const bookingLinks = document.querySelectorAll('a[href*="q-top.be"]:not(#confirmBookingBtn), .header-booking-btn, .mobile-nav-cta a, .service-link');
+  const bookingLinks = document.querySelectorAll('a[href*="q-top.be"]:not(#confirmBookingBtn), .header-booking-btn, .mobile-nav-cta a, .trigger-booking-modal');
   bookingLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       if (link.id === 'confirmBookingBtn' || link.closest('#bookingModal')) return;
