@@ -1,548 +1,930 @@
 <!DOCTYPE html>
-<html lang="nl-BE">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kinesitherapeuten Gent vzw — KineKring Gent | Zoek een Kinesist</title>
-  <meta name="description" content="Officiële portaalsite van Kinesitherapeuten Gent vzw (KG vzw). Vind een geconventioneerde kinesitherapeut in Gent met de juiste specialisatie. Bekijk bijscholingen en RIZIV tarieven.">
+  <title>Kinesitherapie Gent — Kine Strop | Manuele Therapie & Pijncoaching</title>
+  <meta name="description" content="Kine Strop is een actieve kinesitherapiepraktijk in Gent (Sint-Coletastraat 9). Gespecialiseerd in manuele therapie, chronische pijn, actieve revalidatie en dry needling (bij Mathias).">
+  <meta name="keywords" content="kinesitherapie gent, kine gent, manuele therapie gent, chronische pijn gent, dry needling gent, revalidatie gent, kine strop, egon seldeslachts, mathias heene">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.kinestrop.be/">
+
+  <!-- Geo & Local SEO Meta Tags -->
+  <meta name="geo.region" content="BE-VOV">
+  <meta name="geo.placename" content="Gent">
+  <meta name="geo.position" content="51.0366;3.7228">
+  <meta name="ICBM" content="51.0366, 3.7228">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.kinestrop.be/">
+  <meta property="og:title" content="Kinesitherapie Gent — Kine Strop | Manuele Therapie & Pijncoaching">
+  <meta property="og:description" content="Moderne, menselijke en actieve kinesitherapiepraktijk in Gent. Gespecialiseerd in manuele therapie, chronische pijn, actieve revalidatie en dry needling (bij Mathias).">
+  <meta property="og:image" content="https://www.kinestrop.be/assets/practice-1.jpg">
+  <meta property="og:site_name" content="Kine Strop">
+  <meta property="og:locale" content="nl_BE">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kinesitherapie Gent — Kine Strop">
+  <meta name="twitter:description" content="Moderne en actieve kinesitherapiepraktijk aan de Sint-Coletastraat in Gent.">
+  <meta name="twitter:image" content="https://www.kinestrop.be/assets/practice-1.jpg">
+
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Structured Data: MedicalBusiness / LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["MedicalBusiness", "Physiotherapy"],
+    "@id": "https://www.kinestrop.be/#organization",
+    "name": "Kine Strop",
+    "alternateName": "Kine Strop Kinesitherapie Gent",
+    "url": "https://www.kinestrop.be/",
+    "logo": "https://www.kinestrop.be/assets/logo.png",
+    "image": "https://www.kinestrop.be/assets/practice-1.jpg",
+    "telephone": "+3292217419",
+    "email": "info@kinestrop.be",
+    "priceRange": "€€",
+    "medicalSpecialty": [
+      "Physiotherapy",
+      "Manual Therapy",
+      "Pain Management",
+      "Dry Needling"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sint-Coletastraat 9",
+      "addressLocality": "Gent",
+      "postalCode": "9000",
+      "addressCountry": "BE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.0366,
+      "longitude": 3.7228
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Gent"
+    },
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "Egon Seldeslachts",
+        "jobTitle": "Kinesitherapeut & Oprichter",
+        "knowsAbout": ["Manuele therapie", "Chronische pijn", "Pijneducatie"]
+      },
+      {
+        "@type": "Person",
+        "name": "Mathias Heene",
+        "jobTitle": "Kinesitherapeut",
+        "knowsAbout": ["Dry Needling", "Manuele therapie", "Sportrevalidatie"]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage Schema for Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Heb ik een doorverwijzing van een huisarts nodig?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, zonder voorschrift van een arts kan er geen terugbetaling gebeuren van het ziekenfonds. Ga dus steeds eerst langs bij uw huisarts of specialist als u klachten heeft."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wat is de procedure voor nieuwe patiënten?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Via het tabblad 'Contact' vindt u de praktische informatie over het maken van een afspraak. Nieuwe patiënten worden gevraagd naast het voorschrift ook zeker hun identiteitskaart (eID) mee te brengen bij de eerste afspraak."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wat kost een behandeling?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wij zijn gedeconventioneerd. Neem gerust contact met ons op voor een overzicht van de tarieven in de praktijk. Voor huisbezoeken komt er 3 euro verplaatsingsvergoeding bij."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is de praktijk rolstoeltoegankelijk?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, de praktijk is via de straat zonder problemen toegankelijk met een rolstoel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hoe kan ik de praktijk bereiken?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "De praktijk is gemakkelijk te bereiken met het openbaar vervoer. Op 20 meter van de praktijk bevindt zich een bushalte voor buslijnen 5a en 5b. Met de auto kan u in de hele straat parkeren en voor wie met de fiets komt, is er een openbare fietsenstalling aan de overkant van de straat."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Zijn huisbezoeken mogelijk?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, huisbezoeken zijn mogelijk wanneer het voor u niet mogelijk is om naar de praktijk te komen. Dit kan binnen een straal van 1 km rond de praktijk."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wat moet ik doen bij annulatie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Om kosteloos te annuleren, vragen we ten laatste 24u op voorhand te verwittigen. Dit kan telefonisch of in het weekend per mail. Bij ziekte 's ochtends verwittigt u liefst vóór 9u. Indien u laattijdig verwittigt, zal een administratieve kost van €20 worden aangerekend."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Vercel Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
-  <!-- Topbar -->
-  <div class="header-topbar">
-    <div class="container topbar-content">
-      <div class="topbar-info">
-        <div class="topbar-info-item">
-          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          <span>Secretariaat: Sint-Denijslaan 110, 9000 Gent</span>
-        </div>
-        <div class="topbar-info-item">
-          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-4V6l8 5 8-4v2z"/></svg>
-          <span>kinesitherapeutengent@gmail.com</span>
-        </div>
-      </div>
-      <div class="topbar-links">
-        <a href="https://www.facebook.com/KinesitherapeutenGent/" target="_blank" rel="noopener">Facebook Pagina</a>
-        <a href="https://www.facebook.com/groups/289523215818627/" target="_blank" rel="noopener">Leden Facebookgroep</a>
-        <a href="#tarieven">RIZIV Tarieven</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Header / Navigation -->
+  <!-- Navigation Header -->
   <header class="site-header">
-    <div class="container navbar">
-      <a href="#" class="brand-logo">
-        <img src="assets/logo.jpg" alt="Kinesitherapeuten Gent Logo" class="brand-logo-img">
-        <div class="brand-text-wrap">
-          <span class="brand-title">Kinesitherapeuten Gent</span>
-          <span class="brand-subtitle">KG vzw — KineKring Gent</span>
+    <div class="container header-inner">
+      <a href="#home" class="brand-logo" aria-label="Kine Strop — Kinesitherapie Gent Home">
+        <img src="assets/logo.png" alt="Kine Strop — Kinesitherapie Gent logo">
+        <div class="brand-text">
+          <span class="brand-sub">Kinesitherapie Gent</span>
         </div>
       </a>
 
-      <ul class="nav-menu">
-        <li><a href="#zoekgids" class="nav-link">Zoek Kinesist</a></li>
-        <li><a href="#specialisaties" class="nav-link">Specialisaties</a></li>
-        <li><a href="#events" class="nav-link">Agenda & Events</a></li>
-        <li><a href="#tarieven" class="nav-link">Tarieven</a></li>
-        <li><a href="#over-kg" class="nav-link">Over KG</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#visie" class="nav-link">Visie</a></li>
 
-      <div class="nav-actions">
-        <button class="btn btn-primary btn-sm" onclick="openModal('modal-lid-worden')">Lid Worden / Inloggen</button>
-        <button class="mobile-toggle" onclick="document.querySelector('.nav-menu').style.display='flex'">
-          <svg style="width: 24px; height: 24px; fill: var(--navy-900);" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+          <li><a href="#team" class="nav-link">Ons team</a></li>
+          <li><a href="#praktijk" class="nav-link">Praktijk</a></li>
+          <li><a href="#tarieven" class="nav-link">Tarieven</a></li>
+          <li><a href="#partners" class="nav-link">Partners</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="mobile-nav-cta">
+            <a href="https://www.q-top.be/online-planner-v2/NL/?root=kq33633" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem; text-align: center;">
+              Afspraak maken
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <a href="https://www.q-top.be/online-planner-v2/NL/?root=kq33633" target="_blank" rel="noopener noreferrer" class="btn btn-primary header-booking-btn">
+          Afspraak maken
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu openen">
+          ☰
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <span class="badge badge-primary">Erkende Beroepskring AXXON</span>
-        <h1 class="hero-title">Verbindt, versterkt & informeert <span>Gentse Kinesitherapeuten</span></h1>
-        <p class="hero-lead">Vind snel en doelgericht de geconventioneerde kinesitherapeut die het best bij jouw specifieke klachten past in Gent en omliggende gemeenten.</p>
-        
-        <div class="hero-quick-search">
-          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-          <input type="text" id="hero-search-input" placeholder="Zoek op naam, buurt (bv. Sint-Amandsberg) of specialisatie (bv. Dry Needling)..." oninput="document.getElementById('search-query').value=this.value; document.getElementById('search-query').dispatchEvent(new Event('input'));">
-          <a href="#zoekgids" class="btn btn-primary btn-sm">Zoeken</a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="stat-item">
-            <span class="stat-value">150+</span>
-            <span class="stat-label">Aangesloten Kinesisten</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-value">18+</span>
-            <span class="stat-label">Erkende Specialisaties</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-value">12+</span>
-            <span class="stat-label">Bijscholingen / Jaar</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-card-visual">
-        <div class="hero-image-wrap">
-          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Kinesitherapie Gent">
-        </div>
-        <div class="hero-floating-badge">
-          <div class="floating-icon">
-            <svg style="width: 24px; height: 24px; fill: currentColor;" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-          </div>
-          <div>
-            <div class="floating-text-title">Eerstelijns Gezondheidszorg</div>
-            <div class="floating-text-sub">Aangesloten bij LMN Gent & AXXON</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Zoekgids / Therapist Directory -->
-  <section id="zoekgids" class="section section-bg">
-    <div class="container">
-      <div class="section-title-wrap">
-        <span class="badge badge-primary">Patiënten & Artsen Portaal</span>
-        <h2 class="section-title">Zoek een Kinesitherapeut in jouw Regio</h2>
-        <p class="section-desc">Filter eenvoudig op specialisatie, gemeente of op de mogelijkheid tot huisbezoeken.</p>
-      </div>
-
-      <div class="filter-bar">
-        <div class="form-group">
-          <label>Zoekterm of Naam</label>
-          <input type="text" id="search-query" class="form-control" placeholder="bv. Egon Declerck, Dry Needling...">
-        </div>
-        <div class="form-group">
-          <label>Gemeente / Deelgemeente</label>
-          <select id="filter-municipality" class="form-control">
-            <option value="">Alle deelgemeenten in Gent</option>
-            <option value="Gent Centrum">Gent Centrum</option>
-            <option value="Gent Zuid">Gent Zuid</option>
-            <option value="Gent Coupure">Gent Coupure</option>
-            <option value="Sint-Amandsberg">Sint-Amandsberg</option>
-            <option value="Sint-Pieters">Sint-Pieters</option>
-            <option value="Gent Watersportbaan">Gent Watersportbaan</option>
-            <option value="Drongen">Drongen</option>
-            <option value="Ledeberg">Ledeberg</option>
-            <option value="Mariakerke">Mariakerke</option>
-            <option value="Wondelgem">Wondelgem</option>
-            <option value="Oostakker">Oostakker</option>
-            <option value="Zwijnaarde">Zwijnaarde</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Specialisatie</label>
-          <select id="filter-specialty" class="form-control">
-            <option value="">Alle specialisaties</option>
-            <option value="Manuele therapie">Manuele therapie</option>
-            <option value="Dry needling">Dry needling</option>
-            <option value="Bekkenbodem therapie">Bekkenbodem therapie</option>
-            <option value="Sportkinesitherapie">Sportkinesitherapie</option>
-            <option value="Chronische Pijn">Chronische Pijn & Pijneducatie</option>
-            <option value="Ademhalingstherapie">Ademhalingstherapie</option>
-            <option value="Pediatrische kinesitherapie">Pediatrische kinesitherapie</option>
-            <option value="Neurologische kinesitherapie">Neurologische kinesitherapie</option>
-            <option value="Oncorevalidatie">Oncorevalidatie</option>
-          </select>
-        </div>
-        <div class="form-group" style="justify-content: center;">
-          <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; text-transform: none;">
-            <input type="checkbox" id="filter-home-visit" style="width: 18px; height: 18px; accent-color: var(--primary-600);">
-            <strong>Enkel Huisbezoeken</strong>
-          </label>
-        </div>
-      </div>
-
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-        <span id="result-count" style="font-weight: 700; color: var(--navy-800);">Laden...</span>
-      </div>
-
-      <div id="therapist-grid" class="therapist-grid">
-        <!-- Injected dynamically via script.js -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Specialisaties Section -->
-  <section id="specialisaties" class="section">
-    <div class="container">
-      <div class="section-title-wrap">
-        <span class="badge badge-secondary">Klinische Kennis</span>
-        <h2 class="section-title">Erkende Kinesitherapie Specialisaties</h2>
-        <p class="section-desc">Kinesitherapie omvat diverse doorgedreven domeinen. Bekijk waar elke discipline in gespecialiseerd is.</p>
-      </div>
-
-      <div class="specialties-grid">
-        <div class="specialty-card">
-          <div class="specialty-icon">
-            <svg style="width: 28px; height: 28px; fill: currentColor;" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
-          </div>
-          <h3>Manuele Therapie</h3>
-          <p>Specifieke mobilisaties en manipulaties van gewrichten en wervelkolom voor nek-, rug- en ledemaatklachten.</p>
-        </div>
-
-        <div class="specialty-card">
-          <div class="specialty-icon">
-            <svg style="width: 28px; height: 28px; fill: currentColor;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-          </div>
-          <h3>Dry Needling</h3>
-          <p>Aanprikken van myofasciale triggerpoints (spierknopen) met fijne acupunctuurnaaldjes voor snelle spierontspanning.</p>
-        </div>
-
-        <div class="specialty-card">
-          <div class="specialty-icon">
-            <svg style="width: 28px; height: 28px; fill: currentColor;" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-          </div>
-          <h3>Bekkenbodem & Pelvische Reëducatie</h3>
-          <p>Aanpak van incontinentie, bekkenbodemdisfuncties, bekkenpijn en perinatale begeleiding.</p>
-        </div>
-
-        <div class="specialty-card">
-          <div class="specialty-icon">
-            <svg style="width: 28px; height: 28px; fill: currentColor;" viewBox="0 0 24 24"><path d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9l1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1l-5.2 2.2v4.7h2v-3.4l1.8-.7-1.6 8.1-4.9-1-.4 2 6.1 1.2z"/></svg>
-          </div>
-          <h3>Sportkinesitherapie</h3>
-          <p>Revalidatie van sportblessures, sporthervatting, functionele krachttraining en preventieve screeningen.</p>
-        </div>
-
-        <div class="specialty-card">
-          <div class="specialty-icon">
-            <svg style="width: 28px; height: 28px; fill: currentColor;" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 21l3.39-1.28C9.28 20.41 10.6 21 12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9z"/></svg>
-          </div>
-          <h3>Chronische Pijn & Pijneducatie</h3>
-          <p>Uitleg en herconditionering bij aanhoudende pijnklachten gebaseerd op de nieuwste neurobiologische inzichten.</p>
-        </div>
-
-        <div class="specialty-card">
-          <div class="specialty-icon">
-            <svg style="width: 28px; height: 28px; fill: currentColor;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
-          </div>
-          <h3>Ademhalingstherapie</h3>
-          <p>Respiratoire kinesitherapie bij acute en chronische luchtwegaandoeningen, hyperventilatie en autogene drainage.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Agenda / Events Section -->
-  <section id="events" class="section section-bg">
-    <div class="container">
-      <div class="section-title-wrap">
-        <span class="badge badge-primary">Wetenschappelijke Bijscholingen</span>
-        <h2 class="section-title">Agenda & Evenementen 2026</h2>
-        <p class="section-desc">Kinesitherapeuten Gent vzw organiseert geaccrediteerde lezingen en netwerkevents voor haar leden.</p>
-      </div>
-
-      <div class="events-list">
-        <div class="event-card">
-          <div class="event-date-box">
-            <span class="event-day">19</span>
-            <span class="event-month-year">NOV 2026</span>
-          </div>
-          <div class="event-info">
-            <h3>Handvaten om alarmsignalen en psychosociale symptomen te herkennen</h3>
-            <div class="event-details-bar">
-              <span class="event-detail-item">🕒 20:30 - 22:30</span>
-              <span class="event-detail-item">📍 De Refuge (Coupure links 275, Gent)</span>
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Sint-Coletastraat+9,+9000+Gent" target="_blank" rel="noopener noreferrer" class="hero-badge" title="Routebeschrijving via Google Maps">
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              Sint-Coletastraat 9, Gent
+            </a>
+            <h1 class="hero-title">
+              Samen bouwen aan jouw herstel. Actief, onderbouwd en op jouw tempo.
+            </h1>
+            <p class="hero-subtitle">
+              Bij Kine Strop nemen we ruim de tijd om jouw verhaal te horen en stippelen we samen een haalbaar behandelplan uit. Of het nu gaat om acute spier- en gewrichtsklachten, revalidatie of langdurige pijn: <strong>jij zit aan het stuur, wij helpen navigeren.</strong>
+            </p>
+            <div class="hero-actions">
+              <a href="https://www.q-top.be/online-planner-v2/NL/?root=kq33633" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                Boek je intakegesprek
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+              <a href="#visie" class="btn btn-secondary">
+                Onze filosofie
+              </a>
             </div>
-            <p class="event-desc">Als kinesitherapeut zien we veel patiënten die naast fysieke klachten het mentaal moeilijk hebben. Leer rode en gele vlaggen tijdig herkennen en gepast doorverwijzen.</p>
-          </div>
-          <div>
-            <button class="btn btn-primary btn-sm" onclick="openEventModal('Handvaten om alarmsignalen te herkennen', '19/11/2026 20:30', 'De Refuge, Gent')">Inschrijven</button>
-          </div>
-        </div>
 
-        <div class="event-card">
-          <div class="event-date-box">
-            <span class="event-day">29</span>
-            <span class="event-month-year">OKT 2026</span>
-          </div>
-          <div class="event-info">
-            <h3>Diagnostiek en revalidatie van tendinopathieën anno 2026</h3>
-            <div class="event-details-bar">
-              <span class="event-detail-item">🕒 20:30 - 22:30</span>
-              <span class="event-detail-item">📍 De Refuge, Gent | Gastspreker: Dr. Laurens Goemé</span>
+            <div class="hero-trust-bar">
+              <div class="trust-item">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Persoonlijke 1-op-1 intake
+              </div>
+              <div class="trust-item">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Wetenschappelijk onderbouwd
+              </div>
             </div>
-            <p class="event-desc">State of the art inzichten in de aanpak van peesletsels door fysisch geneesheer Dr. Laurens Goemé (AZ Maria Middelares).</p>
           </div>
-          <div>
-            <button class="btn btn-primary btn-sm" onclick="openEventModal('Diagnostiek Tendinopathieën', '29/10/2026 20:30', 'De Refuge, Gent')">Inschrijven</button>
-          </div>
-        </div>
 
-        <div class="event-card">
-          <div class="event-date-box">
-            <span class="event-day">03</span>
-            <span class="event-month-year">SEP 2026</span>
-          </div>
-          <div class="event-info">
-            <h3>Wij vieren 'Dag van de Kine 2026' — Padeltornooi & Netwerk</h3>
-            <div class="event-details-bar">
-              <span class="event-detail-item">🕒 20:00 - 22:00</span>
-              <span class="event-detail-item">📍 Padel Club Gent</span>
+          <div class="hero-image-wrapper">
+            <div class="hero-image-card">
+              <img src="assets/practice-1.jpg" alt="Kine Strop praktijkruimte Gent">
             </div>
-            <p class="event-desc">Het thema dit jaar is de rol van kinesitherapie in cardiovasculaire preventie. We zetten onze leden sportief in beweging!</p>
-          </div>
-          <div>
-            <button class="btn btn-outline btn-sm" onclick="openEventModal('Dag van de Kine Padeltornooi', '03/09/2026 20:00', 'Padel Club Gent')">Inschrijven</button>
+            <div class="hero-floating-card">
+              <div class="coffee-icon-circle"><svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg></div>
+              <div class="floating-card-text">
+                <p>De koffie staat klaar</p>
+                <p>Geen overhaaste consults, maar ruimte voor jouw verhaal.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Tarieven & Conventie Section -->
-  <section id="tarieven" class="section">
-    <div class="container">
-      <div class="tarieven-box">
-        <div class="section-title-wrap" style="margin-bottom: 2rem;">
-          <span class="badge badge-emerald">Transparante Zorg & Tarieven</span>
-          <h2 class="section-title">Tarieven & RIZIV Conventie</h2>
-          <p class="section-desc">Overzicht van onze tarieven, terugbetalingen via het ziekenfonds en ons conventiestatuut.</p>
+    <!-- Visie & filosofie Section -->
+    <section id="visie" class="section">
+      <div class="container">
+        <div class="vision-grid">
+          <div>
+            <span class="section-tag">Onze visie</span>
+            <h2>Herstel is een samenwerking, geen eenrichtingsverkeer</h2>
+            <p>
+              Of je nu kampt met acute blessures, aanslepende rugklachten of zoekende bent bij langdurige pijn: we geloven niet in snelle wondermiddeltjes of passief afwachten.
+            </p>
+            <p>
+              Duurzaam herstel begint bij begrijpen wat er in je lichaam en zenuwstelsel gebeurt. We combineren doordachte manuele behandeling met gerichte, haalbare oefeningen voor thuis en in de praktijk.
+            </p>
+
+            <div class="vision-features">
+              <div class="feature-box">
+                <div class="feature-icon-wrapper">
+                  <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                </div>
+                <div class="feature-content">
+                  <h4>Persoonlijke intake</h4>
+                  <p>We nemen ruim de tijd om jouw volledige voorgeschiedenis, doelen en verwachtingen grondig te begrijpen.</p>
+                </div>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-icon-wrapper">
+                  <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <div class="feature-content">
+                  <h4>Stapsgewijze opbouw</h4>
+                  <p>In plaats van beweging te vermijden, bouwen we je belastbaarheid, kracht en bewegingsvertrouwen weer geleidelijk op.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="vision-quote-card">
+              <blockquote>
+                "Pijn is meer dan enkel een sensatie in weefsel. Het is een beschermingssignaal van je zenuwstelsel dat samengaat met je gedachten, gevoelens en ervaringen. Onze job is om dat signaal samen weer te kalmeren."
+              </blockquote>
+              <div class="vision-author">
+                <img src="assets/egon-profile.jpg?v=20260816_crossed_arms" alt="Egon Seldeslachts">
+                <div class="author-info">
+                  <p>Egon Seldeslachts</p>
+                  <p>Oprichter Kine Strop</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertises / Diensten Section (2x2 SYMMETRICAL GRID) -->
+    <section id="diensten" class="section section-elevated">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Onze expertises</span>
+          <h2>Waarmee kunnen we je helpen?</h2>
+          <p>Van acute klachten tot langdurige pijn: doordachte zorg afgestemd op jouw noden.</p>
         </div>
 
-        <div style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 2rem; box-shadow: var(--shadow-sm);">
-          <div style="display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem;">
-            <span class="badge badge-secondary" style="font-size: 0.85rem; padding: 0.35rem 0.75rem;">Gedeconventioneerd</span>
-            <div>
-              <h3 style="font-size: 1.15rem; margin-bottom: 0.35rem; color: var(--navy-900);">Conventiestatuut & Regeling Verhoogde Tegemoetkoming</h3>
-              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
-                Onze praktijk is <strong>gedeconventioneerd</strong>. Voor patiënten zonder verhoogde tegemoetkoming geldt een vast honorarium van <strong>€ 37,00</strong> per behandelzitting.<br>
-                <strong>Belangrijk:</strong> Patiënten met een <strong>verhoogde tegemoetkoming (VT)</strong> worden steeds aangerekend volgens de <strong>officiële RIZIV-tarieven</strong> (€ 31,64 per zitting). Zo blijft kwalitatieve zorg voor iedereen toegankelijk.
+                <div class="services-grid">
+          <a href="oefentherapie-sportkinesitherapie-gent.html" class="service-card">
+            <div class="service-icon icon-teal">
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 5v14M18 5v14M3 9h6M15 9h6M3 15h6M15 15h6M9 12h6"/>
+              </svg>
+            </div>
+            <h3>Oefentherapie & Sportkinesitherapie</h3>
+            <p>Doelgerichte revalidatie na sportblessures, operaties of bij overbelasting. Geen klakkeloze oefenschema's, maar educatie, motivatie en gedragsverandering op maat.</p>
+            <div class="service-card-footer">
+              <span class="btn btn-service-cta">
+                Lees meer over Oefentherapie
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a href="manuele-therapie-gent.html" class="service-card">
+            <div class="service-icon icon-amber">
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v20M9 6h6M8 11h8M9 16h6"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8l3 3m-3 5l3 3M8 8L5 11m3 5l-3 3"/>
+              </svg>
+            </div>
+            <h3>Manuele therapie</h3>
+            <p>Gespecialiseerde zorg voor wervelkolom en gewrichten. Zachte mobilisaties bij lage rugpijn, nekstijfheid, hoofdpijn en gewrichtsblokkades.</p>
+            <div class="service-card-footer">
+              <span class="btn btn-service-cta">
+                Lees meer over Manuele Therapie
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a href="chronische-pijn.html" class="service-card">
+            <div class="service-icon icon-blue">
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <rect x="2" y="7" width="16" height="10" rx="2" stroke-width="2"/>
+                <line x1="20" y1="10" x2="20" y2="14" stroke-width="2" stroke-linecap="round"/>
+                <line x1="6" y1="12" x2="14" y2="12" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Chronische pijn, fibromyalgie & CVS</h3>
+            <p>Pijneducatie, energiemanagement (pacing) en zeer geleidelijke heropbouw bij aanhoudende pijn, CVS, fibromyalgie en overprikkeling.</p>
+            <div class="service-card-footer">
+              <span class="btn btn-service-cta">
+                Lees meer over Chronische Pijn & CVS
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a href="dry-needling-gent.html" class="service-card">
+            <div class="service-icon icon-rose">
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="8" stroke-width="2"/>
+                <circle cx="12" cy="12" r="3" fill="currentColor"/>
+                <line x1="12" y1="2" x2="12" y2="4" stroke-width="2" stroke-linecap="round"/>
+                <line x1="12" y1="20" x2="12" y2="22" stroke-width="2" stroke-linecap="round"/>
+                <line x1="2" y1="12" x2="4" y2="12" stroke-width="2" stroke-linecap="round"/>
+                <line x1="20" y1="12" x2="22" y2="12" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Dry needling</h3>
+            <p>Ondersteunende behandeling bij hardnekkige spierkrampen en triggerpoints. Nooit als losse 'quick fix', maar geïntegreerd in een actief herstelplan.</p>
+            <div class="service-card-footer">
+              <span class="btn btn-service-cta">
+                Lees meer over Dry Needling
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section></section>
+
+    <!-- Team Section -->
+    <section id="team" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Wie we zijn</span>
+          <h2>Maak kennis met ons team</h2>
+          <p>Twee therapeuten met een gedeelde visie op onderbouwde, menselijke en laagdrempelige zorg.</p>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-image-container">
+              <img src="assets/egon-profile.jpg?v=20260816_crossed_arms" alt="Egon Seldeslachts - Kinesitherapeut">
+            </div>
+            <div class="team-content">
+              <div class="team-role">Oprichter & kinesitherapeut</div>
+              <h3 class="team-name">Egon Seldeslachts</h3>
+              <p class="team-bio">
+                Gespecialiseerd in manuele therapie, chronische pijneducatie en gedragsverandering. Egon helpt je begrijpen wat er in je lichaam en zenuwstelsel omgaat voor een duurzaam herstel.
               </p>
+              <div class="team-tags">
+                <span class="tag">Postgraduaat Manuele Therapie (UGent)</span>
+                <span class="tag">Chronische pijn & pijneducatie</span>
+                <span class="tag">Pain Program OS Mentorship</span>
+                <span class="tag">Upper Limb: Wrist & Hand</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-image-container">
+              <img src="assets/mathias.jpg?v=20260816_landscape" alt="Mathias Heene - Kinesitherapeut">
+            </div>
+            <div class="team-content">
+              <div class="team-role">Kinesitherapeut</div>
+              <h3 class="team-name">Mathias Heene</h3>
+              <p class="team-bio">
+                Gepassioneerd door manuele therapie, dry needling, chronische pijnbegeleiding en actieve sportrevalidatie. Begeleidt patiënten met enthousiasme naar hun persoonlijke bewegingsdoelen.
+              </p>
+              <div class="team-tags">
+                <span class="tag">Postgraduaat Manuele Therapie (UGent)</span>
+                <span class="tag">Dry needling</span>
+                <span class="tag">Chronische pijn & pijneducatie</span>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div style="overflow-x: auto; background: #ffffff; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); margin-bottom: 2rem;">
-          <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.925rem;">
+    <!-- Practice Gallery Section (DYNAMIC BALANCED 12-COL LAYOUT WITH CLICKABLE LIGHTBOX) -->
+    <section id="praktijk" class="section section-elevated">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">De praktijk</span>
+          <h2>Sfeervol, rustig en uitgerust voor herstel</h2>
+          <p>Onze praktijkruimte aan de Sint-Coletastraat 9 te Gent — klik op een foto voor vergroting.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item item-featured">
+            <img src="assets/practice-1.jpg" alt="Onthaal en bespreektafel met doorkijk naar de oefenzaal" data-caption="Onthaal en bespreektafel met doorkijk naar de oefenzaal">
+            <div class="gallery-overlay">
+              <span class="gallery-zoom-icon">Klik voor vergroting</span>
+            </div>
+          </div>
+          <div class="gallery-item item-regular">
+            <img src="assets/practice-2.jpg" alt="Actieve oefenzaal met revalidatie- en krachttoestellen" data-caption="Actieve oefenzaal met revalidatie- en krachttoestellen">
+            <div class="gallery-overlay">
+              <span class="gallery-zoom-icon">Klik voor vergroting</span>
+            </div>
+          </div>
+          <div class="gallery-item item-third">
+            <img src="assets/practice-3.jpg" alt="Individuele behandelruimte met behandelbank" data-caption="Individuele behandelruimte met behandelbank">
+            <div class="gallery-overlay">
+              <span class="gallery-zoom-icon">Klik voor vergroting</span>
+            </div>
+          </div>
+          <div class="gallery-item item-third">
+            <img src="assets/practice-4.jpg" alt="Comfortabele wachtruimte" data-caption="Comfortabele wachtruimte">
+            <div class="gallery-overlay">
+              <span class="gallery-zoom-icon">Klik voor vergroting</span>
+            </div>
+          </div>
+          <div class="gallery-item item-third">
+            <img src="assets/practice-5.jpg" alt="Oefenzaal met kunstgrasloper en revalidatiemateriaal" data-caption="Oefenzaal met kunstgrasloper en revalidatiemateriaal">
+            <div class="gallery-overlay">
+              <span class="gallery-zoom-icon">Klik voor vergroting</span>
+            </div>
+          </div>
+          <div class="gallery-item item-half">
+            <img src="assets/practice-6.jpg" alt="Onthaalhoek met bespreektafel en gang" data-caption="Onthaalhoek met bespreektafel en gang">
+            <div class="gallery-overlay">
+              <span class="gallery-zoom-icon">Klik voor vergroting</span>
+            </div>
+          </div>
+          <div class="gallery-item item-half">
+            <img src="assets/practice-7.jpg" alt="Behandelruimte met behandelbank" data-caption="Behandelruimte met behandelbank">
+            <div class="gallery-overlay">
+              <span class="gallery-zoom-icon">Klik voor vergroting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google Reviews Section -->
+    <section id="reviews" class="section section-elevated">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Patiëntervaringen</span>
+          <h2>Beoordelingen op Google Maps</h2>
+          <p>Lees de authentieke en verifieerbare ervaringen van patiënten op ons officiële Google bedrijfsprofiel in Gent.</p>
+        </div>
+
+        <div class="google-rating-badge" style="max-width: 720px; margin: 0 auto; justify-content: center; text-align: center; flex-direction: column; padding: 2.25rem 2rem;">
+          <div class="google-badge-left" style="flex-direction: column; gap: 0.75rem;">
+            <svg class="google-icon" width="40" height="40" viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+            </svg>
+            <div>
+              <div class="rating-score" style="justify-content: center; font-size: 1.6rem;">
+                <strong>5.0 op Google Maps</strong> <span class="stars" style="font-size: 1.35rem;">★★★★★</span>
+              </div>
+              <p class="rating-sub" style="font-size: 0.95rem; margin-top: 0.25rem;">Lees al onze authentieke beoordelingen rechtstreeks op Google Maps</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 1.25rem;">
+            <a href="https://www.google.com/maps/search/?api=1&query=Kine+Strop+Sint-Coletastraat+9+Gent" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              Bekijk alle Google Reviews ↗
+            </a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Kine+Strop+Sint-Coletastraat+9+Gent" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              Schrijf een review op Google
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tarieven & RIZIV Conventie Section -->
+    <section id="tarieven" class="section section-elevated">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Transparante Zorg</span>
+          <h2>Tarieven & RIZIV Conventie</h2>
+          <p>Overzicht van onze tarieven, terugbetalingen via het ziekenfonds en ons conventiestatuut.</p>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+          <p style="font-size: 1.05rem; line-height: 1.6; color: #1e293b; margin: 0;">
+            Onze praktijk is <strong>gedeconventioneerd</strong>. Voor patiënten zonder verhoogde tegemoetkoming geldt een vast honorarium van <strong>€ 37,00</strong> per behandelzitting.<br>
+            <strong>Verhoogde tegemoetkoming:</strong> Patiënten met een <strong>verhoogde tegemoetkoming (VT)</strong> worden steeds aangerekend volgens de <strong>officiële RIZIV-tarieven</strong> (€ 31,64 per zitting). Zo blijft kwalitatieve kinesitherapie voor iedereen toegankelijk.
+          </p>
+        </div>
+
+        <div style="overflow-x: auto; background: #ffffff; border-radius: 12px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 4px 12px rgba(0,0,0,0.03); margin-bottom: 2rem;">
+          <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
             <thead>
-              <tr style="background: var(--navy-900); color: #ffffff;">
-                <th style="padding: 1rem; border-bottom: 2px solid var(--border-light);">Type aandoening</th>
-                <th style="padding: 1rem; border-bottom: 2px solid var(--border-light);">Zonder verhoogde tegemoetkoming</th>
-                <th style="padding: 1rem; border-bottom: 2px solid var(--border-light);">Terugbetaling zonder VT</th>
-                <th style="padding: 1rem; border-bottom: 2px solid var(--border-light);">Met verhoogde tegemoetkoming (RIZIV)</th>
-                <th style="padding: 1rem; border-bottom: 2px solid var(--border-light);">Terugbetaling met VT</th>
+              <tr style="background: #0f172a; color: #ffffff;">
+                <th style="padding: 1rem; border-bottom: 2px solid #cbd5e1;">Type aandoening</th>
+                <th style="padding: 1rem; border-bottom: 2px solid #cbd5e1;">Zonder verhoogde tegemoetkoming</th>
+                <th style="padding: 1rem; border-bottom: 2px solid #cbd5e1;">Terugbetaling zonder VT</th>
+                <th style="padding: 1rem; border-bottom: 2px solid #cbd5e1;">Met verhoogde tegemoetkoming (RIZIV)</th>
+                <th style="padding: 1rem; border-bottom: 2px solid #cbd5e1;">Terugbetaling met VT</th>
               </tr>
             </thead>
             <tbody>
-              <tr style="border-bottom: 1px solid var(--border-light);">
-                <td style="padding: 0.85rem 1rem; font-weight: 600; color: var(--navy-900);">Courante pathologie</td>
-                <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--navy-800);">€ 37,00</td>
-                <td style="padding: 0.85rem 1rem; color: var(--primary-700);">€ 19,05</td>
-                <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--emerald-700, #047857);">€ 31,64</td>
-                <td style="padding: 0.85rem 1rem; color: var(--primary-700);">€ 29,14</td>
+              <tr style="border-bottom: 1px solid #e2e8f0;">
+                <td style="padding: 0.85rem 1rem; font-weight: 600; color: #0f172a;">Courante pathologie</td>
+                <td style="padding: 0.85rem 1rem; font-weight: 700; color: #1e293b;">€ 37,00</td>
+                <td style="padding: 0.85rem 1rem; color: #0284c7;">€ 19,05</td>
+                <td style="padding: 0.85rem 1rem; font-weight: 700; color: #047857;">€ 31,64</td>
+                <td style="padding: 0.85rem 1rem; color: #0284c7;">€ 29,14</td>
               </tr>
-              <tr style="border-bottom: 1px solid var(--border-light); background: #f8fafc;">
-                <td style="padding: 0.85rem 1rem; font-weight: 600; color: var(--navy-900);">E-pathologie</td>
-                <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--navy-800);">€ 37,00</td>
-                <td style="padding: 0.85rem 1rem; color: var(--primary-700);">€ 20,82</td>
-                <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--emerald-700, #047857);">€ 31,64</td>
-                <td style="padding: 0.85rem 1rem; color: var(--primary-700);">€ 30,26</td>
+              <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
+                <td style="padding: 0.85rem 1rem; font-weight: 600; color: #0f172a;">E-pathologie</td>
+                <td style="padding: 0.85rem 1rem; font-weight: 700; color: #1e293b;">€ 37,00</td>
+                <td style="padding: 0.85rem 1rem; color: #0284c7;">€ 20,82</td>
+                <td style="padding: 0.85rem 1rem; font-weight: 700; color: #047857;">€ 31,64</td>
+                <td style="padding: 0.85rem 1rem; color: #0284c7;">€ 30,26</td>
               </tr>
-              <tr style="border-bottom: 1px solid var(--border-light);">
-                <td style="padding: 0.85rem 1rem; font-weight: 600; color: var(--navy-900);">Fb-pathologie</td>
-                <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--navy-800);">€ 37,00</td>
-                <td style="padding: 0.85rem 1rem; color: var(--primary-700);">€ 19,61</td>
-                <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--emerald-700, #047857);">€ 31,64</td>
-                <td style="padding: 0.85rem 1rem; color: var(--primary-700);">€ 29,64</td>
+              <tr style="border-bottom: 1px solid #e2e8f0;">
+                <td style="padding: 0.85rem 1rem; font-weight: 600; color: #0f172a;">Fb-pathologie</td>
+                <td style="padding: 0.85rem 1rem; font-weight: 700; color: #1e293b;">€ 37,00</td>
+                <td style="padding: 0.85rem 1rem; color: #0284c7;">€ 19,61</td>
+                <td style="padding: 0.85rem 1rem; font-weight: 700; color: #047857;">€ 31,64</td>
+                <td style="padding: 0.85rem 1rem; color: #0284c7;">€ 29,64</td>
               </tr>
-              <tr style="border-bottom: 1px solid var(--border-light); background: #f8fafc;">
-                <td style="padding: 0.85rem 1rem; font-weight: 600; color: var(--navy-900);">Fa-pathologie</td>
-                <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--navy-800);">€ 37,00</td>
-                <td style="padding: 0.85rem 1rem; color: var(--primary-700);">€ 19,61</td>
-                <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--emerald-700, #047857);">€ 31,64</td>
-                <td style="padding: 0.85rem 1rem; color: var(--primary-700);">€ 29,64</td>
+              <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
+                <td style="padding: 0.85rem 1rem; font-weight: 600; color: #0f172a;">Fa-pathologie</td>
+                <td style="padding: 0.85rem 1rem; font-weight: 700; color: #1e293b;">€ 37,00</td>
+                <td style="padding: 0.85rem 1rem; color: #0284c7;">€ 19,61</td>
+                <td style="padding: 0.85rem 1rem; font-weight: 700; color: #047857;">€ 31,64</td>
+                <td style="padding: 0.85rem 1rem; color: #0284c7;">€ 29,64</td>
               </tr>
-              <tr style="border-bottom: 1px solid var(--border-light);">
-                <td style="padding: 0.85rem 1rem; font-weight: 600; color: var(--navy-900);">Dossierkost Fb-, Fa en E</td>
-                <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--navy-800);">€ 33,75</td>
-                <td style="padding: 0.85rem 1rem; color: var(--primary-700);">€ 25,32</td>
-                <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--emerald-700, #047857);">€ 33,75</td>
-                <td style="padding: 0.85rem 1rem; color: var(--primary-700);">€ 33,75</td>
+              <tr style="border-bottom: 1px solid #e2e8f0;">
+                <td style="padding: 0.85rem 1rem; font-weight: 600; color: #0f172a;">Dossierkost Fb-, Fa en E</td>
+                <td style="padding: 0.85rem 1rem; font-weight: 700; color: #1e293b;">€ 33,75</td>
+                <td style="padding: 0.85rem 1rem; color: #0284c7;">€ 25,32</td>
+                <td style="padding: 0.85rem 1rem; font-weight: 700; color: #047857;">€ 33,75</td>
+                <td style="padding: 0.85rem 1rem; color: #0284c7;">€ 33,75</td>
               </tr>
               <tr style="background: #f8fafc;">
-                <td style="padding: 0.85rem 1rem; font-weight: 600; color: var(--navy-900);">Dossierkost courant</td>
-                <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--navy-800);">€ 7,38</td>
-                <td style="padding: 0.85rem 1rem; color: var(--primary-700);">€ 5,54</td>
-                <td style="padding: 0.85rem 1rem; font-weight: 700; color: var(--emerald-700, #047857);">€ 7,38</td>
-                <td style="padding: 0.85rem 1rem; color: var(--primary-700);">€ 7,38</td>
+                <td style="padding: 0.85rem 1rem; font-weight: 600; color: #0f172a;">Dossierkost courant</td>
+                <td style="padding: 0.85rem 1rem; font-weight: 700; color: #1e293b;">€ 7,38</td>
+                <td style="padding: 0.85rem 1rem; color: #0284c7;">€ 5,54</td>
+                <td style="padding: 0.85rem 1rem; font-weight: 700; color: #047857;">€ 7,38</td>
+                <td style="padding: 0.85rem 1rem; color: #0284c7;">€ 7,38</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.875rem; color: var(--text-muted);">
-          <p style="margin: 0;">* De exacte terugbetaling is afhankelijk van de regelgeving van jouw ziekenfonds en de verstrekte prestatiecode.</p>
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.9rem; color: #64748b;">
+          <p style="margin: 0;">* Voor huisbezoeken geldt een verplaatsingsvergoeding van € 3,00.</p>
           <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-            <a href="assets/tarieven-in-de-praktijk.html" target="_blank" class="btn btn-primary btn-sm">
-              📄 Bekijk Document (Tarieven in de praktijk) ↗
+            <a href="assets/tarieven-in-de-praktijk.html" target="_blank" class="btn btn-primary btn-sm" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+              📄 Bekijk / Download Document (Tarieven in de praktijk) ↗
             </a>
-            <a href="https://www.riziv.fgov.be/nl/themas/kost-terugbetaling/door-ziekenfonds/individuele-verzorging/honoraires/Paginas/kine-nl.aspx" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+            <a href="https://www.riziv.fgov.be/nl/themas/kost-terugbetaling/door-ziekenfonds/individuele-verzorging/honoraires/Paginas/kine-nl.aspx" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
               Bekijk Officiële RIZIV Tarieventabel ↗
             </a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Over KG & Bestuur Section -->
-  <section id="over-kg" class="section section-bg">
-    <div class="container about-grid">
-      <div>
-        <span class="badge badge-secondary">Sinds 1990</span>
-        <h2 class="section-title" style="margin-top: 0.5rem;">Over Kinesitherapeuten Gent vzw</h2>
-        <p style="margin-bottom: 1rem; color: var(--text-muted);">In 1990 namen enkele Gentse kinesitherapeuten het initiatief om de lokale beroepskring op te richten om de belangen van de kinesitherapeuten in de eerstelijnsgezondheidszorg te behartigen.</p>
-        <p style="margin-bottom: 1.5rem; color: var(--text-muted);">Als officiële vzw is KG vzw een volwaardige gesprekspartner binnen de Gentse gezondheidszorg, vertegenwoordigd in overlegorganen zoals LMN Gent, de Gezondheidsraad en AXXON.</p>
-        <button class="btn btn-primary" onclick="openModal('modal-lid-worden')">Sluit je aan als Lid bij KG vzw</button>
-      </div>
+    <!-- FAQ Section (ALL 7 QUESTIONS - UPDATED HUISBEZOEKEN & ANNULATIE) -->
+    <section id="faq" class="section">
+      <div class="container container-narrow">
+        <div class="section-header">
+          <span class="section-tag">Veelgestelde vragen</span>
+          <h2>Praktische informatie & FAQ</h2>
+          <p>Hier vind je een antwoord op de meest voorkomende vragen in verband met de praktijk en de behandelingen op kinestrop.be.</p>
+        </div>
 
-      <div>
-        <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Het Bestuur van KG vzw</h3>
-        <div class="board-members-grid">
-          <div class="board-card">
-            <div class="board-avatar">KG</div>
-            <div class="board-info">
-              <h4>Bestuurslid / Voorzitter</h4>
-              <p>KG vzw Gent</p>
+        <div class="faq-list">
+          <div class="faq-item active">
+            <button class="faq-question">
+              <span>Heb ik een doorverwijzing van een huisarts nodig?</span>
+              <div class="faq-icon">↓</div>
+            </button>
+            <div class="faq-answer">
+              <p>Ja, zonder voorschrift van een arts kan er geen terugbetaling gebeuren van het ziekenfonds. Ga dus steeds eerst langs bij uw huisarts of specialist als u klachten heeft.</p>
             </div>
           </div>
-          <div class="board-card">
-            <div class="board-avatar">AX</div>
-            <div class="board-info">
-              <h4>AXXON Afgevaardigde</h4>
-              <p>Lokaal Beroepsoverleg</p>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Wat is de procedure voor nieuwe patiënten?</span>
+              <div class="faq-icon">↓</div>
+            </button>
+            <div class="faq-answer">
+              <p>Via het tabblad 'Contact' vindt u de praktische informatie over het maken van een afspraak. Nieuwe patiënten worden gevraagd naast het voorschrift ook zeker hun identiteitskaart (eID) mee te brengen bij de eerste afspraak.</p>
             </div>
           </div>
-          <div class="board-card">
-            <div class="board-avatar">LM</div>
-            <div class="board-info">
-              <h4>LMN Gent Vertegenwoordiger</h4>
-              <p>Eerstelijnszone Gent</p>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Wat kost een behandeling?</span>
+              <div class="faq-icon">↓</div>
+            </button>
+            <div class="faq-answer">
+              <p>Onze praktijk is <strong>gedeconventioneerd</strong> (€ 37,00 per behandeling voor patiënten zonder verhoogde tegemoetkoming). Patiënten met een <strong>verhoogde tegemoetkoming (VT)</strong> worden steeds aangerekend volgens de <strong>officiële RIZIV-tarieven</strong> (€ 31,64 per zitting). Bekijk onze <a href="#tarieven" style="color: #0284c7; text-decoration: underline;">volledige tarieventabel en het document</a> op deze pagina. Voor huisbezoeken komt er € 3,00 verplaatsingsvergoeding bij.</p>
             </div>
           </div>
-          <div class="board-card">
-            <div class="board-avatar">WB</div>
-            <div class="board-info">
-              <h4>Coördinator Wetenschappelijke Avonden</h4>
-              <p>Bijscholingen & Events</p>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is de praktijk rolstoeltoegankelijk?</span>
+              <div class="faq-icon">↓</div>
+            </button>
+            <div class="faq-answer">
+              <p>Ja, de praktijk is via de straat zonder problemen toegankelijk met een rolstoel.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Hoe kan ik de praktijk bereiken?</span>
+              <div class="faq-icon">↓</div>
+            </button>
+            <div class="faq-answer">
+              <p>De praktijk is gemakkelijk te bereiken met het openbaar vervoer. Op 20 meter van de praktijk bevindt zich een bushalte voor buslijnen 5a en 5b. Met de auto kan u in de hele straat parkeren en voor wie met de fiets komt, is er een openbare fietsenstalling aan de overkant van de straat.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Zijn huisbezoeken mogelijk?</span>
+              <div class="faq-icon">↓</div>
+            </button>
+            <div class="faq-answer">
+              <p>Ja, huisbezoeken zijn mogelijk wanneer het voor u niet mogelijk is om naar de praktijk te komen. Dit kan binnen een straal van 1 km rond de praktijk.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Wat moet ik doen bij annulatie?</span>
+              <div class="faq-icon">↓</div>
+            </button>
+            <div class="faq-answer">
+              <p>Om kosteloos te annuleren, vragen we ten laatste 24u op voorhand te verwittigen. Dit kan telefonisch of in het weekend per mail. Bij ziekte 's ochtends verwittigt u liefst vóór 9u. Indien u laattijdig verwittigt, zal een administratieve kost van €20 worden aangerekend.</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Partners & Samenwerkingen Section -->
+    <section id="partners" class="section section-elevated">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Multidisciplinaire samenwerking</span>
+          <h2>Lokale partners & netwerk</h2>
+          <p>Voor een optimale zorgomgeving werken wij nauw samen met deskundige partners en multidisciplinaire praktijken in Gent.</p>
+        </div>
+
+        <div class="partners-grid">
+          <div class="partner-card">
+            <div>
+              <div class="partner-card-header">
+                <div class="partner-logo-wrap">
+                  <img src="assets/groepspraktijk-gent-logo.png" alt="Groepspraktijk Gent Logo">
+                </div>
+                <div class="partner-card-title">
+                  <h3>Groepspraktijk Gent</h3>
+                  <span class="partner-tag">Multidisciplinaire Praktijk</span>
+                </div>
+              </div>
+              <div class="partner-card-body">
+                <p>Een gewaardeerde partner bij ons in de buurt (Zwijnaardsesteenweg 51, Gent). Een deskundig multidisciplinair team van psychologen, psychotherapeuten, diëtisten, logopedisten en bemiddelaars voor zorg-op-maat.</p>
+              </div>
+            </div>
+            <div class="partner-card-footer">
+              <a href="https://www.groepspraktijk.gent/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; border: 2px solid var(--brand-secondary); color: var(--brand-secondary); font-weight: 600;">
+                Bezoek groepspraktijk.gent ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section id="contact" class="container">
+      <div class="cta-banner">
+        <h2>Klaar om de eerste stap te zetten?</h2>
+        <p>Maak eenvoudig je afspraak online of stuur ons een berichtje bij vragen. De koffie staat voor je klaar!</p>
+        <div class="cta-banner-buttons">
+          <a href="https://www.q-top.be/online-planner-v2/NL/?root=kq33633" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background-color: var(--brand-secondary);">
+            Online afspraak maken
+          </a>
+          <a href="mailto:info@kinestrop.be" class="btn btn-outline-light">
+            Stuur ons een mail
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer id="contact" class="site-footer">
+  <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="assets/logo.jpg" alt="Kinesitherapeuten Gent Logo" class="footer-logo-img" style="height: 52px; width: auto; border-radius: var(--radius-sm); margin-bottom: 1rem; background: #fff; padding: 4px;">
-          <h3>Kinesitherapeuten Gent vzw</h3>
-          <p>Officiële lokale kinekring voor kinesitherapeuten in de regio Gent en omliggende gemeenten. Aangesloten bij AXXON Quality in Kinesitherapie.</p>
-          <div class="badge badge-emerald">Erkende Beroepsvereniging vzw</div>
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1.25rem;">
+            <img src="assets/logo.png" alt="Kine Strop logo" style="height: 60px;">
+            <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.4rem; color: #FFF;">Kine Strop</span>
+          </div>
+          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.6;">
+            Kinesitherapie & pijncoaching in Gent. Een persoonlijke, menselijke en actieve benadering van lichamelijke klachten en chronische pijn.
+          </p>
         </div>
 
-        <div class="footer-col">
-          <h4>Snelle Links</h4>
+        <div>
+          <h4>Snellinks</h4>
           <ul class="footer-links">
-            <li><a href="#zoekgids">Zoek een Kinesist</a></li>
-            <li><a href="#specialisaties">Specialisaties Overzicht</a></li>
-            <li><a href="#events">Agenda & Bijscholingen</a></li>
-            <li><a href="#tarieven">RIZIV Tarieven</a></li>
-            <li><a href="#over-kg">Over KG vzw</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#visie">Onze visie</a></li>
+            <li><a href="#team">Ons team</a></li>
+            <li><a href="#partners">Partners & Samenwerkingen</a></li>
+            <li><a href="#faq">Veelgestelde vragen</a></li>
+            <li><a href="https://www.groepspraktijk.gent/" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.85);">Groepspraktijk Gent ↗</a></li>
           </ul>
         </div>
 
-        <div class="footer-col">
-          <h4>Partners</h4>
+        <div>
+          <h4>Gespecialiseerde zorg</h4>
           <ul class="footer-links">
-            <li><a href="https://www.axxon.be" target="_blank" rel="noopener">AXXON Kinesitherapie</a></li>
-            <li><a href="https://www.groepspraktijk.gent" target="_blank" rel="noopener">Groepspraktijk Gent</a></li>
-            <li><a href="https://www.amonis.be" target="_blank" rel="noopener">Amonis Pensioenfonds</a></li>
-            <li><a href="https://www.interior-gent.be" target="_blank" rel="noopener">Interior-Gent Ergonomie</a></li>
-            <li><a href="#" target="_blank" rel="noopener">WVVK VZW</a></li>
+            <li><a href="#diensten">Kinesitherapie & revalidatie</a></li>
           </ul>
         </div>
 
-        <div class="footer-col">
-          <h4>Secretariaat & Contact</h4>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-            <span>Sint-Denijslaan 110, 9000 Gent</span>
+        <div>
+          <h4>Contact & locatie</h4>
+          <div class="footer-info-item">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Sint-Coletastraat+9,+9000+Gent" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.85); text-decoration: none;">Sint-Coletastraat 9, 9000 Gent</a>
           </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-            <span>0479 01 25 30</span>
+          <div class="footer-info-item">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span>info@kinestrop.be</span>
           </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-4V6l8 5 8-4v2z"/></svg>
-            <span>kinesitherapeutengent@gmail.com</span>
+          <div class="footer-info-item">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>09 221 74 19</span>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 Kinesitherapeuten Gent vzw. Alle rechten voorbehouden.</p>
-        <p><a href="#" style="color: #94a3b8;">Privacy Policy</a> | <a href="#" style="color: #94a3b8;">Cookie Instellingen</a></p>
+        <p>&copy; 2026 Kine Strop Kinesitherapie Gent. Alle rechten voorbehouden.</p>
+        <p style="font-size: 0.825rem;"><a href="https://www.google.com/maps/dir/?api=1&destination=Sint-Coletastraat+9,+9000+Gent" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.7); text-decoration: none;">Sint-Coletastraat 9, 9000 Gent</a></p>
       </div>
     </div>
   </footer>
 
-  <!-- Modal: Contact Therapist -->
-  <div id="modal-contact" class="modal-overlay">
-    <div class="modal-container">
-      <button class="modal-close" onclick="closeModal('modal-contact')">✕</button>
-      <div id="contact-modal-body">
-        <!-- Injected via script.js -->
-      </div>
-    </div>
+  <!-- Lightbox Modal for Gallery Images -->
+  <div id="imageLightbox" class="lightbox-modal">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img class="lightbox-content" id="lightboxImage" alt="Praktijkfoto vergroting">
+    <div id="lightboxCaption" class="lightbox-caption"></div>
   </div>
 
-  <!-- Modal: Event Registration -->
-  <div id="modal-event" class="modal-overlay">
-    <div class="modal-container">
-      <button class="modal-close" onclick="closeModal('modal-event')">✕</button>
-      <div id="event-modal-body">
-        <!-- Injected via script.js -->
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal: Lid Worden -->
-  <div id="modal-lid-worden" class="modal-overlay">
-    <div class="modal-container">
-      <button class="modal-close" onclick="closeModal('modal-lid-worden')">✕</button>
-      <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--navy-900);">Word Lid van KG vzw</h3>
-      <p style="color: var(--text-muted); margin-bottom: 1.25rem;">Sluit je als kinesitherapeut aan bij de Gentse Kinekring via AXXON.</p>
+  <!-- Booking Info Modal (Eerste Sessie / Intake Info) -->
+  <div id="bookingModal" class="booking-modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="booking-modal-card">
+      <button class="booking-modal-close" id="modalCloseBtn" aria-label="Sluit venster">&times;</button>
       
-      <div style="background: var(--primary-50); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--primary-200); margin-bottom: 1.5rem;">
-        <h4 style="color: var(--primary-900); margin-bottom: 0.5rem;">Hoe aanmelden?</h4>
-        <ol style="padding-left: 1.25rem; font-size: 0.925rem; color: var(--navy-800); line-height: 1.6;">
-          <li>Sluit je aan bij de nationale beroepsorganisatie <strong>AXXON</strong>.</li>
-          <li>Meld via <a href="mailto:info.nl@axxon.be">info.nl@axxon.be</a> dat je lokaal lid wil worden van <strong>KG vzw Gent</strong>.</li>
-          <li>Vraag na erkenning toegang tot onze besloten <a href="https://www.facebook.com/groups/289523215818627/" target="_blank" rel="noopener">Facebook-groep voor leden</a>.</li>
-        </ol>
+      <div class="booking-modal-header">
+        <div class="booking-modal-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 id="modalTitle">Belangrijke info voor je eerste afspraak</h3>
       </div>
 
-      <h4 style="margin-bottom: 0.75rem;">Leden Voordelen:</h4>
-      <ul class="rate-list" style="margin-bottom: 1.5rem;">
-        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Gratis toegang tot alle geaccrediteerde wetenschappelijke avonden</li>
-        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Gratis vermelding op de patiënten-zoekgids van kinesitherapeutengent.be</li>
-        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Belangenbehartiging in LMN Gent en Eerstelijnszone</li>
-      </ul>
+      <div class="booking-modal-body">
+        <p class="booking-modal-intro">
+          Bij Kine Strop nemen we voor een eerste consultatie ruim de tijd: <strong>1 volledig uur</strong>.
+        </p>
+        <p>
+          Zo hebben we voldoende rust en ruimte voor een grondige intake, een uitgebreid lichamelijk onderzoek, een duidelijke diagnose en een eerste gerichte behandeling of oefenplan.
+        </p>
+        <div class="booking-modal-alert">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <div>
+            <strong>Hoe boeken in de online planner?</strong>
+            <p>Selecteer in de online planner specifiek de optie <strong>'Eerste sessie (uitgebreid onderzoek)'</strong> (1 uur).</p>
+          </div>
+        </div>
+      </div>
 
-      <a href="mailto:kinesitherapeutengent@gmail.com?subject=Vraag%20omtrent%20Lidmaatschap%20KG%20vzw" class="btn btn-primary" style="width: 100%;">Stuur Vraag naar Secretariaat</a>
+      <div class="booking-modal-footer">
+        <a href="https://www.q-top.be/online-planner-v2/NL/?root=kq33633" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="confirmBookingBtn">
+          Begrepen, open online planner →
+        </a>
+        <button type="button" class="btn btn-secondary" id="cancelModalBtn">
+          Annuleren
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Chat Function (Interactive Contact Drawer) -->
+  <div class="chat-widget-container">
+    <button id="chatWidgetBtn" class="chat-widget-btn" aria-label="Open chatvenster">
+      <span class="chat-btn-icon"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></span>
+      <span class="chat-btn-text">Stel een vraag</span>
+    </button>
+
+    <div id="chatWidgetDrawer" class="chat-widget-drawer" aria-hidden="true">
+      <div class="chat-drawer-header">
+        <div class="chat-header-info">
+          <img src="assets/logo.png" alt="Kine Strop logo" class="chat-avatar">
+          <div>
+            <h3>Kine Strop Gent</h3>
+            <p class="chat-status"><span class="status-dot"></span> Reageert snel • Egon & Mathias</p>
+          </div>
+        </div>
+        <button id="chatCloseBtn" class="chat-close-btn" aria-label="Sluit chat">&times;</button>
+      </div>
+
+      <div class="chat-drawer-body">
+        <div class="chat-message-bubble">
+          <p>Hallo! Welkom bij Kine Strop.</p>
+          <p>Heb je een vraag over onze behandelingen, tarieven, of wil je weten of kinesitherapie geschikt is voor jouw klacht?</p>
+        </div>
+
+        <div class="chat-actions-list">
+          <a href="tel:092217419" class="chat-action-btn action-phone">
+            <span class="action-icon"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></span>
+            <div class="action-text">
+              <strong>Telefonisch contact</strong>
+              <small>09 221 74 19</small>
+            </div>
+          </a>
+
+          <a href="mailto:info@kinestrop.be?subject=Vraag%20via%20website" class="chat-action-btn action-email">
+            <span class="action-icon"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></span>
+            <div class="action-text">
+              <strong>Stuur een e-mail</strong>
+              <small>info@kinestrop.be</small>
+            </div>
+          </a>
+
+          <button type="button" id="chatOpenBookingBtn" class="chat-action-btn action-booking">
+            <span class="action-icon"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></span>
+            <div class="action-text">
+              <strong>Online afspraak maken</strong>
+              <small>Boek direct je intakegesprek</small>
+            </div>
+          </button>
+
+          <a href="#faq" id="chatFaqBtn" class="chat-action-btn action-faq">
+            <span class="action-icon"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
+            <div class="action-text">
+              <strong>Veelgestelde vragen (FAQ)</strong>
+              <small>Voorschriften, tarieven & bereikbaarheid</small>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="chat-drawer-footer">
+        <span>Sint-Coletastraat 9, 9000 Gent • 09 221 74 19</span>
+      </div>
     </div>
   </div>
 
