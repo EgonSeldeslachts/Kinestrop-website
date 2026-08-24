@@ -316,6 +316,121 @@ img {
   width: 100%;
 }
 
+/* Nav Dropdown Menu */
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  min-width: 220px;
+  padding: 0.5rem 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all var(--transition-fast);
+  z-index: 1010;
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.6rem 1.25rem;
+  color: var(--ink-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.dropdown-menu li a:hover {
+  background-color: var(--bg-subtle);
+  color: var(--brand-secondary);
+}
+
+/* Specialization Secondary Sub-Nav Bar */
+.specialization-subnav-bar {
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  margin-top: var(--header-height);
+  padding: 0.75rem 0;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  z-index: 900;
+}
+
+.specialization-subnav-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.specialization-subnav-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.subnav-title {
+  font-size: 0.825rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.subnav-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.subnav-link {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ink-body);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+}
+
+.subnav-link:hover {
+  background: var(--bg-elevated);
+  color: var(--brand-secondary);
+  border-color: var(--brand-secondary);
+}
+
+.subnav-link.active {
+  background: var(--brand-primary);
+  color: var(--ink-inverse);
+  border-color: var(--brand-primary);
+}
+
+/* Adjust hero section padding when subnav bar is present */
+.specialization-subnav-bar + main .hero-section,
+body:has(.specialization-subnav-bar) .hero-section {
+  padding-top: 2.5rem;
+}
+
 .mobile-menu-btn {
   display: none;
   background: none;

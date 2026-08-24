@@ -100,7 +100,7 @@
             "name": "Hoe verschilt kinesitherapie bij chronische pijn van gewone kinesitherapie?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "In plaats van alleen lokaal spieren of gewrichten kortstondig te behandelen, kijken we naar het totale biologische plaatje: perifere en centrale sensitisatie, bewegingsangst, belastbaarheid en verwachtingen. We combineren hands-on therapie met educatie en gedoseerde heropbouw."
+              "text": "In plaats van alleen lokaal spieren of gewrichten kortstondig te behandelen, kijken we naar het totale biologische plaatje: perifere en centrale sensitisatie, bewegingsangst, belastbaarheid en verwachtingen. We combineren manuele therapie met educatie en gedoseerde heropbouw."
             }
           }
         ]
@@ -131,7 +131,16 @@
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="index.html#visie" class="nav-link">Visie</a></li>
-          <li><a href="index.html#diensten" class="nav-link">Diensten</a></li>
+          <li class="nav-dropdown">
+            <a href="index.html#diensten" class="nav-link active">Specialisaties ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="chronische-pijn.html">Chronische Pijn Gent</a></li>
+              <li><a href="fibromyalgie-cvs.html">Fibromyalgie & CVS Gent</a></li>
+              <li><a href="manuele-therapie-gent.html">Manuele Therapie Gent</a></li>
+              <li><a href="dry-needling-gent.html">Dry Needling Gent</a></li>
+              <li><a href="oefentherapie-sportkinesitherapie-gent.html">Oefentherapie & Sportkine Gent</a></li>
+            </ul>
+          </li>
           <li><a href="index.html#team" class="nav-link">Ons team</a></li>
           <li><a href="index.html#praktijk" class="nav-link">Praktijk</a></li>
           <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
@@ -155,6 +164,20 @@
     </div>
   </header>
 
+  <!-- Specialisaties Sub-Nav Bar -->
+  <div class="specialization-subnav-bar">
+    <div class="container specialization-subnav-inner">
+      <span class="subnav-title">Onze Specialisaties:</span>
+      <nav class="subnav-menu">
+        <a href="chronische-pijn.html" class="subnav-link active">Chronische Pijn</a>
+        <a href="fibromyalgie-cvs.html" class="subnav-link">Fibromyalgie & CVS</a>
+        <a href="manuele-therapie-gent.html" class="subnav-link">Manuele Therapie</a>
+        <a href="dry-needling-gent.html" class="subnav-link">Dry Needling</a>
+        <a href="oefentherapie-sportkinesitherapie-gent.html" class="subnav-link">Oefentherapie & Sportkine</a>
+      </nav>
+    </div>
+  </div>
+
   <main>
     <!-- Hero Section -->
     <section class="hero-section">
@@ -162,7 +185,7 @@
         <div class="hero-grid">
           <div class="hero-content">
             <div class="hero-badge">
-              Gespecialiseerde pijntherapie in Gent 📍
+              Gespecialiseerde pijntherapie in Gent
             </div>
             <h1 class="hero-title">
               Kinesitherapie bij chronische en aanhoudende pijn in Gent
@@ -171,7 +194,7 @@
               Duurt je pijn al langer dan drie maanden of heb je het gevoel dat reguliere behandelingen niet helpen? Bij Kine Strop kijken we verder dan enkel snelle symptoombestrijding. We helpen je begrijpen wat er zich biologisch in je weefsels, zenuwen en zenuwstelsel afspeelt en bouwen stapsgewijs weer vertrouwen op in je lichaam.
             </p>
             <p style="margin-bottom: 1.25rem; font-size: 0.95rem; color: var(--text-muted); font-style: italic;">
-              Lees hieronder meer over onze wetenschappelijke aanpak en visie op aanhoudende klachten 👇
+              Lees hieronder meer over onze wetenschappelijke aanpak en visie op aanhoudende klachten:
             </p>
             <div class="hero-actions">
               <button type="button" class="btn btn-primary trigger-booking-modal">
@@ -200,7 +223,7 @@
               <img src="assets/practice-1.jpg" alt="Kine Strop praktijkruimte voor chronische pijnrevalidatie in Gent">
             </div>
             <div class="hero-floating-card">
-              <div class="coffee-icon-circle">🌿</div>
+              <div class="coffee-icon-circle"><svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg></div>
               <div class="floating-card-text">
                 <p>Rust & tijd voor jouw verhaal</p>
                 <p>Geen overhaaste consults, maar onderbouwde heropbouw.</p>
@@ -266,45 +289,51 @@
           <p>Drie complementaire stappen om de vicieuze cirkel van pijn en bewegingsangst te doorbreken.</p>
         </div>
 
-        <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
           <div class="service-card">
             <div class="service-icon icon-teal">
-              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
             </div>
             <h3>1. Pijneducatie op maat</h3>
-            <p>We leggen in heldere mensentaal uit wat er biologisch in jouw zenuwen en weefsels gebeurt. Weten *waarom* je pijn voelt geeft rust, vermindert de onzekerheid en vormt het fundament voor herstel.</p>
+            <p>Begrijpen hoe het zenuwstelsel bij aanhoudende pijn overgevoelig raakt, neemt de angst weg en legt de basis voor herstel.</p>
             <ul class="service-bullets">
-              <li><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Begrijp jouw biologische pijnmechanisme</li>
-              <li><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Verminder bewegingsangst en zorgen</li>
-            </ul>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon icon-cyan">
-              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-            </div>
-            <h3>2. Geleidelijke heropbouw (graded activity)</h3>
-            <p>We gaan niet geforceerd 'door de pijn heen' pushen. We zoeken jouw huidige 'veiligheidszone' en bouwen je belastbaarheid en spierkracht stap voor stap uit op een manier die haalbaar voelt.</p>
-            <ul class="service-bullets">
-              <li><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Oefeningen afgestemd op jouw tempo</li>
-              <li><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Herwin vertrouwen in dagelijkse beweging</li>
+              <li><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Inzicht in centrale sensitisatie</li>
+              <li><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Herwinnen van controle</li>
             </ul>
           </div>
 
           <div class="service-card">
             <div class="service-icon icon-amber">
-              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"/></svg>
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+              </svg>
+            </div>
+            <h3>2. Geleidelijke heropbouw (graded activity)</h3>
+            <p>Stapsgewijs uitbreiden van beweging binnen jouw persoonlijke tolerantievenster, zonder terugval of overprikkeling.</p>
+            <ul class="service-bullets">
+              <li><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Oefentherapie op maat</li>
+              <li><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Opbouw van belastbaarheid</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon icon-blue">
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
             </div>
             <h3>3. Ondersteunende manuele zorg</h3>
-            <p>Hands-on manuele technieken, zachte gewrichtsmobilisaties en myofasciale ontspanning verlichten secundaire spierspanningen en creëren een 'window of opportunity' om aangenamer te bewegen.</p>
+            <p>Zachte manuele technieken om hoge spierspanning te dempen en het zenuwstelsel gerust te stellen als opstap naar beweging.</p>
             <ul class="service-bullets">
-              <li><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Zachte manuele mobilisaties</li>
-              <li><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Spierontspanning & gewrichtscomfort</li>
+              <li><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Ontprikkeling van spiertonus</li>
+              <li><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Pijnvrije bewegingsruimte</li>
             </ul>
           </div>
         </div>
       </div>
-    </section>
+    </section></section>
 
     <!-- Welke klachten behandelen we -->
     <section class="section">
@@ -441,8 +470,8 @@
           <ul class="footer-links">
             <li><a href="chronische-pijn.html">Chronische pijn & pijneducatie</a></li>
             <li><a href="fibromyalgie-cvs.html">Fibromyalgie & CVS revalidatie</a></li>
-            <li><a href="index.html#diensten">Manuele therapie Gent</a></li>
-            <li><a href="index.html#diensten">Dry needling (Mathias)</a></li>
+            <li><a href="manuele-therapie-gent.html">Manuele therapie Gent</a></li>
+            <li><a href="dry-needling-gent.html">Dry needling (Mathias)</a></li>
           </ul>
         </div>
 
@@ -476,7 +505,7 @@
       <button class="booking-modal-close" id="modalCloseBtn" aria-label="Sluit venster">&times;</button>
       
       <div class="booking-modal-header">
-        <div class="booking-modal-icon">⏱️</div>
+        <div class="booking-modal-icon"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
         <h3 id="modalTitle">Belangrijke info voor je eerste afspraak</h3>
       </div>
 

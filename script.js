@@ -170,7 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const chatCloseBtn = document.getElementById('chatCloseBtn');
   const chatOpenBookingBtn = document.getElementById('chatOpenBookingBtn');
   const chatFaqBtn = document.getElementById('chatFaqBtn');
-  const chatBadge = document.querySelector('.chat-badge');
 
   if (chatWidgetBtn && chatWidgetDrawer) {
     const toggleChat = () => {
@@ -181,7 +180,6 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         chatWidgetDrawer.classList.add('active');
         chatWidgetDrawer.setAttribute('aria-hidden', 'false');
-        if (chatBadge) chatBadge.style.display = 'none'; // Hide badge once opened
       }
     };
 
