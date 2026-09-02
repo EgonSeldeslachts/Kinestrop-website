@@ -20,15 +20,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Header scroll shadow
+  // Header scroll shadow and blur effect
   const siteHeader = document.querySelector('.site-header');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
-      siteHeader.style.boxShadow = '0 4px 20px rgba(15, 23, 42, 0.08)';
-    } else {
-      siteHeader.style.boxShadow = 'none';
+  const handleScroll = () => {
+    if (siteHeader) {
+      if (window.scrollY > 20) {
+        siteHeader.classList.add('scrolled');
+      } else {
+        siteHeader.classList.remove('scrolled');
+      }
     }
-  });
+  };
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+
+  // Scroll Reveal Observer (Inspired by modern smooth fade/slide effects)
+  const revealElements = document.querySelectorAll('.reveal, .fade-in, .slide-in-left, .slide-in-right');
+  
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          // Once revealed, unobserve to maintain performance
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -60px 0px', // Trigger slightly before element is fully visible
+      threshold: 0.1
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  } else {
+    // Fallback for older browsers
+    revealElements.forEach(el => el.classList.add('revealed'));
+  }
 
   // FAQ Accordion
   const faqQuestions = document.querySelectorAll('.faq-question');
