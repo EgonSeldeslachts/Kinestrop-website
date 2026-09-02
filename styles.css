@@ -814,6 +814,8 @@ body:has(.specialization-subnav-bar) .hero-section {
   border: 1px solid #E2E8F0;
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
 }
 
 .team-card:hover {
@@ -841,6 +843,9 @@ body:has(.specialization-subnav-bar) .hero-section {
 
 .team-content {
   padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .team-role {
@@ -878,6 +883,54 @@ body:has(.specialization-subnav-bar) .hero-section {
   border-radius: var(--radius-full);
   color: var(--ink-body);
   font-weight: 500;
+}
+
+/* Team Engagement / Zorgnetwerk Block */
+.team-engagement {
+  margin-top: 1.35rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #F1F5F9;
+}
+
+.team-engagement-header {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--brand-secondary);
+  margin-bottom: 0.45rem;
+}
+
+.team-engagement-header svg {
+  flex-shrink: 0;
+  color: var(--brand-secondary);
+}
+
+.team-engagement-text {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--ink-body);
+  margin-bottom: 0.75rem;
+}
+
+.team-engagement-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.tag-engagement {
+  background-color: var(--brand-secondary-light);
+  color: var(--brand-secondary-hover);
+  border-color: var(--accent-border);
+  font-weight: 600;
+  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 
 /* Practice Gallery Section — DYNAMIC BALANCED 12-COL LAYOUT */
