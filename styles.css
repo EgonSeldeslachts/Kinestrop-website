@@ -1005,14 +1005,17 @@ body:has(.specialization-subnav-bar) .hero-section {
 }
 
 .modal-checklist-icon {
-  font-size: 1.1rem;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.15rem;
 }
 
-/* Services Section — 2x2 SYMMETRICAL GRID */
+/* Services Section */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Clean 2x2 symmetrical layout */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
 }
 
@@ -1047,6 +1050,16 @@ body:has(.specialization-subnav-bar) .hero-section {
 .service-icon.icon-cyan {
   background-color: var(--accent-bg);
   color: var(--brand-secondary);
+}
+
+.service-icon.icon-blue {
+  background-color: #E0F2FE;
+  color: #0284C7;
+}
+
+.service-icon.icon-indigo {
+  background-color: #EEF2FF;
+  color: #4338CA;
 }
 
 .service-icon.icon-amber {
