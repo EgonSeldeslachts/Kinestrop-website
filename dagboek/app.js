@@ -330,14 +330,13 @@ function renderAdviceTab() {
 
   if (!entry) {
     container.innerHTML = `
-      <div class="card" style="text-align: center; padding: 36px 20px;">
-        <div style="font-size: 2.5rem; margin-bottom: 12px;">📝</div>
-        <h3 style="font-family: var(--font-heading); font-weight: 600; color: var(--brand-primary); margin-bottom: 8px;">Vul eerst je dagboek in voor vandaag</h3>
-        <p style="color: var(--ink-muted); max-width: 460px; margin: 0 auto 18px auto; font-size: 0.92rem;">
-          Zodra je je slaap, energie en klachten voor ${formatDutchDate(selectedDate)} invult, genereert Kinestrop direct adviezen en voorgestelde oefeningen op maat.
+      <div class="card" style="text-align: center; padding: 40px 20px;">
+        <h3 style="font-family: var(--font-heading); font-weight: 600; color: var(--brand-primary); margin-bottom: 8px;">Nog geen dagboekgegevens voor vandaag</h3>
+        <p style="color: var(--ink-muted); max-width: 480px; margin: 0 auto 18px auto; font-size: 0.9rem; line-height: 1.55;">
+          Vul eerst je gegevens in bij "Dagboek" voor ${formatDutchDate(selectedDate)}. Op basis van je slaap, energie en klachten verschijnen hier passende doseer- en bewegingssuggesties.
         </p>
         <button class="btn-primary" onclick="switchTab('tab-entry')" style="width: auto;">
-          Ga naar Dagboek Invullen
+          Naar Dagboek
         </button>
       </div>
     `;
@@ -351,11 +350,13 @@ function renderAdviceTab() {
   if (status === 'red') {
     bannerHTML = `
       <div class="status-banner red">
-        <div class="status-icon-lg">🛑</div>
+        <div class="status-banner-header">
+          <h3>Aandachtspunt: Herstel en rust</h3>
+          <span class="status-pill-badge red">Herstelfase</span>
+        </div>
         <div class="status-text">
-          <h3>Vandaag staat in het teken van: Herstel & Pacing (Rode Zone)</h3>
           <p>
-            Je energieniveau of klachten vragen om extra mildheid voor je lichaam. Schakel vandaag terug naar de basis: bewijd aandacht aan rust, ontspanning van je zenuwstelsel en vermijd fysieke pieken. Pacing is geen opgeven, maar slim opladen.
+            Je energie en klachten wijzen op een verlaagde draagkracht. Vandaag is het zinvol om piekbelastingen te vermijden en het zenuwstelsel rust te gunnen. Pacing betekent hier bewust doseren en herstelmomenten inplannen.
           </p>
         </div>
       </div>
@@ -364,11 +365,13 @@ function renderAdviceTab() {
   } else if (status === 'orange') {
     bannerHTML = `
       <div class="status-banner orange">
-        <div class="status-icon-lg">⚡</div>
+        <div class="status-banner-header">
+          <h3>Aandachtspunt: Gedoseerd bewegen</h3>
+          <span class="status-pill-badge orange">Doseerfase</span>
+        </div>
         <div class="status-text">
-          <h3>Vandaag staat in het teken van: Doseerbaar Bewegen (Oranje Zone)</h3>
           <p>
-            Je draagkracht is matig. Een prima dag om in beweging te blijven, mits je voldoende micro-breaks inbouwt en regelmatig van houding wisselt. Wissel je Committed Action af met herstelmomenten vóórdat de vermoeidheid toeslaat.
+            Je draagkracht is matig. Een geschikte dag om in beweging te blijven met tussentijdse rustmomenten. Wissel fysieke activiteit af met herstel voordat vermoeidheid of klachten toenemen.
           </p>
         </div>
       </div>
@@ -377,11 +380,13 @@ function renderAdviceTab() {
   } else {
     bannerHTML = `
       <div class="status-banner green">
-        <div class="status-icon-lg">🌿</div>
+        <div class="status-banner-header">
+          <h3>Aandachtspunt: Actieve opbouw</h3>
+          <span class="status-pill-badge green">Opbouwfase</span>
+        </div>
         <div class="status-text">
-          <h3>Vandaag staat in het teken van: Versterken & Opbouw (Groene Zone)</h3>
           <p>
-            Je batterij is goed opgeladen en je spierspanning is gunstig! Dit is een uitstekende dag om je Committed Action uit te voeren en opbouwende oefeningen te doen om je fysieke belastbaarheid te vergroten.
+            Je draagkracht is gunstig en je batterij is voldoende opgeladen. Dit is een geschikt moment om je geplande activiteit uit te voeren en te werken aan actieve belastbaarheid.
           </p>
         </div>
       </div>
@@ -399,13 +404,13 @@ function renderAdviceTab() {
           <span class="exercise-badge ${ex.badgeClass}">${ex.category}</span>
           <h4>${ex.title}</h4>
           <div class="exercise-meta">
-            <span>⏱️ ${ex.duration}</span>
+            <span>${ex.duration}</span>
           </div>
           <p class="exercise-desc">${ex.desc}</p>
         </div>
         <div class="exercise-action">
           <button class="check-btn ${isDone ? 'completed' : ''}" onclick="toggleExerciseCompletion('${ex.id}')">
-            ${isDone ? '✓ Uitgevoerd vandaag' : 'Markeer als uitgevoerd'}
+            ${isDone ? '✓ Uitgevoerd' : 'Markeer als uitgevoerd'}
           </button>
         </div>
       </div>
@@ -414,20 +419,19 @@ function renderAdviceTab() {
 
   // Committed Action Display Card
   const actDisplayHTML = entry.actGoal ? `
-    <div class="card" style="border-left: 4px solid var(--brand-secondary);">
+    <div class="card" style="border-left: 3px solid var(--brand-secondary);">
       <div class="card-header">
-        <div class="card-icon">🎯</div>
         <div class="card-title-group">
-          <h2>Jouw Committed Action voor Vandaag</h2>
-          <p>Wat belangrijk voor je is en hoe je dit doseert</p>
+          <h2>Geplande waardegerichte actie</h2>
+          <p>Doelstelling en pacing-afspraak</p>
         </div>
       </div>
-      <div style="background: var(--surface-base); padding: 14px 18px; border-radius: var(--radius-sm); margin-bottom: 12px;">
-        <strong style="color: var(--brand-primary); font-size: 1.05rem;">"${escapeHtml(entry.actGoal)}"</strong>
-        ${entry.actStep ? `<p style="margin-top: 6px; font-size: 0.9rem; color: var(--ink-muted);">📍 <strong>Concrete stap:</strong> ${escapeHtml(entry.actStep)}</p>` : ''}
+      <div style="background: var(--surface-base); padding: 14px 16px; border-radius: var(--radius-sm); margin-bottom: 10px; border: 1px solid var(--border-color);">
+        <div style="color: var(--brand-primary); font-size: 0.95rem; font-weight: 500;">"${escapeHtml(entry.actGoal)}"</div>
+        ${entry.actStep ? `<p style="margin-top: 6px; font-size: 0.88rem; color: var(--ink-muted);">Concrete tussenstap: ${escapeHtml(entry.actStep)}</p>` : ''}
       </div>
-      <div style="font-size: 0.88rem; color: var(--ink-muted);">
-        Status: <strong>${formatActStatus(entry.actCompleted)}</strong>
+      <div style="font-size: 0.85rem; color: var(--ink-muted);">
+        Status: <span style="color: var(--brand-primary); font-weight: 500;">${formatActStatus(entry.actCompleted)}</span>
       </div>
     </div>
   ` : '';
@@ -435,19 +439,18 @@ function renderAdviceTab() {
   // Total Load Display Card
   const totalLoadVectors = entry.totalLoadVectors || [];
   const totalLoadDisplayHTML = totalLoadVectors.length > 0 ? `
-    <div class="card" style="border-left: 4px solid var(--status-orange);">
+    <div class="card" style="border-left: 3px solid var(--status-orange);">
       <div class="card-header">
-        <div class="card-icon">🧠</div>
         <div class="card-title-group">
-          <h2>Totale Systeembelasting (Total Load)</h2>
-          <p>Actieve niet-fysieke stressoren van vandaag (Lennox Thompson, 2025)</p>
+          <h2>Actieve belastingsfactoren (Total Load)</h2>
+          <p>Niet-fysieke factoren die vandaag meespelen (Lennox Thompson, 2025)</p>
         </div>
       </div>
       <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-        ${totalLoadVectors.map(v => `<span class="stat-pill" style="background: var(--status-orange-bg); color: #92400E; border: 1px solid var(--status-orange-border);">⚠️ ${escapeHtml(v)}</span>`).join('')}
+        ${totalLoadVectors.map(v => `<span class="stat-pill" style="background: var(--surface-elevated); color: var(--brand-primary); border: 1px solid var(--border-color); font-weight: 400;">${escapeHtml(v)}</span>`).join('')}
       </div>
-      <p style="font-size: 0.85rem; color: var(--ink-muted); margin-top: 10px;">
-        💡 <em>Tip van Egon & Mathias:</em> Houd rekening met deze mentale of sensorische prikkels bij het doseren van je fysieke activiteiten!
+      <p style="font-size: 0.84rem; color: var(--ink-muted); margin-top: 10px; line-height: 1.5;">
+        Houd bij het doseren van je fysieke activiteiten rekening met deze mentale of sensorische factoren.
       </p>
     </div>
   ` : '';
@@ -458,21 +461,18 @@ function renderAdviceTab() {
     ${actDisplayHTML}
     <div class="card">
       <div class="card-header">
-        <div class="card-icon">🏋️‍♂️</div>
         <div class="card-title-group">
-          <h2>Voorgestelde Oefeningen & Interventies</h2>
-          <p>Aangepast aan jouw energiestatus op ${formatDutchDate(selectedDate)}</p>
+          <h2>Voorgestelde bewegingsoefeningen</h2>
+          <p>Richtinggevend afgestemd op je draagkracht van ${formatDutchDate(selectedDate)}</p>
         </div>
       </div>
 
       <!-- Duidelijke Klinische Disclaimer -->
-      <div class="clinical-disclaimer-box" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-left: 4px solid var(--brand-secondary); border-radius: var(--radius-sm); padding: 14px 16px; margin-bottom: 20px; display: flex; gap: 12px; align-items: flex-start;">
-        <span style="font-size: 1.35rem; line-height: 1; flex-shrink: 0;">ℹ️</span>
-        <div style="font-size: 0.88rem; color: var(--ink-primary); line-height: 1.55;">
-          <strong style="color: var(--brand-primary); display: block; margin-bottom: 4px; font-size: 0.92rem;">Belangrijke toelichting bij deze oefeningen:</strong>
-          Dit zijn algemene basisoefeningen en richtinggevende suggesties voor zenuwstelsel- en bewegingsdosering, <em>géén individueel medisch of kinesitherapeutisch behandelplan op maat</em>. Ieder lichaam en hersteltraject is uniek. 
-          Bespreek deze oefeningen en jouw dagboekervaring steeds tijdens je consultatie bij <strong>Kine Strop</strong> (samen met Egon of Mathias) om te bepalen wat voor jouw specifieke situatie de meest veilige en effectieve aanpak is.
-        </div>
+      <div class="clinical-disclaimer-box">
+        <div class="disclaimer-title">Klinische toelichting bij deze oefeningen</div>
+        <p style="margin: 0; font-size: 0.86rem; color: var(--ink-muted); line-height: 1.55;">
+          Dit zijn algemene basisoefeningen ter ondersteuning van zenuwstelsel en mobiliteit, geen individueel behandelplan. Ieder hersteltraject verloopt anders. Bespreek eventuele vragen of aanpassingen steeds tijdens je consultatie bij Kine Strop met Egon of Mathias.
+        </p>
       </div>
 
       <div class="exercise-grid">
@@ -499,7 +499,7 @@ function toggleExerciseCompletion(exId) {
 
   saveToStorage();
   renderAdviceTab();
-  showToast('Oefenstatus bijgewerkt! ✓');
+  showToast('Oefenstatus bijgewerkt');
 }
 
 /* ==========================================================================
@@ -513,8 +513,8 @@ function renderHistoryTab() {
 
   if (dates.length === 0) {
     container.innerHTML = `
-      <div class="card" style="text-align: center; padding: 36px 20px;">
-        <p style="color: var(--ink-muted);">Nog geen dagboekinvoeren gevonden. Vul je eerste dagboek in bij "Dagboek Invullen".</p>
+      <div style="text-align: center; padding: 36px 20px;">
+        <p style="color: var(--ink-muted); font-size: 0.9rem;">Nog geen eerdere dagboekregistraties gevonden.</p>
       </div>
     `;
     return;
@@ -523,27 +523,27 @@ function renderHistoryTab() {
   const listHTML = dates.map(d => {
     const entry = appData[d];
     const status = calculateDayStatus(entry);
-    const statusLabel = status === 'green' ? '🟢 Goed' : status === 'orange' ? '🟠 Matig' : '🔴 Herstel';
+    const statusLabel = status === 'green' ? 'Opbouwfase' : status === 'orange' ? 'Doseerfase' : 'Herstelfase';
     
     return `
       <div class="history-item">
         <div>
           <div class="history-date">${formatDutchDate(d)}</div>
-          <div style="font-size: 0.82rem; color: var(--ink-muted); margin-top: 2px;">
-            Zone: <strong>${statusLabel}</strong>
+          <div style="margin-top: 4px;">
+            <span class="status-pill-badge ${status}">${statusLabel}</span>
           </div>
         </div>
 
         <div class="history-stats">
-          <span class="stat-pill">😴 ${entry.sleepDuration || '-'}u slaap</span>
-          <span class="stat-pill">⚡ ${entry.energyLevel || '-'}% energie</span>
-          <span class="stat-pill">⚡ Pijn ${entry.painLevel || 0}/10</span>
-          ${entry.actGoal ? `<span class="stat-pill" title="${escapeHtml(entry.actGoal)}">🎯 ACT: ${formatActStatus(entry.actCompleted)}</span>` : ''}
+          <span class="stat-pill">${entry.sleepDuration || '-'}u slaap</span>
+          <span class="stat-pill">${entry.energyLevel || '-'}% energie</span>
+          <span class="stat-pill">Pijn ${entry.painLevel || 0}/10</span>
+          ${entry.actGoal ? `<span class="stat-pill" title="${escapeHtml(entry.actGoal)}">${formatActStatus(entry.actCompleted)}</span>` : ''}
         </div>
 
-        <div class="history-actions">
-          <button class="btn-icon" title="Bekijk of bewerk deze dag" onclick="selectAndEditDate('${d}')">✏️</button>
-          <button class="btn-icon" title="Verwijder" onclick="deleteEntry('${d}')">🗑️</button>
+        <div class="history-actions" style="display: flex; gap: 8px;">
+          <button class="btn-secondary" style="padding: 4px 10px; font-size: 0.78rem;" onclick="selectAndEditDate('${d}')">Bewerken</button>
+          <button class="btn-secondary" style="padding: 4px 10px; font-size: 0.78rem; color: var(--status-red); border-color: var(--status-red-border);" onclick="deleteEntry('${d}')">Verwijderen</button>
         </div>
       </div>
     `;
@@ -597,7 +597,7 @@ function renderExportTab() {
   if (dates.length === 0) {
     container.innerHTML = `
       <div class="card" style="text-align: center; padding: 36px 20px;">
-        <p style="color: var(--ink-muted);">Er zijn nog geen dagboeknotities om te exporteren.</p>
+        <p style="color: var(--ink-muted); font-size: 0.9rem;">Er zijn nog geen dagboeknotities om te exporteren.</p>
       </div>
     `;
     return;
@@ -622,13 +622,13 @@ function renderExportTab() {
   const tableRowsHTML = dates.map(d => {
     const e = appData[d];
     const status = calculateDayStatus(e);
-    const statusBadge = status === 'green' ? '🟢 Groen' : status === 'orange' ? '🟠 Oranje' : '🔴 Rood';
-    const totalLoadStr = (e.totalLoadVectors || []).length > 0 ? e.totalLoadVectors.join(', ') : 'Geen';
-    const regieStr = e.selfEfficacy === 'volledig' ? '🟢 Volledig' : e.selfEfficacy === 'gedeeltelijk' ? '🟠 Gedeeltelijk' : '🔴 Nauwelijks';
+    const statusBadge = status === 'green' ? '<span class="status-pill-badge green">Opbouw</span>' : status === 'orange' ? '<span class="status-pill-badge orange">Doseerbaar</span>' : '<span class="status-pill-badge red">Herstel</span>';
+    const totalLoadStr = (e.totalLoadVectors || []).length > 0 ? e.totalLoadVectors.join(', ') : '-';
+    const regieStr = e.selfEfficacy === 'volledig' ? 'Volledig' : e.selfEfficacy === 'gedeeltelijk' ? 'Gedeeltelijk' : 'Nauwelijks';
 
     return `
       <tr style="border-bottom: 1px solid #E2E8F0;">
-        <td style="padding: 10px; font-weight: 600;">${d}</td>
+        <td style="padding: 10px; font-weight: 500;">${d}</td>
         <td style="padding: 10px;">${statusBadge}</td>
         <td style="padding: 10px;">${e.sleepDuration || '-'}u (${e.sleepQuality || '-'}/5)</td>
         <td style="padding: 10px;">${e.energyLevel || '-'}%</td>
@@ -642,61 +642,61 @@ function renderExportTab() {
   }).join('');
 
   container.innerHTML = `
-    <div class="card" style="border: 2px solid var(--brand-primary); padding: 28px;">
+    <div class="card" style="border: 1px solid var(--border-color); padding: 24px;">
       
       <!-- Print Header (Visible on print & preview) -->
       <div class="print-header">
         <div>
-          <h2 style="font-family: var(--font-heading); color: var(--brand-primary); font-size: 1.4rem; font-weight: 700; margin-bottom: 4px;">
+          <h2 style="font-family: var(--font-heading); color: var(--brand-primary); font-size: 1.25rem; font-weight: 600; margin-bottom: 2px;">
             Kinestrop Patiënten Dagboek Rapport
           </h2>
-          <p style="font-size: 0.9rem; color: var(--ink-muted);">
-            Kinesitherapie & Chronische Pijnrevalidatie Gent | Egon & Mathias
+          <p style="font-size: 0.85rem; color: var(--ink-muted);">
+            Kinesitherapie & Chronische Pijnrevalidatie Gent • Egon & Mathias
           </p>
         </div>
         <div style="text-align: right;">
-          <div style="font-weight: 600; color: var(--brand-primary);" id="export-display-name">Patiënt: ${escapeHtml(patientName)}</div>
-          <div style="font-size: 0.85rem; color: var(--ink-muted);">Gegenereerd op: ${new Date().toLocaleDateString('nl-BE')}</div>
+          <div style="font-weight: 500; color: var(--brand-primary);" id="export-display-name">Patiënt: ${escapeHtml(patientName)}</div>
+          <div style="font-size: 0.82rem; color: var(--ink-muted);">Datum: ${new Date().toLocaleDateString('nl-BE')}</div>
         </div>
       </div>
 
       <!-- Samenvatting Grid -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 24px;">
-        <div style="background: var(--surface-elevated); padding: 12px; border-radius: 8px; text-align: center;">
-          <div style="font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase;">Gem. Slaap</div>
-          <div style="font-size: 1.3rem; font-weight: 700; color: var(--brand-primary);">${avgSleep} uur</div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 20px;">
+        <div style="background: var(--surface-elevated); padding: 12px; border-radius: 8px; text-align: center; border: 1px solid var(--border-color);">
+          <div style="font-size: 0.75rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.03em;">Gem. Slaap</div>
+          <div style="font-size: 1.2rem; font-weight: 600; color: var(--brand-primary);">${avgSleep} uur</div>
         </div>
-        <div style="background: var(--surface-elevated); padding: 12px; border-radius: 8px; text-align: center;">
-          <div style="font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase;">Gem. Energie</div>
-          <div style="font-size: 1.3rem; font-weight: 700; color: var(--brand-secondary);">${avgEnergy}%</div>
+        <div style="background: var(--surface-elevated); padding: 12px; border-radius: 8px; text-align: center; border: 1px solid var(--border-color);">
+          <div style="font-size: 0.75rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.03em;">Gem. Energie</div>
+          <div style="font-size: 1.2rem; font-weight: 600; color: var(--brand-secondary);">${avgEnergy}%</div>
         </div>
-        <div style="background: var(--surface-elevated); padding: 12px; border-radius: 8px; text-align: center;">
-          <div style="font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase;">Gem. Pijn</div>
-          <div style="font-size: 1.3rem; font-weight: 700; color: var(--brand-primary);">${avgPain}/10</div>
+        <div style="background: var(--surface-elevated); padding: 12px; border-radius: 8px; text-align: center; border: 1px solid var(--border-color);">
+          <div style="font-size: 0.75rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.03em;">Gem. Pijn</div>
+          <div style="font-size: 1.2rem; font-weight: 600; color: var(--brand-primary);">${avgPain}/10</div>
         </div>
-        <div style="background: var(--surface-elevated); padding: 12px; border-radius: 8px; text-align: center;">
-          <div style="font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase;">ACT Succes</div>
-          <div style="font-size: 1.3rem; font-weight: 700; color: #10B981;">${actCompletedCount} dagen</div>
+        <div style="background: var(--surface-elevated); padding: 12px; border-radius: 8px; text-align: center; border: 1px solid var(--border-color);">
+          <div style="font-size: 0.75rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.03em;">Doelen uitgevoerd</div>
+          <div style="font-size: 1.2rem; font-weight: 600; color: #059669;">${actCompletedCount} dagen</div>
         </div>
       </div>
 
       <!-- Detail Tabel -->
-      <h3 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--brand-primary); margin-bottom: 12px;">
-        Overzicht Dagen (${dates.length} meest recente notities)
+      <h3 style="font-family: var(--font-heading); font-size: 1rem; color: var(--brand-primary); margin-bottom: 10px; font-weight: 600;">
+        Overzicht Dagen (${dates.length} recente notities)
       </h3>
       <div style="overflow-x: auto;">
-        <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem; text-align: left;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left;">
           <thead>
-            <tr style="background: var(--surface-elevated); color: var(--brand-primary);">
-              <th style="padding: 10px;">Datum</th>
-              <th style="padding: 10px;">Zone</th>
-              <th style="padding: 10px;">Slaap</th>
-              <th style="padding: 10px;">Energie</th>
-              <th style="padding: 10px;">Pijn</th>
-              <th style="padding: 10px;">Total Load (Ment/Sens)</th>
-              <th style="padding: 10px;">Committed Action</th>
-              <th style="padding: 10px;">Eigen Regie</th>
-              <th style="padding: 10px;">Reflectie / Opmerking</th>
+            <tr style="background: var(--surface-elevated); color: var(--brand-primary); border-bottom: 1px solid var(--border-color);">
+              <th style="padding: 8px 10px; font-weight: 500;">Datum</th>
+              <th style="padding: 8px 10px; font-weight: 500;">Zone</th>
+              <th style="padding: 8px 10px; font-weight: 500;">Slaap</th>
+              <th style="padding: 8px 10px; font-weight: 500;">Energie</th>
+              <th style="padding: 8px 10px; font-weight: 500;">Pijn</th>
+              <th style="padding: 8px 10px; font-weight: 500;">Total Load</th>
+              <th style="padding: 8px 10px; font-weight: 500;">Committed Action</th>
+              <th style="padding: 8px 10px; font-weight: 500;">Eigen Regie</th>
+              <th style="padding: 8px 10px; font-weight: 500;">Reflectie</th>
             </tr>
           </thead>
           <tbody>
@@ -732,10 +732,10 @@ function setRadioValue(name, val) {
 
 function formatActStatus(statusStr) {
   switch (statusStr) {
-    case 'voltooid': return '🟢 Voltooid';
-    case 'aangepast': return '🟠 Aangepast uitgevoerd';
-    case 'niet_gelukt': return '⚪ Niet aan toegekomen';
-    default: return '🔵 Gepland';
+    case 'voltooid': return 'Volledig uitgevoerd';
+    case 'aangepast': return 'Aangepast uitgevoerd';
+    case 'niet_gelukt': return 'Bewust gepauzeerd / rust';
+    default: return 'Gepland voor vandaag';
   }
 }
 
@@ -755,10 +755,10 @@ function showToast(message) {
 
   const toast = document.createElement('div');
   toast.className = 'toast-notification';
-  toast.innerHTML = `<span>ℹ️</span> <span>${message}</span>`;
+  toast.textContent = message;
   document.body.appendChild(toast);
 
   setTimeout(() => {
     toast.remove();
-  }, 3000);
+  }, 2500);
 }

@@ -110,7 +110,7 @@ body {
   display: flex;
   align-items: center;
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.1rem;
   letter-spacing: -0.02em;
 }
@@ -307,14 +307,14 @@ label.form-label {
 
 .slider-value-badge {
   min-width: 60px;
-  padding: 6px 12px;
-  background: var(--brand-accent-bg);
-  color: var(--brand-secondary);
-  font-weight: 700;
-  font-size: 0.95rem;
+  padding: 5px 12px;
+  background: var(--surface-elevated);
+  color: var(--brand-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
   border-radius: var(--radius-sm);
   text-align: center;
-  border: 1px solid #BAE6FD;
+  border: 1px solid var(--border-color);
 }
 
 /* Chips / Selection Buttons */
@@ -434,61 +434,84 @@ textarea {
 
 /* Status Indicator Banner */
 .status-banner {
-  border-radius: var(--radius-lg);
-  padding: 20px;
-  margin-bottom: 24px;
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border-color);
+  background: var(--surface-card);
 }
 
 .status-banner.green {
-  background: var(--status-green-bg);
-  border-color: var(--status-green-border);
-  color: #065F46;
+  border-left: 4px solid var(--status-green);
 }
 
 .status-banner.orange {
-  background: var(--status-orange-bg);
-  border-color: var(--status-orange-border);
-  color: #92400E;
+  border-left: 4px solid var(--status-orange);
 }
 
 .status-banner.red {
-  background: var(--status-red-bg);
-  border-color: var(--status-red-border);
-  color: #991B1B;
+  border-left: 4px solid var(--status-red);
 }
 
-.status-icon-lg {
-  font-size: 2.2rem;
-  line-height: 1;
+.status-banner-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
 }
 
-.status-text h3 {
+.status-banner-header h3 {
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 1.15rem;
-  margin-bottom: 4px;
+  font-size: 1.05rem;
+  color: var(--brand-primary);
+}
+
+.status-pill-badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 2px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.status-pill-badge.green {
+  background: var(--status-green-bg);
+  color: #065F46;
+  border: 1px solid var(--status-green-border);
+}
+
+.status-pill-badge.orange {
+  background: var(--status-orange-bg);
+  color: #92400E;
+  border: 1px solid var(--status-orange-border);
+}
+
+.status-pill-badge.red {
+  background: var(--status-red-bg);
+  color: #991B1B;
+  border: 1px solid var(--status-red-border);
 }
 
 .status-text p {
-  font-size: 0.92rem;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--ink-primary);
 }
 
 /* Exercise Cards */
 .exercise-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 18px;
+  gap: 16px;
 }
 
 .exercise-card {
   background: var(--surface-card);
   border-radius: var(--radius-md);
-  padding: 20px;
+  padding: 18px;
   border: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
@@ -499,39 +522,39 @@ textarea {
 
 .exercise-badge {
   align-self: flex-start;
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: 0.72rem;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 4px 10px;
-  border-radius: 20px;
-  margin-bottom: 12px;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
 
-.badge-recovery { background: #E0F2FE; color: #0369A1; }
-.badge-mobility { background: #FEF3C7; color: #B45309; }
-.badge-strength { background: #D1FAE5; color: #047857; }
+.badge-recovery { background: #F1F5F9; color: #475569; border: 1px solid #CBD5E1; }
+.badge-mobility { background: #FEF3C7; color: #92400E; border: 1px solid #FDE68A; }
+.badge-strength { background: #ECFDF5; color: #065F46; border: 1px solid #A7F3D0; }
 
 .exercise-card h4 {
   font-family: var(--font-heading);
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--brand-primary);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .exercise-meta {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--ink-muted);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   display: flex;
   gap: 12px;
 }
 
 .exercise-desc {
   font-size: 0.88rem;
-  color: var(--ink-primary);
-  margin-bottom: 16px;
+  color: var(--ink-muted);
+  margin-bottom: 14px;
   line-height: 1.5;
 }
 
@@ -546,8 +569,8 @@ textarea {
   background: var(--surface-base);
   color: var(--ink-primary);
   border-radius: var(--radius-sm);
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.82rem;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
@@ -557,9 +580,29 @@ textarea {
 }
 
 .check-btn.completed {
-  background: var(--status-green-bg);
-  border-color: var(--status-green-border);
-  color: #065F46;
+  background: #F0FDF4;
+  border-color: #86EFAC;
+  color: #166534;
+}
+
+/* Clinical disclaimer box */
+.clinical-disclaimer-box {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-left: 3px solid var(--brand-secondary);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  font-size: 0.86rem;
+  color: var(--ink-primary);
+  line-height: 1.5;
+}
+
+.clinical-disclaimer-box .disclaimer-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--brand-primary);
+  margin-bottom: 4px;
 }
 
 /* History Items */

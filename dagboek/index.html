@@ -45,16 +45,16 @@
     <!-- Navigation Tabs -->
     <nav class="app-nav no-print">
       <button class="nav-btn active" data-tab="tab-entry">
-        <span>📝</span> Dagboek Invullen
+        Dagboek
       </button>
       <button class="nav-btn" data-tab="tab-advice">
-        <span>🧭</span> Advies & Oefeningen
+        Advies & Oefeningen
       </button>
       <button class="nav-btn" data-tab="tab-history">
-        <span>📊</span> Trends & Geschiedenis
+        Geschiedenis
       </button>
       <button class="nav-btn" data-tab="tab-export">
-        <span>🖨️</span> Rapport voor Kine
+        Klinisch Rapport
       </button>
     </nav>
 
@@ -65,10 +65,10 @@
         <!-- Sectie 1: Slaap & Herstel -->
         <section class="card">
           <div class="card-header">
-            <div class="card-icon">🌙</div>
+            <span class="card-step">1</span>
             <div class="card-title-group">
-              <h2>Slaap & Nachtelijk Herstel</h2>
-              <p>Slaap is de belangrijkste herstelbron voor je zenuwstelsel</p>
+              <h2>Slaap & herstel</h2>
+              <p>Inzicht in nachtrust en herstelcapaciteit</p>
             </div>
           </div>
 
@@ -81,27 +81,27 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label">Hoe beoordeel je de slaapkwaliteit?</label>
+            <label class="form-label">Slaapkwaliteit:</label>
             <div class="chip-grid">
               <div class="chip-item">
                 <input type="radio" id="sq1" name="sleepQuality" value="1">
-                <label for="sq1" class="chip-label"><span class="chip-icon">😫</span> Slecht</label>
+                <label for="sq1" class="chip-label">1 · Slecht</label>
               </div>
               <div class="chip-item">
                 <input type="radio" id="sq2" name="sleepQuality" value="2">
-                <label for="sq2" class="chip-label"><span class="chip-icon">🙁</span> Matig</label>
+                <label for="sq2" class="chip-label">2 · Matig</label>
               </div>
               <div class="chip-item">
                 <input type="radio" id="sq3" name="sleepQuality" value="3" checked>
-                <label for="sq3" class="chip-label"><span class="chip-icon">😐</span> Redelijk</label>
+                <label for="sq3" class="chip-label">3 · Redelijk</label>
               </div>
               <div class="chip-item">
                 <input type="radio" id="sq4" name="sleepQuality" value="4">
-                <label for="sq4" class="chip-label"><span class="chip-icon">🙂</span> Goed</label>
+                <label for="sq4" class="chip-label">4 · Goed</label>
               </div>
               <div class="chip-item">
                 <input type="radio" id="sq5" name="sleepQuality" value="5">
-                <label for="sq5" class="chip-label"><span class="chip-icon">😊</span> Uitstekend</label>
+                <label for="sq5" class="chip-label">5 · Uitstekend</label>
               </div>
             </div>
           </div>
@@ -111,51 +111,51 @@
             <div class="chip-grid">
               <div class="chip-item">
                 <input type="radio" id="sr1" name="sleepRecovery" value="onuitgerust">
-                <label for="sr1" class="chip-label">Onuitgerust / Zwaar</label>
+                <label for="sr1" class="chip-label">Onuitgerust / zwaar</label>
               </div>
               <div class="chip-item">
                 <input type="radio" id="sr2" name="sleepRecovery" value="matig" checked>
-                <label for="sr2" class="chip-label">Wisselend / Redelijk</label>
+                <label for="sr2" class="chip-label">Wisselend / redelijk</label>
               </div>
               <div class="chip-item">
                 <input type="radio" id="sr3" name="sleepRecovery" value="uitgerust">
-                <label for="sr3" class="chip-label">Fris & Opgeladen</label>
+                <label for="sr3" class="chip-label">Fris & opgeladen</label>
               </div>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="form-label">Slaap-regulariteit (vast waak- & bedtijdritme gehouden):</label>
+            <label class="form-label">Slaap-regulariteit (vast waak- en bedtijdritme):</label>
             <div class="chip-grid">
               <div class="chip-item">
                 <input type="radio" id="sreg1" name="sleepRegularity" value="ja" checked>
-                <label for="sreg1" class="chip-label">🟢 Vaste tijden</label>
+                <label for="sreg1" class="chip-label">Vaste tijden</label>
               </div>
               <div class="chip-item">
                 <input type="radio" id="sreg2" name="sleepRegularity" value="wisselend">
-                <label for="sreg2" class="chip-label">🟠 Licht wisselend</label>
+                <label for="sreg2" class="chip-label">Licht wisselend</label>
               </div>
               <div class="chip-item">
                 <input type="radio" id="sreg3" name="sleepRegularity" value="nee">
-                <label for="sreg3" class="chip-label">🔴 Sterk afgeweken (social jetlag)</label>
+                <label for="sreg3" class="chip-label">Sterk afgeweken</label>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Sectie 2: Pacing & Energie (De Batterij) -->
+        <!-- Sectie 2: Pacing & Energie -->
         <section class="card">
           <div class="card-header">
-            <div class="card-icon">🔋</div>
+            <span class="card-step">2</span>
             <div class="card-title-group">
-              <h2>Pacing & Energieniveau</h2>
-              <p>Balans tussen belasting (activiteiten) en belastbaarheid (capaciteit)</p>
+              <h2>Pacing & energieniveau</h2>
+              <p>Balans tussen dagelijkse belasting en belastbaarheid</p>
             </div>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="energy-level">Energieniveau bij de start van je dag:</label>
-            <p class="form-hint">0% = Volledig leeggelopen batterij | 100% = Volledige energie</p>
+            <p class="form-hint">0% = Lege batterij | 100% = Volledige capaciteit</p>
             <div class="slider-container">
               <input type="range" id="energy-level" min="0" max="100" step="5" value="60">
               <span class="slider-value-badge" id="energy-level-val">60%</span>
@@ -167,56 +167,56 @@
             <div class="chip-grid">
               <div class="chip-item">
                 <input type="radio" id="pb1" name="pacingBalance" value="overdone">
-                <label for="pb1" class="chip-label">🔴 te veel gedaan (grens overschreden)</label>
+                <label for="pb1" class="chip-label">Overbelast (grens gepasseerd)</label>
               </div>
               <div class="chip-item">
                 <input type="radio" id="pb2" name="pacingBalance" value="balanced" checked>
-                <label for="pb2" class="chip-label">🟢 Goed gedoseerd (met pauzes)</label>
+                <label for="pb2" class="chip-label">Gebalanceerd gedoseerd</label>
               </div>
               <div class="chip-item">
                 <input type="radio" id="pb3" name="pacingBalance" value="underdone">
-                <label for="pb3" class="chip-label">🟠 Erg passief (weinig bewogen)</label>
+                <label for="pb3" class="chip-label">Onderbelast / weinig bewogen</label>
               </div>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="form-label">Totale Systeembelasting — Non-fysieke belastingen (Total Load):</label>
-            <p class="form-hint">Niet-fysieke stressoren beïnvloeden je fysieke draagkracht even sterk (Lennox Thompson, 2025)</p>
+            <label class="form-label">Totale systeembelasting (Total Load):</label>
+            <p class="form-hint">Niet-fysieke belastingen beïnvloeden de fysieke draagkracht evenzeer (Lennox Thompson, 2025)</p>
             <div class="chip-grid">
               <div class="chip-item">
                 <input type="checkbox" id="tl-cog" name="totalLoadVectors" value="Cognitieve belasting">
-                <label for="tl-cog" class="chip-label">🧠 Mentale/Cognitieve focus (planningsdruk)</label>
+                <label for="tl-cog" class="chip-label">Cognitieve focus (hoge concentratie, plandruk)</label>
               </div>
               <div class="chip-item">
                 <input type="checkbox" id="tl-emo" name="totalLoadVectors" value="Emotionele stress">
-                <label for="tl-emo" class="chip-label">❤️ Emotionele spanning / piekeren</label>
+                <label for="tl-emo" class="chip-label">Emotionele belasting (spanning, zorgen)</label>
               </div>
               <div class="chip-item">
                 <input type="checkbox" id="tl-sens" name="totalLoadVectors" value="Sensorische overprikkeling">
-                <label for="tl-sens" class="chip-label">🔊 Sensorische prikkels (geluid/scherm)</label>
+                <label for="tl-sens" class="chip-label">Sensorische prikkels (geluid, schermen, drukte)</label>
               </div>
               <div class="chip-item">
                 <input type="checkbox" id="tl-bio" name="totalLoadVectors" value="Biologische stressor">
-                <label for="tl-bio" class="chip-label">🧬 Biologische stressor (verkoudheid/cyclus)</label>
+                <label for="tl-bio" class="chip-label">Biologische factor (infectie, vermoeidheid, cyclus)</label>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Sectie 3: Lichamelijke Klachten & Sensaties -->
+        <!-- Sectie 3: Lichamelijke Gewaarwordingen & Spanning -->
         <section class="card">
           <div class="card-header">
-            <div class="card-icon">🌱</div>
+            <span class="card-step">3</span>
             <div class="card-title-group">
-              <h2>Lichamelijke Klachten & Sensaties</h2>
-              <p>Observeer je spierspanning en gevoeligheid zonder oordeel</p>
+              <h2>Lichamelijke gewaarwordingen & spanning</h2>
+              <p>Gevoeligheid en beschermingsspanning observeren</p>
             </div>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="pain-level">Gevoeligheid / Pijnintensiteit vandaag (NPRS 0–10):</label>
-            <p class="form-hint">0 = Geen gevoeligheid | 1-3 = Milde achtergrondpijn | 4-6 = Matig aanwezig | 7-10 = Intensief</p>
+            <p class="form-hint">0 = Geen klachten · 1–3 = Mild · 4–6 = Matig · 7–10 = Hevig</p>
             <div class="slider-container">
               <input type="range" id="pain-level" min="0" max="10" step="1" value="3">
               <span class="slider-value-badge" id="pain-level-val">3/10</span>
@@ -225,19 +225,19 @@
 
           <div class="form-group">
             <label class="form-label">Gevoel van stijfheid / Opstartspanning (Stanton 2017):</label>
-            <p class="form-hint">Stijfheid is een beschermingssignaal van het zenuwstelsel om weefsel te ontzien, geen fysieke verkorting</p>
+            <p class="form-hint">Stijfheid is een beschermingsreactie van het zenuwstelsel, geen structurele verkorting</p>
             <div class="chip-grid">
               <div class="chip-item">
                 <input type="radio" id="stiff1" name="stiffnessPerception" value="geen" checked>
-                <label for="stiff1" class="chip-label">🟢 Geen tot milde spanning</label>
+                <label for="stiff1" class="chip-label">Geen tot milde spanning</label>
               </div>
               <div class="chip-item">
                 <input type="radio" id="stiff2" name="stiffnessPerception" value="matig">
-                <label for="stiff2" class="chip-label">🟠 Matig aanwezig (zachte beweging helpt)</label>
+                <label for="stiff2" class="chip-label">Matige stijfheid (zachte beweging helpt)</label>
               </div>
               <div class="chip-item">
                 <input type="radio" id="stiff3" name="stiffnessPerception" value="hoog">
-                <label for="stiff3" class="chip-label">🔴 Duidelijk aanwezig (beschermingsstand)</label>
+                <label for="stiff3" class="chip-label">Duidelijke beschermingsspanning</label>
               </div>
             </div>
           </div>
@@ -259,7 +259,7 @@
               </div>
               <div class="chip-item">
                 <input type="checkbox" id="reg-benen" name="bodyRegions" value="Benen/Knieën">
-                <label for="reg-benen" class="chip-label">Benen / Knieën</label>
+                <label for="reg-benen" class="chip-label">Benen & Knieën</label>
               </div>
               <div class="chip-item">
                 <input type="checkbox" id="reg-hoofd" name="bodyRegions" value="Hoofdpijn/Spanning">
@@ -273,77 +273,77 @@
           </div>
         </section>
 
-        <!-- Sectie 4: Committed Action (ACT) & Waarden -->
+        <!-- Sectie 4: Committed Action & Waarden -->
         <section class="card">
           <div class="card-header">
-            <div class="card-icon">🎯</div>
+            <span class="card-step">4</span>
             <div class="card-title-group">
-              <h2>Committed Action (Waardegerichte Actie)</h2>
-              <p>Stap voor stap bewegen naar wat écht belangrijk voor je is</p>
+              <h2>Waardegerichte actie (Committed Action)</h2>
+              <p>Kleine, betekenisvolle stappen binnen jouw mogelijkheden</p>
             </div>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="act-goal">Wat is vandaag een betekenisvol doel of waarde voor jou?</label>
-            <p class="form-hint">Bijv. "Tijd doorbrengen met gezin", "Buiten zijn in de natuur", "Zelfstandig boodschappen doen"</p>
-            <input type="text" id="act-goal" placeholder="Mijn waardegerichte doel voor vandaag...">
+            <p class="form-hint">Bijv. "Tijd met gezin doorbrengen", "Even buiten wandelen", "Rustig koken"</p>
+            <input type="text" id="act-goal" placeholder="Mijn waardegerichte doel...">
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="act-step">Concrete, haalbare stap + pacing-afspraak met jezelf:</label>
-            <p class="form-hint">Bijv. "15 minuten wandelen in het park, met 2 rustpauzes op een bankje"</p>
-            <input type="text" id="act-step" placeholder="Mijn concrete gedoseerde stap...">
+            <label class="form-label" for="act-step">Concrete stap en pacing-afspraak met jezelf:</label>
+            <p class="form-hint">Bijv. "15 minuten wandelen met halverwege een korte pauze"</p>
+            <input type="text" id="act-step" placeholder="Mijn gedoseerde tussenstap...">
           </div>
 
           <div class="form-group">
-            <label class="form-label">Status Committed Action (Avond-check):</label>
+            <label class="form-label">Status waardegerichte actie (avond-evaluatie):</label>
             <div class="chip-grid">
               <div class="chip-item">
                 <input type="radio" id="ac1" name="actCompleted" value="gepland" checked>
-                <label for="ac1" class="chip-label">🔵 Gepland voor vandaag</label>
+                <label for="ac1" class="chip-label">Gepland voor vandaag</label>
               </div>
               <div class="chip-item">
                 <input type="radio" id="ac2" name="actCompleted" value="voltooid">
-                <label for="ac2" class="chip-label">🟢 Volledig gelukt</label>
+                <label for="ac2" class="chip-label">Volledig uitgevoerd</label>
               </div>
               <div class="chip-item">
                 <input type="radio" id="ac3" name="actCompleted" value="aangepast">
-                <label for="ac3" class="chip-label">🟠 Aangepast uitgevoerd</label>
+                <label for="ac3" class="chip-label">Aangepast uitgevoerd</label>
               </div>
               <div class="chip-item">
                 <input type="radio" id="ac4" name="actCompleted" value="niet_gelukt">
-                <label for="ac4" class="chip-label">⚪ Bewust uitgesteld / rust genomen</label>
+                <label for="ac4" class="chip-label">Bewust gepauzeerd / rust</label>
               </div>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="form-label">Gevoel van Eigen Regie & Autonomie vandaag (Sanabria-Mazo 2026):</label>
-            <p class="form-hint">In welke mate voelde je dat je zélf de controle en regie had over je keuzes en dagindeling?</p>
+            <label class="form-label">Gevoel van eigen regie en autonomie vandaag:</label>
+            <p class="form-hint">In welke mate voelde je dat je zélf de keuzes maakte over je dagindeling?</p>
             <div class="chip-grid">
               <div class="chip-item">
                 <input type="radio" id="aut1" name="selfEfficacy" value="volledig" checked>
-                <label for="aut1" class="chip-label">🟢 Volledige regie</label>
+                <label for="aut1" class="chip-label">Volledige eigen regie</label>
               </div>
               <div class="chip-item">
                 <input type="radio" id="aut2" name="selfEfficacy" value="gedeeltelijk">
-                <label for="aut2" class="chip-label">🟠 Gedeeltelijk</label>
+                <label for="aut2" class="chip-label">Gedeeltelijke regie</label>
               </div>
               <div class="chip-item">
                 <input type="radio" id="aut3" name="selfEfficacy" value="nauwelijks">
-                <label for="aut3" class="chip-label">🔴 Gevoel overgeleverd te zijn</label>
+                <label for="aut3" class="chip-label">Weinig tot geen regie</label>
               </div>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="reflection-notes">Reflectie / Succesmoment ("Wat ging goed vandaag?"):</label>
-            <textarea id="reflection-notes" placeholder="Schrijf hier een korte positieve ervaring of notitie voor jezelf of voor Egon & Mathias..."></textarea>
+            <label class="form-label" for="reflection-notes">Reflectie / Succeservaring ("Wat ging goed vandaag?"):</label>
+            <textarea id="reflection-notes" placeholder="Korte observatie of positieve ervaring voor jezelf of voor de kine..."></textarea>
           </div>
         </section>
 
         <button type="submit" class="btn-primary">
-          <span>💾</span> Dagboek Opslaan & Advies Bekijken
+          Dagboek opslaan & advies bekijken
         </button>
 
       </form>
@@ -360,10 +360,9 @@
     <main id="tab-history" class="tab-content">
       <div class="card">
         <div class="card-header">
-          <div class="card-icon">📊</div>
           <div class="card-title-group">
-            <h2>Mijn Dagboek Historie</h2>
-            <p>Overzicht van je eerdere registraties op dit apparaat</p>
+            <h2>Dagboekgeschiedenis</h2>
+            <p>Overzicht van eerdere registraties op dit apparaat</p>
           </div>
         </div>
 
@@ -371,9 +370,9 @@
           <!-- Dynamic content rendered by app.js -->
         </div>
 
-        <div style="margin-top: 24px; pt: 18px; border-top: 1px solid var(--border-color); text-align: right;">
-          <button id="clear-data-btn" class="btn-secondary" style="color: var(--status-red); border-color: var(--status-red-border);">
-            🗑️ Wissen & Resetten
+        <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border-color); text-align: right;">
+          <button id="clear-data-btn" class="btn-secondary" style="color: var(--status-red); border-color: var(--status-red-border); font-size: 0.82rem;">
+            Gegevens wissen
           </button>
         </div>
       </div>
@@ -383,20 +382,19 @@
     <main id="tab-export" class="tab-content">
       <div class="card no-print">
         <div class="card-header">
-          <div class="card-icon">🖨️</div>
           <div class="card-title-group">
-            <h2>Rapport voor Kinesitherapie Consultatie</h2>
-            <p>Genereer een overzichtelijk overzicht om mee te nemen naar Egon of Mathias</p>
+            <h2>Klinisch consultatierapport</h2>
+            <p>Overzicht voor bespreking tijdens je consultatie bij Kine Strop</p>
           </div>
         </div>
 
         <div class="form-group" style="max-width: 400px;">
-          <label class="form-label" for="export-patient-name">Jouw naam (optioneel):</label>
-          <input type="text" id="export-patient-name" placeholder="Vul je voornaam en achternaam in...">
+          <label class="form-label" for="export-patient-name">Naam patiënt (optioneel):</label>
+          <input type="text" id="export-patient-name" placeholder="Voornaam en achternaam...">
         </div>
 
         <button id="print-export-btn" class="btn-primary" style="width: auto;">
-          <span>🖨️</span> Druk af of Opslaan als PDF
+          Afdrukken of opslaan als PDF
         </button>
       </div>
 
