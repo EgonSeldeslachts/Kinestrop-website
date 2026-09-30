@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pacingdagboek & Activiteitenbalans — Kine Strop Gent</title>
+  <meta name="description" content="Werkboek Activiteitenbalans & Pacing bij chronische pijn en vermoeidheid. Te bespreken tijdens consultatie bij Kine Strop Gent.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-primary: #1E293B;
+      --brand-secondary: #0284C7;
+      --surface-base: #FFFFFF;
+      --surface-elevated: #F8FAFC;
+      --ink-primary: #1C2833;
+      --ink-muted: #64748B;
+      --accent-bg: #F0F9FF;
+      --border-color: #E2E8F0;
+      --border-dark: #CBD5E1;
+      --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--ink-primary);
+      background-color: var(--surface-elevated);
+      line-height: 1.6;
+      font-size: 14px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Navigation Banner (Screen only) */
+    .top-nav-bar {
+      background: var(--surface-base);
+      border-bottom: 1px solid var(--border-color);
+      padding: 12px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .top-nav-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .tool-switcher {
+      display: inline-flex;
+      background: var(--surface-elevated);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 3px;
+      gap: 4px;
+    }
+
+    .switcher-link {
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--ink-muted);
+      transition: all 0.15s ease;
+    }
+
+    .switcher-link:hover {
+      color: var(--brand-primary);
+    }
+
+    .switcher-link.active {
+      background: var(--brand-primary);
+      color: #FFFFFF;
+    }
+
+    .print-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .print-btn {
+      background-color: var(--brand-secondary);
+      color: #FFFFFF;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 13.5px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background-color 0.2s ease;
+    }
+
+    .print-btn:hover { background-color: #0369A1; }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 20px 48px 20px;
+    }
+
+    /* Instruction Alert Box */
+    .clinical-notice-box {
+      background: #F0F9FF;
+      border: 1px solid #BAE6FD;
+      border-left: 4px solid var(--brand-secondary);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+
+    .clinical-notice-box strong {
+      color: var(--brand-primary);
+    }
+
+    /* Header */
+    header {
+      background: var(--brand-primary);
+      color: #FFFFFF;
+      padding: 22px 28px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .header-left h1 {
+      font-family: var(--font-heading);
+      font-size: 21px;
+      font-weight: 600;
+      color: #FFFFFF;
+      margin-bottom: 2px;
+    }
+
+    .header-left p {
+      font-size: 13px;
+      color: #94A3B8;
+    }
+
+    .logo-img { height: 44px; width: auto; }
+
+    /* Card Panels */
+    .card {
+      background: var(--surface-base);
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border-color);
+    }
+
+    .card-badge {
+      display: inline-block;
+      background: var(--accent-bg);
+      color: var(--brand-secondary);
+      font-weight: 500;
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      color: var(--brand-primary);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    h3 {
+      font-family: var(--font-heading);
+      font-size: 15px;
+      color: var(--brand-primary);
+      margin: 16px 0 8px 0;
+      font-weight: 600;
+    }
+
+    p { margin-bottom: 10px; }
+
+    /* Patient Info Bar */
+    .patient-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      background: var(--surface-elevated);
+      padding: 14px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 20px;
+      font-size: 13px;
+    }
+
+    .fill-line {
+      border-bottom: 1.5px solid #64748B;
+      display: inline-block;
+      width: 60%;
+      height: 18px;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 13px;
+    }
+
+    th, td {
+      padding: 8px 10px;
+      text-align: left;
+      border: 1px solid var(--border-color);
+    }
+
+    th {
+      background-color: var(--surface-elevated);
+      color: var(--brand-primary);
+      font-weight: 500;
+      font-family: var(--font-heading);
+      font-size: 12.5px;
+    }
+
+    /* Callout */
+    .callout {
+      background-color: var(--accent-bg);
+      border-left: 3px solid var(--brand-secondary);
+      padding: 12px 16px;
+      border-radius: 0 6px 6px 0;
+      margin: 14px 0;
+      font-size: 13.5px;
+    }
+
+    .callout-title {
+      font-weight: 600;
+      color: var(--brand-primary);
+      margin-bottom: 2px;
+    }
+
+    /* Checkbox list */
+    .checkbox-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .checkbox-box {
+      width: 16px;
+      height: 16px;
+      border: 1.5px solid #64748B;
+      border-radius: 3px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .page-break { page-break-before: always; }
+
+    @media print {
+      body { background: #FFF; font-size: 11.5px; color: #000; }
+      .top-nav-bar { display: none !important; }
+      .container { max-width: 100%; padding: 0; }
+      header { background: none; color: #000; border-bottom: 2px solid var(--brand-primary); padding: 0 0 10px 0; border-radius: 0; }
+      .header-left h1 { color: var(--brand-primary); font-size: 17px; }
+      .header-left p { color: #475569; }
+      .logo-img { height: 36px; }
+      .card { border: none; padding: 0; margin-bottom: 16px; }
+      .patient-info-grid { border: 1px solid #CBD5E1; padding: 10px; }
+      .clinical-notice-box { border-left-color: #334155; border-color: #CBD5E1; background: #F8FAFC !important; }
+      .page-break { page-break-before: always; padding-top: 14px; }
+      th { background-color: #F1F5F9 !important; -webkit-print-color-adjust: exact; }
+      .callout { background-color: #F8FAFC !important; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen-only Switcher & Print Bar -->
+  <div class="top-nav-bar">
+    <div class="top-nav-container">
+      <div class="tool-switcher">
+        <a href="/dagboek" class="switcher-link">Dagelijkse Check-in</a>
+        <a href="/pacingdagboek" class="switcher-link active">Pacingdagboek (Werkboek)</a>
+      </div>
+      <div class="print-actions">
+        <a href="/dagboek" style="font-size: 0.84rem; color: var(--ink-muted); text-decoration: none;">← Naar dagelijkse check-in</a>
+        <button class="print-btn" onclick="window.print()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          Afdrukken of Opslaan als PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+      <div class="header-left">
+        <h1>Pacingdagboek & Activiteitenbalans</h1>
+        <p>Klinisch Werkboek voor Kinesitherapie Consultatie • Kine Strop Gent</p>
+      </div>
+      <img src="/assets/logo.png" alt="Kine Strop Logo" class="logo-img" onerror="this.style.display='none'">
+    </header>
+
+    <!-- Expliciete Klinische Afspraak & Gebruiksinstructie -->
+    <div class="clinical-notice-box">
+      <strong>Klinische toelichting & gebruik:</strong><br>
+      Dit pacingdagboek is een gestructureerd werkboek om in te vullen over <strong>verschillende representatieve dagen (bijv. 2 weekdagen en 1 weekenddag)</strong>, <em>nadat we dit samen tijdens je consultatie bij Kine Strop hebben besproken</em>. Het dient om samen in de praktijk te overlopen hoe jouw activiteiten, rust en belasting verdeeld zijn, en op basis daarvan je veilige startgrens en herstelplan op te stellen.<br>
+      <span style="font-size: 0.82rem; color: var(--ink-muted); display: inline-block; margin-top: 6px;">
+        Zoek je de snelle dagelijkse registratie voor thuis? Gebruik dan de <a href="/dagboek" style="color: var(--brand-secondary); text-decoration: underline;">Dagelijkse Check-in & Energiemonitor</a>.
+      </span>
+    </div>
+
+    <div class="patient-info-grid">
+      <div><strong>Naam patiënt:</strong> <span class="fill-line" style="width: 65%;"></span></div>
+      <div><strong>Datum consultatie:</strong> <span class="fill-line" style="width: 60%;"></span></div>
+      <div style="grid-column: span 2;"><strong>Kinesitherapeut:</strong> Egon Seldeslachts / Mathias (Kine Strop — Gent)</div>
+    </div>
+
+    <div class="card">
+      <h2>Doel van dit werkboek</h2>
+      <p>Als je kampt met wisselende pijn of vermoeidheid, ontstaat vaak een 'piek-en-dal' patroon: op een betere dag probeer je veel in te halen, waarna je de dag(en) erna gedwongen moet recupereren door een toename van klachten.</p>
+      <p>Pacing betekent niet minder doen, maar <strong>slimmer doseren op de klok</strong>. Dit schema legt je weekritme bloot zodat we samen een veilige basislijn kunnen bepalen.</p>
+    </div>
+
+    <!-- DEEL 1: DAGSCHEMA DAG 1 -->
+    <div class="card page-break">
+      <span class="card-badge">Deel 1 — Dag 1 (Doordeweeks)</span>
+      <h2>Uur-tot-Uur Dagschema: Weekdag 1</h2>
+      <p>Noteer per uur kort wat je deed en geef aan hoe het blok voelde (1 = Vlot/licht, 3 = Neutraal, 5 = Zwaar/vermoeiend).</p>
+      <p><strong>Datum / Weekdag:</strong> <span class="fill-line" style="width: 260px;"></span></p>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 95px;">Tijdstip</th>
+            <th>Activiteit (Wat heb je gedaan?)</th>
+            <th style="width: 150px;">Type (Fysiek / Mentaal / Rust)</th>
+            <th style="width: 170px;">Zwaarte (1 = Vlot · 5 = Zwaar)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>07:00 - 08:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>08:00 - 09:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>09:00 - 10:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>10:00 - 11:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>11:00 - 12:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>12:00 - 13:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>13:00 - 14:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>14:00 - 15:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>15:00 - 16:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>16:00 - 17:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>17:00 - 18:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>18:00 - 19:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>19:00 - 20:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>20:00 - 21:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>21:00 - 22:00</strong></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- DEEL 1: DAGSCHEMA DAG 2 -->
+    <div class="card page-break">
+      <span class="card-badge">Deel 1 — Dag 2 (Doordeweeks)</span>
+      <h2>Uur-tot-Uur Dagschema: Weekdag 2</h2>
+      <p>Noteer per uur kort wat je deed en geef aan hoe het blok voelde.</p>
+      <p><strong>Datum / Weekdag:</strong> <span class="fill-line" style="width: 260px;"></span></p>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 95px;">Tijdstip</th>
+            <th>Activiteit (Wat heb je gedaan?)</th>
+            <th style="width: 150px;">Type (Fysiek / Mentaal / Rust)</th>
+            <th style="width: 170px;">Zwaarte (1 = Vlot · 5 = Zwaar)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>07:00 - 08:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>08:00 - 09:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>09:00 - 10:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>10:00 - 11:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>11:00 - 12:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>12:00 - 13:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>13:00 - 14:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>14:00 - 15:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>15:00 - 16:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>16:00 - 17:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>17:00 - 18:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>18:00 - 19:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>19:00 - 20:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>20:00 - 21:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>21:00 - 22:00</strong></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- DEEL 1: DAGSCHEMA DAG 3 (WEEKEND) -->
+    <div class="card page-break">
+      <span class="card-badge">Deel 1 — Dag 3 (Weekenddag)</span>
+      <h2>Uur-tot-Uur Dagschema: Weekenddag</h2>
+      <p>Weekenddagen hebben vaak een ander ritme of andere sociale prikkels dan doordeweekse dagen.</p>
+      <p><strong>Datum / Weekenddag:</strong> <span class="fill-line" style="width: 260px;"></span></p>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 95px;">Tijdstip</th>
+            <th>Activiteit (Wat heb je gedaan?)</th>
+            <th style="width: 150px;">Type (Fysiek / Mentaal / Rust)</th>
+            <th style="width: 170px;">Zwaarte (1 = Vlot · 5 = Zwaar)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>08:00 - 09:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>09:00 - 10:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>10:00 - 11:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>11:00 - 12:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>12:00 - 13:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>13:00 - 14:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>14:00 - 15:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>15:00 - 16:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>16:00 - 17:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>17:00 - 18:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>18:00 - 19:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>19:00 - 20:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>20:00 - 21:00</strong></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>21:00 - 22:00</strong></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- DEEL 2: CHECKLIST -->
+    <div class="card page-break">
+      <span class="card-badge">Deel 2 — Zelfreflectie</span>
+      <h2>De Totale Belastings-Checklist (Total Load)</h2>
+      <p>Pijn en vermoeidheid nemen niet alleen toe door fysieke belasting. Ook mentale concentratie, emoties, omgevingsprikkels en slechte slaap beïnvloeden de gevoeligheid van je zenuwstelsel.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 180px;">Belastingstype</th>
+            <th>Voorbeelden in jouw dag</th>
+            <th style="width: 180px;">Jouw Score (1 = Laag · 5 = Hoog)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Fysieke belasting</strong></td>
+            <td>Wandelen, huishouden, tillen, lang zitten, sport</td>
+            <td>[ 1 - 2 - 3 - 4 - 5 ]</td>
+          </tr>
+          <tr>
+            <td><strong>Mentale belasting</strong></td>
+            <td>Schermtijd, administratie, complexe taken, plannen</td>
+            <td>[ 1 - 2 - 3 - 4 - 5 ]</td>
+          </tr>
+          <tr>
+            <td><strong>Emotionele belasting</strong></td>
+            <td>Zorgen, stress, piekeren, moeilijke gesprekken</td>
+            <td>[ 1 - 2 - 3 - 4 - 5 ]</td>
+          </tr>
+          <tr>
+            <td><strong>Omgevingsprikkels</strong></td>
+            <td>Drukke ruimtes, verkeer, fel licht, luide geluiden</td>
+            <td>[ 1 - 2 - 3 - 4 - 5 ]</td>
+          </tr>
+          <tr>
+            <td><strong>Slaap & Herstel</strong></td>
+            <td>Onderbroken nacht, vroeg wakker, vermoeid ontwaken</td>
+            <td>[ 1 - 2 - 3 - 4 - 5 ]</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <div class="callout-title">Klinische afspraak:</div>
+        Is je mentale of emotionele belasting een 4 of 5? Schaal je fysieke doelen die dag dan bewust iets terug. Zo voorkom je dat je totale belastbaarheid overschreden wordt.
+      </div>
+    </div>
+
+    <!-- DEEL 3 & 4: STARTGRENS & ACTIEPLAN -->
+    <div class="card page-break">
+      <span class="card-badge">Deel 3 & 4 — Plan & Afspraken</span>
+      <h2>Samen te Bepalen in de Praktijk</h2>
+
+      <h3>1. Onze Veilige Startgrens (Baseline)</h3>
+      <p>Gekozen activiteit: <span class="fill-line" style="width: 300px;"></span></p>
+      <p>• Wat lukt er op een moeilijke dag zonder opstoot? <span class="fill-line" style="width: 80px;"></span> minuten</p>
+      <p>• Onze afgesproken startgrens (tijd minus 20%): <strong><span class="fill-line" style="width: 80px;"></span> minuten</strong></p>
+
+      <p style="font-size: 0.88rem; color: var(--ink-muted); margin-top: 6px;">
+        <em>Afspraak: Stop op de afgesproken tijd op de klok, niet pas wanneer je lichaam overbelast raakt.</em>
+      </p>
+
+      <hr style="margin: 18px 0; border: none; border-top: 1px solid var(--border-color);">
+
+      <h3>2. Mijn Opstoot-Actieplan (Flare-Up Plan)</h3>
+      <p>Als mijn klachten tijdelijk toenemen, handel ik volgens deze stappen:</p>
+
+      <div class="checkbox-item">
+        <div class="checkbox-box"></div>
+        <div><strong>1. Geruststelling:</strong> Ik herinner mezelf: <em>"Dit is een tijdelijk beschermingssignaal van mijn zenuwstelsel, geen nieuwe schade."</em></div>
+      </div>
+
+      <div class="checkbox-item">
+        <div class="checkbox-box"></div>
+        <div><strong>2. Terugschalen:</strong> Ik halveer tijdelijk mijn activiteitenduur naar <span class="fill-line" style="width: 70px;"></span> minuten en las vaker rust in.</div>
+      </div>
+
+      <div class="checkbox-item">
+        <div class="checkbox-box"></div>
+        <div><strong>3. Actief herstel:</strong> Ik pas rustige buikademhaling toe of zoek warmte en rustige ontspanning op.</div>
+      </div>
+
+      <div class="checkbox-item">
+        <div class="checkbox-box"></div>
+        <div><strong>4. Communicatie:</strong> Ik geef duidelijk aan mijn omgeving aan dat ik tijdelijk doseer.</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

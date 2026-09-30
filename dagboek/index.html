@@ -31,8 +31,8 @@
           <div class="brand-logo-fallback" style="display: none;">KINESTROP</div>
         </a>
         <div class="brand-text">
-          <h1>Patiënten Dagboek</h1>
-          <p>Kinesitherapie & Pacing Kompas • <a href="/" class="no-print" style="color: var(--brand-secondary); text-decoration: none; font-size: 0.825rem;">← Naar kinestrop.be</a></p>
+          <h1>Dagelijkse Check-in</h1>
+          <p>Pacing & Energiemonitor • <a href="/" class="no-print" style="color: var(--brand-secondary); text-decoration: none; font-size: 0.825rem;">← Naar kinestrop.be</a></p>
         </div>
       </div>
 
@@ -41,6 +41,17 @@
         <input type="date" id="entry-date">
       </div>
     </header>
+
+    <!-- Tool Switcher Bar -->
+    <div class="tool-switcher-bar no-print" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; background: var(--surface-base); padding: 8px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); flex-wrap: wrap; gap: 10px;">
+      <div style="display: inline-flex; background: var(--surface-elevated); border: 1px solid var(--border-color); border-radius: 6px; padding: 2px;">
+        <span style="padding: 5px 12px; border-radius: 4px; font-size: 0.82rem; font-weight: 600; background: var(--brand-primary); color: #fff;">Dagelijkse Check-in</span>
+        <a href="/pacingdagboek" style="padding: 5px 12px; border-radius: 4px; font-size: 0.82rem; font-weight: 500; text-decoration: none; color: var(--ink-muted);">Pacingdagboek (Werkboek)</a>
+      </div>
+      <div style="font-size: 0.82rem; color: var(--ink-muted);">
+        Uur-tot-uur dagschema voor je consultatie met Egon? <a href="/pacingdagboek" style="color: var(--brand-secondary); text-decoration: underline; font-weight: 500;">Bekijk het Pacingdagboek Werkboek →</a>
+      </div>
+    </div>
 
     <!-- Navigation Tabs -->
     <nav class="app-nav no-print">
@@ -60,6 +71,11 @@
 
     <!-- TAB 1: DAGBOEK INVULLEN -->
     <main id="tab-entry" class="tab-content active">
+      <!-- Info notice for consultation vs daily check-in -->
+      <div class="clinical-notice-box no-print" style="background: #F8FAFC; border: 1px solid var(--border-color); border-left: 3px solid var(--brand-secondary); border-radius: var(--radius-sm); padding: 10px 14px; margin-bottom: 16px; font-size: 0.84rem; color: var(--ink-muted); line-height: 1.5;">
+        <strong style="color: var(--brand-primary); font-weight: 500;">Dagelijkse zelfreflectie:</strong> Vul dit korte formulier dagelijks in om je energie en draagkracht te monitoren. Heb je met je kinesitherapeut afgesproken om een uitgebreid 3-daags uur-tot-uur dagschema bij te houden? Gebruik dan het <a href="/pacingdagboek" style="color: var(--brand-secondary); text-decoration: underline; font-weight: 500;">Pacingdagboek Werkboek</a>.
+      </div>
+
       <form id="daily-entry-form">
 
         <!-- Sectie 1: Slaap & Herstel -->
