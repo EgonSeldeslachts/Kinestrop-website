@@ -464,6 +464,17 @@ function renderAdviceTab() {
           <p>Aangepast aan jouw energiestatus op ${formatDutchDate(selectedDate)}</p>
         </div>
       </div>
+
+      <!-- Duidelijke Klinische Disclaimer -->
+      <div class="clinical-disclaimer-box" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-left: 4px solid var(--brand-secondary); border-radius: var(--radius-sm); padding: 14px 16px; margin-bottom: 20px; display: flex; gap: 12px; align-items: flex-start;">
+        <span style="font-size: 1.35rem; line-height: 1; flex-shrink: 0;">ℹ️</span>
+        <div style="font-size: 0.88rem; color: var(--ink-primary); line-height: 1.55;">
+          <strong style="color: var(--brand-primary); display: block; margin-bottom: 4px; font-size: 0.92rem;">Belangrijke toelichting bij deze oefeningen:</strong>
+          Dit zijn algemene basisoefeningen en richtinggevende suggesties voor zenuwstelsel- en bewegingsdosering, <em>géén individueel medisch of kinesitherapeutisch behandelplan op maat</em>. Ieder lichaam en hersteltraject is uniek. 
+          Bespreek deze oefeningen en jouw dagboekervaring steeds tijdens je consultatie bij <strong>Kine Strop</strong> (samen met Egon of Mathias) om te bepalen wat voor jouw specifieke situatie de meest veilige en effectieve aanpak is.
+        </div>
+      </div>
+
       <div class="exercise-grid">
         ${exerciseCardsHTML}
       </div>
