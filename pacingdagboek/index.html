@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pacingdagboek & Activiteitenbalans — Kine Strop Gent</title>
-  <meta name="description" content="Werkboek Activiteitenbalans & Pacing bij chronische pijn en vermoeidheid. Te bespreken tijdens consultatie bij Kine Strop Gent.">
+  <meta name="description" content="Digitaal invulbaar Werkboek Activiteitenbalans & Pacing bij chronische pijn en vermoeidheid. Te bespreken tijdens consultatie bij Kine Strop Gent.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
@@ -45,7 +45,7 @@
     }
 
     .top-nav-container {
-      max-width: 900px;
+      max-width: 920px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -86,6 +86,40 @@
       display: flex;
       gap: 10px;
       align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .save-indicator {
+      font-size: 0.78rem;
+      color: #059669;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .save-indicator.visible {
+      opacity: 1;
+    }
+
+    .clear-btn {
+      background: none;
+      border: 1px solid var(--border-dark);
+      color: var(--ink-muted);
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-family: var(--font-body);
+      font-size: 12.5px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .clear-btn:hover {
+      background: #F1F5F9;
+      color: #DC2626;
+      border-color: #F87171;
     }
 
     .print-btn {
@@ -107,7 +141,7 @@
     .print-btn:hover { background-color: #0369A1; }
 
     .container {
-      max-width: 900px;
+      max-width: 920px;
       margin: 0 auto;
       padding: 24px 20px 48px 20px;
     }
@@ -208,11 +242,41 @@
       font-size: 13px;
     }
 
-    .fill-line {
-      border-bottom: 1.5px solid #64748B;
+    .info-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Digital Form Inputs */
+    .form-input {
+      font-family: var(--font-body);
+      font-size: 13.5px;
+      color: var(--ink-primary);
+      background: #FFFFFF;
+      border: 1px solid var(--border-dark);
+      border-radius: 6px;
+      padding: 6px 10px;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--brand-secondary);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+
+    .form-input.inline-input {
+      width: 90px;
       display: inline-block;
-      width: 60%;
-      height: 18px;
+      text-align: center;
+      padding: 4px 8px;
+      margin: 0 4px;
+    }
+
+    .form-input.fill-input {
+      flex: 1;
+      width: 100%;
     }
 
     /* Tables */
@@ -224,9 +288,10 @@
     }
 
     th, td {
-      padding: 8px 10px;
+      padding: 6px 8px;
       text-align: left;
       border: 1px solid var(--border-color);
+      vertical-align: middle;
     }
 
     th {
@@ -235,6 +300,43 @@
       font-weight: 500;
       font-family: var(--font-heading);
       font-size: 12.5px;
+      padding: 8px 10px;
+    }
+
+    .table-input {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: var(--ink-primary);
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 5px 8px;
+      transition: all 0.15s ease;
+    }
+
+    .table-input:focus {
+      outline: none;
+      border-color: var(--brand-secondary);
+      background: #F0F9FF;
+    }
+
+    .table-select {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 12.5px;
+      color: var(--ink-primary);
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 5px 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .table-select:focus {
+      outline: none;
+      border-color: var(--brand-secondary);
     }
 
     /* Callout */
@@ -258,34 +360,186 @@
       display: flex;
       align-items: flex-start;
       gap: 10px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      font-size: 13.5px;
     }
 
-    .checkbox-box {
-      width: 16px;
-      height: 16px;
-      border: 1.5px solid #64748B;
-      border-radius: 3px;
-      margin-top: 2px;
+    .checkbox-item input[type="checkbox"] {
+      width: 17px;
+      height: 17px;
+      accent-color: var(--brand-secondary);
+      margin-top: 3px;
+      cursor: pointer;
       flex-shrink: 0;
+    }
+
+    .textarea-input {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: var(--ink-primary);
+      border: 1px solid var(--border-dark);
+      border-radius: 6px;
+      padding: 8px 10px;
+      resize: vertical;
+      margin-top: 8px;
+    }
+
+    .textarea-input:focus {
+      outline: none;
+      border-color: var(--brand-secondary);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
     }
 
     .page-break { page-break-before: always; }
 
+    /* PRINT SPECIFIC STYLES FOR CRISP PDF OUTPUT */
+    @page {
+      size: A4;
+      margin: 10mm 12mm;
+    }
+
     @media print {
-      body { background: #FFF; font-size: 11.5px; color: #000; }
-      .top-nav-bar { display: none !important; }
-      .container { max-width: 100%; padding: 0; }
-      header { background: none; color: #000; border-bottom: 2px solid var(--brand-primary); padding: 0 0 10px 0; border-radius: 0; }
-      .header-left h1 { color: var(--brand-primary); font-size: 17px; }
-      .header-left p { color: #475569; }
-      .logo-img { height: 36px; }
-      .card { border: none; padding: 0; margin-bottom: 16px; }
-      .patient-info-grid { border: 1px solid #CBD5E1; padding: 10px; }
-      .clinical-notice-box { border-left-color: #334155; border-color: #CBD5E1; background: #F8FAFC !important; }
-      .page-break { page-break-before: always; padding-top: 14px; }
-      th { background-color: #F1F5F9 !important; -webkit-print-color-adjust: exact; }
-      .callout { background-color: #F8FAFC !important; -webkit-print-color-adjust: exact; }
+      body {
+        background: #FFF !important;
+        font-size: 11px !important;
+        color: #000 !important;
+      }
+
+      .top-nav-bar, .no-print {
+        display: none !important;
+      }
+
+      .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+      }
+
+      header {
+        background: none !important;
+        color: #000 !important;
+        border-bottom: 2px solid #1E293B !important;
+        padding: 0 0 8px 0 !important;
+        border-radius: 0 !important;
+        margin-bottom: 14px !important;
+      }
+
+      .header-left h1 {
+        color: #1E293B !important;
+        font-size: 16px !important;
+      }
+
+      .header-left p {
+        color: #475569 !important;
+        font-size: 11px !important;
+      }
+
+      .logo-img {
+        height: 34px !important;
+      }
+
+      .card {
+        border: none !important;
+        padding: 0 !important;
+        margin-bottom: 14px !important;
+      }
+
+      .card-badge {
+        background: #F1F5F9 !important;
+        color: #1E293B !important;
+        border: 1px solid #CBD5E1 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .patient-info-grid {
+        border: 1px solid #CBD5E1 !important;
+        background: #F8FAFC !important;
+        padding: 8px 10px !important;
+        margin-bottom: 12px !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .clinical-notice-box {
+        border-left-color: #334155 !important;
+        border-color: #CBD5E1 !important;
+        background: #F8FAFC !important;
+        padding: 10px 12px !important;
+        font-size: 11px !important;
+        margin-bottom: 14px !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      table {
+        margin: 8px 0 !important;
+        font-size: 10.5px !important;
+      }
+
+      th, td {
+        padding: 4px 6px !important;
+      }
+
+      th {
+        background-color: #F1F5F9 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      /* Clean borderless form inputs on print */
+      .form-input, .table-input, .table-select, .textarea-input {
+        border: none !important;
+        background: transparent !important;
+        padding: 2px 4px !important;
+        font-size: 10.5px !important;
+        color: #000 !important;
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        appearance: none !important;
+      }
+
+      /* Subtle line under text inputs when printing */
+      .form-input.fill-input {
+        border-bottom: 1px solid #94A3B8 !important;
+        border-radius: 0 !important;
+      }
+
+      .form-input.inline-input {
+        border-bottom: 1px solid #94A3B8 !important;
+        border-radius: 0 !important;
+        font-weight: 600 !important;
+      }
+
+      /* Table inputs underline if empty so hand-writing is still possible */
+      .table-input {
+        border-bottom: 1px dotted #CBD5E1 !important;
+        border-radius: 0 !important;
+      }
+
+      .table-select {
+        border-bottom: 1px dotted #CBD5E1 !important;
+        border-radius: 0 !important;
+        font-weight: 500 !important;
+      }
+
+      .callout {
+        background-color: #F8FAFC !important;
+        border-left: 3px solid #1E293B !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        padding: 8px 12px !important;
+      }
+
+      .page-break {
+        page-break-before: always !important;
+        padding-top: 10px !important;
+      }
+
+      input[type="checkbox"] {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
     }
   </style>
 </head>
@@ -299,10 +553,11 @@
         <a href="/pacingdagboek/" class="switcher-link active">Pacingdagboek (Werkboek)</a>
       </div>
       <div class="print-actions">
-        <a href="/dagboek/" style="font-size: 0.84rem; color: var(--ink-muted); text-decoration: none;">← Naar dagelijkse check-in</a>
-        <button class="print-btn" onclick="window.print()">
+        <span class="save-indicator" id="save-status">✓ Automatisch bewaard</span>
+        <button type="button" class="clear-btn" id="clear-data-btn" title="Wis ingevulde velden">Wis velden</button>
+        <button type="button" class="print-btn" onclick="window.print()">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-          Afdrukken of Opslaan als PDF
+          Opslaan als PDF / Afdrukken
         </button>
       </div>
     </div>
@@ -322,16 +577,25 @@
     <!-- Expliciete Klinische Afspraak & Gebruiksinstructie -->
     <div class="clinical-notice-box">
       <strong>Klinische toelichting & gebruik:</strong><br>
-      Dit pacingdagboek is een gestructureerd werkboek om in te vullen over <strong>verschillende representatieve dagen (bijv. 2 weekdagen en 1 weekenddag)</strong>, <em>nadat we dit samen tijdens je consultatie bij Kine Strop hebben besproken</em>. Het dient om samen in de praktijk te overlopen hoe jouw activiteiten, rust en belasting verdeeld zijn, en op basis daarvan je veilige startgrens en herstelplan op te stellen.<br>
-      <span style="font-size: 0.82rem; color: var(--ink-muted); display: inline-block; margin-top: 6px;">
-        Zoek je de snelle dagelijkse registratie voor thuis? Gebruik dan de <a href="/dagboek/" style="color: var(--brand-secondary); text-decoration: underline;">Dagelijkse Check-in & Energiemonitor</a>.
+      Dit pacingdagboek is een gestructureerd werkboek om <strong>digitaal of met pen in te vullen over verschillende dagen (bijv. 2 weekdagen en 1 weekenddag)</strong>, <em>nadat we dit samen tijdens je consultatie bij Kine Strop hebben besproken</em>. Het dient om samen in de praktijk te overlopen hoe jouw activiteiten, rust en belasting verdeeld zijn, en op basis daarvan je veilige startgrens en herstelplan op te stellen.<br>
+      <span class="no-print" style="font-size: 0.82rem; color: var(--ink-muted); display: inline-block; margin-top: 6px;">
+        💡 <em>Alles wat je hier invult wordt automatisch bewaard op dit apparaat. Klik bovenaan op <strong>'Opslaan als PDF / Afdrukken'</strong> om het document digitaal op te slaan of af te drukken voor je consultatie.</em>
       </span>
     </div>
 
+    <!-- PATIENT INFO -->
     <div class="patient-info-grid">
-      <div><strong>Naam patiënt:</strong> <span class="fill-line" style="width: 65%;"></span></div>
-      <div><strong>Datum consultatie:</strong> <span class="fill-line" style="width: 60%;"></span></div>
-      <div style="grid-column: span 2;"><strong>Kinesitherapeut:</strong> Egon Seldeslachts / Mathias (Kine Strop — Gent)</div>
+      <div class="info-row">
+        <strong>Naam patiënt:</strong>
+        <input type="text" class="form-input fill-input" id="pb_patient_name" placeholder="Typ je voor- en achternaam...">
+      </div>
+      <div class="info-row">
+        <strong>Datum / Consultatie:</strong>
+        <input type="text" class="form-input fill-input" id="pb_consult_date" placeholder="Bijv. 14 oktober 2026">
+      </div>
+      <div style="grid-column: span 2; color: var(--ink-muted);">
+        <strong>Kinesitherapeut:</strong> Egon Seldeslachts / Mathias (Kine Strop — Gent)
+      </div>
     </div>
 
     <div class="card">
@@ -345,33 +609,23 @@
       <span class="card-badge">Deel 1 — Dag 1 (Doordeweeks)</span>
       <h2>Uur-tot-Uur Dagschema: Weekdag 1</h2>
       <p>Noteer per uur kort wat je deed en geef aan hoe het blok voelde (1 = Vlot/licht, 3 = Neutraal, 5 = Zwaar/vermoeiend).</p>
-      <p><strong>Datum / Weekdag:</strong> <span class="fill-line" style="width: 260px;"></span></p>
+      
+      <div class="info-row" style="margin-bottom: 12px; max-width: 380px;">
+        <strong>Datum / Weekdag:</strong>
+        <input type="text" class="form-input fill-input" id="pb_d1_date" placeholder="Bijv. Maandag 12 oktober">
+      </div>
 
       <table>
         <thead>
           <tr>
             <th style="width: 95px;">Tijdstip</th>
             <th>Activiteit (Wat heb je gedaan?)</th>
-            <th style="width: 150px;">Type (Fysiek / Mentaal / Rust)</th>
-            <th style="width: 170px;">Zwaarte (1 = Vlot · 5 = Zwaar)</th>
+            <th style="width: 170px;">Type (Belasting)</th>
+            <th style="width: 160px;">Zwaarte (1 · 5)</th>
           </tr>
         </thead>
-        <tbody>
-          <tr><td><strong>07:00 - 08:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>08:00 - 09:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>09:00 - 10:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>10:00 - 11:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>11:00 - 12:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>12:00 - 13:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>13:00 - 14:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>14:00 - 15:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>15:00 - 16:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>16:00 - 17:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>17:00 - 18:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>18:00 - 19:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>19:00 - 20:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>20:00 - 21:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>21:00 - 22:00</strong></td><td></td><td></td><td></td></tr>
+        <tbody id="tbody-day-1">
+          <!-- Dynamically or statically rendered rows -->
         </tbody>
       </table>
     </div>
@@ -381,33 +635,23 @@
       <span class="card-badge">Deel 1 — Dag 2 (Doordeweeks)</span>
       <h2>Uur-tot-Uur Dagschema: Weekdag 2</h2>
       <p>Noteer per uur kort wat je deed en geef aan hoe het blok voelde.</p>
-      <p><strong>Datum / Weekdag:</strong> <span class="fill-line" style="width: 260px;"></span></p>
+      
+      <div class="info-row" style="margin-bottom: 12px; max-width: 380px;">
+        <strong>Datum / Weekdag:</strong>
+        <input type="text" class="form-input fill-input" id="pb_d2_date" placeholder="Bijv. Woensdag 14 oktober">
+      </div>
 
       <table>
         <thead>
           <tr>
             <th style="width: 95px;">Tijdstip</th>
             <th>Activiteit (Wat heb je gedaan?)</th>
-            <th style="width: 150px;">Type (Fysiek / Mentaal / Rust)</th>
-            <th style="width: 170px;">Zwaarte (1 = Vlot · 5 = Zwaar)</th>
+            <th style="width: 170px;">Type (Belasting)</th>
+            <th style="width: 160px;">Zwaarte (1 · 5)</th>
           </tr>
         </thead>
-        <tbody>
-          <tr><td><strong>07:00 - 08:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>08:00 - 09:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>09:00 - 10:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>10:00 - 11:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>11:00 - 12:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>12:00 - 13:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>13:00 - 14:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>14:00 - 15:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>15:00 - 16:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>16:00 - 17:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>17:00 - 18:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>18:00 - 19:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>19:00 - 20:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>20:00 - 21:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>21:00 - 22:00</strong></td><td></td><td></td><td></td></tr>
+        <tbody id="tbody-day-2">
+          <!-- Dynamically or statically rendered rows -->
         </tbody>
       </table>
     </div>
@@ -417,32 +661,23 @@
       <span class="card-badge">Deel 1 — Dag 3 (Weekenddag)</span>
       <h2>Uur-tot-Uur Dagschema: Weekenddag</h2>
       <p>Weekenddagen hebben vaak een ander ritme of andere sociale prikkels dan doordeweekse dagen.</p>
-      <p><strong>Datum / Weekenddag:</strong> <span class="fill-line" style="width: 260px;"></span></p>
+      
+      <div class="info-row" style="margin-bottom: 12px; max-width: 380px;">
+        <strong>Datum / Weekenddag:</strong>
+        <input type="text" class="form-input fill-input" id="pb_d3_date" placeholder="Bijv. Zaterdag 17 oktober">
+      </div>
 
       <table>
         <thead>
           <tr>
             <th style="width: 95px;">Tijdstip</th>
             <th>Activiteit (Wat heb je gedaan?)</th>
-            <th style="width: 150px;">Type (Fysiek / Mentaal / Rust)</th>
-            <th style="width: 170px;">Zwaarte (1 = Vlot · 5 = Zwaar)</th>
+            <th style="width: 170px;">Type (Belasting)</th>
+            <th style="width: 160px;">Zwaarte (1 · 5)</th>
           </tr>
         </thead>
-        <tbody>
-          <tr><td><strong>08:00 - 09:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>09:00 - 10:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>10:00 - 11:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>11:00 - 12:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>12:00 - 13:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>13:00 - 14:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>14:00 - 15:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>15:00 - 16:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>16:00 - 17:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>17:00 - 18:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>18:00 - 19:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>19:00 - 20:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>20:00 - 21:00</strong></td><td></td><td></td><td></td></tr>
-          <tr><td><strong>21:00 - 22:00</strong></td><td></td><td></td><td></td></tr>
+        <tbody id="tbody-day-3">
+          <!-- Dynamically or statically rendered rows -->
         </tbody>
       </table>
     </div>
@@ -456,36 +691,81 @@
       <table>
         <thead>
           <tr>
-            <th style="width: 180px;">Belastingstype</th>
+            <th style="width: 160px;">Belastingstype</th>
             <th>Voorbeelden in jouw dag</th>
-            <th style="width: 180px;">Jouw Score (1 = Laag · 5 = Hoog)</th>
+            <th style="width: 170px;">Jouw Score (1 · 5)</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><strong>Fysieke belasting</strong></td>
-            <td>Wandelen, huishouden, tillen, lang zitten, sport</td>
-            <td>[ 1 - 2 - 3 - 4 - 5 ]</td>
+            <td><input type="text" class="table-input" id="pb_tl_ex_1" placeholder="Wandelen, huishouden, tillen, zitten..."></td>
+            <td>
+              <select class="table-select" id="pb_tl_sc_1">
+                <option value="">-- Score --</option>
+                <option value="1 (Laag)">1 · Laag</option>
+                <option value="2 (Mild)">2 · Mild</option>
+                <option value="3 (Gemiddeld)">3 · Gemiddeld</option>
+                <option value="4 (Hoog)">4 · Hoog</option>
+                <option value="5 (Extreem)">5 · Extreem</option>
+              </select>
+            </td>
           </tr>
           <tr>
             <td><strong>Mentale belasting</strong></td>
-            <td>Schermtijd, administratie, complexe taken, plannen</td>
-            <td>[ 1 - 2 - 3 - 4 - 5 ]</td>
+            <td><input type="text" class="table-input" id="pb_tl_ex_2" placeholder="Schermtijd, administratie, complexe taken..."></td>
+            <td>
+              <select class="table-select" id="pb_tl_sc_2">
+                <option value="">-- Score --</option>
+                <option value="1 (Laag)">1 · Laag</option>
+                <option value="2 (Mild)">2 · Mild</option>
+                <option value="3 (Gemiddeld)">3 · Gemiddeld</option>
+                <option value="4 (Hoog)">4 · Hoog</option>
+                <option value="5 (Extreem)">5 · Extreem</option>
+              </select>
+            </td>
           </tr>
           <tr>
             <td><strong>Emotionele belasting</strong></td>
-            <td>Zorgen, stress, piekeren, moeilijke gesprekken</td>
-            <td>[ 1 - 2 - 3 - 4 - 5 ]</td>
+            <td><input type="text" class="table-input" id="pb_tl_ex_3" placeholder="Zorgen, stress, piekeren, gesprekken..."></td>
+            <td>
+              <select class="table-select" id="pb_tl_sc_3">
+                <option value="">-- Score --</option>
+                <option value="1 (Laag)">1 · Laag</option>
+                <option value="2 (Mild)">2 · Mild</option>
+                <option value="3 (Gemiddeld)">3 · Gemiddeld</option>
+                <option value="4 (Hoog)">4 · Hoog</option>
+                <option value="5 (Extreem)">5 · Extreem</option>
+              </select>
+            </td>
           </tr>
           <tr>
             <td><strong>Omgevingsprikkels</strong></td>
-            <td>Drukke ruimtes, verkeer, fel licht, luide geluiden</td>
-            <td>[ 1 - 2 - 3 - 4 - 5 ]</td>
+            <td><input type="text" class="table-input" id="pb_tl_ex_4" placeholder="Drukke ruimtes, verkeer, fel licht, lawaai..."></td>
+            <td>
+              <select class="table-select" id="pb_tl_sc_4">
+                <option value="">-- Score --</option>
+                <option value="1 (Laag)">1 · Laag</option>
+                <option value="2 (Mild)">2 · Mild</option>
+                <option value="3 (Gemiddeld)">3 · Gemiddeld</option>
+                <option value="4 (Hoog)">4 · Hoog</option>
+                <option value="5 (Extreem)">5 · Extreem</option>
+              </select>
+            </td>
           </tr>
           <tr>
             <td><strong>Slaap & Herstel</strong></td>
-            <td>Onderbroken nacht, vroeg wakker, vermoeid ontwaken</td>
-            <td>[ 1 - 2 - 3 - 4 - 5 ]</td>
+            <td><input type="text" class="table-input" id="pb_tl_ex_5" placeholder="Onderbroken nacht, vroeg wakker, moe..."></td>
+            <td>
+              <select class="table-select" id="pb_tl_sc_5">
+                <option value="">-- Score --</option>
+                <option value="1 (Laag)">1 · Laag (goed hersteld)</option>
+                <option value="2 (Mild)">2 · Mild vermoeid</option>
+                <option value="3 (Gemiddeld)">3 · Matige nacht</option>
+                <option value="4 (Hoog)">4 · Slechte nacht</option>
+                <option value="5 (Extreem)">5 · Uitgeput ontwaakt</option>
+              </select>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -502,41 +782,189 @@
       <h2>Samen te Bepalen in de Praktijk</h2>
 
       <h3>1. Onze Veilige Startgrens (Baseline)</h3>
-      <p>Gekozen activiteit: <span class="fill-line" style="width: 300px;"></span></p>
-      <p>• Wat lukt er op een moeilijke dag zonder opstoot? <span class="fill-line" style="width: 80px;"></span> minuten</p>
-      <p>• Onze afgesproken startgrens (tijd minus 20%): <strong><span class="fill-line" style="width: 80px;"></span> minuten</strong></p>
+      <p style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+        <strong>Gekozen activiteit:</strong>
+        <input type="text" class="form-input fill-input" style="max-width: 320px;" id="pb_base_act" placeholder="Bijv. Buiten wandelen of licht tuinieren">
+      </p>
+      <p style="margin-top: 8px;">
+        • Wat lukt er op een moeilijke dag zonder opstoot? 
+        <input type="number" class="form-input inline-input" id="pb_base_bad_day" placeholder="15"> minuten
+      </p>
+      <p style="margin-top: 6px;">
+        • Onze afgesproken startgrens (tijd minus 20%): 
+        <input type="number" class="form-input inline-input" id="pb_base_safe_start" placeholder="12" style="font-weight: 600; color: var(--brand-secondary);"> <strong>minuten</strong>
+      </p>
 
-      <p style="font-size: 0.88rem; color: var(--ink-muted); margin-top: 6px;">
+      <p style="font-size: 0.88rem; color: var(--ink-muted); margin-top: 8px;">
         <em>Afspraak: Stop op de afgesproken tijd op de klok, niet pas wanneer je lichaam overbelast raakt.</em>
       </p>
 
       <hr style="margin: 18px 0; border: none; border-top: 1px solid var(--border-color);">
 
       <h3>2. Mijn Opstoot-Actieplan (Flare-Up Plan)</h3>
-      <p>Als mijn klachten tijdelijk toenemen, handel ik volgens deze stappen:</p>
+      <p>Als mijn klachten tijdelijk toenemen, handel ik volgens deze afspraken:</p>
 
       <div class="checkbox-item">
-        <div class="checkbox-box"></div>
-        <div><strong>1. Geruststelling:</strong> Ik herinner mezelf: <em>"Dit is een tijdelijk beschermingssignaal van mijn zenuwstelsel, geen nieuwe schade."</em></div>
+        <input type="checkbox" id="pb_chk_reassure" checked>
+        <div><strong>1. Geruststelling:</strong> Ik herinner mezelf: <em>"Dit is een tijdelijk beschermingssignaal van mijn zenuwstelsel, geen nieuwe weefselschade."</em></div>
       </div>
 
       <div class="checkbox-item">
-        <div class="checkbox-box"></div>
-        <div><strong>2. Terugschalen:</strong> Ik halveer tijdelijk mijn activiteitenduur naar <span class="fill-line" style="width: 70px;"></span> minuten en las vaker rust in.</div>
+        <input type="checkbox" id="pb_chk_scale" checked>
+        <div>
+          <strong>2. Terugschalen:</strong> Ik halveer tijdelijk mijn activiteitenduur naar 
+          <input type="number" class="form-input inline-input" id="pb_flare_mins" placeholder="6"> minuten en las vaker rust in.
+        </div>
       </div>
 
       <div class="checkbox-item">
-        <div class="checkbox-box"></div>
-        <div><strong>3. Actief herstel:</strong> Ik pas rustige buikademhaling toe of zoek warmte en rustige ontspanning op.</div>
+        <input type="checkbox" id="pb_chk_recovery" checked>
+        <div>
+          <strong>3. Actief herstel:</strong> Ik kies bewust voor:
+          <input type="text" class="form-input fill-input" style="margin-top: 4px;" id="pb_flare_rec_choice" placeholder="Bijv. 4-6 ademhaling, warm kussen, rustige natuurwandeling...">
+        </div>
       </div>
 
       <div class="checkbox-item">
-        <div class="checkbox-box"></div>
-        <div><strong>4. Communicatie:</strong> Ik geef duidelijk aan mijn omgeving aan dat ik tijdelijk doseer.</div>
+        <input type="checkbox" id="pb_chk_comm" checked>
+        <div><strong>4. Communicatie:</strong> Ik geef rustig en zonder schuldgevoel aan mijn omgeving aan dat ik tijdelijk doseer.</div>
+      </div>
+
+      <div style="margin-top: 16px;">
+        <label for="pb_extra_notes" style="font-weight: 500; font-size: 13px; color: var(--ink-muted);">Persoonlijke opmerkingen of afspraken voor de consultatie:</label>
+        <textarea class="textarea-input" id="pb_extra_notes" rows="2" placeholder="Noteer hier eventuele vragen of patronen die je opvielen..."></textarea>
       </div>
     </div>
 
   </div>
+
+  <script>
+    // Hours configuration
+    const hours = [
+      '07:00 - 08:00', '08:00 - 09:00', '09:00 - 10:00', '10:00 - 11:00',
+      '11:00 - 12:00', '12:00 - 13:00', '13:00 - 14:00', '14:00 - 15:00',
+      '15:00 - 16:00', '16:00 - 17:00', '17:00 - 18:00', '18:00 - 19:00',
+      '19:00 - 20:00', '20:00 - 21:00', '21:00 - 22:00'
+    ];
+
+    const typeOptions = `
+      <option value="">-- Kies type --</option>
+      <option value="Fysiek">Fysiek</option>
+      <option value="Mentaal">Mentaal / Werk</option>
+      <option value="Rust">Rust & Herstel</option>
+      <option value="Sociaal">Sociaal</option>
+    `;
+
+    const scoreOptions = `
+      <option value="">-- Score --</option>
+      <option value="1">1 · Zeer vlot</option>
+      <option value="2">2 · Vlot</option>
+      <option value="3">3 · Neutraal</option>
+      <option value="4">4 · Lastig</option>
+      <option value="5">5 · Zwaar</option>
+    `;
+
+    // Render table rows
+    function renderRows(tbodyId, dayPrefix) {
+      const tbody = document.getElementById(tbodyId);
+      if (!tbody) return;
+      
+      let html = '';
+      hours.forEach((hour, idx) => {
+        const idAct = `${dayPrefix}_act_${idx}`;
+        const idType = `${dayPrefix}_type_${idx}`;
+        const idScore = `${dayPrefix}_score_${idx}`;
+
+        html += `
+          <tr>
+            <td><strong>${hour}</strong></td>
+            <td><input type="text" class="table-input" id="${idAct}" placeholder="Activiteit..."></td>
+            <td><select class="table-select" id="${idType}">${typeOptions}</select></td>
+            <td><select class="table-select" id="${idScore}">${scoreOptions}</select></td>
+          </tr>
+        `;
+      });
+      tbody.innerHTML = html;
+    }
+
+    renderRows('tbody-day-1', 'pb_d1');
+    renderRows('tbody-day-2', 'pb_d2');
+    renderRows('tbody-day-3', 'pb_d3');
+
+    // Auto-save and Auto-restore with LocalStorage
+    const STORAGE_KEY_PREFIX = 'kinestrop_pacing_v1_';
+    const saveIndicator = document.getElementById('save-status');
+
+    function saveAllInputs() {
+      const inputs = document.querySelectorAll('input, select, textarea');
+      inputs.forEach(el => {
+        if (el.id) {
+          if (el.type === 'checkbox') {
+            localStorage.setItem(STORAGE_KEY_PREFIX + el.id, el.checked ? 'true' : 'false');
+          } else {
+            localStorage.setItem(STORAGE_KEY_PREFIX + el.id, el.value);
+          }
+        }
+      });
+      if (saveIndicator) {
+        saveIndicator.classList.add('visible');
+        setTimeout(() => saveIndicator.classList.remove('visible'), 1600);
+      }
+    }
+
+    function loadAllInputs() {
+      const inputs = document.querySelectorAll('input, select, textarea');
+      inputs.forEach(el => {
+        if (el.id) {
+          const val = localStorage.getItem(STORAGE_KEY_PREFIX + el.id);
+          if (val !== null) {
+            if (el.type === 'checkbox') {
+              el.checked = (val === 'true');
+            } else {
+              el.value = val;
+            }
+          }
+        }
+      });
+    }
+
+    // Attach listeners
+    document.addEventListener('input', (e) => {
+      if (e.target.matches('input, select, textarea')) {
+        saveAllInputs();
+      }
+    });
+
+    document.addEventListener('change', (e) => {
+      if (e.target.matches('input, select, textarea')) {
+        saveAllInputs();
+      }
+    });
+
+    // Clear data button
+    const clearBtn = document.getElementById('clear-data-btn');
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        if (confirm('Weet je zeker dat je alle ingevulde velden van dit werkboek wilt leegmaken?')) {
+          const inputs = document.querySelectorAll('input, select, textarea');
+          inputs.forEach(el => {
+            if (el.id) {
+              localStorage.removeItem(STORAGE_KEY_PREFIX + el.id);
+              if (el.type === 'checkbox') {
+                el.checked = false;
+              } else {
+                el.value = '';
+              }
+            }
+          });
+          alert('Het werkboek is leeggemaakt.');
+        }
+      });
+    }
+
+    // Initial load
+    window.addEventListener('DOMContentLoaded', loadAllInputs);
+  </script>
 
 </body>
 </html>
