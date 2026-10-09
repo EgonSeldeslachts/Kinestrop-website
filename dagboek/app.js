@@ -8,82 +8,102 @@ const STORAGE_KEY = 'kinestrop_patient_dagboek_v1';
 
 // Preset Exercises Database categorized by load & therapeutic goal
 const EXERCISE_DATABASE = {
+  anchor: [
+    {
+      id: 'anc_1',
+      title: '3-2-1 Zintuigenanker (contact met het hier-en-nu)',
+      category: 'Ankeroefening & rust',
+      duration: '3 minuten',
+      badgeClass: 'badge-recovery',
+      desc: 'Kan overdag zittend of staand. Benoem in stilte: 3 dingen die je rondom je ziet, 2 dingen die je fysiek voelt (je voeten op de grond, je kleding op je huid), en 1 geluid dat je hoort. Adem daarna één keer rustig en diep uit. Dit haalt je brein direct uit de pieker- of alertheidsmodus en brengt je terug naar het hier-en-nu.'
+    }
+  ],
+  somatic: [
+    {
+      id: 'som_1',
+      title: 'Lichaamssensaties observeren zonder alarm (somatic tracking)',
+      category: 'Pijndemping & veiligheid',
+      duration: '5 minuten',
+      badgeClass: 'badge-recovery',
+      desc: 'Ga ontspannen zitten of liggen. Richt je aandacht met open, neutrale nieuwsgierigheid op de plek die gevoelig is. Observeer de fysieke sensatie (warmte, spanning, tinteling of dof gevoel) zonder ertegen te vechten. Herinner jezelf eraan: "Mijn zenuwstelsel stuurt een overbeschermend alarmsignaal, maar er is nu geen weefselschade of gevaar." Adem rustig door en laat de sensatie er gewoon even zijn.'
+    }
+  ],
   recovery: [
     {
       id: 'rec_1',
-      title: 'Diafragmatische Ademhaling (4-7-8)',
-      category: 'Herstel & Pacing',
+      title: 'Rustige buikademhaling (4-7-8)',
+      category: 'Herstel & rust',
       duration: '5 minuten',
       badgeClass: 'badge-recovery',
-      desc: 'Ga comfortabel liggen op je rug met buigingen in je knieën. Adem 4 seconden in via je neus naar je buik, houd 7 sec vast, en blaas rustig 8 sec uit via je mond. Dit verlaagt je spierspanning en zenuwstelsel-arousal.'
+      desc: 'Ga comfortabel op je rug liggen met je knieën geplooid en je voeten plat op de grond. Adem 4 seconden rustig in via je neus naar je buik, houd 7 seconden ontspannen vast, en blaas zachtjes in 8 seconden uit via de mond. Dit brengt je zenuwstelsel tot rust en verlaagt je spierspanning.'
     },
     {
       id: 'rec_2',
-      title: 'Constructive Rest Position (Rugontlasting)',
+      title: 'Ontspannen ruglig (met geplooide knieën)',
       category: 'Rugontlasting',
       duration: '10 minuten',
       badgeClass: 'badge-recovery',
-      desc: 'Liggend op je rug op een yogamat of tapijt met je voeten plat op de grond, knieën gebogen en op heupbreedte. Plaats je handen rustig op je onderbuik. Laat de zwaartekracht je rug ontspannen zonder te duwen.'
+      desc: 'Ga op je rug liggen op een matje of tapijt met je voeten plat op de grond en je knieën geplooid op heupbreedte. Leg je handen rustig op je onderbuik. Laat de zwaartekracht je rug ontspannen zonder ergens tegenaan te duwen.'
     },
     {
       id: 'rec_3',
-      title: 'Progressieve Bodyscan',
-      category: 'Mentale Rust',
+      title: 'Lichaamsverkenning (aandachtsoefening)',
+      category: 'Mentale rust',
       duration: '7 minuten',
       badgeClass: 'badge-recovery',
-      desc: 'Focus je aandacht achtereenvolgens op je voeten, benen, heupen, rug, schouders en gezicht. Merk spanning op zonder oordeel, en laat deze uitademen per lichaamsdeel.'
+      desc: 'Breng rustig je aandacht achtereenvolgens naar je voeten, benen, heupen, rug, schouders en kaken. Merk eventuele spanning op zonder oordeel, en stel je voor dat je die bij elke uitademing zachtjes loslaat.'
     }
   ],
   mobility: [
     {
       id: 'mob_1',
-      title: 'Cat-Cow Wervelkolom Mobilisatie',
-      category: 'Zachte Mobilisatie',
+      title: 'Rug hol en bol maken (op handen en knieën)',
+      category: 'Zachte mobilisatie',
       duration: '2x 8 herhalingen',
       badgeClass: 'badge-mobility',
-      desc: 'Op handen en knieën. Maak je rug rustig bol (kin naar de borst, inademen) en laat daarna je rug weer zacht inzakken (kijk licht omhoog, uitademen). Beweeg binnen een comfortabele, pijnvrije grens.'
+      desc: 'Ga op handen en knieën zitten. Maak je rug langzaam en rustig bol (kin richting je borst) en laat je rug daarna zachtjes weer wat doorzakken (kijk lichtjes vooruit). Beweeg vloeiend binnen een comfortabele grens.'
     },
     {
       id: 'mob_2',
-      title: 'Bekkenkantelingen (Pelvic Tilts)',
+      title: 'Bekken kantelen in ruglig',
       category: 'Lendenmobilisatie',
       duration: '2x 10 herhalingen',
       badgeClass: 'badge-mobility',
-      desc: 'Liggend op je rug. Duw je onderrug zachtjes plat tegen de mat door je buikspieren licht aan te spannen, en kantel daarna je bekken weer terug zodat er een kleine holte ontstaat. Beweeg vloeiend.'
+      desc: 'Ga op je rug liggen met geplooide knieën en je voeten plat op de ondergrond. Duw je onderrug zachtjes plat tegen de mat door je buikspieren licht aan te spannen, en kantel daarna je bekken rustig de andere kant op zodat er een kleine holte ontstaat. Beweeg rustig en ritmisch.'
     },
     {
       id: 'mob_3',
-      title: 'Schouder- & Borst-opener',
+      title: 'Borstkas en schouders openen',
       category: 'Houdingswissel',
       duration: '3x 30 seconden',
       badgeClass: 'badge-mobility',
-      desc: 'Sta rechtop of zit op de rand van een stoel. Breng je armen wijd open, open je borst naar het plafond toe en adem diep in. Breng daarna je armen zacht naar voren om jezelf te omarmen.'
+      desc: 'Ga rechtop zitten op de rand van een stoel of ga staan. Breng je armen wijd opzij, open je borstkas en adem rustig diep in. Breng daarna je armen rustig naar voren en omarm jezelf even zachtjes.'
     }
   ],
   strength: [
     {
       id: 'str_1',
-      title: 'Stoel Squat (Sit-to-Stand)',
-      category: 'Actieve Opbouw',
+      title: 'Opstaan en gaan zitten uit een stoel (stoel-squat)',
+      category: 'Actieve opbouw',
       duration: '2x 8 herhalingen',
       badgeClass: 'badge-strength',
-      desc: 'Sta op vanuit een stoel zonder je handen te gebruiken als het kan, strek je heupen volledig uit, en ga gecontroleerd weer zitten. Bouwt beenspierkracht en functionele belastbaarheid op.'
+      desc: 'Sta rustig op uit een stoel (probeer dit zonder steun van je handen als dat vlot lukt), strek je lichaam volledig op, en ga gecontroleerd weer zitten. Dit bouwt beenspierkracht en dagelijkse belastbaarheid op.'
     },
     {
       id: 'str_2',
-      title: 'Gluteal Bridging (Bekkentillen)',
-      category: 'Heup- & Rugversterking',
+      title: 'Bekkentillen in ruglig (bruggetje)',
+      category: 'Heup- & bilspieren',
       duration: '2x 10 herhalingen',
       badgeClass: 'badge-strength',
-      desc: 'Liggend op je rug met knieën gebogen. Duw door je hielen om je heupen op te tillen tot je schouders, heupen en knieën één rechte lijn vormen. Knijp de billen kort aan en zak rustig terug.'
+      desc: 'Ga op je rug liggen met je knieën geplooid en je voeten plat op de grond. Duw op je hielen en hef je bekken op tot je schouders, heupen en knieën min of meer één rechte lijn vormen. Knijp de billen kort aan en laat rustig weer zakken.'
     },
     {
       id: 'str_3',
-      title: 'Gedoseerde Wandel-interval',
-      category: 'Cardio & Pacing',
+      title: 'Gedoseerd wandelen met rustpauze',
+      category: 'Conditie & dosering',
       duration: '15–20 minuten',
       badgeClass: 'badge-strength',
-      desc: 'Wandel in een ontspannen tempo buitenshuis. Bouw een korte rustpauze in van 2 minuten halverwege, vóórdat je vermoeid bent. Dit versterkt je uithoudingsvermogen op een veilige manier.'
+      desc: 'Wandel in een ontspannen tempo buitenshuis. Neem halverwege bewust 2 minuten rust op een bankje, vóórdat je vermoeid raakt of klachten opkomen. Zo bouw je je uithoudingsvermogen veilig op.'
     }
   ]
 };
@@ -237,7 +257,7 @@ function loadDateEntryIntoForm(dateStr) {
 
   const totalLoad = entry.totalLoadVectors || [];
   document.querySelectorAll('input[name="totalLoadVectors"]').forEach(cb => {
-    cb.checked = totalLoad.includes(cb.value);
+    cb.checked = totalLoad.includes(cb.value) || (cb.value === 'Mentale druk & spanning' && totalLoad.includes('Emotionele stress'));
   });
 
   // Klachten & Stijfheidsperceptie
@@ -344,6 +364,27 @@ function renderAdviceTab() {
   }
 
   const status = calculateDayStatus(entry);
+  const pain = Number(entry.painLevel) || 0;
+  const stiffness = entry.stiffnessPerception || 'geen';
+  const totalLoad = entry.totalLoadVectors || [];
+  const hasMentalLoad = totalLoad.some(v => v.includes('Emotioneel') || v.includes('Mentaal') || v.includes('Sensorisch'));
+  const hasHighPainOrInterference = pain >= 5 || stiffness === 'hoog' || entry.pacingBalance === 'overdone';
+
+  let extraAdviceTip = '';
+  if (hasHighPainOrInterference) {
+    extraAdviceTip = `
+      <div style="margin-top: 10px; padding: 10px 14px; background: rgba(255,255,255,0.7); border-radius: 6px; font-size: 0.88rem; color: var(--ink-base); border-left: 3px solid #6366F1;">
+        💡 <strong>Aanbevolen bij verhoogde gevoeligheid:</strong> We hebben de <em>somatic tracking</em> oefening toegevoegd. Hiermee observeer je de fysieke sensatie met neutrale nieuwsgierigheid, waardoor je brein leert dat het alarmsignaal veilig is en niet wijst op acute schade.
+      </div>
+    `;
+  } else if (hasMentalLoad) {
+    extraAdviceTip = `
+      <div style="margin-top: 10px; padding: 10px 14px; background: rgba(255,255,255,0.7); border-radius: 6px; font-size: 0.88rem; color: var(--ink-base); border-left: 3px solid #0EA5E9;">
+        💡 <strong>Aanbevolen bij mentale drukte of spanning:</strong> Het <em>3-2-1 zintuigenanker</em> kun je overdag op elk moment zittend of staand uitvoeren om je zenuwstelsel direct te aarden in het hier-en-nu.
+      </div>
+    `;
+  }
+
   let bannerHTML = '';
   let exercisesToDisplay = [];
 
@@ -358,10 +399,22 @@ function renderAdviceTab() {
           <p>
             Je energie en klachten wijzen op een verlaagde draagkracht. Vandaag is het zinvol om piekbelastingen te vermijden en het zenuwstelsel rust te gunnen. Pacing betekent hier bewust doseren en herstelmomenten inplannen.
           </p>
+          ${extraAdviceTip}
         </div>
       </div>
     `;
-    exercisesToDisplay = [...EXERCISE_DATABASE.recovery];
+    exercisesToDisplay = [];
+    if (hasHighPainOrInterference) {
+      exercisesToDisplay.push(EXERCISE_DATABASE.somatic[0]);
+    }
+    if (hasMentalLoad) {
+      exercisesToDisplay.push(EXERCISE_DATABASE.anchor[0]);
+    }
+    EXERCISE_DATABASE.recovery.forEach(ex => {
+      if (!exercisesToDisplay.some(e => e.id === ex.id) && exercisesToDisplay.length < 4) {
+        exercisesToDisplay.push(ex);
+      }
+    });
   } else if (status === 'orange') {
     bannerHTML = `
       <div class="status-banner orange">
@@ -373,10 +426,25 @@ function renderAdviceTab() {
           <p>
             Je draagkracht is matig. Een geschikte dag om in beweging te blijven met tussentijdse rustmomenten. Wissel fysieke activiteit af met herstel voordat vermoeidheid of klachten toenemen.
           </p>
+          ${extraAdviceTip}
         </div>
       </div>
     `;
-    exercisesToDisplay = [...EXERCISE_DATABASE.mobility, EXERCISE_DATABASE.recovery[0]];
+    exercisesToDisplay = [];
+    if (hasHighPainOrInterference) {
+      exercisesToDisplay.push(EXERCISE_DATABASE.somatic[0]);
+    }
+    if (hasMentalLoad) {
+      exercisesToDisplay.push(EXERCISE_DATABASE.anchor[0]);
+    }
+    EXERCISE_DATABASE.mobility.forEach(ex => {
+      if (!exercisesToDisplay.some(e => e.id === ex.id) && exercisesToDisplay.length < 4) {
+        exercisesToDisplay.push(ex);
+      }
+    });
+    if (exercisesToDisplay.length < 4 && !exercisesToDisplay.some(e => e.id === EXERCISE_DATABASE.recovery[0].id)) {
+      exercisesToDisplay.push(EXERCISE_DATABASE.recovery[0]);
+    }
   } else {
     bannerHTML = `
       <div class="status-banner green">
@@ -388,10 +456,18 @@ function renderAdviceTab() {
           <p>
             Je draagkracht is gunstig en je batterij is voldoende opgeladen. Dit is een geschikt moment om je geplande activiteit uit te voeren en te werken aan actieve belastbaarheid.
           </p>
+          ${extraAdviceTip}
         </div>
       </div>
     `;
-    exercisesToDisplay = [...EXERCISE_DATABASE.strength, EXERCISE_DATABASE.mobility[0]];
+    exercisesToDisplay = [...EXERCISE_DATABASE.strength];
+    if (hasHighPainOrInterference) {
+      exercisesToDisplay.unshift(EXERCISE_DATABASE.somatic[0]);
+    } else if (hasMentalLoad) {
+      exercisesToDisplay.push(EXERCISE_DATABASE.anchor[0]);
+    } else {
+      exercisesToDisplay.push(EXERCISE_DATABASE.mobility[0]);
+    }
   }
 
   // Build Exercise Cards
@@ -693,8 +769,8 @@ function renderExportTab() {
               <th style="padding: 8px 10px; font-weight: 500;">Slaap</th>
               <th style="padding: 8px 10px; font-weight: 500;">Energie</th>
               <th style="padding: 8px 10px; font-weight: 500;">Pijn</th>
-              <th style="padding: 8px 10px; font-weight: 500;">Total Load</th>
-              <th style="padding: 8px 10px; font-weight: 500;">Committed Action</th>
+              <th style="padding: 8px 10px; font-weight: 500;">Totale belasting</th>
+              <th style="padding: 8px 10px; font-weight: 500;">Waardegerichte actie</th>
               <th style="padding: 8px 10px; font-weight: 500;">Eigen Regie</th>
               <th style="padding: 8px 10px; font-weight: 500;">Reflectie</th>
             </tr>

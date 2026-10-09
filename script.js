@@ -252,6 +252,10 @@ function openBooking(therapist) {
     modal.classList.add('active');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    const modalBody = modal.querySelector('.booking-modal-body');
+    if (modalBody) {
+      modalBody.scrollTop = 0;
+    }
   } else {
     window.open('https://www.q-top.be/online-planner-v2/NL/?root=kq33633', '_blank', 'noopener,noreferrer');
   }
