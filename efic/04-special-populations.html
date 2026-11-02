@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0F172A">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json">
+
+    <title>Section 4: Special Patient Populations — EFIC Ingest & Study Guide — EFIC Diploma Study Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+
+:root {
+    --brand-primary: #0F172A;
+    --brand-secondary: #0284C7;
+    --brand-accent: #0284C7;
+    --surface-bg: #F8FAFC;
+    --surface-card: #FFFFFF;
+    --text-main: #1E293B;
+    --text-muted: #64748B;
+    --border-subtle: #E2E8F0;
+    --border-strong: #CBD5E1;
+    --highlight-bg: #EFF6FF;
+    --success-bg: #F0FDF4;
+    --success-text: #166534;
+    --warning-bg: #FFFBEB;
+    --warning-text: #B45309;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--surface-bg);
+    color: var(--text-main);
+    line-height: 1.7;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background: #0F172A;
+    color: #F8FAFC;
+    padding: 16px 24px;
+    border-bottom: 2px solid #0284C7;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.top-bar-content {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.brand-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+}
+
+.brand-badge span {
+    background: #0284C7;
+    color: #FFFFFF;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-print {
+    background: #1E293B;
+    color: #E2E8F0;
+    border: 1px solid #334155;
+    padding: 7px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-print:hover {
+    background: #0284C7;
+    color: #FFFFFF;
+    border-color: #0284C7;
+}
+
+.nav-container {
+    background: #1E293B;
+    border-bottom: 1px solid #334155;
+    padding: 6px 24px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.study-nav {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    gap: 6px;
+}
+
+.nav-link {
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.15s ease;
+}
+
+.nav-link:hover {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-link.active {
+    color: #38BDF8;
+    background: rgba(56, 189, 248, 0.12);
+    font-weight: 600;
+}
+
+.main-container {
+    max-width: 1100px;
+    margin: 32px auto 64px auto;
+    background: var(--surface-card);
+    padding: 48px 56px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.06), 0 1px 4px rgba(15, 23, 42, 0.04);
+    border: 1px solid var(--border-subtle);
+}
+
+.wide-content .main-container {
+    max-width: 1350px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--brand-primary);
+    line-height: 1.3;
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-top: 0.2em;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--border-subtle);
+    color: #0F172A;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+    color: #1E293B;
+}
+
+h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #0369A1;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1.1em;
+}
+
+ul, ol {
+    margin-top: 0.3em;
+    margin-bottom: 1.2em;
+    padding-left: 26px;
+}
+
+li {
+    margin-bottom: 0.45em;
+    line-height: 1.6;
+}
+
+li > p {
+    margin-bottom: 0.35em;
+}
+
+li > p:last-child {
+    margin-bottom: 0;
+}
+
+ul > li::marker {
+    color: var(--brand-secondary);
+}
+
+ol > li::marker {
+    font-weight: 600;
+    color: var(--brand-secondary);
+}
+
+ul ul, ol ul {
+    margin-top: 0.4em;
+    margin-bottom: 0.6em;
+    padding-left: 20px;
+    border-left: 2px solid var(--border-subtle);
+    list-style-type: circle;
+}
+
+ul ol, ol ol {
+    margin-top: 0.4em;
+    margin-bottom: 0.6em;
+    padding-left: 20px;
+    border-left: 2px solid var(--border-subtle);
+    list-style-type: lower-alpha;
+}
+
+ul ul > li::marker, ol ul > li::marker {
+    color: var(--text-muted);
+}
+
+ul ul ul, ol ul ul, ul ol ul, ol ol ul {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+    padding-left: 18px;
+    border-left: 2px solid var(--border-strong);
+    list-style-type: square;
+}
+
+ul ul ul > li::marker, ol ul ul > li::marker {
+    color: #94A3B8;
+}
+
+li:has(> ul), li:has(> ol) {
+    margin-bottom: 0.75em;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 24px 0 32px 0;
+    font-size: 13.5px;
+    line-height: 1.55;
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px 14px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+th {
+    background-color: #0F172A;
+    color: #FFFFFF;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 13px;
+    border-bottom: 2px solid #0284C7;
+}
+
+tr:nth-child(even) td {
+    background-color: #F8FAFC;
+}
+
+tr:hover td {
+    background-color: #F0F9FF;
+}
+
+blockquote {
+    margin: 20px 0;
+    padding: 14px 20px;
+    background: #F0F9FF;
+    border-left: 4px solid #0284C7;
+    border-radius: 0 8px 8px 0;
+    color: #0369A1;
+    font-style: normal;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.88em;
+    background: #F1F5F9;
+    color: #0F172A;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid #E2E8F0;
+}
+
+pre {
+    background: #0F172A;
+    color: #F8FAFC;
+    padding: 16px 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 13.5px;
+    line-height: 1.6;
+}
+
+pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    border: none;
+}
+
+a {
+    color: #0284C7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0369A1;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border-subtle);
+    margin: 36px 0;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+@media print {
+    body { background: #FFFFFF; font-size: 11pt; }
+    .top-bar, .nav-container, .btn-print, .footer { display: none !important; }
+    .main-container { max-width: 100% !important; margin: 0 !important; padding: 0 !important; border: none !important; box-shadow: none !important; }
+    table { font-size: 9pt !important; page-break-inside: auto; }
+    tr { page-break-inside: avoid; page-break-after: auto; }
+    th { background-color: #E2E8F0 !important; color: #000000 !important; }
+    h1, h2, h3 { page-break-after: avoid; }
+}
+
+    </style>
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="top-bar-content">
+        <div class="brand-badge">
+            <span>EFIC® EDPP</span> European Diploma in Pain Physiotherapy
+        </div>
+        <div class="actions">
+            <button class="btn-print" onclick="window.print()">
+                Print / Save as PDF
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="nav-container">
+<nav class="study-nav"><a href="README.html" class="nav-link">Hub Overview</a><a href="00-curriculum-breakdown.html" class="nav-link">00. Curriculum</a><a href="01-iasp-taxonomy-master-sheet.html" class="nav-link">01a. Taxonomy</a><a href="01-pain-science-and-knowledge.html" class="nav-link">01b. Pain Science</a><a href="02-assessment-and-measurement.html" class="nav-link">02. Assessment</a><a href="03-principles-of-treatment.html" class="nav-link">03. Treatment</a><a href="04-special-populations.html" class="nav-link active">04. Populations</a><a href="05-mcq-high-yield-quick-reference.html" class="nav-link">05. MCQ Bible</a><a href="06-treatment-evidence-master-table.html" class="nav-link">06. Master Table</a><a href="07-zotero-complete-reading-list-inventory.html" class="nav-link">07. Zotero Library</a></nav>
+</div>
+
+<main class="main-container">
+<h1 id="section-4-special-patient-populations-efic-ingest-study-guide">Section 4: Special Patient Populations — EFIC Ingest &amp; Study Guide</h1>
+<p>This module covers the evidence base, assessment methods, and clinical management strategies for <strong>Section Four</strong> of the EFIC Core Curriculum: Complex Regional Pain Syndrome (CRPS), Older Adults &amp; Dementia, and Infants, Children &amp; Adolescents.</p>
+<hr />
+<h2 id="1-complex-regional-pain-syndrome-crps-types-i-ii-41">1. Complex Regional Pain Syndrome (CRPS Types I &amp; II) (4.1)</h2>
+<h3 id="paper-22-smart-wand-oconnell-2016-cochrane-review-on-crps-physiotherapy">📄 Paper 22: Smart, Wand, &amp; O'Connell (2016) — Cochrane Review on CRPS Physiotherapy</h3>
+<p><strong>Citation:</strong> Smart KM, Wand BM, O'Connell NE. <em>Physiotherapy for pain and disability in adults with complex regional pain syndrome (CRPS) types I and II.</em> Cochrane Database Syst Rev. 2016 Feb 24;2(2):CD010853. DOI: 10.1002/14651858.CD010853.pub2.</p>
+<ul>
+<li><strong>Diagnostic Distinction (Budapest Criteria):</strong><ul>
+<li><strong>CRPS Type I (Reflex Sympathetic Dystrophy):</strong> Develops after an initiating noxious event or immobilization without verifiable major peripheral nerve injury.</li>
+<li><strong>CRPS Type II (Causalgia):</strong> Develops following an identifiable major peripheral nerve injury.</li>
+<li><strong>Four Symptom Categories (Budapest):</strong><ol>
+<li><em>Sensory:</em> Hyperalgesia, allodynia.</li>
+<li><em>Vasomotor:</em> Temperature asymmetry ($&gt;1^\circ\text{C}$), skin color changes/asymmetry.</li>
+<li><em>Sudomotor / Edema:</em> Edema, sweating changes/asymmetry.</li>
+<li><em>Motor / Trophic:</em> Decreased range of motion, motor dysfunction (weakness, tremor, dystonia), trophic changes (hair, nail, skin changes).</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><strong>Physiotherapy Evidence Findings:</strong><ol>
+<li><strong>Graded Motor Imagery (GMI) and Mirror Therapy:</strong> Best available evidence for reducing pain and disability in chronic CRPS Type I when delivered in sequence (Laterality $\rightarrow$ Imagined Movements $\rightarrow$ Mirror Therapy).</li>
+<li><strong>Tactile Desensitization &amp; Sensory Discrimination Training:</strong> Promising adjunctive evidence for reducing mechanical allodynia and cortical somatotopic reorganization.</li>
+<li><strong>General Physiotherapy / Graded Functional Exposure:</strong> Essential for restoring limb function and preventing disuse contractures, but aggressive, pain-provoking manual therapies are contraindicated in acute flare phases.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h2 id="2-older-adults-dementia-42-44">2. Older Adults &amp; Dementia (4.2 &amp; 4.4)</h2>
+<h3 id="paper-23-lichtner-et-al-2014-pain-assessment-in-dementia">📄 Paper 23: Lichtner et al. (2014) — Pain Assessment in Dementia</h3>
+<p><strong>Citation:</strong> Lichtner V, Dowding D, Esterhuizen P, et al. <em>Pain assessment for people with dementia: a systematic review of systematic reviews of pain assessment tools.</em> BMC Geriatr. 2014 Dec 17;14:138. DOI: 10.1186/1471-2318-14-138.</p>
+<ul>
+<li><strong>Core Problem:</strong> Patients with moderate-to-severe dementia or communicative impairments cannot reliably use self-report scales (NRS/VAS), leading to systemic <strong>undertreatment of pain</strong> and misdiagnosis of pain-related agitation as behavioral disturbances.</li>
+<li><strong>Non-Verbal Facial Expressions of Pain in Dementia:</strong><ul>
+<li>Facial expression is the most sensitive non-verbal indicator of pain.</li>
+<li>Specifically, pain evokes grimacing concentrated <strong>around the eyes and nose</strong>: brow lowering/furrowing (FACS AU 4), eyelid tightening/orbit narrowing (AU 6 &amp; 7), and nose wrinkling (AU 9).</li>
+<li>Generalized agitation or pulling away may occur with routine distress, but facial contraction around the upper face (eyes/nose) is the hallmark observational sign.</li>
+</ul>
+</li>
+</ul>
+<h3 id="paper-23b-lichtner-et-al-2014-pain-assessment-for-people-with-dementia-a-systematic-review-of-systematic-reviews">📄 Paper 23b: Lichtner et al. (2014) — Pain Assessment for People with Dementia: A Systematic Review of Systematic Reviews</h3>
+<p><strong>Citation:</strong> Lichtner V, Dowding D, Esterhuizen P, Closs SJ, Long AF, Corbett A, Briggs M. <em>Pain assessment for people with dementia: a systematic review of systematic reviews of pain assessment tools.</em> BMC Geriatr. 2014 Dec 21;14:138. DOI: 10.1186/1471-2318-14-138.
+- <strong>Key Findings of the Meta-Review (Evaluating 28 Observational Tools):</strong>
+    - <strong>No Single Gold Standard:</strong> Because studies vary widely in methodological quality and there is no objective biological marker for pain in non-verbal patients, <strong>no single tool can be definitively recommended as superior</strong> or universally adopted.
+    - <strong>Behavioral Observation vs. Physiological Signs:</strong> Autonomic signs (blood pressure, pulse rate) are non-specific and habituate quickly; validated behavioral observation scales are mandatory.
+    - <strong>Movement-Based Evaluation:</strong> Pain behaviors are significantly more discernible during guided movement and functional care activities than during quiet rest.
+- <strong>Observational Behavioral Pain Tools (Key for MCQ):</strong>
+    - <strong>PAINAD (Pain Assessment in Advanced Dementia):</strong> 5 behavioral domains (Breathing, Negative Vocalization, Facial Expression, Body Language, Consolability). Score 0–10. Fast and easy to integrate into clinical routine.
+    - <strong>MOBID-2 (Mobility-Observed Information Dementia Pain Scale):</strong> Evaluates pain during active and passive mobilization across 10 anatomical regions; high construct validity and inter-rater reliability for MSK pain.
+    - <strong>PACSLAC (Pain Assessment Checklist for Seniors with Limited Ability to Communicate):</strong> Comprehensive 60-item checklist (facial, activity, social/personality, other); robust reliability, but longer to administer.
+    - <strong>Abbey Pain Scale &amp; DOLOPLUS-2:</strong> Common European observational tools; useful for screening changes over time.
+- <strong>⚡ MCQ Takeaway:</strong> <em>No single tool is the universal gold standard</em>. Behavioral observation during movement (MOBID-2/PAINAD) is vastly superior to physiological parameters.</p>
+<hr />
+<h3 id="paper-24-karp-et-al-2008-herr-2011-pain-neurobiology-assessment-in-older-adults">📄 Paper 24: Karp et al. (2008) &amp; Herr (2011) — Pain Neurobiology &amp; Assessment in Older Adults</h3>
+<ul>
+<li><strong>Karp et al. (2008) <em>Br J Anaesth</em>:</strong><ul>
+<li><strong>Age-Related Neurobiological Changes:</strong><ul>
+<li>Degeneration of unmyelinated $C$-fibers and decreased intraepidermal nerve fiber density.</li>
+<li>Decreased endogenous opioid receptor binding and impaired descending inhibitory control (reduced CPM/DNIC).</li>
+<li>Increased prevalence of multi-site musculoskeletal pain, osteoarthritis, and neuropathic pain (post-herpetic neuralgia, lumbar radiculopathy).</li>
+</ul>
+</li>
+<li><strong>Pharmacological Vulnerabilities:</strong> Decreased renal clearance (GFR), altered hepatic cytochrome P450 metabolism, polypharmacy risk, heightened sensitivity to CNS side effects (sedation, falls, delirium) from opioids, NSAIDs (GI bleeding, renal failure), and tricyclic antidepressants (anticholinergic burden).</li>
+</ul>
+</li>
+<li><strong>Herr (2011) <em>J Pain</em> — Assessment Hierarchy:</strong><ul>
+<li><strong>Hierarchy of Pain Assessment Techniques:</strong><ol>
+<li><em>Self-report:</em> Always attempt self-report first (even in mild-moderate dementia; prefer Verbal Rating Scale [VRS] or Numeric Rating Scale [NRS] with large font).</li>
+<li><em>Search for potential causes:</em> Pathological conditions (fracture, arthritis, pressure ulcers, constipation, UTI).</li>
+<li><em>Observe patient behaviors:</em> Grimacing, guarding, vocalizations, agitation.</li>
+<li><em>Surrogate reporting:</em> Family members / regular caregivers who know baseline behaviors.</li>
+<li><em>Empirical analgesic trial:</em> Monitor behavioral response to low-dose analgesia.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="3-infants-children-and-adolescents-43-45">3. Infants, Children, and Adolescents (4.3 &amp; 4.5)</h2>
+<h3 id="paper-25-hatfield-ely-2015-acute-pain-measurement-in-infants">📄 Paper 25: Hatfield &amp; Ely (2015) — Acute Pain Measurement in Infants</h3>
+<p><strong>Citation:</strong> Hatfield LA, Ely EA. <em>Measurement of acute pain in infants: a review of behavioral and physiological variables.</em> Biol Res Nurs. 2015 Jan;17(1):100-11. DOI: 10.1177/1099800414531448.</p>
+<ul>
+<li><strong>Validated Multidimensional Infant Pain Scales:</strong><ul>
+<li><strong>NIPS (Neonatal Infant Pain Scale):</strong> Facial expression, cry, breathing patterns, arms, legs, state of arousal (Score 0–7; $&gt;3$ indicates pain).</li>
+<li><strong>FLACC Scale (Face, Legs, Activity, Cry, Consolability):</strong> Widely validated in post-operative and procedural pain from 2 months to 7 years (Score 0–10).</li>
+<li><strong>PIPP (Premature Infant Pain Profile):</strong> Incorporates gestational age, baseline heart rate/oxygen saturation, facial brow bulge, eye squeeze, and nasolabial furrow.</li>
+</ul>
+</li>
+<li><strong>Neurodevelopmental Impact:</strong> Repeated, untreated neonatal pain in NICU causes long-term alterations in stress reactivity, lowered pain thresholds in childhood, and neurodevelopmental vulnerabilities.</li>
+</ul>
+<hr />
+<h3 id="paper-26-hamill-et-al-2014-pediatric-pain-location-tools">📄 Paper 26: Hamill et al. (2014) — Pediatric Pain Location Tools</h3>
+<p><strong>Citation:</strong> Hamill JK, Lyndon M, Liley A, Hill AG. <em>Where it hurts: a systematic review of pain-location tools for children.</em> Pain. 2014 May;155(5):851-8. DOI: 10.1016/j.pain.2014.01.026.
+- <strong>Key Findings:</strong>
+    - <strong>Body Maps / Pain Drawings:</strong> Reliable and valid in children aged <strong>$\ge 4\text{–}5$ years</strong>.
+    - Provides critical spatial discrimination that verbal descriptions cannot capture in young children. Note: Asking "where it hurts" measures <strong>location</strong>, NOT intensity.
+    - Digital interactive body maps enhance reporting accuracy and engagement in adolescents.</p>
+<ul>
+<li><strong>Pediatric Pain Intensity Measurement by Age Group (Oxford Textbook of Paediatric Pain):</strong><ul>
+<li><strong>&lt;3–4 years:</strong> Purely observational/behavioral scales (FLACC, CHEOPS, NIPS, PIPP).</li>
+<li><strong>3 to 7 years (including &lt;5 years):</strong> Self-report faces scales (<strong>Wong-Baker FACES</strong>, Faces Pain Scale - Revised [FPS-R]).</li>
+<li><strong>$\ge 8$ years:</strong> Abstract numeric and linear scales (<strong>Numeric Rating Scale [NRS]</strong>, <strong>Visual Analog Scale [VAS]</strong>).</li>
+</ul>
+</li>
+</ul>
+<h3 id="adolescent-knee-musculoskeletal-pain-differential">📄 Adolescent Knee &amp; Musculoskeletal Pain Differential:</h3>
+<ul>
+<li><strong>Osgood-Schlatter Disease (Traction Apophysitis):</strong><ul>
+<li>Most common cause of anterior knee pain in active adolescents (12–15 years, boys &gt; girls; bilateral in ~20–30%).</li>
+<li>Typical presentation: Activity-related anterior knee pain over months with a <strong>normal intra-articular physical examination</strong> (no effusion, normal ligaments/menisci, normal joint ROM), except for focal tenderness and swelling directly over the tibial tuberosity.</li>
+</ul>
+</li>
+<li><strong>Juvenile Idiopathic Arthritis (JIA):</strong><ul>
+<li>Inflammatory arthropathy requiring objective arthritis (<strong>synovitis, swelling, joint effusion, warmth, limited ROM</strong>) persisting for $&gt;6$ weeks. An adolescent with a completely normal joint exam does <strong>not</strong> have active JIA.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="paper-27-fisher-et-al-2015-eccleston-et-al-2015-pediatric-psychological-interventions">📄 Paper 27: Fisher et al. (2015) &amp; Eccleston et al. (2015) — Pediatric Psychological Interventions</h3>
+<ul>
+<li><strong>Fisher et al. (2015) Cochrane Review:</strong> Remotely delivered psychological therapies (internet CBT) are effective in reducing pain intensity and headache frequency in children and adolescents with chronic recurrent pain.</li>
+<li><strong>Eccleston et al. (2015) Cochrane Review (Parent Interventions):</strong><ul>
+<li>Psychological interventions specifically targeting <strong>parents</strong> of children with chronic illness/pain significantly reduce parent distress, reduce protective pain-reinforcing behaviors (parental solicitousness), and improve child functioning and coping.</li>
+</ul>
+</li>
+<li><strong>Return to School (RTS) and Staying in School (SIS):</strong><ul>
+<li>Core rehabilitation objective in pediatric chronic pain. School avoidance reinforces disability and social isolation. A structured, graded school return plan with school nurse/teacher alignment is a primary clinical priority.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="4-section-4-high-yield-mcq-summary-table">4. Section 4 High-Yield MCQ Summary Table</h2>
+<table>
+<thead>
+<tr>
+<th>Population / Condition</th>
+<th>Primary Assessment Tool</th>
+<th>Gold Standard / Clinical Benchmark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CRPS (Type I &amp; II)</strong></td>
+<td>Budapest Diagnostic Criteria</td>
+<td>Sensory + Vasomotor + Sudomotor/Edema + Motor/Trophic</td>
+</tr>
+<tr>
+<td><strong>CRPS Physiotherapy</strong></td>
+<td>Graded Motor Imagery (Smart 2016)</td>
+<td>Stage 1: Laterality $\rightarrow$ Stage 2: Motor Imagery $\rightarrow$ Stage 3: Mirror Therapy</td>
+</tr>
+<tr>
+<td><strong>Dementia Pain</strong></td>
+<td>PAINAD / MOBID-2 / Abbey</td>
+<td>Observational behavioral tools during rest &amp; mobilization</td>
+</tr>
+<tr>
+<td><strong>Older Adults Hierarchy</strong></td>
+<td>Herr (2011) Hierarchy</td>
+<td>1. Self-report (VRS/NRS) $\rightarrow$ 2. Pathology $\rightarrow$ 3. Behavior $\rightarrow$ 4. Carer $\rightarrow$ 5. Analgesic trial</td>
+</tr>
+<tr>
+<td><strong>Infant Acute Pain</strong></td>
+<td>FLACC / NIPS / PIPP</td>
+<td>Multidimensional behavioral + physiological indicators</td>
+</tr>
+<tr>
+<td><strong>Pediatric Pain Location</strong></td>
+<td>Body Maps / Drawings (Hamill 2014)</td>
+<td>Valid from $\ge 4\text{–}5$ years of age</td>
+</tr>
+<tr>
+<td><strong>Pediatric Parent Role</strong></td>
+<td>Eccleston (2015) Cochrane</td>
+<td>Reducing parental solicitousness directly improves child functioning</td>
+</tr>
+<tr>
+<td><strong>School Attendance</strong></td>
+<td>RTS / SIS Protocols</td>
+<td>Graded return to school is a primary functional metric</td>
+</tr>
+</tbody>
+</table>
+
+<div class="footer">
+    EFIC® European Diploma in Pain Physiotherapy — Study Hub (Exam Target: Nov 13th)
+</div>
+</main>
+
+</body>
+</html>

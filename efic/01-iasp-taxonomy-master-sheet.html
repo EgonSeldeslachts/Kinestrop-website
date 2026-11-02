@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0F172A">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json">
+
+    <title>IASP Taxonomy & Pain Definitions — Authoritative Master Sheet (EFIC Diploma) — EFIC Diploma Study Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+
+:root {
+    --brand-primary: #0F172A;
+    --brand-secondary: #0284C7;
+    --brand-accent: #0284C7;
+    --surface-bg: #F8FAFC;
+    --surface-card: #FFFFFF;
+    --text-main: #1E293B;
+    --text-muted: #64748B;
+    --border-subtle: #E2E8F0;
+    --border-strong: #CBD5E1;
+    --highlight-bg: #EFF6FF;
+    --success-bg: #F0FDF4;
+    --success-text: #166534;
+    --warning-bg: #FFFBEB;
+    --warning-text: #B45309;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--surface-bg);
+    color: var(--text-main);
+    line-height: 1.7;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background: #0F172A;
+    color: #F8FAFC;
+    padding: 16px 24px;
+    border-bottom: 2px solid #0284C7;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.top-bar-content {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.brand-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+}
+
+.brand-badge span {
+    background: #0284C7;
+    color: #FFFFFF;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-print {
+    background: #1E293B;
+    color: #E2E8F0;
+    border: 1px solid #334155;
+    padding: 7px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-print:hover {
+    background: #0284C7;
+    color: #FFFFFF;
+    border-color: #0284C7;
+}
+
+.nav-container {
+    background: #1E293B;
+    border-bottom: 1px solid #334155;
+    padding: 6px 24px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.study-nav {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    gap: 6px;
+}
+
+.nav-link {
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.15s ease;
+}
+
+.nav-link:hover {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-link.active {
+    color: #38BDF8;
+    background: rgba(56, 189, 248, 0.12);
+    font-weight: 600;
+}
+
+.main-container {
+    max-width: 1100px;
+    margin: 32px auto 64px auto;
+    background: var(--surface-card);
+    padding: 48px 56px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.06), 0 1px 4px rgba(15, 23, 42, 0.04);
+    border: 1px solid var(--border-subtle);
+}
+
+.wide-content .main-container {
+    max-width: 1350px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--brand-primary);
+    line-height: 1.3;
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-top: 0.2em;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--border-subtle);
+    color: #0F172A;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+    color: #1E293B;
+}
+
+h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #0369A1;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1.1em;
+}
+
+ul, ol {
+    margin-top: 0.3em;
+    margin-bottom: 1.2em;
+    padding-left: 26px;
+}
+
+li {
+    margin-bottom: 0.45em;
+    line-height: 1.6;
+}
+
+li > p {
+    margin-bottom: 0.35em;
+}
+
+li > p:last-child {
+    margin-bottom: 0;
+}
+
+ul > li::marker {
+    color: var(--brand-secondary);
+}
+
+ol > li::marker {
+    font-weight: 600;
+    color: var(--brand-secondary);
+}
+
+ul ul, ol ul {
+    margin-top: 0.4em;
+    margin-bottom: 0.6em;
+    padding-left: 20px;
+    border-left: 2px solid var(--border-subtle);
+    list-style-type: circle;
+}
+
+ul ol, ol ol {
+    margin-top: 0.4em;
+    margin-bottom: 0.6em;
+    padding-left: 20px;
+    border-left: 2px solid var(--border-subtle);
+    list-style-type: lower-alpha;
+}
+
+ul ul > li::marker, ol ul > li::marker {
+    color: var(--text-muted);
+}
+
+ul ul ul, ol ul ul, ul ol ul, ol ol ul {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+    padding-left: 18px;
+    border-left: 2px solid var(--border-strong);
+    list-style-type: square;
+}
+
+ul ul ul > li::marker, ol ul ul > li::marker {
+    color: #94A3B8;
+}
+
+li:has(> ul), li:has(> ol) {
+    margin-bottom: 0.75em;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 24px 0 32px 0;
+    font-size: 13.5px;
+    line-height: 1.55;
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px 14px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+th {
+    background-color: #0F172A;
+    color: #FFFFFF;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 13px;
+    border-bottom: 2px solid #0284C7;
+}
+
+tr:nth-child(even) td {
+    background-color: #F8FAFC;
+}
+
+tr:hover td {
+    background-color: #F0F9FF;
+}
+
+blockquote {
+    margin: 20px 0;
+    padding: 14px 20px;
+    background: #F0F9FF;
+    border-left: 4px solid #0284C7;
+    border-radius: 0 8px 8px 0;
+    color: #0369A1;
+    font-style: normal;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.88em;
+    background: #F1F5F9;
+    color: #0F172A;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid #E2E8F0;
+}
+
+pre {
+    background: #0F172A;
+    color: #F8FAFC;
+    padding: 16px 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 13.5px;
+    line-height: 1.6;
+}
+
+pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    border: none;
+}
+
+a {
+    color: #0284C7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0369A1;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border-subtle);
+    margin: 36px 0;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+@media print {
+    body { background: #FFFFFF; font-size: 11pt; }
+    .top-bar, .nav-container, .btn-print, .footer { display: none !important; }
+    .main-container { max-width: 100% !important; margin: 0 !important; padding: 0 !important; border: none !important; box-shadow: none !important; }
+    table { font-size: 9pt !important; page-break-inside: auto; }
+    tr { page-break-inside: avoid; page-break-after: auto; }
+    th { background-color: #E2E8F0 !important; color: #000000 !important; }
+    h1, h2, h3 { page-break-after: avoid; }
+}
+
+    </style>
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="top-bar-content">
+        <div class="brand-badge">
+            <span>EFIC® EDPP</span> European Diploma in Pain Physiotherapy
+        </div>
+        <div class="actions">
+            <button class="btn-print" onclick="window.print()">
+                Print / Save as PDF
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="nav-container">
+<nav class="study-nav"><a href="README.html" class="nav-link">Hub Overview</a><a href="00-curriculum-breakdown.html" class="nav-link">00. Curriculum</a><a href="01-iasp-taxonomy-master-sheet.html" class="nav-link active">01a. Taxonomy</a><a href="01-pain-science-and-knowledge.html" class="nav-link">01b. Pain Science</a><a href="02-assessment-and-measurement.html" class="nav-link">02. Assessment</a><a href="03-principles-of-treatment.html" class="nav-link">03. Treatment</a><a href="04-special-populations.html" class="nav-link">04. Populations</a><a href="05-mcq-high-yield-quick-reference.html" class="nav-link">05. MCQ Bible</a><a href="06-treatment-evidence-master-table.html" class="nav-link">06. Master Table</a><a href="07-zotero-complete-reading-list-inventory.html" class="nav-link">07. Zotero Library</a></nav>
+</div>
+
+<main class="main-container">
+<h1 id="iasp-taxonomy-pain-definitions-authoritative-master-sheet-efic-diploma">IASP Taxonomy &amp; Pain Definitions — Authoritative Master Sheet (EFIC Diploma)</h1>
+<blockquote>
+<p><strong>Official Standard:</strong> International Association for the Study of Pain (IASP) Terminology &amp; Taxonomy Revision.<br />
+<strong>Rule for the EFIC Exam:</strong> Questions testing definitions require <strong>EXACT VERBATIM KNOWLEDGE</strong> of the clauses (e.g. <em>"whether spontaneous or evoked"</em>, <em>"associated with, or resembling"</em>, <em>"non-neural tissue"</em>, <em>"somatosensory nervous system"</em>).</p>
+</blockquote>
+<hr />
+<h2 id="1-the-definitive-iasp-terminology-catalog-31-verbatim-definitions">1. The Definitive IASP Terminology Catalog (31 Verbatim Definitions)</h2>
+<h3 id="1-pain">1. Pain</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"An unpleasant sensory and emotional experience associated with, or resembling that associated with, actual or potential tissue damage."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong>  <ol>
+<li>Pain is always a personal experience influenced by biological, psychological, and social factors.</li>
+<li>Pain and nociception are different phenomena.</li>
+<li>Through life experiences, individuals learn the concept of pain.</li>
+<li>A person's report of an experience as pain should be respected.</li>
+<li>Although pain usually serves an adaptive role, it may have adverse effects on function and well-being.</li>
+<li>Verbal description is only one behavior to express pain; inability to communicate does not negate the possibility of experiencing pain.</li>
+</ol>
+</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will omit 'emotional', claim pain requires 'actual tissue damage' (omitting 'potential' or 'resembling'), or claim non-verbal patients cannot experience pain.</em></li>
+</ul>
+<hr />
+<h3 id="2-allodynia">2. Allodynia</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"Pain due to a stimulus that does not normally provoke pain."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Note that the stimulus leads to an unexpectedly painful response. This is a clinical term that does not imply a mechanism. The stimulus and response mode differ (i.e. non-painful stimulus produces painful response).</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will swap with hyperalgesia: claiming allodynia is 'exaggerated pain to a noxious stimulus'.</em></li>
+</ul>
+<hr />
+<h3 id="3-hyperalgesia">3. Hyperalgesia</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"Increased pain from a stimulus that normally provokes pain."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Current evidence suggests that hyperalgesia is a consequence of perturbation of the nociceptive system with peripheral or central sensitization, or both. The stimulus and response mode are the same (i.e. painful stimulus produces magnified pain).</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will define it as pain provoked by a non-painful stimulus.</em></li>
+</ul>
+<hr />
+<h3 id="4-dysesthesia">4. Dysesthesia</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"An unpleasant abnormal sensation, whether spontaneous or evoked."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Compare with paresthesia. A dysesthesia should always be unpleasant, and a paresthesia should not be unpleasant. It should always be specified whether the sensations are spontaneous or evoked.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will say dysesthesia is 'only evoked by touch' or omit the word 'unpleasant'.</em></li>
+</ul>
+<hr />
+<h3 id="5-paresthesia">5. Paresthesia</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"An abnormal sensation, whether spontaneous or evoked."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Compare with dysesthesia. A paresthesia should not be unpleasant (e.g. tingling, pins and needles). It should always be specified whether the sensations are spontaneous or evoked.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will state paresthesia is inherently painful or unpleasant.</em></li>
+</ul>
+<hr />
+<h3 id="6-nociceptive-pain">6. Nociceptive Pain</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"Pain that arises from actual or threatened damage to non-neural tissue and is due to the activation of nociceptors."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Used to describe pain occurring with a normally functioning somatosensory nervous system, to contrast with the abnormal function seen in neuropathic pain.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will categorize radiculopathy or fibromyalgia as nociceptive pain.</em></li>
+</ul>
+<hr />
+<h3 id="7-neuropathic-pain">7. Neuropathic Pain</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"Pain caused by a lesion or disease of the somatosensory nervous system."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Requires a demonstrable lesion or disease that satisfies established neurological diagnostic criteria with neuroanatomical plausibility.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will claim somatic referred pain or muscle spasm pain is neuropathic.</em></li>
+</ul>
+<hr />
+<h3 id="8-nociplastic-pain">8. Nociplastic Pain</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"Pain that arises from altered nociception despite no clear evidence of actual or threatened tissue damage causing the activation of peripheral nociceptors or evidence for disease or lesion of the somatosensory system causing the pain."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Clinical features include multifocal/widespread pain, hypersensitivity (allodynia, hyperalgesia), fatigue, sleep, and cognitive disturbance (e.g. fibromyalgia).</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will call it 'psychogenic pain' or claim it involves a structural nerve lesion.</em></li>
+</ul>
+<hr />
+<h3 id="9-nociception">9. Nociception</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"The neural process of encoding noxious stimuli."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Consequences may be autonomic or behavioral. Pain perception is not necessarily implied. Nociception != pain.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will claim nociception is synonymous with pain or that pain cannot exist without nociception.</em></li>
+</ul>
+<hr />
+<h3 id="10-nociceptor">10. Nociceptor</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"A high-threshold sensory receptor of the peripheral somatosensory nervous system that is capable of transducing and encoding noxious stimuli."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Includes A-delta and C primary afferent nerve endings.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will call nociceptors 'pain receptors' (receptors transduce energy, they do not feel pain).</em></li>
+</ul>
+<hr />
+<h3 id="11-nociceptive-neuron">11. Nociceptive Neuron</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"A central or peripheral neuron of the somatosensory nervous system that is capable of encoding noxious stimuli."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Can be peripheral or central (e.g. dorsal horn Wide Dynamic Range or nociceptive-specific neurons).</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will claim nociceptive neurons are only found in the peripheral nervous system.</em></li>
+</ul>
+<hr />
+<h3 id="12-nociceptive-stimulus">12. Nociceptive Stimulus</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"An actually or potentially tissue-damaging event transduced and encoded by nociceptors."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Refers to the physical stimulus acting on nociceptors.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will confuse stimulus with sensation.</em></li>
+</ul>
+<hr />
+<h3 id="13-noxious-stimulus">13. Noxious Stimulus</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"An actually or potentially tissue-damaging event."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    May be mechanical, thermal, or chemical.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will claim non-noxious stimuli can activate normal nociceptors.</em></li>
+</ul>
+<hr />
+<h3 id="14-analgesia">14. Analgesia</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"Absence of pain in response to stimulation which would normally be painful."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Encompasses pharmacological analgesia, congenital insensitivity to pain, or nerve block.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will confuse analgesia (absence of pain to noxious stimulus) with anesthesia (absence of all sensation).</em></li>
+</ul>
+<hr />
+<h3 id="15-anesthesia-dolorosa">15. Anesthesia Dolorosa</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"Pain in an area or region which is anesthetic."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Typically seen after deafferentation or surgical lesioning (e.g. trigeminal rhizotomy).</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will claim an anesthetic area cannot feel pain.</em></li>
+</ul>
+<hr />
+<h3 id="16-central-pain">16. Central Pain</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"Pain initiated or caused by a primary lesion or disease of the central somatosensory nervous system."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Examples: post-stroke thalamic pain, spinal cord injury pain, multiple sclerosis pain.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will categorize central sensitization in fibromyalgia as 'central pain' (central pain requires a lesion/disease of CNS somatosensory tracts).</em></li>
+</ul>
+<hr />
+<h3 id="17-peripheral-neuropathic-pain">17. Peripheral Neuropathic Pain</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"Pain caused by a lesion or disease of the peripheral somatosensory nervous system."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Examples: painful diabetic polyneuropathy, post-herpetic neuralgia, radiculopathy.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will include musculoskeletal pain radiating into the limb.</em></li>
+</ul>
+<hr />
+<h3 id="18-central-sensitization">18. Central Sensitization</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"Increased responsiveness of nociceptive neurons in the central nervous system to their normal or subthreshold afferent input."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Includes dorsal horn and supraspinal amplification and loss of descending inhibition. Peripheral neurons are typically not involved in this definition.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will claim central sensitization is caused by peripheral nociceptor membrane phosphorylation.</em></li>
+</ul>
+<hr />
+<h3 id="19-peripheral-sensitization">19. Peripheral Sensitization</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"Increased responsiveness and reduced threshold of nociceptive neurons in the periphery to the stimulation of their receptive fields."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Driven by inflammatory soup (prostaglandins, bradykinin, NGF) sensitizing ion channels (TRPV1, Nav1.7/1.8).</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will claim peripheral sensitization causes secondary hyperalgesia (it causes primary hyperalgesia).</em></li>
+</ul>
+<hr />
+<h3 id="20-sensitization">20. Sensitization</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"Increased responsiveness of nociceptive neurons to their normal input, and/or recruitment of a response to normally subthreshold inputs."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Umbrella neurophysiological term encompassing both peripheral and central sensitization.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will say sensitization refers to psychological distress.</em></li>
+</ul>
+<hr />
+<h3 id="21-hyperpathia">21. Hyperpathia</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"A painful syndrome characterized by an abnormally painful reaction to a stimulus, especially a repetitive stimulus, as well as an increased threshold."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Faulty identification/localization, delay in perception, radiating sensation, and explosive character outlasting stimulus are hallmarks.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will claim hyperpathia has a lowered initiation threshold (the threshold is ELEVATED/INCREASED!).</em></li>
+</ul>
+<hr />
+<h3 id="22-hyperesthesia">22. Hyperesthesia</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"Increased sensitivity to stimulation, excluding the special senses."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Encompasses both allodynia and hyperalgesia, but also refers to non-painful touch and thermal modalities.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will claim hyperesthesia only applies to painful sensations.</em></li>
+</ul>
+<hr />
+<h3 id="23-hypoesthesia">23. Hypoesthesia</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"Decreased sensitivity to stimulation, excluding the special senses."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Refers to cutaneous modalities (touch, warmth, cold).</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will confuse hypoesthesia (decreased sensation) with hypoalgesia (decreased pain).</em></li>
+</ul>
+<hr />
+<h3 id="24-hypoalgesia">24. Hypoalgesia</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"Diminished pain in response to a normally painful stimulus."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Refers specifically to noxious/painful stimuli.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will claim hypoalgesia is the complete absence of pain (that is analgesia).</em></li>
+</ul>
+<hr />
+<h3 id="25-neuralgia">25. Neuralgia</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"Pain in the distribution of a nerve or nerves."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    E.g. Trigeminal neuralgia, glossopharyngeal neuralgia, occipital neuralgia.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will claim neuralgia requires pathological inflammation (that is neuritis).</em></li>
+</ul>
+<hr />
+<h3 id="26-neuritis">26. Neuritis</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"Inflammation of a nerve or nerves."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Reserved for processes which are inflammatory; should not be used for degenerative conditions unless inflammation is also present.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will call any nerve compression or neuropathy 'neuritis'.</em></li>
+</ul>
+<hr />
+<h3 id="27-neuropathy">27. Neuropathy</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"A disturbance of function or pathological change in a nerve: in one nerve, mononeuropathy; in several nerves, mononeuropathy multiplex; if diffuse and bilateral, polyneuropathy."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Non-inflammatory structural or functional nerve disorder.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will require pain for neuropathy (neuropathy can be purely painless motor or sensory loss).</em></li>
+</ul>
+<hr />
+<h3 id="28-pain-threshold">28. Pain Threshold</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"The minimum intensity of a stimulus that is perceived as painful."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Traditionally the lowest stimulus intensity at which a subject perceives pain in 50% of trials. Represents a sensory-discriminative endpoint.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will state pain threshold reflects psychological coping.</em></li>
+</ul>
+<hr />
+<h3 id="29-pain-tolerance-level">29. Pain Tolerance Level</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"The maximum intensity of a pain-producing stimulus that a subject is willing to accept in a given situation."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Heavily influenced by cognitive, motivational, cultural, and contextual factors.</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will claim pain tolerance is a fixed physiological spinal reflex.</em></li>
+</ul>
+<hr />
+<h3 id="30-causalgia">30. Causalgia</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"A syndrome of sustained burning pain, allodynia, and hyperpathia after a traumatic nerve lesion, often combined with vasomotor and sudomotor dysfunction and later trophic changes."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    Historically known as Reflex Sympathetic Dystrophy / now classified as Complex Regional Pain Syndrome Type II (CRPS II).</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will say causalgia occurs without a nerve injury (CRPS Type I occurs without nerve injury; Causalgia / Type II requires a nerve lesion).</em></li>
+</ul>
+<hr />
+<h3 id="31-neurogenic-pain">31. Neurogenic Pain</h3>
+<ul>
+<li><strong>Official IASP Definition (VERBATIM):</strong><br />
+    &gt; <strong>"Pain initiated or caused by a primary lesion, dysfunction, or transitory perturbation in the peripheral or central nervous system."</strong></li>
+<li><strong>Official IASP Commentary &amp; Clinical Notes:</strong><br />
+    An older term largely superseded by 'neuropathic pain' (for lesions) and 'nociplastic pain' (for dysfunction).</li>
+<li><strong>⚠️ Exam Distractor Trap:</strong><br />
+<em>Distractor will treat neurogenic and neuropathic pain as strictly identical in modern taxonomy.</em></li>
+</ul>
+<hr />
+<h2 id="2-high-yield-comparative-matrices">2. High-Yield Comparative Matrices</h2>
+<h3 id="a-allodynia-vs-hyperalgesia-the-core-distinction">A. Allodynia vs. Hyperalgesia (The Core Distinction)</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Allodynia</th>
+<th>Hyperalgesia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Exact Definition</strong></td>
+<td><em>"Pain due to a stimulus that does not normally provoke pain."</em></td>
+<td><em>"Increased pain from a stimulus that normally provokes pain."</em></td>
+</tr>
+<tr>
+<td><strong>Stimulus Mode</strong></td>
+<td><strong>Non-noxious</strong> (innocuous brush, cotton wisp, clothing, mild warm/cold).</td>
+<td><strong>Noxious</strong> (pinprick, sharp probe, heat &gt;45°C).</td>
+</tr>
+<tr>
+<td><strong>Response</strong></td>
+<td>Pain elicited where none should exist.</td>
+<td>Pain exaggerated in intensity and/or duration.</td>
+</tr>
+<tr>
+<td><strong>IASP Rule</strong></td>
+<td><strong>Stimulus and response mode differ</strong> (touch $\rightarrow$ pain).</td>
+<td><strong>Stimulus and response mode are the same</strong> (pain $\rightarrow$ extreme pain).</td>
+</tr>
+<tr>
+<td><strong>Clinical Subtypes</strong></td>
+<td>Dynamic mechanical ($A\beta$ brush), Static/Punctate, Thermal.</td>
+<td>Primary (peripheral / zone of injury) vs. Secondary (central / undamaged zone).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="b-dysesthesia-vs-paresthesia-the-unpleasantness-rule">B. Dysesthesia vs. Paresthesia (The Unpleasantness Rule)</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Paresthesia</th>
+<th>Dysesthesia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Exact Definition</strong></td>
+<td><em>"An abnormal sensation, whether spontaneous or evoked."</em></td>
+<td><em>"An unpleasant abnormal sensation, whether spontaneous or evoked."</em></td>
+</tr>
+<tr>
+<td><strong>Unpleasantness</strong></td>
+<td><strong>NOT unpleasant</strong> (by definition).</td>
+<td><strong>STRICTLY unpleasant / distressing</strong>.</td>
+</tr>
+<tr>
+<td><strong>Triggering Mode</strong></td>
+<td><strong>Whether spontaneous or evoked</strong> (can be either).</td>
+<td><strong>Whether spontaneous or evoked</strong> (can be either).</td>
+</tr>
+<tr>
+<td><strong>Examples</strong></td>
+<td>Tingling, "limb falling asleep", vibration, non-painful pins &amp; needles.</td>
+<td>Burning tingling, painful crawling, painful cold/freezing, electric buzzing.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="c-the-3-mechanistic-pain-types-kosek-et-al-2016-2021">C. The 3 Mechanistic Pain Types (Kosek et al. 2016 / 2021)</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Nociceptive Pain</th>
+<th>Neuropathic Pain</th>
+<th>Nociplastic Pain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Verbatim Definition</strong></td>
+<td><em>"Pain that arises from actual or threatened damage to non-neural tissue and is due to the activation of nociceptors."</em></td>
+<td><em>"Pain caused by a lesion or disease of the somatosensory nervous system."</em></td>
+<td><em>"Pain that arises from altered nociception despite no clear evidence of actual or threatened tissue damage... or evidence for disease or lesion of the somatosensory system."</em></td>
+</tr>
+<tr>
+<td><strong>Somatosensory System</strong></td>
+<td>Normally functioning nervous system.</td>
+<td>Structural/pathological lesion or disease in somatosensory tracts.</td>
+<td>Structurally intact; functional central amplification/loss of inhibition.</td>
+</tr>
+<tr>
+<td><strong>Key Clinical Trap</strong></td>
+<td>Cannot involve non-neural tissue.</td>
+<td>Somatic referred pain radiating down leg is <strong>NOT</strong> neuropathic.</td>
+<td>Not psychogenic; real neurobiological altered nociceptive processing.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="footer">
+    EFIC® European Diploma in Pain Physiotherapy — Study Hub (Exam Target: Nov 13th)
+</div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0F172A">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json">
+
+    <title>EFIC Core Curriculum & Reading List Syllabus Mapping — EFIC Diploma Study Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+
+:root {
+    --brand-primary: #0F172A;
+    --brand-secondary: #0284C7;
+    --brand-accent: #0284C7;
+    --surface-bg: #F8FAFC;
+    --surface-card: #FFFFFF;
+    --text-main: #1E293B;
+    --text-muted: #64748B;
+    --border-subtle: #E2E8F0;
+    --border-strong: #CBD5E1;
+    --highlight-bg: #EFF6FF;
+    --success-bg: #F0FDF4;
+    --success-text: #166534;
+    --warning-bg: #FFFBEB;
+    --warning-text: #B45309;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--surface-bg);
+    color: var(--text-main);
+    line-height: 1.7;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background: #0F172A;
+    color: #F8FAFC;
+    padding: 16px 24px;
+    border-bottom: 2px solid #0284C7;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.top-bar-content {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.brand-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+}
+
+.brand-badge span {
+    background: #0284C7;
+    color: #FFFFFF;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-print {
+    background: #1E293B;
+    color: #E2E8F0;
+    border: 1px solid #334155;
+    padding: 7px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-print:hover {
+    background: #0284C7;
+    color: #FFFFFF;
+    border-color: #0284C7;
+}
+
+.nav-container {
+    background: #1E293B;
+    border-bottom: 1px solid #334155;
+    padding: 6px 24px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.study-nav {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    gap: 6px;
+}
+
+.nav-link {
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.15s ease;
+}
+
+.nav-link:hover {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-link.active {
+    color: #38BDF8;
+    background: rgba(56, 189, 248, 0.12);
+    font-weight: 600;
+}
+
+.main-container {
+    max-width: 1100px;
+    margin: 32px auto 64px auto;
+    background: var(--surface-card);
+    padding: 48px 56px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.06), 0 1px 4px rgba(15, 23, 42, 0.04);
+    border: 1px solid var(--border-subtle);
+}
+
+.wide-content .main-container {
+    max-width: 1350px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--brand-primary);
+    line-height: 1.3;
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-top: 0.2em;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--border-subtle);
+    color: #0F172A;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+    color: #1E293B;
+}
+
+h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #0369A1;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1.1em;
+}
+
+ul, ol {
+    margin-top: 0.3em;
+    margin-bottom: 1.2em;
+    padding-left: 26px;
+}
+
+li {
+    margin-bottom: 0.45em;
+    line-height: 1.6;
+}
+
+li > p {
+    margin-bottom: 0.35em;
+}
+
+li > p:last-child {
+    margin-bottom: 0;
+}
+
+ul > li::marker {
+    color: var(--brand-secondary);
+}
+
+ol > li::marker {
+    font-weight: 600;
+    color: var(--brand-secondary);
+}
+
+ul ul, ol ul {
+    margin-top: 0.4em;
+    margin-bottom: 0.6em;
+    padding-left: 20px;
+    border-left: 2px solid var(--border-subtle);
+    list-style-type: circle;
+}
+
+ul ol, ol ol {
+    margin-top: 0.4em;
+    margin-bottom: 0.6em;
+    padding-left: 20px;
+    border-left: 2px solid var(--border-subtle);
+    list-style-type: lower-alpha;
+}
+
+ul ul > li::marker, ol ul > li::marker {
+    color: var(--text-muted);
+}
+
+ul ul ul, ol ul ul, ul ol ul, ol ol ul {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+    padding-left: 18px;
+    border-left: 2px solid var(--border-strong);
+    list-style-type: square;
+}
+
+ul ul ul > li::marker, ol ul ul > li::marker {
+    color: #94A3B8;
+}
+
+li:has(> ul), li:has(> ol) {
+    margin-bottom: 0.75em;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 24px 0 32px 0;
+    font-size: 13.5px;
+    line-height: 1.55;
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px 14px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+th {
+    background-color: #0F172A;
+    color: #FFFFFF;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 13px;
+    border-bottom: 2px solid #0284C7;
+}
+
+tr:nth-child(even) td {
+    background-color: #F8FAFC;
+}
+
+tr:hover td {
+    background-color: #F0F9FF;
+}
+
+blockquote {
+    margin: 20px 0;
+    padding: 14px 20px;
+    background: #F0F9FF;
+    border-left: 4px solid #0284C7;
+    border-radius: 0 8px 8px 0;
+    color: #0369A1;
+    font-style: normal;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.88em;
+    background: #F1F5F9;
+    color: #0F172A;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid #E2E8F0;
+}
+
+pre {
+    background: #0F172A;
+    color: #F8FAFC;
+    padding: 16px 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 13.5px;
+    line-height: 1.6;
+}
+
+pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    border: none;
+}
+
+a {
+    color: #0284C7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0369A1;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border-subtle);
+    margin: 36px 0;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+@media print {
+    body { background: #FFFFFF; font-size: 11pt; }
+    .top-bar, .nav-container, .btn-print, .footer { display: none !important; }
+    .main-container { max-width: 100% !important; margin: 0 !important; padding: 0 !important; border: none !important; box-shadow: none !important; }
+    table { font-size: 9pt !important; page-break-inside: auto; }
+    tr { page-break-inside: avoid; page-break-after: auto; }
+    th { background-color: #E2E8F0 !important; color: #000000 !important; }
+    h1, h2, h3 { page-break-after: avoid; }
+}
+
+    </style>
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="top-bar-content">
+        <div class="brand-badge">
+            <span>EFIC® EDPP</span> European Diploma in Pain Physiotherapy
+        </div>
+        <div class="actions">
+            <button class="btn-print" onclick="window.print()">
+                Print / Save as PDF
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="nav-container">
+<nav class="study-nav"><a href="README.html" class="nav-link">Hub Overview</a><a href="00-curriculum-breakdown.html" class="nav-link active">00. Curriculum</a><a href="01-iasp-taxonomy-master-sheet.html" class="nav-link">01a. Taxonomy</a><a href="01-pain-science-and-knowledge.html" class="nav-link">01b. Pain Science</a><a href="02-assessment-and-measurement.html" class="nav-link">02. Assessment</a><a href="03-principles-of-treatment.html" class="nav-link">03. Treatment</a><a href="04-special-populations.html" class="nav-link">04. Populations</a><a href="05-mcq-high-yield-quick-reference.html" class="nav-link">05. MCQ Bible</a><a href="06-treatment-evidence-master-table.html" class="nav-link">06. Master Table</a><a href="07-zotero-complete-reading-list-inventory.html" class="nav-link">07. Zotero Library</a></nav>
+</div>
+
+<main class="main-container">
+<h1 id="efic-core-curriculum-reading-list-syllabus-mapping">EFIC Core Curriculum &amp; Reading List Syllabus Mapping</h1>
+<p>This document aligns the <strong>European Pain Federation (EFIC®) Core Curriculum for the European Diploma in Pain Physiotherapy</strong> with the exact required and recommended literature.</p>
+<hr />
+<h2 id="section-1-pain-science-and-knowledge">Section 1: Pain Science and Knowledge</h2>
+<h3 id="11-pain-mechanisms">1.1 Pain Mechanisms</h3>
+<ul>
+<li><strong>Objectives:</strong><ul>
+<li>1.1.1 Outline mechanisms of acute pain, inflammation, neuropathic pain, and functional pain syndromes.</li>
+<li>1.1.2 Demonstrate knowledge and understanding of underlying physiology and biology of acute and chronic pain.</li>
+<li>1.1.3 Discuss the distinction between nociception and pain.</li>
+<li>1.1.4 Current theories of pain: Revised Gate-Control Theory, Neuromatrix Theory (Melzack), Fear-Avoidance and Endurance Model, Onion-Skin Model (Loeser), Mature Organism Model (Gifford), Mechanism-Based Approach.</li>
+<li>1.1.5 Describe: Transduction, transmission, modulation in nociceptive pathways; Ascending and descending pathways; Peripheral vs Central Sensitization; Primary vs Secondary Hyperalgesia; Neurobiology (Spinal inhibition/facilitation, Somatic/visceral nerves, Opioidergic/GABAergic PAG-RVM pathway, Adrenergic Locus Coeruleus pathway, Cortical top-down processing, Somatosensory system, Autonomic system); Neuronal-glial interactions.</li>
+</ul>
+</li>
+<li><strong>Reading List Sources:</strong><ul>
+<li><em>Textbooks on Pain:</em> Sluka (ed.) <em>Mechanisms and Management of Pain for the Physical Therapist</em>; Melzack &amp; Wall’s <em>Textbook of Pain</em> (6th ed).</li>
+</ul>
+</li>
+</ul>
+<h3 id="12-iasp-definition-of-pain-and-taxonomy">1.2 IASP Definition of Pain and Taxonomy</h3>
+<ul>
+<li><strong>Objectives:</strong><ul>
+<li>1.2.1 Describe key historical milestones: Cartesian Dualism, Germ-theory (Pasteur/Koch), Cell-theory (Virchow), Specificity vs Gate Control, Sensitization-theory.</li>
+<li>1.2.2 Define common pain phenomena according to IASP taxonomy (IASP 2020 revision: "An unpleasant sensory and emotional experience associated with, or resembling that associated with, actual or potential tissue damage").</li>
+<li>1.2.3 Define clinical pain terminology: Acute, chronic (&gt;3 months), neuropathic, spontaneous, breakthrough pain.</li>
+<li>1.2.4 Define Pain-Oriented Sensory Testing (POST): Sensory threshold, pain threshold, pain tolerance, punctate mechanical allodynia, dynamic and static mechanical allodynia, cold/warmth allodynia.</li>
+<li>1.2.5 Discuss sensory testing related to phenotypic changes in peripheral neurons (heat/cold/mechanical hyperalgesia).</li>
+</ul>
+</li>
+<li><strong>Reading List Sources:</strong><ul>
+<li><em>IASP Taxonomy &amp; Classification of Chronic Pain:</em> Merskey &amp; Bogduk (1994/2012); IASP online taxonomy (<code>iasp-pain.org/Taxonomy</code>).</li>
+</ul>
+</li>
+</ul>
+<h3 id="13-the-complex-and-multidimensional-nature-of-pain">1.3 The Complex and Multidimensional Nature of Pain</h3>
+<ul>
+<li><strong>Objectives:</strong><ul>
+<li>1.3.1 Discuss evolution of conceptual models (Biopsychosocial model); Brain changes in chronic pain (cognition, memory, mood); Behavioral/cognitive mechanisms (fear-avoidance, catastrophizing, operant/classical conditioning); Neurophysiological overlap with co-morbidities (stress, sleep, anxiety, depression); Placebo and Nocebo mechanisms; Genetics and epigenetics.</li>
+</ul>
+</li>
+<li><strong>Reading List Sources:</strong><ul>
+<li><strong>Malfliet A, Coppieters I, Van Wilgen P, et al.</strong> (2017). <em>Brain changes associated with cognitive and emotional factors in chronic pain: A systematic review.</em> Eur J Pain, 21(5):769-786.</li>
+<li><strong>Simons LE, Elman I, Borsook D.</strong> (2014). <em>Psychological processing in chronic pain: a neural systems approach.</em> Neurosci Biobehav Rev, 39:61-78.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="section-2-principles-of-assessment-and-measurement">Section 2: Principles of Assessment and Measurement</h2>
+<h3 id="21-assessment">2.1 Assessment</h3>
+<ul>
+<li><strong>Objectives:</strong><ul>
+<li>2.1.1 Comprehensive biopsychosocial assessment across the life span.</li>
+<li>2.1.2 Rationale behind basic biopsychosocial assessments.</li>
+<li>2.1.3 Cultural, societal, economic, institutional influences on pain assessment.</li>
+<li>2.1.4 Patient and provider factors (attitudes, beliefs, health literacy, affective/cognitive/behavioral responses).</li>
+<li>2.1.5 Person-centred approach (biological, functional, psychological, work, social).</li>
+<li>2.1.6 Rationale for basic investigations (red flags, serious pathology, neuropathies, musculoskeletal).</li>
+<li>2.1.7 Specialist assessment and appropriate multidisciplinary referral.</li>
+</ul>
+</li>
+<li><strong>Reading List Sources:</strong><ul>
+<li><strong>WHO ICF:</strong> <em>International Classification of Functioning, Disability and Health.</em></li>
+<li><strong>Finnerup NB, Haroutounian S, Kamerman P, Baron R, Bennett DL, et al.</strong> (2016). <em>Neuropathic pain: an updated grading system for research and clinical practice.</em> Pain, 157(8):1599-606.</li>
+<li><strong>Smart KM, Blake C, Doody C.</strong> (2011). <em>The Discriminative validity of "nociceptive," "peripheral neuropathic," and "central sensitization" as mechanisms-based classifications of musculoskeletal pain.</em> Clin J Pain, 27(8):655-63.</li>
+</ul>
+</li>
+</ul>
+<h3 id="22-outcome-measures-measurement-tools">2.2 Outcome Measures &amp; Measurement Tools</h3>
+<ul>
+<li><strong>Objectives:</strong><ul>
+<li>2.2.1 Critical selection of valid/reliable physical and psychological outcome measures across ICF domains.</li>
+<li>2.2.2 Physical assessment (activity levels, daily function, functional capacity, sleep).</li>
+<li>2.2.3 Validated tools for monitoring across lifespan and special populations (pediatric, dementia, cognitive impairment, cultural/linguistic diversity).</li>
+</ul>
+</li>
+<li><strong>Reading List Sources:</strong><ul>
+<li><strong>Wang L, Guyatt GH, Kennedy SA, et al.</strong> (2016). <em>Predictors of persistent pain after breast cancer surgery: a systematic review and meta-analysis of observational studies.</em> CMAJ, 188:E352-e361.</li>
+<li><strong>Verbunt JA, Huijnen IP, Seelen HA.</strong> (2012). <em>Assessment of physical activity by movement registration systems in chronic pain: methodological considerations.</em> Clin J Pain, 28(6):496-504.</li>
+<li><strong>Tyson SF, Brown P.</strong> (2014). <em>How to measure pain in neurological conditions? A systematic review of psychometric properties and clinical utility of measurement tools.</em> Clin Rehabil, 28(7):669-86.</li>
+<li><strong>Gordon DB.</strong> (2015). <em>Acute pain assessment tools: let us move beyond simple pain ratings.</em> Curr Opin Anaesthesiol, 28(5):565-9.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="section-3-principles-of-treatment">Section 3: Principles of Treatment</h2>
+<h3 id="31-communication-therapeutic-alliance">3.1 Communication &amp; Therapeutic Alliance</h3>
+<ul>
+<li><strong>Objectives:</strong> 3.1.1 Individualized evidence-based management plan; 3.1.2 Multimodal vs Multidisciplinary triage; 3.1.3 Shared decision-making &amp; health literacy.</li>
+<li><strong>Reading List Source:</strong><ul>
+<li><strong>Petersen GL, Finnerup NB, Colloca L, Amanzio M, Price DD, Jensen TS, Vase L.</strong> (2014). <em>The magnitude of nocebo effects in pain: a meta-analysis.</em> Pain, 155(8):1426-34.</li>
+</ul>
+</li>
+</ul>
+<h3 id="32-pain-neuroscience-education-pne">3.2 Pain Neuroscience Education (PNE)</h3>
+<ul>
+<li><strong>Objectives:</strong> 3.2.1 Teaching pain neurophysiology; 3.2.2 Service delivery modes (1-on-1, group, online); 3.2.3 Self-management coaching; 3.2.4 Variables influencing learning; 3.2.5 Provider attitudes/beliefs.</li>
+<li><strong>Reading List Sources:</strong><ul>
+<li><strong>Geneen LJ, Martin DJ, Adams N, et al.</strong> (2015). <em>Effects of education to facilitate knowledge about chronic pain for adults: a systematic review with meta-analysis.</em> Syst Rev, 4:132.</li>
+<li><strong>Engers A, Jellema P, Wensing M, van der Windt DA, Grol R, van Tulder MW.</strong> (2008). <em>Individual patient education for low back pain.</em> Cochrane Database Syst Rev, (1).</li>
+<li><strong>Moseley GL, Butler DS.</strong> (2015). <em>Fifteen Years of Explaining Pain: The Past, Present, and Future.</em> J Pain, 16(9):807-13.</li>
+</ul>
+</li>
+</ul>
+<h3 id="33-behavioural-therapies-psychological-risk-factors">3.3 Behavioural Therapies &amp; Psychological Risk Factors</h3>
+<ul>
+<li><strong>Objectives:</strong> CBT, ACT, MBSR, relaxation/biofeedback, autogenic training, graded exposure to feared movements, yellow flags identification.</li>
+<li><strong>Reading List Sources:</strong><ul>
+<li><strong>Persson AL, Veenhuizen H, et al.</strong> (2008). <em>Relaxation as treatment for chronic musculoskeletal pain: a systematic review.</em> Phys Ther Rev, 13(5):355-365.</li>
+<li><strong>O'Keeffe M, Purtill H, Kennedy N, Conneely M, et al.</strong> (2016). <em>Comparative Effectiveness of Conservative Interventions for Nonspecific Chronic Spinal Pain: Physical, Behavioral/Psychologically Informed, or Combined?</em> J Pain, 17(7):755-74.</li>
+<li><strong>Nicholas MK, Linton SJ, Watson PJ, Main CJ.</strong> (2011). <em>Early identification and management of psychological risk factors ("yellow flags") in patients with low back pain: a reappraisal.</em> Phys Ther, 91(5):737-53.</li>
+<li><strong>Linton SJ, Shaw WS.</strong> (2011). <em>Impact of psychological factors in the experience of pain.</em> Phys Ther, 91(5):700-11.</li>
+<li><strong>Eccleston C, Fisher E, Craig L, Duggan GB, et al.</strong> (2014). <em>Psychological therapies (Internet-delivered) for the management of chronic pain in adults.</em> Cochrane Database Syst Rev, (2).</li>
+<li><strong>Flor H.</strong> (2014). <em>Psychological pain interventions and neurophysiology: implications for a mechanism-based approach.</em> Am Psychol, 69(2):188-96.</li>
+<li><strong>Henschke N, Ostelo RW, van Tulder MW, Vlaeyen JW, Morley S, Assendelft WJ, Main CJ.</strong> (2010). <em>Behavioural treatment for chronic low-back pain.</em> Cochrane Database Syst Rev, (7).</li>
+<li><strong>Macedo LG, Smeets RJ, Maher CG, Latimer J, McAuley JH.</strong> (2010). <em>Graded activity and graded exposure for persistent nonspecific low back pain: a systematic review.</em> Phys Ther, 90(6):860-79.</li>
+</ul>
+</li>
+</ul>
+<h3 id="34-exercise-physical-activity">3.4 Exercise &amp; Physical Activity</h3>
+<ul>
+<li><strong>Objectives:</strong> Evidence-based exercise prescription, adaptation for co-morbidities, biopsychosocial exercise delivery, pacing, graded activity.</li>
+<li><strong>Reading List Sources:</strong><ul>
+<li><strong>Geneen LJ, Moore RA, Clarke C, Martin D, et al.</strong> (2017). <em>Physical activity and exercise for chronic pain in adults: an overview of Cochrane Reviews.</em> Cochrane Database Syst Rev, 4.</li>
+<li><strong>Bidonde J, Busch AJ, Schachter CL, et al.</strong> (2017). <em>Aerobic exercise training for adults with fibromyalgia.</em> Cochrane Database Syst Rev, 6.</li>
+<li><strong>Searle A, Spink M, et al.</strong> (2015). <em>Exercise interventions for the treatment of chronic low back pain: a systematic review and meta-analysis.</em> Clin Rehabil, 29(12):1155-67.</li>
+<li><strong>Oliveira CB, Franco MR, Maher CG, et al.</strong> (2016). <em>Physical Activity Interventions for Increasing Objectively Measured Physical Activity Levels in Patients With Chronic Musculoskeletal Pain.</em> Arthritis Care Res, 68(12):1832-1842.</li>
+<li><strong>Booth J, Moseley GL, Schiltenwolf M, Cashin A, Davies M, Hübscher M.</strong> (2017). <em>Exercise for chronic musculoskeletal pain: A biopsychosocial approach.</em> Musculoskelet Care, 15(4):413-421.</li>
+</ul>
+</li>
+</ul>
+<h3 id="35-interdisciplinary-medical-referral">3.5 Interdisciplinary &amp; Medical Referral</h3>
+<ul>
+<li><strong>Objectives:</strong> Interdisciplinary team collaboration, procedural modalities knowledge, pharmacological classes (NSAIDs, opioids, antidepressants, anticonvulsants, capsaicin, cannabinoids, corticosteroids) and their limitations.</li>
+<li><strong>Reading List Source:</strong><ul>
+<li><strong>Gatchel RJ, McGeary DD, McGeary CA, Lippe B.</strong> (2014). <em>Interdisciplinary chronic pain management: past, present, and future.</em> Am Psychol, 69(2):119-30.</li>
+</ul>
+</li>
+</ul>
+<h3 id="36-work-occupational-health">3.6 Work &amp; Occupational Health</h3>
+<ul>
+<li><strong>Objectives:</strong> Work factors, work loss predictors, return-to-work (RTW) strategies, workplace adaptations.</li>
+<li><strong>Reading List Sources:</strong><ul>
+<li><strong>Oesch P, Kool J, et al.</strong> (2010). <em>Effectiveness of exercise on work disability in patients with non-acute non-specific low back pain: Systematic review &amp; meta-analysis.</em> J Rehabil Med, 42(3):193-205.</li>
+<li><strong>Schaafsma F, Schonstein E, et al.</strong> (2010/2013). <em>Physical conditioning programs for improving work outcomes in workers with back pain.</em> Cochrane Database Syst Rev, (1)/(8).</li>
+</ul>
+</li>
+</ul>
+<h3 id="37-physical-neuromodulatory-treatment-modalities">3.7 Physical &amp; Neuromodulatory Treatment Modalities</h3>
+<ul>
+<li><strong>Objectives:</strong> Indications, efficacy, and evidence for GMI, TENS, Ultrasound, Spinal Manipulation.</li>
+<li><strong>Reading List Sources:</strong><ul>
+<li><strong>Bowering KJ, O'Connell NE, Tabor A, et al.</strong> (2013). <em>The effects of graded motor imagery and its components on chronic pain: a systematic review and meta-analysis.</em> J Pain, 14(1):3-13.</li>
+<li><strong>Johnson MI, Mulvey MR, et al.</strong> (2015). <em>Transcutaneous electrical nerve stimulation (TENS) for phantom pain and stump pain following amputation in adults.</em> Cochrane Database Syst Rev, 8.</li>
+<li><strong>Ebadi S, Henschke N, Nakhostin Ansari N, Fallah E, van Tulder MW.</strong> (2014). <em>Therapeutic ultrasound for chronic low-back pain.</em> Cochrane Database Syst Rev, (3).</li>
+<li><strong>Rubinstein SM, van Middelkoop M, et al.</strong> (2011). <em>Spinal manipulative therapy for chronic low-back pain: an update of a Cochrane review.</em> Spine, 36(13):E825-46.</li>
+</ul>
+</li>
+</ul>
+<h3 id="38-treatment-effects-rehabilitation">3.8 Treatment Effects &amp; Rehabilitation</h3>
+<ul>
+<li><strong>Objectives:</strong> Multidisciplinary biopsychosocial rehab, functional restoration, adherence factors, arthroplasty rehab.</li>
+<li><strong>Reading List Sources:</strong><ul>
+<li><strong>Kamper SJ, Apeldoorn AT, et al.</strong> (2015). <em>Multidisciplinary biopsychosocial rehabilitation for chronic low back pain: Cochrane systematic review and meta-analysis.</em> BMJ, 350:h444.</li>
+<li><strong>Richards MC, Ford JJ, Slater SL, et al.</strong> (2013). <em>The effectiveness of physiotherapy functional restoration for post-acute low back pain: a systematic review.</em> Man Ther, 18(1):4-25.</li>
+<li><strong>Thompson EL, Broadbent J, Bertino MD, Staiger PK.</strong> (2016). <em>Do Pain-related Beliefs Influence Adherence to Multidisciplinary Rehabilitation?: A Systematic Review.</em> Clin J Pain, 32(2):164-78.</li>
+<li><strong>Khan F, Ng L, et al.</strong> (2008). <em>Multidisciplinary rehabilitation programmes following joint replacement at the hip and knee in chronic arthropathy.</em> Cochrane Database Syst Rev, (2).</li>
+</ul>
+</li>
+</ul>
+<h3 id="39-allied-complementary-therapies">3.9 Allied &amp; Complementary Therapies</h3>
+<ul>
+<li><strong>Objectives:</strong> Evidence base and safety of Yoga, Osteopathy, Pilates, MBSR, and Acupuncture for chronic pain.</li>
+<li><strong>Reading List Sources:</strong><ul>
+<li><strong>Cramer H, Lauche R, Haller H, Dobos G.</strong> (2013). <em>A systematic review and meta-analysis of yoga for low back pain.</em> Clin J Pain, 29(5):450-60.</li>
+<li><strong>Franke H, Franke JD, Fryer G.</strong> (2014). <em>Osteopathic manipulative treatment for nonspecific low back pain: a systematic review and meta-analysis.</em> BMC Musculoskelet Disord, 15:286.</li>
+<li><strong>Patti A, Bianco A, Paoli A, et al.</strong> (2015). <em>Effects of Pilates exercise programs in people with chronic low back pain: a systematic review.</em> Medicine (Baltimore), 94(4).</li>
+<li><strong>Cramer H, Haller H, Lauche R, Dobos G.</strong> (2012). <em>Mindfulness-based stress reduction for low back pain. A systematic review.</em> BMC Complement Altern Med, 12:162.</li>
+<li><strong>Standaert CJ, Friedly J, Erwin MW, et al.</strong> (2011). <em>Comparative effectiveness of exercise, acupuncture, and spinal manipulation for low back pain.</em> Spine, 36(21 Suppl):S120-30.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="section-4-pain-subgroups-special-patient-populations">Section 4: Pain Subgroups / Special Patient Populations</h2>
+<h3 id="41-specific-pain-conditions-crps">4.1 Specific Pain Conditions &amp; CRPS</h3>
+<ul>
+<li><strong>Reading List Sources:</strong><ul>
+<li><strong>Smart KM, Wand BM, O'Connell NE.</strong> (2016). <em>Physiotherapy for pain and disability in adults with complex regional pain syndrome (CRPS) types I and II.</em> Cochrane Database Syst Rev, 2:CD010853.</li>
+<li><em>IASP Factsheets</em> (Neuropathic, Musculoskeletal, Visceral, CRPS).</li>
+</ul>
+</li>
+</ul>
+<h3 id="42-44-older-adults-dementia">4.2 &amp; 4.4 Older Adults &amp; Dementia</h3>
+<ul>
+<li><strong>Objectives:</strong> Altered pathophysiology, cognitive co-morbidities, observational pain tools, analgesic risks.</li>
+<li><strong>Reading List Sources:</strong><ul>
+<li><strong>Lichtner V, Dowding D, Esterhuizen P, et al.</strong> (2014). <em>Pain assessment for people with dementia: a systematic review of systematic reviews of pain assessment tools.</em> BMC Geriatr, 14:138.</li>
+<li><strong>Karp JF, Shega JW, Morone NE, Weiner DK.</strong> (2008). <em>Advances in understanding the mechanisms and management of persistent pain in older adults.</em> Br J Anaesth, 101(1):111-20.</li>
+<li><strong>Herr K.</strong> (2011). <em>Pain assessment strategies in older patients.</em> J Pain, 12(3 Suppl 1):S3-S13.</li>
+</ul>
+</li>
+</ul>
+<h3 id="45-infants-children-and-adolescents">4.5 Infants, Children, and Adolescents</h3>
+<ul>
+<li><strong>Objectives:</strong> Long-term neurophysiological consequences of early pain, observational vs self-report, parent interventions, remote/digital CBT, RTS/SIS (Return to School / Stay in School).</li>
+<li><strong>Reading List Sources:</strong><ul>
+<li><em>Textbook:</em> <strong>McGrath PJ</strong> (ed.) <em>Oxford Textbook of Paediatric Pain</em> (2014).</li>
+<li><strong>Fisher E, Law E, et al.</strong> (2015). <em>Psychological therapies (remotely delivered) for the management of chronic and recurrent pain in children and adolescents.</em> Cochrane Database Syst Rev, (3).</li>
+<li><strong>Eccleston C, Fisher E, Law E, Bartlett J, Palermo TM.</strong> (2015). <em>Psychological interventions for parents of children and adolescents with chronic illness.</em> Cochrane Database Syst Rev, (4).</li>
+<li><strong>Hatfield LA, Ely EA.</strong> (2015). <em>Measurement of acute pain in infants: a review of behavioral and physiological variables.</em> Biol Res Nurs, 17(1):100-11.</li>
+<li><strong>Hamill JK, Lyndon M, Liley A, Hill AG.</strong> (2014). <em>Where it hurts: a systematic review of pain-location tools for children.</em> Pain, 155(5):851-8.</li>
+</ul>
+</li>
+</ul>
+
+<div class="footer">
+    EFIC® European Diploma in Pain Physiotherapy — Study Hub (Exam Target: Nov 13th)
+</div>
+</main>
+
+</body>
+</html>
