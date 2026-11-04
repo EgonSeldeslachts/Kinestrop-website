@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0F172A">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json">
+
+    <title>Section 5: Clinical Foundations, Red Flags & Physical Assessment (EFIC EDPP) — EFIC Diploma Study Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+
+:root {
+    --brand-primary: #0F172A;
+    --brand-secondary: #0284C7;
+    --brand-accent: #0284C7;
+    --surface-bg: #F8FAFC;
+    --surface-card: #FFFFFF;
+    --text-main: #1E293B;
+    --text-muted: #64748B;
+    --border-subtle: #E2E8F0;
+    --border-strong: #CBD5E1;
+    --highlight-bg: #EFF6FF;
+    --success-bg: #F0FDF4;
+    --success-text: #166534;
+    --warning-bg: #FFFBEB;
+    --warning-text: #B45309;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--surface-bg);
+    color: var(--text-main);
+    line-height: 1.7;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background: #0F172A;
+    color: #F8FAFC;
+    padding: 16px 24px;
+    border-bottom: 2px solid #0284C7;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.top-bar-content {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.brand-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+}
+
+.brand-badge span {
+    background: #0284C7;
+    color: #FFFFFF;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-print {
+    background: #1E293B;
+    color: #E2E8F0;
+    border: 1px solid #334155;
+    padding: 7px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-print:hover {
+    background: #0284C7;
+    color: #FFFFFF;
+    border-color: #0284C7;
+}
+
+.nav-container {
+    background: #1E293B;
+    border-bottom: 1px solid #334155;
+    padding: 6px 24px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.study-nav {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    gap: 6px;
+}
+
+.nav-link {
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.15s ease;
+}
+
+.nav-link:hover {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-link.active {
+    color: #38BDF8;
+    background: rgba(56, 189, 248, 0.12);
+    font-weight: 600;
+}
+
+.main-container {
+    max-width: 1100px;
+    margin: 32px auto 64px auto;
+    background: var(--surface-card);
+    padding: 48px 56px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.06), 0 1px 4px rgba(15, 23, 42, 0.04);
+    border: 1px solid var(--border-subtle);
+}
+
+.wide-content .main-container {
+    max-width: 1350px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--brand-primary);
+    line-height: 1.3;
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-top: 0.2em;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--border-subtle);
+    color: #0F172A;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+    color: #1E293B;
+}
+
+h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #0369A1;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1.1em;
+}
+
+ul, ol {
+    margin-top: 0.3em;
+    margin-bottom: 1.2em;
+    padding-left: 26px;
+}
+
+li {
+    margin-bottom: 0.45em;
+    line-height: 1.6;
+}
+
+li > p {
+    margin-bottom: 0.35em;
+}
+
+li > p:last-child {
+    margin-bottom: 0;
+}
+
+ul > li::marker {
+    color: var(--brand-secondary);
+}
+
+ol > li::marker {
+    font-weight: 600;
+    color: var(--brand-secondary);
+}
+
+ul ul, ol ul {
+    margin-top: 0.4em;
+    margin-bottom: 0.6em;
+    padding-left: 20px;
+    border-left: 2px solid var(--border-subtle);
+    list-style-type: circle;
+}
+
+ul ol, ol ol {
+    margin-top: 0.4em;
+    margin-bottom: 0.6em;
+    padding-left: 20px;
+    border-left: 2px solid var(--border-subtle);
+    list-style-type: lower-alpha;
+}
+
+ul ul > li::marker, ol ul > li::marker {
+    color: var(--text-muted);
+}
+
+ul ul ul, ol ul ul, ul ol ul, ol ol ul {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+    padding-left: 18px;
+    border-left: 2px solid var(--border-strong);
+    list-style-type: square;
+}
+
+ul ul ul > li::marker, ol ul ul > li::marker {
+    color: #94A3B8;
+}
+
+li:has(> ul), li:has(> ol) {
+    margin-bottom: 0.75em;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 24px 0 32px 0;
+    font-size: 13.5px;
+    line-height: 1.55;
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px 14px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+th {
+    background-color: #0F172A;
+    color: #FFFFFF;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 13px;
+    border-bottom: 2px solid #0284C7;
+}
+
+tr:nth-child(even) td {
+    background-color: #F8FAFC;
+}
+
+tr:hover td {
+    background-color: #F0F9FF;
+}
+
+blockquote {
+    margin: 20px 0;
+    padding: 14px 20px;
+    background: #F0F9FF;
+    border-left: 4px solid #0284C7;
+    border-radius: 0 8px 8px 0;
+    color: #0369A1;
+    font-style: normal;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.88em;
+    background: #F1F5F9;
+    color: #0F172A;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid #E2E8F0;
+}
+
+pre {
+    background: #0F172A;
+    color: #F8FAFC;
+    padding: 16px 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 13.5px;
+    line-height: 1.6;
+}
+
+pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    border: none;
+}
+
+a {
+    color: #0284C7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0369A1;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border-subtle);
+    margin: 36px 0;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+@media print {
+    body { background: #FFFFFF; font-size: 11pt; }
+    .top-bar, .nav-container, .btn-print, .footer { display: none !important; }
+    .main-container { max-width: 100% !important; margin: 0 !important; padding: 0 !important; border: none !important; box-shadow: none !important; }
+    table { font-size: 9pt !important; page-break-inside: auto; }
+    tr { page-break-inside: avoid; page-break-after: auto; }
+    th { background-color: #E2E8F0 !important; color: #000000 !important; }
+    h1, h2, h3 { page-break-after: avoid; }
+}
+
+    </style>
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="top-bar-content">
+        <div class="brand-badge">
+            <span>EFIC® EDPP</span> European Diploma in Pain Physiotherapy
+        </div>
+        <div class="actions">
+            <button class="btn-print" onclick="window.print()">
+                Print / Save as PDF
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="nav-container">
+<nav class="study-nav"><a href="README.html" class="nav-link">Hub Overview</a><a href="00-curriculum-breakdown.html" class="nav-link">00. Curriculum</a><a href="01-iasp-taxonomy-master-sheet.html" class="nav-link">01a. Taxonomy</a><a href="01-pain-science-and-knowledge.html" class="nav-link">01b. Pain Science</a><a href="02-assessment-and-measurement.html" class="nav-link">02. Assessment</a><a href="03-principles-of-treatment.html" class="nav-link">03. Treatment</a><a href="04-special-populations.html" class="nav-link">04. Populations</a><a href="05-mcq-high-yield-quick-reference.html" class="nav-link">05. MCQ Bible</a><a href="06-treatment-evidence-master-table.html" class="nav-link">06. Master Table</a><a href="07-zotero-complete-reading-list-inventory.html" class="nav-link">07. Zotero Library</a><a href="08-clinical-assessment-and-red-flags.html" class="nav-link active">08. Clinical & Red Flags</a></nav>
+</div>
+
+<main class="main-container">
+<h1 id="section-5-clinical-foundations-red-flags-physical-assessment-efic-edpp">Section 5: Clinical Foundations, Red Flags &amp; Physical Assessment (EFIC EDPP)</h1>
+<blockquote>
+<p><strong>Core Purpose:</strong> This module bridges the gap between the scientific research papers and the <strong>undergraduate/clinical physiotherapy competencies</strong> that EFIC assumes every candidate possesses. It covers high-yield orthopedic provocation tests, medical red flags (VBI vs. myelopathy), neurological pain syndromes (SCI, stroke), theoretical models (Loeser's Onion Skin, Gifford's MOM), and international guideline standards.</p>
+</blockquote>
+<hr />
+<h2 id="1-medical-vascular-red-flags-safety-screening">1. Medical &amp; Vascular Red Flags / Safety Screening</h2>
+<p>EFIC questions frequently test the clinician's ability to discriminate between benign musculoskeletal pain, systemic/spinal cord pathology, and urgent vascular compromise.</p>
+<pre><code>                    ┌──────────────────────────────────────────────┐
+                    │       CRITICAL CERVICAL RED FLAGS            │
+                    └──────────────────────┬───────────────────────┘
+                                           │
+                 ┌─────────────────────────┴────────────────────────┐
+                 ▼                                                  ▼
+   ┌───────────────────────────┐                      ┌───────────────────────────┐
+   │ Cervical Arterial Dysf.   │                      │ Cervical Spondylotic      │
+   │ (VBI / CAD)               │                      │ Myelopathy (CSM)          │
+   ├───────────────────────────┤                      ├───────────────────────────┤
+   │ • Cardinal 5 D's &amp; 3 N's  │                      │ • Bilateral hand/foot     │
+   │ • Sudden unfamiliar neck/ │                      │   paresthesia / numbness  │
+   │   occipital headache      │                      │ • Gait ataxia / stiffness │
+   │ • Transient ischemic signs│                      │ • Loss of hand dexterity  │
+   │ • Provocative rotation    │                      │ • Pathological reflexes:  │
+   │   tests have POOR validity│                      │   Hoffman, Babinski       │
+   └───────────────────────────┘                      └───────────────────────────┘
+</code></pre>
+<h3 id="a-cervical-arterial-dysfunction-cad-vertebrobasilar-insufficiency-vbi">A. Cervical Arterial Dysfunction (CAD) / Vertebrobasilar Insufficiency (VBI)</h3>
+<p><em>Reference Framework:</em> <strong>IFOMPT International Framework for Examination of the Cervical Spine for Cervical Arterial Dysfunction</strong> (Rushton et al., 2014 / 2020).</p>
+<ol>
+<li><strong>Pathophysiology:</strong></li>
+<li>Mechanical deformation, stretching, or dissection of the vertebral or internal carotid arteries (often during sustained cervical rotation, extension, or high-velocity thrust manipulation), leading to transient cerebral or hindbrain ischemia.</li>
+<li><strong>Cardinal Symptoms — The 5 D's and 3 N's:</strong></li>
+<li><strong>5 D's:</strong><ul>
+<li><strong>D</strong>izziness / lightheadedness / unsteadiness</li>
+<li><strong>D</strong>iplopia (double vision) / visual field defects</li>
+<li><strong>D</strong>ysarthria (speech difficulties / slurred speech)</li>
+<li><strong>D</strong>ysphagia (difficulty swallowing)</li>
+<li><strong>D</strong>rop attacks (sudden loss of postural tone without loss of consciousness)</li>
+</ul>
+</li>
+<li><strong>3 N's:</strong><ul>
+<li><strong>N</strong>ausea and vomiting</li>
+<li><strong>N</strong>umbness (unilateral perioral / facial paresthesia)</li>
+<li><strong>N</strong>ystagmus (involuntary, jerky eye movements)</li>
+</ul>
+</li>
+<li><strong>Other cardinal features:</strong> Ataxia (clumsiness/uncoordinated movement), Horner's syndrome (ptosis, miosis, anhidrosis), and a <strong>new, sudden, severe, unfamiliar headache or neck pain</strong> (often suboccipital/temporal, described as "unlike any previous headache").</li>
+<li><strong>Clinical Utility of Provocative Tests (DeKleyn's, sustained end-range rotation):</strong></li>
+<li><strong>Poor sensitivity and poor negative predictive value.</strong> A negative VBI test does <strong>NOT</strong> rule out arterial dysfunction.</li>
+<li>Prolonged provocation testing is no longer recommended as a mandatory clearance tool because it can precipitate dissection or stroke. Clinicians must rely on thorough <strong>vascular risk factor profiling</strong> (hypertension, smoking, oral contraceptives, recent neck trauma, hypermobility) and early symptom identification.</li>
+<li><strong>⚡ High-Yield MCQ Distractor Trap:</strong></li>
+<li><em>Trap:</em> "Bilateral tingling of the hands and feet is a typical sign of vertebrobasilar insufficiency."</li>
+<li><em>Reality:</em> <strong>FALSE.</strong> Bilateral tingling of hands and feet indicates <strong>cervical spinal cord compression (myelopathy)</strong>, NOT VBI.</li>
+</ol>
+<hr />
+<h3 id="b-cervical-spondylotic-myelopathy-csm-spinal-cord-compression">B. Cervical Spondylotic Myelopathy (CSM) — Spinal Cord Compression</h3>
+<ol>
+<li><strong>Pathophysiology:</strong> Narrowing of the central spinal canal resulting in mechanical compression and microvascular ischemia of the cervical spinal cord.</li>
+<li><strong>Cardinal Clinical Prediction Cluster (Cook et al., 2010):</strong>
+   Presence of $\ge 3$ of the following 5 features yields a positive Likelihood Ratio ($+LR = 30.9$):</li>
+<li><strong>Gait ataxia / broad-based unsteadiness</strong> (most sensitive initial sign).</li>
+<li><strong>Positive Hoffman's sign:</strong> Flicking the terminal phalanx of the middle finger produces involuntary flexion/adduction of the thumb and index finger.</li>
+<li><strong>Inverted Supinator / Brachioradialis Reflex:</strong> Percussing the distal radius produces paradoxical finger flexion rather than normal elbow flexion.</li>
+<li><strong>Positive Babinski reflex:</strong> Firm stroking of the lateral plantar aspect of the foot produces great toe extension and fanning of other toes (extensor plantar response).</li>
+<li><strong>Age $&gt; 45$ years.</strong></li>
+<li><strong>Subjective Red Flags:</strong></li>
+<li><strong>Bilateral tingling, numbness, or "glove-and-stocking" sensory loss</strong> in hands and feet.</li>
+<li>Progressive loss of fine motor dexterity in the hands (difficulty buttoning shirts, tying shoelaces, turning keys, altered handwriting).</li>
+<li>Subjective feeling of heavy, stiff, or "rubbery" legs.</li>
+<li>Urinary urgency, frequency, or incontinence (late sign).</li>
+</ol>
+<hr />
+<h3 id="c-cauda-equina-syndrome-ces">C. Cauda Equina Syndrome (CES)</h3>
+<ol>
+<li><strong>Pathophysiology:</strong> Massive space-occupying lesion (typically central disc herniation or spinal tumor) compressing the multiple lumbosacral nerve roots (L2–S5) within the thecal sac.</li>
+<li><strong>Cardinal Red Flag Signs &amp; Symptoms:</strong></li>
+<li><strong>Saddle anesthesia / sensory deficit:</strong> Numbness, altered sensation over the buttocks, perineum, perianal area, and inner thighs (dermatomes S3–S5).</li>
+<li><strong>Bladder dysfunction:</strong><ul>
+<li><strong>Urinary retention with overflow incontinence:</strong> High sensitivity ($\sim 90\%$). Inability to completely empty the bladder, loss of urinary sensation.</li>
+</ul>
+</li>
+<li><strong>Bowel dysfunction:</strong> Fecal incontinence, loss of anal sphincter tone (demonstrated on rectal examination).</li>
+<li><strong>Sexual dysfunction:</strong> Sudden onset erectile dysfunction, genital numbness.</li>
+<li><strong>Bilateral lower extremity neurological deficits:</strong> Progressive bilateral leg weakness, motor loss (foot drop), or bilateral sciatica.</li>
+</ol>
+<hr />
+<h3 id="d-other-spinal-red-flags-cancer-infection-fracture">D. Other Spinal Red Flags (Cancer, Infection, Fracture)</h3>
+<ul>
+<li><strong>Spinal Malignancy:</strong></li>
+<li><strong>Previous personal history of cancer</strong> (highest diagnostic value; $+LR \approx 15$).</li>
+<li>Unexplained weight loss ($&gt;5\text{--}10\%$ body weight over 3–6 months).</li>
+<li>Unrelenting, non-mechanical pain that is progressive, severe at night, and unimproved by supine rest.</li>
+<li>Age $&gt;50$ years with new-onset unremitting pain.</li>
+<li><strong>Spinal Infection (Discitis / Osteomyelitis / Epidural Abscess):</strong></li>
+<li>Fever, chills, night sweats.</li>
+<li>History of recent invasive spinal procedure, IV drug use, or recent bacterial infection (urinary tract, skin).</li>
+<li>Severe, rigid localized spinal tenderness and deep constant ache.</li>
+<li><strong>Spinal Osteoporotic Fracture:</strong></li>
+<li>Sudden onset severe thoracolumbar pain following minor trauma (or sneezing/bending).</li>
+<li>Prolonged systemic corticosteroid use.</li>
+<li>Female gender, advanced age ($&gt;70$ years), known osteoporosis.</li>
+</ul>
+<hr />
+<h2 id="2-peripheral-orthopedic-physical-examination-provocation-tests">2. Peripheral Orthopedic Physical Examination &amp; Provocation Tests</h2>
+<p>The EFIC exam expects clinicians to distinguish between tests that isolate specific musculotendinous structures versus tests for capsulolabral instability, bursae, or intra-articular structures.</p>
+<h3 id="a-shoulder-examination-rotator-cuff-vs-instability-vs-biceps">A. Shoulder Examination: Rotator Cuff vs. Instability vs. Biceps</h3>
+<table>
+<thead>
+<tr>
+<th>Target Structure / Pathology</th>
+<th>Special Physical Test</th>
+<th>Procedure &amp; Positive Sign</th>
+<th>Clinical Meaning &amp; Distinction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Subscapularis</strong> (Rotator Cuff)</td>
+<td><strong>Gerber's Lift-Off Test</strong></td>
+<td>Patient places dorsum of hand on mid-lumbar spine and actively lifts hand away from back. Inability to lift or hold = <strong>Positive</strong>.</td>
+<td>Isolates the lower subscapularis. <strong>Is a rotator cuff test.</strong></td>
+</tr>
+<tr>
+<td><strong>Subscapularis</strong> (Rotator Cuff)</td>
+<td><strong>Belly-Press Test (Napoleon Sign)</strong></td>
+<td>Patient presses palm flat against abdomen, keeping elbow forward in scapular plane. If elbow drops backward into extension = <strong>Positive</strong>.</td>
+<td>Preferred if patient lacks internal rotation to reach lumbar spine.</td>
+</tr>
+<tr>
+<td><strong>Subscapularis</strong> (Rotator Cuff)</td>
+<td><strong>Bear-Hug Test</strong></td>
+<td>Hand on opposite shoulder with elbow anterior; examiner attempts to externally rotate arm off chest.</td>
+<td>Highly sensitive for upper subscapularis tear.</td>
+</tr>
+<tr>
+<td><strong>Supraspinatus</strong> (Rotator Cuff)</td>
+<td><strong>Drop Arm Test (Codman's Test)</strong></td>
+<td>Arm passively abducted to $90^\circ\text{--}120^\circ$; patient asked to lower slowly. Arm drops suddenly or uncontrolled ratcheting = <strong>Positive</strong>.</td>
+<td>Indicates <strong>large full-thickness supraspinatus tear</strong>.</td>
+</tr>
+<tr>
+<td><strong>Supraspinatus</strong> (Rotator Cuff)</td>
+<td><strong>Empty Can (Jobe's Test)</strong></td>
+<td>$90^\circ$ abduction in scapular plane ($30^\circ$ anterior), fully internally rotated (thumb down); resisted elevation.</td>
+<td>Pain or weakness indicates supraspinatus tendinopathy or tear.</td>
+</tr>
+<tr>
+<td><strong>Supraspinatus</strong> (Rotator Cuff)</td>
+<td><strong>Full Can Test</strong></td>
+<td>Same position as Jobe, but thumb pointed UP (external rotation).</td>
+<td>Equally sensitive to Jobe, but produces less subacromial pain.</td>
+</tr>
+<tr>
+<td><strong>Infraspinatus &amp; Teres Minor</strong> (Rotator Cuff)</td>
+<td><strong>Resisted External Rotation</strong></td>
+<td>Arm at side (neutral), elbow flexed $90^\circ$; patient externally rotates against resistance.</td>
+<td>Weakness/pain isolates infraspinatus.</td>
+</tr>
+<tr>
+<td><strong>Infraspinatus &amp; Teres Minor</strong> (Rotator Cuff)</td>
+<td><strong>External Rotation Lag Sign</strong></td>
+<td>Examiner passively externally rotates arm near end-range; patient cannot hold position and arm springs forward.</td>
+<td>Indicates extensive infraspinatus/teres minor rupture.</td>
+</tr>
+<tr>
+<td><strong>Infraspinatus &amp; Teres Minor</strong> (Rotator Cuff)</td>
+<td><strong>Hornblower's Sign</strong></td>
+<td>Arm abducted $90^\circ$ in scapular plane, elbow flexed $90^\circ$; patient cannot externally rotate.</td>
+<td>Indicates severe teres minor atrophy/tear.</td>
+</tr>
+<tr>
+<td><strong>Glenohumeral Instability / Labrum</strong> (NON-Cuff)</td>
+<td><strong>Apprehension &amp; Relocation Test</strong></td>
+<td>Patient supine, arm abducted $90^\circ$, maximal passive external rotation. Apprehension/fear = positive. Posterior force on humeral head relieves fear = Relocation.</td>
+<td><strong>Tests anterior glenohumeral instability / labral tear.</strong> NOT a rotator cuff test.</td>
+</tr>
+<tr>
+<td><strong>Biceps Long Head / SLAP</strong> (NON-Cuff)</td>
+<td><strong>Speed's Test</strong></td>
+<td>Resisted shoulder flexion with elbow fully extended and forearm <strong>supinated</strong>. Pain localized to bicipital groove = <strong>Positive</strong>.</td>
+<td>Tests long head of biceps brachii / SLAP tear. NOT a rotator cuff muscle test.</td>
+</tr>
+<tr>
+<td><strong>Biceps Long Head / SLAP</strong> (NON-Cuff)</td>
+<td><strong>Yergason's Test</strong></td>
+<td>Resisted forearm supination and external rotation with elbow flexed at $90^\circ$.</td>
+<td>Tests bicipital tendon stability in the bicipital groove.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="b-lumbar-spine-neurodynamics">B. Lumbar Spine &amp; Neurodynamics</h3>
+<pre><code>        STRAIGHT LEG RAISE (SLR)              CROSSED SLR (WELL LEG RAISE)
+    Elevate symptomatic leg: 30°-70°          Elevate asymptomatic leg
+    Pain radiates past knee                   Pain radiates down CONTRALATERAL leg
+    ────────────────────────────────          ────────────────────────────────────
+    High SENSITIVITY (~0.90)                  High SPECIFICITY (&gt;0.90)
+    Good to RULE OUT herniation               Confirms space-occupying herniation
+</code></pre>
+<ol>
+<li><strong>Straight Leg Raise (SLR / Lasègue Test):</strong></li>
+<li>Performed passively with knee extended and hip neutrally rotated.</li>
+<li>Reproduction of dermatomal shooting pain radiating below the knee between $30^\circ$ and $70^\circ$ indicates mechanical traction on L4, L5, or S1 nerve roots.</li>
+<li><strong>Sensitivity:</strong> High ($\approx 0.90$). If SLR is negative, lumbar disc herniation with nerve root involvement is highly unlikely.</li>
+<li><strong>Crossed Straight Leg Raise (Well Leg Raise):</strong></li>
+<li>Passive elevation of the <em>unaffected, asymptomatic</em> leg reproduces sharp radicular pain down the <em>affected, symptomatic</em> leg.</li>
+<li><strong>Specificity:</strong> Extremely high ($&gt;0.90$). Virtually confirms a large paramedian or free disc fragment compressing the nerve root.</li>
+<li><strong>Slump Test:</strong></li>
+<li>Progressive neurodynamic test: Thoracic/lumbar flexion $\rightarrow$ Cervical flexion $\rightarrow$ Knee extension $\rightarrow$ Ankle dorsiflexion.</li>
+<li>More sensitive than the SLR for neural mechanosensitivity throughout the entire neuraxis (cervical to sacral).</li>
+<li><strong>Sensitizing Maneuvers:</strong></li>
+<li><em>Tibial nerve bias:</em> Ankle dorsiflexion + eversion.</li>
+<li><em>Peroneal (fibular) nerve bias:</em> Ankle plantarflexion + inversion.</li>
+<li><em>Sural nerve bias:</em> Ankle dorsiflexion + inversion.</li>
+<li><em>Femoral nerve bias (L2–L4):</em> Prone Knee Bend (PKB / Nachlas test) with hip extension.</li>
+</ol>
+<hr />
+<h3 id="c-sacroiliac-joint-sij-knee-assessment">C. Sacroiliac Joint (SIJ) &amp; Knee Assessment</h3>
+<ol>
+<li><strong>Sacroiliac Joint Provocation Cluster (Laslett et al., 2005):</strong></li>
+<li><strong>Rule:</strong> Single SIJ tests are unreliable. Diagnostic accuracy requires a multi-test cluster:<ul>
+<li>4 Core Tests: (1) <strong>Distraction test</strong>, (2) <strong>Thigh thrust</strong>, (3) <strong>Compression test</strong>, (4) <strong>Sacral thrust</strong>.</li>
+<li>$\ge 2$ positive tests out of 4 has high sensitivity ($88\%$) and specificity ($78\%$) for SIJ intra-articular pain.</li>
+</ul>
+</li>
+<li><strong>Knee Joint Examination:</strong></li>
+<li><em>Meniscal pathology:</em> Joint line tenderness, McMurray test, Thessaly test (dynamic weightbearing rotation at $20^\circ$ knee flexion).</li>
+<li><em>Anterior Cruciate Ligament (ACL):</em> <strong>Lachman test</strong> (highest sensitivity, $\approx 85\%$), <strong>Pivot Shift test</strong> (highest specificity, $&gt;95\%$).</li>
+</ol>
+<hr />
+<h2 id="3-special-neurological-pain-populations-syndromes">3. Special Neurological Pain Populations &amp; Syndromes</h2>
+<h3 id="a-spinal-cord-injury-sci-pain-curriculum-41">A. Spinal Cord Injury (SCI) Pain (Curriculum 4.1)</h3>
+<pre><code>                            ┌──────────────────────────────────┐
+                            │    IASP SCI PAIN CLASSIFICATION  │
+                            │      (Bryce-Ragnarsson / ISCIP)  │
+                            └────────────────┬─────────────────┘
+                                             │
+                     ┌───────────────────────┴───────────────────────┐
+                     ▼                                               ▼
+         ┌───────────────────────┐                       ┌───────────────────────┐
+         │   NOCICEPTIVE PAIN    │                       │   NEUROPATHIC PAIN    │
+         ├───────────────────────┤                       ├───────────────────────┤
+         │ • Musculoskeletal     │                       │ • At-Level:           │
+         │   (Wheelchair overuse,│                       │   Segmental band,     │
+         │   spasms, facet pain) │                       │   root/cord injury    │
+         │ • Visceral:           │                       │ • Below-Level:        │
+         │   Bladder distension, │                       │   Diffuse central     │
+         │   constipation,       │                       │   burning pain        │
+         │   autonomic dysreflex.│                       │   (MOST COMMON)       │
+         └───────────────────────┘                       └───────────────────────┘
+</code></pre>
+<ol>
+<li><strong>Epidemiology &amp; General Characteristics:</strong></li>
+<li><strong>Prevalence:</strong> <strong>More than half ($&gt;50\%$, typically $65\text{--}80\%$)</strong> of individuals with SCI experience persistent, chronic pain.</li>
+<li><strong>Multiplicity:</strong> The vast majority of SCI patients suffer from <strong>multiple co-existing pain types</strong> simultaneously (e.g., musculoskeletal shoulder pain + below-level central neuropathic pain + visceral bladder pain).</li>
+<li><strong>Severity:</strong> Pain after SCI is frequently rated as <strong>severe, relentless, and debilitating</strong>, often cited as a greater barrier to quality of life than the paralysis itself.</li>
+<li><strong>International Spinal Cord Injury Basic Pain Data Set (IASP ISCIP Taxonomy):</strong></li>
+<li><strong>Tier 1: Nociceptive Pain:</strong><ul>
+<li><em>Musculoskeletal Pain:</em> Originates from nociceptors in musculoskeletal structures with preserved sensation. Common sources: Overuse tendinopathy in shoulders/wrists from manual wheelchair propulsion, myofascial spasms, and mechanical spinal instability above the fusion level.</li>
+<li><em>Visceral Pain:</em> <strong>Visceral structures ARE involved.</strong> Arises from visceral organs in thorax, abdomen, or pelvis (e.g., urinary tract infection, bladder calculi, constipation, fecal impaction, gallstones). In lesions above T6, visceral noxious inputs can trigger life-threatening <strong>autonomic dysreflexia</strong>.</li>
+</ul>
+</li>
+<li><strong>Tier 2: Neuropathic Pain:</strong><ul>
+<li><em>At-Level Neuropathic Pain:</em> Located in a dermatomal band or segment at or within two segments of the neurological level of injury. Caused by direct trauma to nerve roots (radiculopathy) or spinal cord dorsal horn at the level of transection/contusion.</li>
+<li><em>Below-Level Neuropathic Pain:</em> Located diffusely throughout dermatomes <strong>more than two segments below the level of injury</strong>. It is a <strong>central neuropathic pain syndrome</strong> caused by disruption of spinothalamic tracts, loss of descending inhibitory control, thalamic bursting, and spinal microglial activation.</li>
+<li><strong>⚡ High-Yield MCQ Fact:</strong> <strong>Below-level neuropathic pain is the most common neuropathic pain type in SCI.</strong> Distractors claiming that "above-level neuropathic pain is most common" are FALSE (above-level pain is usually peripheral overuse entrapment like Carpal Tunnel Syndrome).</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3 id="b-central-post-stroke-pain-cpsp-dejerine-roussy-syndrome">B. Central Post-Stroke Pain (CPSP / Dejerine-Roussy Syndrome)</h3>
+<ol>
+<li><strong>Definition &amp; Prevalence:</strong> Central neuropathic pain occurring in $8\text{--}10\%$ of stroke patients following an ischemic or hemorrhagic vascular lesion affecting the somatosensory pathways.</li>
+<li><strong>Anatomical Site:</strong> Classically involves the <strong>ventroposterolateral (VPL) nucleus of the thalamus</strong>, but can occur following lesions in the brainstem (lateral medullary / Wallenberg syndrome) or cortex.</li>
+<li><strong>Clinical Presentation:</strong></li>
+<li>Hemibody burning, freezing, aching, or tearing pain.</li>
+<li>Associated with objective sensory deficits: Loss of temperature/pinprick sensation, accompanied by marked <strong>cold allodynia</strong> and <strong>hyperpathia</strong>.</li>
+</ol>
+<hr />
+<h3 id="c-multiple-sclerosis-ms-pain">C. Multiple Sclerosis (MS) Pain</h3>
+<ol>
+<li><strong>Prevalence:</strong> Over $50\%$ of MS patients experience chronic pain.</li>
+<li><strong>Presentations:</strong></li>
+<li><em>Trigeminal Neuralgia:</em> Paroxysmal lancinating facial pain. In MS, it frequently presents <strong>bilaterally</strong> and at a <strong>substantially younger age</strong> than idiopathic trigeminal neuralgia.</li>
+<li><em>Lhermitte's Sign:</em> Sudden transient electric-shock sensation running down the spine and into the limbs triggered by <strong>cervical flexion</strong> (indicates demyelination in the cervical posterior columns).</li>
+<li><em>Painful tonic spasms:</em> Paroxysmal, involuntary dystonic muscle contractions lasting seconds to minutes.</li>
+</ol>
+<hr />
+<h2 id="4-psychological-behavioral-models-mechanisms">4. Psychological &amp; Behavioral Models &amp; Mechanisms</h2>
+<pre><code>┌──────────────────────────────────────────────────────────────────────────────────┐
+│              EVOLUTION OF COGNITIVE-BEHAVIORAL THERAPIES (CBT)                   │
+├────────────────────────────────────────┬─────────────────────────────────────────┤
+│    TRADITIONAL CBT (Second-Wave)       │     ACT &amp; MBSR (Third-Wave)             │
+│    (Beck, Turk, Linton)                │     (Hayes, Vowles, Kabat-Zinn)         │
+├────────────────────────────────────────┼─────────────────────────────────────────┤
+│ • Focus: COGNITIVE RESTRUCTURING       │ • Focus: PSYCHOLOGICAL FLEXIBILITY      │
+│ • Identifies cognitive distortions     │ • Focus: MINDFUL NON-JUDGMENTAL         │
+│ • Actively CHALLENGES and CHANGES the  │   AWARENESS                             │
+│   CONTENT of negative thoughts         │ • Changes the RELATIONSHIP / CONTEXT    │
+│ • Goal: Decrease irrational beliefs    │   to internal sensations &amp; thoughts     │
+│   and reduce pain/distress             │ • Goal: Living valued life DESPITE pain │
+└────────────────────────────────────────┴─────────────────────────────────────────┘
+</code></pre>
+<h3 id="a-second-wave-vs-third-wave-psychological-interventions">A. Second-Wave vs. Third-Wave Psychological Interventions</h3>
+<ul>
+<li><strong>Traditional Cognitive-Behavioral Therapy (CBT - Second-Wave):</strong></li>
+<li><strong>Core Mechanism:</strong> <strong>Cognitive Restructuring</strong>.</li>
+<li><strong>Approach:</strong> Clinicians help patients identify irrational automatic thoughts, cognitive distortions, and catastrophizing. The explicit goal is to <strong>dispute, test, and alter the <em>content</em></strong> of thoughts (e.g., replacing <em>"My back is destroyed and moving will paralyze me"</em> with <em>"My spine is strong and sore but safe"</em>).</li>
+<li><strong>Acceptance and Commitment Therapy (ACT - Third-Wave):</strong></li>
+<li><strong>Core Mechanism:</strong> <strong>Psychological Flexibility</strong> mediated by the 6 core processes of the Hexaflex:<ol>
+<li><em>Acceptance:</em> Willingness to experience unpleasant bodily sensations without struggle.</li>
+<li><em>Cognitive Defusion:</em> Stepping back and observing thoughts as transient verbal events rather than objective truths (e.g., <em>"I am having the thought that I can't walk"</em> instead of <em>"I can't walk"</em>).</li>
+<li><em>Contact with the Present Moment:</em> Mindful presence.</li>
+<li><em>Self-as-Context:</em> The observing self that remains stable regardless of pain.</li>
+<li><em>Values Clarification:</em> Defining what truly matters in life.</li>
+<li><em>Committed Action:</em> Setting functional goals aligned with values, even in the presence of pain.</li>
+</ol>
+</li>
+<li><strong>Approach:</strong> ACT does <strong>NOT</strong> seek to change the content of thoughts or reduce pain intensity. It increases functional engagement and decreases experiential avoidance.</li>
+<li><strong>Mindfulness-Based Stress Reduction (MBSR - Kabat-Zinn):</strong></li>
+<li><strong>Core Mechanism:</strong> <strong>Intentional, non-judgmental present-moment awareness</strong>.</li>
+<li><strong>Approach:</strong> Cultivates observational openness to sensory and emotional inputs without emotional reactivity or cognitive elaboration.</li>
+</ul>
+<hr />
+<h3 id="b-theoretical-pain-models-comparative-overview">B. Theoretical Pain Models: Comparative Overview</h3>
+<table>
+<thead>
+<tr>
+<th>Theory / Model</th>
+<th>Originator</th>
+<th>Core Architecture</th>
+<th>Diagnostic / Explanatory Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Specificity Theory</strong></td>
+<td>Descartes (1664); von Frey</td>
+<td>Direct, 1-to-1 linear transmission: Injury tugs a peripheral nerve bell-wire $\rightarrow$ rings pain bell in brain.</td>
+<td>Historical. Refuted because it ignores modulation, central sensitization, and cognitive context.</td>
+</tr>
+<tr>
+<td><strong>Gate Control Theory</strong></td>
+<td>Melzack &amp; Wall (1965)</td>
+<td>Dorsal horn (Lamina II Substantia Gelatinosa) interneurons act as a gate: Large $A\beta$ close gate; small $A\delta/C$ open gate. Top-down descending brain modulation.</td>
+<td>Explains counter-irritation, TENS, massage, and descending inhibition.</td>
+</tr>
+<tr>
+<td><strong>Neuromatrix Theory</strong></td>
+<td>Melzack (1999)</td>
+<td>Body-self neuromatrix (widespread thalamocortical &amp; limbic network) generates a "neurosignature" across sensory, affective, and cognitive loops.</td>
+<td>Explains phantom limb pain, chronic pain without tissue injury, and whole-brain engagement.</td>
+</tr>
+<tr>
+<td><strong>Mature Organism Model (MOM)</strong></td>
+<td>Louis Gifford (1998)</td>
+<td><strong>Formulated to integrate molecular neurophysiology and tissue biology with clinical pain experience.</strong><br>Loop: <strong>Input</strong> (tissues, environment) $\rightarrow$ <strong>Central Sampling &amp; Scrutiny</strong> (brain appraisal of threat/survival meaning) $\rightarrow$ <strong>Output</strong> (pain sensation, motor, autonomic, neuroendocrine, immune stress response).</td>
+<td>Explains how biological tissue inflammation and cellular stress responses are translated into complex adaptive behavior and pain.</td>
+</tr>
+<tr>
+<td><strong>Onion Skin Model</strong></td>
+<td>John Loeser (1982)</td>
+<td>4 concentric rings expanding outward:<br>1. <strong>Nociception</strong> (innermost biological event: detection of noxious energy).<br>2. <strong>Pain</strong> (sensory/emotional perception in CNS).<br>3. <strong>Suffering</strong> (affective appraisal: fear, despair, depression).<br>4. <strong>Pain Behavior</strong> (outermost observable action: grimacing, limping, moaning, avoiding activity).</td>
+<td>Explains why treating nociception alone fails when suffering and pain behaviors become decoupled from tissue injury.</td>
+</tr>
+<tr>
+<td><strong>Fear-Avoidance Model</strong></td>
+<td>Vlaeyen &amp; Linton (2000)</td>
+<td>Injury $\rightarrow$ Catastrophizing $\rightarrow$ Pain-related fear $\rightarrow$ Avoidance/hypervigilance $\rightarrow$ Disuse, depression, disability $\rightarrow$ Reinforces pain.</td>
+<td>Underpins Graded Exposure therapy (PHODA) for high-fear cohorts.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-evidence-based-clinical-practice-guidelines-cpgs-provider-beliefs">5. Evidence-Based Clinical Practice Guidelines (CPGs) &amp; Provider Beliefs</h2>
+<h3 id="a-consensus-principles-across-international-lbp-guidelines">A. Consensus Principles Across International LBP Guidelines</h3>
+<p>(NICE 2016, American College of Physicians 2017, Belgian KCE 2017, Lancet Low Back Pain Series 2018 — Foster, Buchbinder, Hartvigsen).</p>
+<pre><code>┌───────────────────────────────────────┬───────────────────────────────────────┐
+│     RECOMMENDED (First-Line)          │     DISCOURAGED / NOT RECOMMENDED     │
+├───────────────────────────────────────┼───────────────────────────────────────┤
+│ • Biopsychosocial assessment          │ • Biomedical pathoanatomical framing  │
+│ • Reassurance &amp; advice to STAY ACTIVE │ • Routine radiological imaging        │
+│ • Structured exercise therapy         │ • Bed rest                            │
+│ • Pain Neuroscience Education (PNE)   │ • Routine paracetamol / opioids       │
+│ • Stratified care (STarT Back)        │ • Therapeutic ultrasound &amp; TENS       │
+│ • Multidisciplinary rehab (chronic)   │ • Surgery for non-specific LBP        │
+└───────────────────────────────────────┴───────────────────────────────────────┘
+</code></pre>
+<h3 id="b-the-critical-role-of-healthcare-professional-hcp-beliefs">B. The Critical Role of Healthcare Professional (HCP) Beliefs</h3>
+<p><em>Reference:</em> <strong>Darlow et al. (2012) Systematic Review</strong> (<em>Eur J Pain</em>, 16(1):3-17).
+- <strong>Core Finding:</strong> The personal attitudes and beliefs of the physiotherapist or physician regarding pain <strong>strongly and directly influence the treatment choices and recommendations they provide to patients</strong>.
+- <strong>Biomedical vs. Biopsychosocial Stance:</strong>
+  - Clinicians holding strong biomedical beliefs are significantly more likely to:
+    - Advise patients to restrict physical activity and stay home from work.
+    - Recommend bed rest or passive modalities.
+    - Refer for unnecessary MRI/X-ray imaging.
+    - Reinforce the patient's fear-avoidance beliefs and catastrophizing (iatrogenic harm).
+  - Conversely, clinicians who adopt a biopsychosocial approach successfully decrease patient fear-avoidance and foster self-efficacy.
+- <strong>⚡ Exam Takeaway:</strong> Provider beliefs are <strong>NOT</strong> neutral; they are a major prognostic determinant of clinical outcomes and guideline adherence.</p>
+<hr />
+<h2 id="6-neuropathic-screening-questionnaires-vs-general-pain-battery">6. Neuropathic Screening Questionnaires vs. General Pain Battery</h2>
+<p>EFIC questions routinely test whether a tool is a <strong>specific neuropathic screening questionnaire</strong> or a <strong>general multidimensional descriptor/construct scale</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Assessment Tool</th>
+<th>Target Construct</th>
+<th>Type of Tool</th>
+<th style="text-align: center;">Validated for Neuropathic Pain?</th>
+<th>Cut-Off / Scoring</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DN4</strong></td>
+<td>Neuropathic pain screening</td>
+<td>Clinician-administered (4 exam items, 6 interview)</td>
+<td style="text-align: center;"><strong>YES</strong></td>
+<td>$\ge 4 / 10$ points indicates neuropathic pain</td>
+</tr>
+<tr>
+<td><strong>LANSS / S-LANSS</strong></td>
+<td>Neuropathic pain screening</td>
+<td>LANSS: Clinician exam<br>S-LANSS: Self-report</td>
+<td style="text-align: center;"><strong>YES</strong></td>
+<td>$\ge 12 / 24$ points indicates neuropathic pain</td>
+</tr>
+<tr>
+<td><strong>painDETECT</strong></td>
+<td>Neuropathic pain screening</td>
+<td>Self-report questionnaire</td>
+<td style="text-align: center;"><strong>YES</strong> (esp. radicular/back)</td>
+<td>$\le 12$ unlikely, $13\text{--}18$ ambiguous, $\ge 19$ likely</td>
+</tr>
+<tr>
+<td><strong>NPQ</strong> (Neuropathic Pain Questionnaire)</td>
+<td>Neuropathic pain screening</td>
+<td>12-item self-report questionnaire</td>
+<td style="text-align: center;"><strong>YES</strong></td>
+<td>Discriminates neuropathic from non-neuropathic</td>
+</tr>
+<tr>
+<td><strong>ID-Pain</strong></td>
+<td>Neuropathic pain screening</td>
+<td>6-item self-report screening tool</td>
+<td style="text-align: center;"><strong>YES</strong> (primary care)</td>
+<td>$\ge 2$ or $3$ indicates neuropathic component</td>
+</tr>
+<tr>
+<td><strong>McGill Pain Questionnaire (MPQ / SF-MPQ)</strong></td>
+<td>Sensory, affective, evaluative pain descriptors</td>
+<td>Multidimensional pain profile</td>
+<td style="text-align: center;"><strong>NO</strong></td>
+<td>Evaluates multidimensional quality of pain; <strong>NOT a neuropathic screening tool</strong>.</td>
+</tr>
+<tr>
+<td><strong>Brief Pain Inventory (BPI)</strong></td>
+<td>Pain intensity &amp; functional interference</td>
+<td>Multidimensional outcome measure</td>
+<td style="text-align: center;"><strong>NO</strong></td>
+<td>Measures general interference across 7 domains.</td>
+</tr>
+<tr>
+<td><strong>Pain Catastrophizing Scale (PCS)</strong></td>
+<td>Rumination, magnification, helplessness</td>
+<td>Psychological cognitive risk factor</td>
+<td style="text-align: center;"><strong>NO</strong></td>
+<td>$\ge 30 / 52$ indicates clinically high catastrophizing.</td>
+</tr>
+<tr>
+<td><strong>Tampa Scale for Kinesiophobia (TSK)</strong></td>
+<td>Fear of movement / (re)injury</td>
+<td>Psychological cognitive risk factor</td>
+<td style="text-align: center;"><strong>NO</strong></td>
+<td>$\ge 37 / 68$ indicates high kinesiophobia.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-high-yield-mcq-quick-traps-for-clinical-foundations">7. High-Yield MCQ Quick Traps for Clinical Foundations</h2>
+<ol>
+<li><strong>The Rotator Cuff vs. Instability Trap:</strong></li>
+<li><em>Trap:</em> "Gerber's lift-off sign is a test for glenohumeral anterior labral instability."</li>
+<li><em>Reality:</em> <strong>FALSE.</strong> Gerber's lift-off isolates the <strong>subscapularis muscle</strong> (part of the rotator cuff). Anterior instability is evaluated with the <strong>Apprehension and Relocation test</strong>.</li>
+<li><strong>The VBI vs. Myelopathy Tingling Trap:</strong></li>
+<li><em>Trap:</em> "Bilateral numbness and tingling of both hands and feet is a typical warning sign of Vertebrobasilar Insufficiency."</li>
+<li><em>Reality:</em> <strong>FALSE.</strong> Bilateral tingling of hands/feet indicates <strong>cervical spinal cord compression (cervical myelopathy)</strong>. Classic VBI signs are the <strong>5 D's</strong> (<em>Dizziness, Diplopia, Dysarthria, Dysphagia, Drop attacks</em>) and <strong>3 N's</strong> (<em>Nausea, Numbness [unilateral facial], Nystagmus</em>).</li>
+<li><strong>The Spinal Cord Injury Neuropathic Prevalence Trap:</strong></li>
+<li><em>Trap:</em> "Neuropathic pain above the level of injury is the most common feature of chronic pain after SCI."</li>
+<li><em>Reality:</em> <strong>FALSE.</strong> <strong>Below-level neuropathic pain</strong> (central burning pain) is the most common and persistent neuropathic pain in SCI. More than half ($&gt;50\%$) of all SCI patients experience persistent pain, and multiple pain types (nociceptive MSK + neuropathic + visceral) co-exist.</li>
+<li><strong>The Neuropathic Questionnaire Identification Trap:</strong></li>
+<li><em>Trap:</em> "The McGill Pain Questionnaire (MPQ) is a validated diagnostic screening tool for detecting neuropathic pain."</li>
+<li><em>Reality:</em> <strong>FALSE.</strong> The MPQ evaluates general sensory, affective, and evaluative descriptors. Validated neuropathic screening tools are <strong>LANSS, DN4, painDETECT, NPQ, and ID-Pain</strong>.</li>
+<li><strong>The Third-Wave CBT Mechanism Trap:</strong></li>
+<li><em>Trap:</em> "Acceptance and Commitment Therapy (ACT) works by challenging and restructuring distorted cognitive thoughts."</li>
+<li><em>Reality:</em> <strong>FALSE.</strong> Traditional CBT focuses on <strong>cognitive restructuring</strong> (changing the content of thoughts). ACT and MBSR focus on <strong>psychological flexibility, acceptance, and non-judgmental present-moment awareness</strong> without disputing or altering the thoughts themselves.</li>
+<li><strong>The Clinician Beliefs in LBP Trap:</strong></li>
+<li><em>Trap:</em> "Evidence-based practice dictates that a physiotherapist's personal beliefs about the cause of pain have no measurable effect on their treatment choices."</li>
+<li><em>Reality:</em> <strong>FALSE.</strong> Systematic reviews (Darlow et al.) prove that <strong>physiotherapists' own beliefs strongly guide their clinical management choices</strong> (e.g., biomedical beliefs lead to advising rest, off-work certification, and requesting imaging).</li>
+</ol>
+
+<div class="footer">
+    EFIC® European Diploma in Pain Physiotherapy — Study Hub (Exam Target: Nov 13th)
+</div>
+</main>
+
+</body>
+</html>
