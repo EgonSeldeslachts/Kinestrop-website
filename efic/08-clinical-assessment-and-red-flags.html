@@ -217,14 +217,14 @@ p {
 }
 
 ul, ol {
-    margin-top: 0.3em;
-    margin-bottom: 1.2em;
-    padding-left: 26px;
+    margin-top: 0.4em;
+    margin-bottom: 1.3em;
+    padding-left: 28px;
 }
 
 li {
-    margin-bottom: 0.45em;
-    line-height: 1.6;
+    margin-bottom: 0.55em;
+    line-height: 1.65;
 }
 
 li > p {
@@ -237,47 +237,73 @@ li > p:last-child {
 
 ul > li::marker {
     color: var(--brand-secondary);
+    font-size: 1.1em;
 }
 
 ol > li::marker {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--brand-secondary);
 }
 
+/* Level 2 Sub-lists (Onderverdelingen) */
 ul ul, ol ul {
-    margin-top: 0.4em;
-    margin-bottom: 0.6em;
-    padding-left: 20px;
-    border-left: 2px solid var(--border-subtle);
-    list-style-type: circle;
+    margin-top: 0.5em;
+    margin-bottom: 0.75em;
+    margin-left: 6px;
+    padding-left: 26px;
+    border-left: 3px solid #38BDF8;
+    list-style-type: disc;
 }
 
 ul ol, ol ol {
-    margin-top: 0.4em;
-    margin-bottom: 0.6em;
-    padding-left: 20px;
-    border-left: 2px solid var(--border-subtle);
+    margin-top: 0.5em;
+    margin-bottom: 0.75em;
+    margin-left: 6px;
+    padding-left: 26px;
+    border-left: 3px solid #38BDF8;
     list-style-type: lower-alpha;
 }
 
-ul ul > li::marker, ol ul > li::marker {
-    color: var(--text-muted);
+ul ul > li, ol ul > li, ul ol > li, ol ol > li {
+    margin-bottom: 0.45em;
+    font-size: 0.97em;
+    color: #1E293B;
 }
 
+ul ul > li::marker, ol ul > li::marker {
+    color: #0284C7;
+    font-size: 0.9em;
+}
+
+ul ol > li::marker, ol ol > li::marker {
+    color: #0284C7;
+    font-weight: 600;
+}
+
+/* Level 3 Sub-sub-lists */
 ul ul ul, ol ul ul, ul ol ul, ol ol ul {
-    margin-top: 0.3em;
-    margin-bottom: 0.5em;
-    padding-left: 18px;
-    border-left: 2px solid var(--border-strong);
-    list-style-type: square;
+    margin-top: 0.4em;
+    margin-bottom: 0.6em;
+    margin-left: 8px;
+    padding-left: 24px;
+    border-left: 2px dashed #94A3B8;
+    list-style-type: circle;
+}
+
+ul ul ul > li, ol ul ul > li, ul ol ul > li, ol ol ul > li {
+    margin-bottom: 0.35em;
+    font-size: 0.94em;
+    color: #334155;
 }
 
 ul ul ul > li::marker, ol ul ul > li::marker {
-    color: #94A3B8;
+    color: #64748B;
+    font-size: 0.85em;
 }
 
 li:has(> ul), li:has(> ol) {
-    margin-bottom: 0.75em;
+    margin-top: 0.5em;
+    margin-bottom: 0.9em;
 }
 
 table {
@@ -444,9 +470,11 @@ hr {
 <h3 id="a-cervical-arterial-dysfunction-cad-vertebrobasilar-insufficiency-vbi">A. Cervical Arterial Dysfunction (CAD) / Vertebrobasilar Insufficiency (VBI)</h3>
 <p><em>Reference Framework:</em> <strong>IFOMPT International Framework for Examination of the Cervical Spine for Cervical Arterial Dysfunction</strong> (Rushton et al., 2014 / 2020).</p>
 <ol>
-<li><strong>Pathophysiology:</strong></li>
+<li><strong>Pathophysiology:</strong><ul>
 <li>Mechanical deformation, stretching, or dissection of the vertebral or internal carotid arteries (often during sustained cervical rotation, extension, or high-velocity thrust manipulation), leading to transient cerebral or hindbrain ischemia.</li>
-<li><strong>Cardinal Symptoms — The 5 D's and 3 N's:</strong></li>
+</ul>
+</li>
+<li><strong>Cardinal Symptoms — The 5 D's and 3 N's:</strong><ul>
 <li><strong>5 D's:</strong><ul>
 <li><strong>D</strong>izziness / lightheadedness / unsteadiness</li>
 <li><strong>D</strong>iplopia (double vision) / visual field defects</li>
@@ -462,35 +490,45 @@ hr {
 </ul>
 </li>
 <li><strong>Other cardinal features:</strong> Ataxia (clumsiness/uncoordinated movement), Horner's syndrome (ptosis, miosis, anhidrosis), and a <strong>new, sudden, severe, unfamiliar headache or neck pain</strong> (often suboccipital/temporal, described as "unlike any previous headache").</li>
-<li><strong>Clinical Utility of Provocative Tests (DeKleyn's, sustained end-range rotation):</strong></li>
+</ul>
+</li>
+<li><strong>Clinical Utility of Provocative Tests (DeKleyn's, sustained end-range rotation):</strong><ul>
 <li><strong>Poor sensitivity and poor negative predictive value.</strong> A negative VBI test does <strong>NOT</strong> rule out arterial dysfunction.</li>
 <li>Prolonged provocation testing is no longer recommended as a mandatory clearance tool because it can precipitate dissection or stroke. Clinicians must rely on thorough <strong>vascular risk factor profiling</strong> (hypertension, smoking, oral contraceptives, recent neck trauma, hypermobility) and early symptom identification.</li>
-<li><strong>⚡ High-Yield MCQ Distractor Trap:</strong></li>
+</ul>
+</li>
+<li><strong>⚡ High-Yield MCQ Distractor Trap:</strong><ul>
 <li><em>Trap:</em> "Bilateral tingling of the hands and feet is a typical sign of vertebrobasilar insufficiency."</li>
 <li><em>Reality:</em> <strong>FALSE.</strong> Bilateral tingling of hands and feet indicates <strong>cervical spinal cord compression (myelopathy)</strong>, NOT VBI.</li>
+</ul>
+</li>
 </ol>
 <hr />
 <h3 id="b-cervical-spondylotic-myelopathy-csm-spinal-cord-compression">B. Cervical Spondylotic Myelopathy (CSM) — Spinal Cord Compression</h3>
 <ol>
 <li><strong>Pathophysiology:</strong> Narrowing of the central spinal canal resulting in mechanical compression and microvascular ischemia of the cervical spinal cord.</li>
 <li><strong>Cardinal Clinical Prediction Cluster (Cook et al., 2010):</strong>
-   Presence of $\ge 3$ of the following 5 features yields a positive Likelihood Ratio ($+LR = 30.9$):</li>
+   Presence of $\ge 3$ of the following 5 features yields a positive Likelihood Ratio ($+LR = 30.9$):<ol>
 <li><strong>Gait ataxia / broad-based unsteadiness</strong> (most sensitive initial sign).</li>
 <li><strong>Positive Hoffman's sign:</strong> Flicking the terminal phalanx of the middle finger produces involuntary flexion/adduction of the thumb and index finger.</li>
 <li><strong>Inverted Supinator / Brachioradialis Reflex:</strong> Percussing the distal radius produces paradoxical finger flexion rather than normal elbow flexion.</li>
 <li><strong>Positive Babinski reflex:</strong> Firm stroking of the lateral plantar aspect of the foot produces great toe extension and fanning of other toes (extensor plantar response).</li>
 <li><strong>Age $&gt; 45$ years.</strong></li>
-<li><strong>Subjective Red Flags:</strong></li>
+</ol>
+</li>
+<li><strong>Subjective Red Flags:</strong><ul>
 <li><strong>Bilateral tingling, numbness, or "glove-and-stocking" sensory loss</strong> in hands and feet.</li>
 <li>Progressive loss of fine motor dexterity in the hands (difficulty buttoning shirts, tying shoelaces, turning keys, altered handwriting).</li>
 <li>Subjective feeling of heavy, stiff, or "rubbery" legs.</li>
 <li>Urinary urgency, frequency, or incontinence (late sign).</li>
+</ul>
+</li>
 </ol>
 <hr />
 <h3 id="c-cauda-equina-syndrome-ces">C. Cauda Equina Syndrome (CES)</h3>
 <ol>
 <li><strong>Pathophysiology:</strong> Massive space-occupying lesion (typically central disc herniation or spinal tumor) compressing the multiple lumbosacral nerve roots (L2–S5) within the thecal sac.</li>
-<li><strong>Cardinal Red Flag Signs &amp; Symptoms:</strong></li>
+<li><strong>Cardinal Red Flag Signs &amp; Symptoms:</strong><ul>
 <li><strong>Saddle anesthesia / sensory deficit:</strong> Numbness, altered sensation over the buttocks, perineum, perianal area, and inner thighs (dermatomes S3–S5).</li>
 <li><strong>Bladder dysfunction:</strong><ul>
 <li><strong>Urinary retention with overflow incontinence:</strong> High sensitivity ($\sim 90\%$). Inability to completely empty the bladder, loss of urinary sensation.</li>
@@ -499,23 +537,31 @@ hr {
 <li><strong>Bowel dysfunction:</strong> Fecal incontinence, loss of anal sphincter tone (demonstrated on rectal examination).</li>
 <li><strong>Sexual dysfunction:</strong> Sudden onset erectile dysfunction, genital numbness.</li>
 <li><strong>Bilateral lower extremity neurological deficits:</strong> Progressive bilateral leg weakness, motor loss (foot drop), or bilateral sciatica.</li>
+</ul>
+</li>
 </ol>
 <hr />
 <h3 id="d-other-spinal-red-flags-cancer-infection-fracture">D. Other Spinal Red Flags (Cancer, Infection, Fracture)</h3>
 <ul>
-<li><strong>Spinal Malignancy:</strong></li>
+<li><strong>Spinal Malignancy:</strong><ul>
 <li><strong>Previous personal history of cancer</strong> (highest diagnostic value; $+LR \approx 15$).</li>
 <li>Unexplained weight loss ($&gt;5\text{--}10\%$ body weight over 3–6 months).</li>
 <li>Unrelenting, non-mechanical pain that is progressive, severe at night, and unimproved by supine rest.</li>
 <li>Age $&gt;50$ years with new-onset unremitting pain.</li>
-<li><strong>Spinal Infection (Discitis / Osteomyelitis / Epidural Abscess):</strong></li>
+</ul>
+</li>
+<li><strong>Spinal Infection (Discitis / Osteomyelitis / Epidural Abscess):</strong><ul>
 <li>Fever, chills, night sweats.</li>
 <li>History of recent invasive spinal procedure, IV drug use, or recent bacterial infection (urinary tract, skin).</li>
 <li>Severe, rigid localized spinal tenderness and deep constant ache.</li>
-<li><strong>Spinal Osteoporotic Fracture:</strong></li>
+</ul>
+</li>
+<li><strong>Spinal Osteoporotic Fracture:</strong><ul>
 <li>Sudden onset severe thoracolumbar pain following minor trauma (or sneezing/bending).</li>
 <li>Prolonged systemic corticosteroid use.</li>
 <li>Female gender, advanced age ($&gt;70$ years), known osteoporosis.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="2-peripheral-orthopedic-physical-examination-provocation-tests">2. Peripheral Orthopedic Physical Examination &amp; Provocation Tests</h2>
@@ -615,34 +661,46 @@ hr {
     Good to RULE OUT herniation               Confirms space-occupying herniation
 </code></pre>
 <ol>
-<li><strong>Straight Leg Raise (SLR / Lasègue Test):</strong></li>
+<li><strong>Straight Leg Raise (SLR / Lasègue Test):</strong><ul>
 <li>Performed passively with knee extended and hip neutrally rotated.</li>
 <li>Reproduction of dermatomal shooting pain radiating below the knee between $30^\circ$ and $70^\circ$ indicates mechanical traction on L4, L5, or S1 nerve roots.</li>
 <li><strong>Sensitivity:</strong> High ($\approx 0.90$). If SLR is negative, lumbar disc herniation with nerve root involvement is highly unlikely.</li>
-<li><strong>Crossed Straight Leg Raise (Well Leg Raise):</strong></li>
+</ul>
+</li>
+<li><strong>Crossed Straight Leg Raise (Well Leg Raise):</strong><ul>
 <li>Passive elevation of the <em>unaffected, asymptomatic</em> leg reproduces sharp radicular pain down the <em>affected, symptomatic</em> leg.</li>
 <li><strong>Specificity:</strong> Extremely high ($&gt;0.90$). Virtually confirms a large paramedian or free disc fragment compressing the nerve root.</li>
-<li><strong>Slump Test:</strong></li>
+</ul>
+</li>
+<li><strong>Slump Test:</strong><ul>
 <li>Progressive neurodynamic test: Thoracic/lumbar flexion $\rightarrow$ Cervical flexion $\rightarrow$ Knee extension $\rightarrow$ Ankle dorsiflexion.</li>
 <li>More sensitive than the SLR for neural mechanosensitivity throughout the entire neuraxis (cervical to sacral).</li>
-<li><strong>Sensitizing Maneuvers:</strong></li>
+</ul>
+</li>
+<li><strong>Sensitizing Maneuvers:</strong><ul>
 <li><em>Tibial nerve bias:</em> Ankle dorsiflexion + eversion.</li>
 <li><em>Peroneal (fibular) nerve bias:</em> Ankle plantarflexion + inversion.</li>
 <li><em>Sural nerve bias:</em> Ankle dorsiflexion + inversion.</li>
 <li><em>Femoral nerve bias (L2–L4):</em> Prone Knee Bend (PKB / Nachlas test) with hip extension.</li>
+</ul>
+</li>
 </ol>
 <hr />
 <h3 id="c-sacroiliac-joint-sij-knee-assessment">C. Sacroiliac Joint (SIJ) &amp; Knee Assessment</h3>
 <ol>
-<li><strong>Sacroiliac Joint Provocation Cluster (Laslett et al., 2005):</strong></li>
+<li><strong>Sacroiliac Joint Provocation Cluster (Laslett et al., 2005):</strong><ul>
 <li><strong>Rule:</strong> Single SIJ tests are unreliable. Diagnostic accuracy requires a multi-test cluster:<ul>
 <li>4 Core Tests: (1) <strong>Distraction test</strong>, (2) <strong>Thigh thrust</strong>, (3) <strong>Compression test</strong>, (4) <strong>Sacral thrust</strong>.</li>
 <li>$\ge 2$ positive tests out of 4 has high sensitivity ($88\%$) and specificity ($78\%$) for SIJ intra-articular pain.</li>
 </ul>
 </li>
-<li><strong>Knee Joint Examination:</strong></li>
+</ul>
+</li>
+<li><strong>Knee Joint Examination:</strong><ul>
 <li><em>Meniscal pathology:</em> Joint line tenderness, McMurray test, Thessaly test (dynamic weightbearing rotation at $20^\circ$ knee flexion).</li>
 <li><em>Anterior Cruciate Ligament (ACL):</em> <strong>Lachman test</strong> (highest sensitivity, $\approx 85\%$), <strong>Pivot Shift test</strong> (highest specificity, $&gt;95\%$).</li>
+</ul>
+</li>
 </ol>
 <hr />
 <h2 id="3-special-neurological-pain-populations-syndromes">3. Special Neurological Pain Populations &amp; Syndromes</h2>
@@ -667,11 +725,13 @@ hr {
          └───────────────────────┘                       └───────────────────────┘
 </code></pre>
 <ol>
-<li><strong>Epidemiology &amp; General Characteristics:</strong></li>
+<li><strong>Epidemiology &amp; General Characteristics:</strong><ul>
 <li><strong>Prevalence:</strong> <strong>More than half ($&gt;50\%$, typically $65\text{--}80\%$)</strong> of individuals with SCI experience persistent, chronic pain.</li>
 <li><strong>Multiplicity:</strong> The vast majority of SCI patients suffer from <strong>multiple co-existing pain types</strong> simultaneously (e.g., musculoskeletal shoulder pain + below-level central neuropathic pain + visceral bladder pain).</li>
 <li><strong>Severity:</strong> Pain after SCI is frequently rated as <strong>severe, relentless, and debilitating</strong>, often cited as a greater barrier to quality of life than the paralysis itself.</li>
-<li><strong>International Spinal Cord Injury Basic Pain Data Set (IASP ISCIP Taxonomy):</strong></li>
+</ul>
+</li>
+<li><strong>International Spinal Cord Injury Basic Pain Data Set (IASP ISCIP Taxonomy):</strong><ul>
 <li><strong>Tier 1: Nociceptive Pain:</strong><ul>
 <li><em>Musculoskeletal Pain:</em> Originates from nociceptors in musculoskeletal structures with preserved sensation. Common sources: Overuse tendinopathy in shoulders/wrists from manual wheelchair propulsion, myofascial spasms, and mechanical spinal instability above the fusion level.</li>
 <li><em>Visceral Pain:</em> <strong>Visceral structures ARE involved.</strong> Arises from visceral organs in thorax, abdomen, or pelvis (e.g., urinary tract infection, bladder calculi, constipation, fecal impaction, gallstones). In lesions above T6, visceral noxious inputs can trigger life-threatening <strong>autonomic dysreflexia</strong>.</li>
@@ -683,24 +743,30 @@ hr {
 <li><strong>⚡ High-Yield MCQ Fact:</strong> <strong>Below-level neuropathic pain is the most common neuropathic pain type in SCI.</strong> Distractors claiming that "above-level neuropathic pain is most common" are FALSE (above-level pain is usually peripheral overuse entrapment like Carpal Tunnel Syndrome).</li>
 </ul>
 </li>
+</ul>
+</li>
 </ol>
 <hr />
 <h3 id="b-central-post-stroke-pain-cpsp-dejerine-roussy-syndrome">B. Central Post-Stroke Pain (CPSP / Dejerine-Roussy Syndrome)</h3>
 <ol>
 <li><strong>Definition &amp; Prevalence:</strong> Central neuropathic pain occurring in $8\text{--}10\%$ of stroke patients following an ischemic or hemorrhagic vascular lesion affecting the somatosensory pathways.</li>
 <li><strong>Anatomical Site:</strong> Classically involves the <strong>ventroposterolateral (VPL) nucleus of the thalamus</strong>, but can occur following lesions in the brainstem (lateral medullary / Wallenberg syndrome) or cortex.</li>
-<li><strong>Clinical Presentation:</strong></li>
+<li><strong>Clinical Presentation:</strong><ul>
 <li>Hemibody burning, freezing, aching, or tearing pain.</li>
 <li>Associated with objective sensory deficits: Loss of temperature/pinprick sensation, accompanied by marked <strong>cold allodynia</strong> and <strong>hyperpathia</strong>.</li>
+</ul>
+</li>
 </ol>
 <hr />
 <h3 id="c-multiple-sclerosis-ms-pain">C. Multiple Sclerosis (MS) Pain</h3>
 <ol>
 <li><strong>Prevalence:</strong> Over $50\%$ of MS patients experience chronic pain.</li>
-<li><strong>Presentations:</strong></li>
+<li><strong>Presentations:</strong><ul>
 <li><em>Trigeminal Neuralgia:</em> Paroxysmal lancinating facial pain. In MS, it frequently presents <strong>bilaterally</strong> and at a <strong>substantially younger age</strong> than idiopathic trigeminal neuralgia.</li>
 <li><em>Lhermitte's Sign:</em> Sudden transient electric-shock sensation running down the spine and into the limbs triggered by <strong>cervical flexion</strong> (indicates demyelination in the cervical posterior columns).</li>
 <li><em>Painful tonic spasms:</em> Paroxysmal, involuntary dystonic muscle contractions lasting seconds to minutes.</li>
+</ul>
+</li>
 </ol>
 <hr />
 <h2 id="4-psychological-behavioral-models-mechanisms">4. Psychological &amp; Behavioral Models &amp; Mechanisms</h2>
@@ -720,10 +786,12 @@ hr {
 </code></pre>
 <h3 id="a-second-wave-vs-third-wave-psychological-interventions">A. Second-Wave vs. Third-Wave Psychological Interventions</h3>
 <ul>
-<li><strong>Traditional Cognitive-Behavioral Therapy (CBT - Second-Wave):</strong></li>
+<li><strong>Traditional Cognitive-Behavioral Therapy (CBT - Second-Wave):</strong><ul>
 <li><strong>Core Mechanism:</strong> <strong>Cognitive Restructuring</strong>.</li>
 <li><strong>Approach:</strong> Clinicians help patients identify irrational automatic thoughts, cognitive distortions, and catastrophizing. The explicit goal is to <strong>dispute, test, and alter the <em>content</em></strong> of thoughts (e.g., replacing <em>"My back is destroyed and moving will paralyze me"</em> with <em>"My spine is strong and sore but safe"</em>).</li>
-<li><strong>Acceptance and Commitment Therapy (ACT - Third-Wave):</strong></li>
+</ul>
+</li>
+<li><strong>Acceptance and Commitment Therapy (ACT - Third-Wave):</strong><ul>
 <li><strong>Core Mechanism:</strong> <strong>Psychological Flexibility</strong> mediated by the 6 core processes of the Hexaflex:<ol>
 <li><em>Acceptance:</em> Willingness to experience unpleasant bodily sensations without struggle.</li>
 <li><em>Cognitive Defusion:</em> Stepping back and observing thoughts as transient verbal events rather than objective truths (e.g., <em>"I am having the thought that I can't walk"</em> instead of <em>"I can't walk"</em>).</li>
@@ -734,9 +802,13 @@ hr {
 </ol>
 </li>
 <li><strong>Approach:</strong> ACT does <strong>NOT</strong> seek to change the content of thoughts or reduce pain intensity. It increases functional engagement and decreases experiential avoidance.</li>
-<li><strong>Mindfulness-Based Stress Reduction (MBSR - Kabat-Zinn):</strong></li>
+</ul>
+</li>
+<li><strong>Mindfulness-Based Stress Reduction (MBSR - Kabat-Zinn):</strong><ul>
 <li><strong>Core Mechanism:</strong> <strong>Intentional, non-judgmental present-moment awareness</strong>.</li>
 <li><strong>Approach:</strong> Cultivates observational openness to sensory and emotional inputs without emotional reactivity or cognitive elaboration.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h3 id="b-theoretical-pain-models-comparative-overview">B. Theoretical Pain Models: Comparative Overview</h3>
@@ -807,12 +879,12 @@ hr {
 <p><em>Reference:</em> <strong>Darlow et al. (2012) Systematic Review</strong> (<em>Eur J Pain</em>, 16(1):3-17).
 - <strong>Core Finding:</strong> The personal attitudes and beliefs of the physiotherapist or physician regarding pain <strong>strongly and directly influence the treatment choices and recommendations they provide to patients</strong>.
 - <strong>Biomedical vs. Biopsychosocial Stance:</strong>
-  - Clinicians holding strong biomedical beliefs are significantly more likely to:
-    - Advise patients to restrict physical activity and stay home from work.
-    - Recommend bed rest or passive modalities.
-    - Refer for unnecessary MRI/X-ray imaging.
-    - Reinforce the patient's fear-avoidance beliefs and catastrophizing (iatrogenic harm).
-  - Conversely, clinicians who adopt a biopsychosocial approach successfully decrease patient fear-avoidance and foster self-efficacy.
+    - Clinicians holding strong biomedical beliefs are significantly more likely to:
+        - Advise patients to restrict physical activity and stay home from work.
+        - Recommend bed rest or passive modalities.
+        - Refer for unnecessary MRI/X-ray imaging.
+        - Reinforce the patient's fear-avoidance beliefs and catastrophizing (iatrogenic harm).
+    - Conversely, clinicians who adopt a biopsychosocial approach successfully decrease patient fear-avoidance and foster self-efficacy.
 - <strong>⚡ Exam Takeaway:</strong> Provider beliefs are <strong>NOT</strong> neutral; they are a major prognostic determinant of clinical outcomes and guideline adherence.</p>
 <hr />
 <h2 id="6-neuropathic-screening-questionnaires-vs-general-pain-battery">6. Neuropathic Screening Questionnaires vs. General Pain Battery</h2>
@@ -896,24 +968,36 @@ hr {
 <hr />
 <h2 id="7-high-yield-mcq-quick-traps-for-clinical-foundations">7. High-Yield MCQ Quick Traps for Clinical Foundations</h2>
 <ol>
-<li><strong>The Rotator Cuff vs. Instability Trap:</strong></li>
+<li><strong>The Rotator Cuff vs. Instability Trap:</strong><ul>
 <li><em>Trap:</em> "Gerber's lift-off sign is a test for glenohumeral anterior labral instability."</li>
 <li><em>Reality:</em> <strong>FALSE.</strong> Gerber's lift-off isolates the <strong>subscapularis muscle</strong> (part of the rotator cuff). Anterior instability is evaluated with the <strong>Apprehension and Relocation test</strong>.</li>
-<li><strong>The VBI vs. Myelopathy Tingling Trap:</strong></li>
+</ul>
+</li>
+<li><strong>The VBI vs. Myelopathy Tingling Trap:</strong><ul>
 <li><em>Trap:</em> "Bilateral numbness and tingling of both hands and feet is a typical warning sign of Vertebrobasilar Insufficiency."</li>
 <li><em>Reality:</em> <strong>FALSE.</strong> Bilateral tingling of hands/feet indicates <strong>cervical spinal cord compression (cervical myelopathy)</strong>. Classic VBI signs are the <strong>5 D's</strong> (<em>Dizziness, Diplopia, Dysarthria, Dysphagia, Drop attacks</em>) and <strong>3 N's</strong> (<em>Nausea, Numbness [unilateral facial], Nystagmus</em>).</li>
-<li><strong>The Spinal Cord Injury Neuropathic Prevalence Trap:</strong></li>
+</ul>
+</li>
+<li><strong>The Spinal Cord Injury Neuropathic Prevalence Trap:</strong><ul>
 <li><em>Trap:</em> "Neuropathic pain above the level of injury is the most common feature of chronic pain after SCI."</li>
 <li><em>Reality:</em> <strong>FALSE.</strong> <strong>Below-level neuropathic pain</strong> (central burning pain) is the most common and persistent neuropathic pain in SCI. More than half ($&gt;50\%$) of all SCI patients experience persistent pain, and multiple pain types (nociceptive MSK + neuropathic + visceral) co-exist.</li>
-<li><strong>The Neuropathic Questionnaire Identification Trap:</strong></li>
+</ul>
+</li>
+<li><strong>The Neuropathic Questionnaire Identification Trap:</strong><ul>
 <li><em>Trap:</em> "The McGill Pain Questionnaire (MPQ) is a validated diagnostic screening tool for detecting neuropathic pain."</li>
 <li><em>Reality:</em> <strong>FALSE.</strong> The MPQ evaluates general sensory, affective, and evaluative descriptors. Validated neuropathic screening tools are <strong>LANSS, DN4, painDETECT, NPQ, and ID-Pain</strong>.</li>
-<li><strong>The Third-Wave CBT Mechanism Trap:</strong></li>
+</ul>
+</li>
+<li><strong>The Third-Wave CBT Mechanism Trap:</strong><ul>
 <li><em>Trap:</em> "Acceptance and Commitment Therapy (ACT) works by challenging and restructuring distorted cognitive thoughts."</li>
 <li><em>Reality:</em> <strong>FALSE.</strong> Traditional CBT focuses on <strong>cognitive restructuring</strong> (changing the content of thoughts). ACT and MBSR focus on <strong>psychological flexibility, acceptance, and non-judgmental present-moment awareness</strong> without disputing or altering the thoughts themselves.</li>
-<li><strong>The Clinician Beliefs in LBP Trap:</strong></li>
+</ul>
+</li>
+<li><strong>The Clinician Beliefs in LBP Trap:</strong><ul>
 <li><em>Trap:</em> "Evidence-based practice dictates that a physiotherapist's personal beliefs about the cause of pain have no measurable effect on their treatment choices."</li>
 <li><em>Reality:</em> <strong>FALSE.</strong> Systematic reviews (Darlow et al.) prove that <strong>physiotherapists' own beliefs strongly guide their clinical management choices</strong> (e.g., biomedical beliefs lead to advising rest, off-work certification, and requesting imaging).</li>
+</ul>
+</li>
 </ol>
 
 <div class="footer">

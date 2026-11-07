@@ -217,14 +217,14 @@ p {
 }
 
 ul, ol {
-    margin-top: 0.3em;
-    margin-bottom: 1.2em;
-    padding-left: 26px;
+    margin-top: 0.4em;
+    margin-bottom: 1.3em;
+    padding-left: 28px;
 }
 
 li {
-    margin-bottom: 0.45em;
-    line-height: 1.6;
+    margin-bottom: 0.55em;
+    line-height: 1.65;
 }
 
 li > p {
@@ -237,47 +237,73 @@ li > p:last-child {
 
 ul > li::marker {
     color: var(--brand-secondary);
+    font-size: 1.1em;
 }
 
 ol > li::marker {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--brand-secondary);
 }
 
+/* Level 2 Sub-lists (Onderverdelingen) */
 ul ul, ol ul {
-    margin-top: 0.4em;
-    margin-bottom: 0.6em;
-    padding-left: 20px;
-    border-left: 2px solid var(--border-subtle);
-    list-style-type: circle;
+    margin-top: 0.5em;
+    margin-bottom: 0.75em;
+    margin-left: 6px;
+    padding-left: 26px;
+    border-left: 3px solid #38BDF8;
+    list-style-type: disc;
 }
 
 ul ol, ol ol {
-    margin-top: 0.4em;
-    margin-bottom: 0.6em;
-    padding-left: 20px;
-    border-left: 2px solid var(--border-subtle);
+    margin-top: 0.5em;
+    margin-bottom: 0.75em;
+    margin-left: 6px;
+    padding-left: 26px;
+    border-left: 3px solid #38BDF8;
     list-style-type: lower-alpha;
 }
 
-ul ul > li::marker, ol ul > li::marker {
-    color: var(--text-muted);
+ul ul > li, ol ul > li, ul ol > li, ol ol > li {
+    margin-bottom: 0.45em;
+    font-size: 0.97em;
+    color: #1E293B;
 }
 
+ul ul > li::marker, ol ul > li::marker {
+    color: #0284C7;
+    font-size: 0.9em;
+}
+
+ul ol > li::marker, ol ol > li::marker {
+    color: #0284C7;
+    font-weight: 600;
+}
+
+/* Level 3 Sub-sub-lists */
 ul ul ul, ol ul ul, ul ol ul, ol ol ul {
-    margin-top: 0.3em;
-    margin-bottom: 0.5em;
-    padding-left: 18px;
-    border-left: 2px solid var(--border-strong);
-    list-style-type: square;
+    margin-top: 0.4em;
+    margin-bottom: 0.6em;
+    margin-left: 8px;
+    padding-left: 24px;
+    border-left: 2px dashed #94A3B8;
+    list-style-type: circle;
+}
+
+ul ul ul > li, ol ul ul > li, ul ol ul > li, ol ol ul > li {
+    margin-bottom: 0.35em;
+    font-size: 0.94em;
+    color: #334155;
 }
 
 ul ul ul > li::marker, ol ul ul > li::marker {
-    color: #94A3B8;
+    color: #64748B;
+    font-size: 0.85em;
 }
 
 li:has(> ul), li:has(> ol) {
-    margin-bottom: 0.75em;
+    margin-top: 0.5em;
+    margin-bottom: 0.9em;
 }
 
 table {
@@ -481,13 +507,11 @@ hr {
 <li><strong>Citation:</strong> <em>Pain</em>, 155(8):1426–34.</li>
 <li><strong>Design &amp; Sample:</strong> Meta-analysis of 10 experimental laboratory studies ($N = 524$).</li>
 <li><strong>Evidence Quality:</strong> High internal validity (experimental randomized laboratory models).</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Overall Nocebo Hyperalgesia:</strong> <strong>Moderate-to-large effect</strong> (Hedges' $g = 0.63$, 95% CI 0.49–0.78).</li>
-<li><strong>Conditioning + Negative Verbal Suggestion:</strong> <strong>Moderate-to-large effect</strong> ($g = 0.77$).</li>
-<li><strong>Negative Verbal Suggestion Alone:</strong> <strong>Moderate effect</strong> ($g = 0.52$).</li>
-<li><strong>Conditioning Alone:</strong> <strong>Small-to-moderate effect</strong> ($g = 0.43$).</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Overall Nocebo Hyperalgesia:</strong> <strong>Moderate-to-large effect</strong> (Hedges' $g = 0.63$, 95% CI 0.49–0.78).
+        - <strong>Conditioning + Negative Verbal Suggestion:</strong> <strong>Moderate-to-large effect</strong> ($g = 0.77$).
+        - <strong>Negative Verbal Suggestion Alone:</strong> <strong>Moderate effect</strong> ($g = 0.52$).
+        - <strong>Conditioning Alone:</strong> <strong>Small-to-moderate effect</strong> ($g = 0.43$).</li>
 <li><strong>Neurobiological Mechanism:</strong> Mediated by <strong>Cholecystokinin (CCK)</strong> and HPA axis activation; completely blocked or reversed by CCK antagonists (<strong>proglumide</strong>).</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>High internal validity | Moderate-to-large effect (g = 0.63) on pain sensitivity | Verbal + conditioning (g = 0.77) &gt; Verbal alone (g = 0.52) | CCK-mediated, blocked by proglumide</code>.</li>
@@ -498,16 +522,14 @@ hr {
 <li><strong>Citation:</strong> <em>J Pain</em>, 16(9):807–13.</li>
 <li><strong>Design &amp; Sample:</strong> Narrative synthesis and meta-analytic overview of Pain Neuroscience Education (PNE).</li>
 <li><strong>Evidence Quality:</strong> Moderate-to-high quality across multiple clinical trials.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Pain Biology Knowledge:</strong> <strong>Large effect</strong> ($\text{SMD} &gt; 0.80$).</li>
-<li><strong>Pain Catastrophizing (PCS) &amp; Kinesiophobia (TSK):</strong> <strong>Moderate-to-large reduction</strong> ($\text{SMD} \approx -0.50\text{ to } -0.70$).</li>
-<li><strong>Pain Intensity (Standalone PNE):</strong> <strong>Small reduction</strong> ($\text{SMD} \approx -0.25$).</li>
-<li><strong>Pain Intensity (PNE + Active Movement):</strong> <strong>Moderate reduction</strong> ($\text{SMD} \approx -0.50$).</li>
-<li><strong>Disability / Function (Standalone PNE):</strong> <strong>Small / Non-significant</strong> effect.</li>
-<li><strong>Disability / Function (PNE + Active Movement):</strong> <strong>Moderate reduction</strong> ($\text{SMD} \approx -0.45$).</li>
-<li><strong>Healthcare Utilization:</strong> <strong>Moderate reduction</strong> in doctor consultations and diagnostic imaging requests.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Pain Biology Knowledge:</strong> <strong>Large effect</strong> ($\text{SMD} &gt; 0.80$).
+        - <strong>Pain Catastrophizing (PCS) &amp; Kinesiophobia (TSK):</strong> <strong>Moderate-to-large reduction</strong> ($\text{SMD} \approx -0.50\text{ to } -0.70$).
+        - <strong>Pain Intensity (Standalone PNE):</strong> <strong>Small reduction</strong> ($\text{SMD} \approx -0.25$).
+        - <strong>Pain Intensity (PNE + Active Movement):</strong> <strong>Moderate reduction</strong> ($\text{SMD} \approx -0.50$).
+        - <strong>Disability / Function (Standalone PNE):</strong> <strong>Small / Non-significant</strong> effect.
+        - <strong>Disability / Function (PNE + Active Movement):</strong> <strong>Moderate reduction</strong> ($\text{SMD} \approx -0.45$).
+        - <strong>Healthcare Utilization:</strong> <strong>Moderate reduction</strong> in doctor consultations and diagnostic imaging requests.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate-to-high quality | Large effect on knowledge | Moderate-to-large reduction in catastrophizing &amp; kinesiophobia | Small effect on pain/disability as standalone → Moderate effect when combined with movement</code>.</li>
 </ul>
@@ -517,13 +539,11 @@ hr {
 <li><strong>Citation:</strong> <em>Syst Rev</em>, 4:132.</li>
 <li><strong>Design &amp; Sample:</strong> Systematic review and meta-analysis of 16 RCTs ($N = 2,999$ adults with chronic pain).</li>
 <li><strong>Evidence Quality:</strong> Moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Pain Biology Knowledge:</strong> <strong>Large improvement</strong> ($\text{SMD} = 0.81$, 95% CI 0.53–1.08).</li>
-<li><strong>Pain Intensity (Short-term $\le 3\text{m}$):</strong> <strong>Small reduction</strong> ($\text{SMD} = -0.29$, 95% CI -0.46 to -0.12).</li>
-<li><strong>Physical Function / Disability:</strong> <strong>Small / Non-significant</strong> standalone effect ($\text{SMD} = -0.14$).</li>
-<li><strong>Self-Efficacy:</strong> <strong>Small-to-moderate improvement</strong> ($\text{SMD} = 0.38$).</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Pain Biology Knowledge:</strong> <strong>Large improvement</strong> ($\text{SMD} = 0.81$, 95% CI 0.53–1.08).
+        - <strong>Pain Intensity (Short-term $\le 3\text{m}$):</strong> <strong>Small reduction</strong> ($\text{SMD} = -0.29$, 95% CI -0.46 to -0.12).
+        - <strong>Physical Function / Disability:</strong> <strong>Small / Non-significant</strong> standalone effect ($\text{SMD} = -0.14$).
+        - <strong>Self-Efficacy:</strong> <strong>Small-to-moderate improvement</strong> ($\text{SMD} = 0.38$).</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate quality | Large effect on knowledge (SMD 0.81) | Small effect on short-term pain (SMD -0.29) | No significant standalone effect on disability</code>.</li>
 </ul>
@@ -533,18 +553,12 @@ hr {
 <li><strong>Citation:</strong> <em>Cochrane Database Syst Rev</em>, (1):CD003005.</li>
 <li><strong>Design &amp; Sample:</strong> 24 RCTs ($N = 4,923$).</li>
 <li><strong>Evidence Quality:</strong> Moderate-to-high quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Acute Low Back Pain:</strong><ul>
-<li>Brief patient education (e.g., <em>The Back Book</em>, 2-page advice sheet to stay active): <strong>Moderate effect</strong> on reducing sick leave and healthcare consultations; <strong>Small effect</strong> on pain.</li>
-</ul>
-</li>
-<li><strong>Chronic Low Back Pain:</strong><ul>
-<li>Brief generic advice/booklets: <strong>NO effect / Ineffective</strong> for pain or disability.</li>
-<li>Intensive 1-on-1 or group biopsychosocial education: <strong>Moderate effect</strong> on functional disability and return to work.</li>
-</ul>
-</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Acute Low Back Pain:</strong>
+            - Brief patient education (e.g., <em>The Back Book</em>, 2-page advice sheet to stay active): <strong>Moderate effect</strong> on reducing sick leave and healthcare consultations; <strong>Small effect</strong> on pain.
+        - <strong>Chronic Low Back Pain:</strong>
+            - Brief generic advice/booklets: <strong>NO effect / Ineffective</strong> for pain or disability.
+            - Intensive 1-on-1 or group biopsychosocial education: <strong>Moderate effect</strong> on functional disability and return to work.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate-to-high quality | Acute LBP: Brief advice/booklet effective for sick leave | Chronic LBP: Brief advice INEFFECTIVE; intensive 1-on-1 biopsychosocial education required</code>.</li>
 </ul>
@@ -556,19 +570,15 @@ hr {
 <li><strong>Citation:</strong> <em>Cogn Behav Ther</em>, 45(1):5–31.</li>
 <li><strong>Design &amp; Sample:</strong> Meta-analysis of 25 RCTs ($N = 1,285$ chronic pain patients) evaluating ACT, MBSR, and MBCT.</li>
 <li><strong>Evidence Quality:</strong> <strong>Low-to-high quality</strong> (heterogeneous; 6 scored high, 5 scored low, none met all criteria; mean quality did not moderate effect).</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Pain Interference:</strong><ul>
-<li>Post-treatment: <strong>Moderate effect</strong> ($\text{SMD} = 0.62$, 95% CI 0.43–0.81).</li>
-<li>Follow-up (2–6 months): <strong>Large effect</strong> ($\text{SMD} &gt; 0.80$).</li>
-</ul>
-</li>
-<li><strong>Anxiety:</strong> <strong>Moderate effect</strong> ($\text{SMD} = 0.51$, 95% CI 0.32–0.70).</li>
-<li><strong>Pain Intensity:</strong> <strong>Small effect</strong> ($\text{SMD} = 0.37$, 95% CI 0.24–0.49).</li>
-<li><strong>Depression:</strong> <strong>Small effect</strong> ($\text{SMD} = 0.35$, 95% CI 0.20–0.51).</li>
-<li><strong>Disability:</strong> <strong>Small effect</strong> ($\text{SMD} = 0.31$, 95% CI 0.15–0.47).</li>
-<li><strong>Quality of Life:</strong> <strong>Small effect</strong> ($\text{SMD} = 0.39$, non-significant).</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Pain Interference:</strong>
+            - Post-treatment: <strong>Moderate effect</strong> ($\text{SMD} = 0.62$, 95% CI 0.43–0.81).
+            - Follow-up (2–6 months): <strong>Large effect</strong> ($\text{SMD} &gt; 0.80$).
+        - <strong>Anxiety:</strong> <strong>Moderate effect</strong> ($\text{SMD} = 0.51$, 95% CI 0.32–0.70).
+        - <strong>Pain Intensity:</strong> <strong>Small effect</strong> ($\text{SMD} = 0.37$, 95% CI 0.24–0.49).
+        - <strong>Depression:</strong> <strong>Small effect</strong> ($\text{SMD} = 0.35$, 95% CI 0.20–0.51).
+        - <strong>Disability:</strong> <strong>Small effect</strong> ($\text{SMD} = 0.31$, 95% CI 0.15–0.47).
+        - <strong>Quality of Life:</strong> <strong>Small effect</strong> ($\text{SMD} = 0.39$, non-significant).</li>
 <li><strong>Subgroup Findings:</strong> <strong>ACT</strong> demonstrated significantly higher effect sizes on depression and anxiety than MBSR or MBCT.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Low-to-high quality evidence | Moderate effects on PAIN INTERFERENCE (SMD 0.62) and ANXIETY (SMD 0.51) | Small effects on pain intensity, depression, and disability | Pain interference effect grows to Large at follow-up</code>.</li>
@@ -579,17 +589,13 @@ hr {
 <li><strong>Citation:</strong> <em>Phys Ther</em>, 90(6):860–79.</li>
 <li><strong>Design &amp; Sample:</strong> Systematic review of 13 RCTs ($N = 1,540$).</li>
 <li><strong>Evidence Quality:</strong> Moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Pain Intensity &amp; Disability:</strong> Both Graded Activity (GA) and Graded Exposure (GExp) produce <strong>small-to-moderate improvements</strong> over minimal care.</li>
-<li><strong>Catastrophizing &amp; Fear of Movement (TSK):</strong> <strong>Moderate-to-large reduction</strong> favoring <strong>Graded Exposure</strong> over Graded Activity in patients with high baseline fear.</li>
-<li><strong>Long-term Follow-up (12 months):</strong> Pain and disability outcomes between GA and GExp are <strong>equivalent</strong>.</li>
-</ul>
-</li>
-<li><strong>Mechanisms:</strong><ul>
-<li><strong>Graded Activity:</strong> Operant conditioning using quota-based, time-contingent progression regardless of pain.</li>
-<li><strong>Graded Exposure:</strong> Cognitive-behavioral in-vivo confrontation based on fear hierarchies (e.g., <strong>PHODA</strong>) to violate threat expectations.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Pain Intensity &amp; Disability:</strong> Both Graded Activity (GA) and Graded Exposure (GExp) produce <strong>small-to-moderate improvements</strong> over minimal care.
+        - <strong>Catastrophizing &amp; Fear of Movement (TSK):</strong> <strong>Moderate-to-large reduction</strong> favoring <strong>Graded Exposure</strong> over Graded Activity in patients with high baseline fear.
+        - <strong>Long-term Follow-up (12 months):</strong> Pain and disability outcomes between GA and GExp are <strong>equivalent</strong>.</li>
+<li><strong>Mechanisms:</strong>
+        - <strong>Graded Activity:</strong> Operant conditioning using quota-based, time-contingent progression regardless of pain.
+        - <strong>Graded Exposure:</strong> Cognitive-behavioral in-vivo confrontation based on fear hierarchies (e.g., <strong>PHODA</strong>) to violate threat expectations.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate quality | GA and GExp equivalent for pain &amp; disability at 12m | GExp superior for reducing catastrophizing &amp; fear-avoidance in high-fear patients | GA = Operant quota; GExp = In-vivo fear hierarchy (PHODA)</code>.</li>
 </ul>
@@ -599,14 +605,12 @@ hr {
 <li><strong>Citation:</strong> <em>Cochrane Database Syst Rev</em>, (7):CD002014.</li>
 <li><strong>Design &amp; Sample:</strong> 30 RCTs ($N = 3,438$).</li>
 <li><strong>Evidence Quality:</strong> Moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Pain Relief (vs. Waitlist):</strong> <strong>Moderate short-term effect</strong> ($\text{SMD} = -0.62$, 95% CI -0.88 to -0.35).</li>
-<li><strong>Functional Improvement / Disability (vs. Waitlist):</strong> <strong>Moderate short-term effect</strong> ($\text{SMD} = -0.45$).</li>
-<li><strong>Pain &amp; Function (vs. Active PT / Usual Care):</strong> <strong>Small / Negligible</strong> difference when delivered in isolation.</li>
-<li><strong>Behavioral Therapy + Active Physical Exercise:</strong> <strong>Moderate long-term reduction</strong> in pain and disability.</li>
-<li><strong>Operant vs. Cognitive vs. Respondent:</strong> <strong>No significant difference</strong> between behavioral sub-types.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Pain Relief (vs. Waitlist):</strong> <strong>Moderate short-term effect</strong> ($\text{SMD} = -0.62$, 95% CI -0.88 to -0.35).
+        - <strong>Functional Improvement / Disability (vs. Waitlist):</strong> <strong>Moderate short-term effect</strong> ($\text{SMD} = -0.45$).
+        - <strong>Pain &amp; Function (vs. Active PT / Usual Care):</strong> <strong>Small / Negligible</strong> difference when delivered in isolation.
+        - <strong>Behavioral Therapy + Active Physical Exercise:</strong> <strong>Moderate long-term reduction</strong> in pain and disability.
+        - <strong>Operant vs. Cognitive vs. Respondent:</strong> <strong>No significant difference</strong> between behavioral sub-types.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate quality | Moderate short-term effect vs waitlist (pain SMD -0.62, disability SMD -0.45) | Behavioral + Exercise superior to PT alone long-term | No difference between operant, cognitive, or respondent types</code>.</li>
 </ul>
@@ -616,14 +620,12 @@ hr {
 <li><strong>Citation:</strong> <em>Cochrane Database Syst Rev</em>, (2):CD010152.</li>
 <li><strong>Design &amp; Sample:</strong> 15 RCTs ($N = 2,012$ adults with chronic non-cancer pain).</li>
 <li><strong>Evidence Quality:</strong> Moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Pain Intensity (Post-treatment):</strong> <strong>Small reduction</strong> ($\text{SMD} = -0.37$, 95% CI -0.59 to -0.15).</li>
-<li><strong>Disability / Function (Post-treatment):</strong> <strong>Moderate reduction</strong> ($\text{SMD} = -0.50$, 95% CI -0.79 to -0.22).</li>
-<li><strong>Depression:</strong> <strong>Small-to-moderate reduction</strong> ($\text{SMD} = -0.26$).</li>
-<li><strong>Anxiety:</strong> <strong>Small-to-moderate reduction</strong> ($\text{SMD} = -0.33$).</li>
-<li><strong>Delivery Format:</strong> <strong>Therapist-supported internet CBT</strong> yielded significantly higher completion rates ($&gt;75\%$) and larger effect sizes than unguided automated self-help.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Pain Intensity (Post-treatment):</strong> <strong>Small reduction</strong> ($\text{SMD} = -0.37$, 95% CI -0.59 to -0.15).
+        - <strong>Disability / Function (Post-treatment):</strong> <strong>Moderate reduction</strong> ($\text{SMD} = -0.50$, 95% CI -0.79 to -0.22).
+        - <strong>Depression:</strong> <strong>Small-to-moderate reduction</strong> ($\text{SMD} = -0.26$).
+        - <strong>Anxiety:</strong> <strong>Small-to-moderate reduction</strong> ($\text{SMD} = -0.33$).
+        - <strong>Delivery Format:</strong> <strong>Therapist-supported internet CBT</strong> yielded significantly higher completion rates ($&gt;75\%$) and larger effect sizes than unguided automated self-help.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate quality | Moderate effect on disability (SMD -0.50) | Small effect on pain (SMD -0.37) and mood | Therapist-supported &gt;&gt; Unguided automated modules</code>.</li>
 </ul>
@@ -633,12 +635,10 @@ hr {
 <li><strong>Citation:</strong> <em>Phys Ther Rev</em>, 13(5):355–365.</li>
 <li><strong>Design &amp; Sample:</strong> Systematic review of 15 RCTs ($N = 963$).</li>
 <li><strong>Evidence Quality:</strong> Low-to-moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Pain Intensity:</strong> <strong>Small short-term reduction</strong> ($\text{SMD} \approx -0.30$).</li>
-<li><strong>Muscle Guarding / Autonomic Arousal:</strong> <strong>Moderate short-term reduction</strong>.</li>
-<li><strong>Long-term Functional Recovery / Sick Leave:</strong> <strong>No significant effect / Inconclusive</strong>.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Pain Intensity:</strong> <strong>Small short-term reduction</strong> ($\text{SMD} \approx -0.30$).
+        - <strong>Muscle Guarding / Autonomic Arousal:</strong> <strong>Moderate short-term reduction</strong>.
+        - <strong>Long-term Functional Recovery / Sick Leave:</strong> <strong>No significant effect / Inconclusive</strong>.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Low-to-moderate quality | Small short-term pain relief | Moderate reduction in somatic/muscle tension | Ineffective as standalone for long-term disability or work resumption</code>.</li>
 </ul>
@@ -648,16 +648,12 @@ hr {
 <li><strong>Citation:</strong> <em>J Pain</em>, 17(7):755–74.</li>
 <li><strong>Design &amp; Sample:</strong> Systematic review &amp; meta-analysis of 56 RCTs ($N = 8,713$).</li>
 <li><strong>Evidence Quality:</strong> Moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Combined Interventions (Physical + Behavioral / Psychologically Informed):</strong><ul>
-<li>Disability: <strong>Moderate effect</strong> ($\text{SMD} = 0.48$).</li>
-<li>Pain: <strong>Moderate effect</strong> ($\text{SMD} = 0.43$).</li>
-</ul>
-</li>
-<li><strong>Isolated Physical Interventions:</strong> Small-to-moderate short-term effects; lower 12-month durability.</li>
-<li><strong>Isolated Behavioral Interventions:</strong> Small-to-moderate on disability, minimal effect on physical capacity.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Combined Interventions (Physical + Behavioral / Psychologically Informed):</strong>
+            - Disability: <strong>Moderate effect</strong> ($\text{SMD} = 0.48$).
+            - Pain: <strong>Moderate effect</strong> ($\text{SMD} = 0.43$).
+        - <strong>Isolated Physical Interventions:</strong> Small-to-moderate short-term effects; lower 12-month durability.
+        - <strong>Isolated Behavioral Interventions:</strong> Small-to-moderate on disability, minimal effect on physical capacity.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate quality | Combined (Physical + Psychologically informed) superior to either alone | Disability SMD 0.48, Pain SMD 0.43 | Highest long-term durability</code>.</li>
 </ul>
@@ -666,14 +662,12 @@ hr {
 <ul>
 <li><strong>Citation:</strong> <em>Phys Ther</em>, 91(5):737–53 &amp; 91(5):700–11.</li>
 <li><strong>Evidence Quality:</strong> Landmark epidemiological consensus framework.</li>
-<li><strong>The Flags Hierarchy for MCQ:</strong><ul>
-<li><strong>Red Flags:</strong> Serious biomedical pathology (infection, fracture, malignancy, cauda equina).</li>
-<li><strong>Orange Flags:</strong> Psychiatric illness (clinical depression, psychosis, personality disorders).</li>
-<li><strong>Yellow Flags:</strong> Psychological &amp; cognitive beliefs (fear-avoidance, catastrophizing, low self-efficacy, expectation of harm).</li>
-<li><strong>Blue Flags:</strong> Workplace perceptions &amp; social factors (unsupportive boss, high job demand, low control).</li>
-<li><strong>Black Flags:</strong> Systemic, financial, and legal barriers (workers' comp litigation, insurance delays, rigid sickness certification).</li>
-</ul>
-</li>
+<li><strong>The Flags Hierarchy for MCQ:</strong>
+        - <strong>Red Flags:</strong> Serious biomedical pathology (infection, fracture, malignancy, cauda equina).
+        - <strong>Orange Flags:</strong> Psychiatric illness (clinical depression, psychosis, personality disorders).
+        - <strong>Yellow Flags:</strong> Psychological &amp; cognitive beliefs (fear-avoidance, catastrophizing, low self-efficacy, expectation of harm).
+        - <strong>Blue Flags:</strong> Workplace perceptions &amp; social factors (unsupportive boss, high job demand, low control).
+        - <strong>Black Flags:</strong> Systemic, financial, and legal barriers (workers' comp litigation, insurance delays, rigid sickness certification).</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Red = Pathology | Orange = Psychiatric | Yellow = Cognitive beliefs &amp; fear | Blue = Workplace perceptions | Black = Systemic/Legal/Insurance</code>.</li>
 </ul>
@@ -685,14 +679,12 @@ hr {
 <li><strong>Citation:</strong> <em>Cochrane Database Syst Rev</em>, 4:CD011279.</li>
 <li><strong>Design &amp; Sample:</strong> Overview of 21 Cochrane reviews, 264 RCTs ($N = 19,642$).</li>
 <li><strong>Evidence Quality:</strong> Low-to-moderate quality across diverse reviews.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Pain Severity:</strong> <strong>Small-to-moderate reduction</strong> ($\text{SMD} \approx -0.35\text{ to } -0.50$).</li>
-<li><strong>Physical Function:</strong> <strong>Small-to-moderate improvement</strong> ($\text{SMD} \approx 0.30\text{ to } 0.50$).</li>
-<li><strong>Quality of Life (HRQoL):</strong> <strong>Small improvement</strong> ($\text{SMD} \approx 0.25$).</li>
-<li><strong>Adverse Events:</strong> Predominantly minor and transient (muscle soreness). Exercise is <strong>safe and first-line</strong>.</li>
-<li><strong>Modality Superiority:</strong> <strong>No single exercise type</strong> (aerobic vs. resistance vs. motor control) is consistently superior across all chronic pain syndromes.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Pain Severity:</strong> <strong>Small-to-moderate reduction</strong> ($\text{SMD} \approx -0.35\text{ to } -0.50$).
+        - <strong>Physical Function:</strong> <strong>Small-to-moderate improvement</strong> ($\text{SMD} \approx 0.30\text{ to } 0.50$).
+        - <strong>Quality of Life (HRQoL):</strong> <strong>Small improvement</strong> ($\text{SMD} \approx 0.25$).
+        - <strong>Adverse Events:</strong> Predominantly minor and transient (muscle soreness). Exercise is <strong>safe and first-line</strong>.
+        - <strong>Modality Superiority:</strong> <strong>No single exercise type</strong> (aerobic vs. resistance vs. motor control) is consistently superior across all chronic pain syndromes.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Low-to-moderate quality overview | Small-to-moderate reduction in pain and disability across all pain conditions | Highly safe | No single exercise type universally superior</code>.</li>
 </ul>
@@ -702,14 +694,12 @@ hr {
 <li><strong>Citation:</strong> <em>Cochrane Database Syst Rev</em>, 6:CD009747.</li>
 <li><strong>Design &amp; Sample:</strong> 13 RCTs ($N = 1,264$ adults with fibromyalgia).</li>
 <li><strong>Evidence Quality:</strong> <strong>Moderate-quality evidence</strong>.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Health-Related Quality of Life (HRQoL on 0–100 FIQ):</strong> <strong>Moderate clinically meaningful improvement</strong> (Mean Difference $\text{MD} = -5.6\text{ points}$, 95% CI -8.6 to -2.6).</li>
-<li><strong>Pain Intensity (0–100 VAS):</strong> <strong>Small-to-moderate reduction</strong> ($\text{MD} = -8.8\text{ points}$, 95% CI -13.7 to -3.9).</li>
-<li><strong>Physical Function (0–100 scale):</strong> <strong>Moderate improvement</strong> ($\text{MD} = -6.4\text{ points}$).</li>
-<li><strong>Fatigue &amp; Stiffness:</strong> <strong>Small / Borderline</strong> improvement.</li>
-<li><strong>Prescription Rule:</strong> Low-to-moderate intensity (walking, cycling, aquatic), progressing slowly to avoid post-exertional flare-ups.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Health-Related Quality of Life (HRQoL on 0–100 FIQ):</strong> <strong>Moderate clinically meaningful improvement</strong> (Mean Difference $\text{MD} = -5.6\text{ points}$, 95% CI -8.6 to -2.6).
+        - <strong>Pain Intensity (0–100 VAS):</strong> <strong>Small-to-moderate reduction</strong> ($\text{MD} = -8.8\text{ points}$, 95% CI -13.7 to -3.9).
+        - <strong>Physical Function (0–100 scale):</strong> <strong>Moderate improvement</strong> ($\text{MD} = -6.4\text{ points}$).
+        - <strong>Fatigue &amp; Stiffness:</strong> <strong>Small / Borderline</strong> improvement.
+        - <strong>Prescription Rule:</strong> Low-to-moderate intensity (walking, cycling, aquatic), progressing slowly to avoid post-exertional flare-ups.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>MODERATE-QUALITY evidence | Moderate improvement in HRQoL (MD -5.6 on FIQ) and function (MD -6.4) | Small-to-moderate pain reduction (MD -8.8) | Low-to-moderate intensity with gradual progression</code>.</li>
 </ul>
@@ -719,22 +709,16 @@ hr {
 <li><strong>Citation:</strong> <em>Clin Rehabil</em>, 29(12):1155–67.</li>
 <li><strong>Design &amp; Sample:</strong> Systematic review &amp; meta-analysis of 39 RCTs ($N = 4,144$).</li>
 <li><strong>Evidence Quality:</strong> Moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Pain Intensity:</strong><ul>
-<li>Motor Control Exercise: <strong>Moderate reduction</strong> ($\text{SMD} = -0.45$, 95% CI -0.61 to -0.29).</li>
-<li>Resistance / Strengthening: <strong>Moderate reduction</strong> ($\text{SMD} = -0.42$).</li>
-<li>Aerobic Exercise: <strong>Small reduction</strong> ($\text{SMD} = -0.28$).</li>
-<li>Stretching / Flexibility: <strong>Small reduction</strong> ($\text{SMD} = -0.25$).</li>
-</ul>
-</li>
-<li><strong>Disability / Function:</strong><ul>
-<li>Motor Control Exercise: <strong>Moderate reduction</strong> ($\text{SMD} = -0.41$).</li>
-<li>Resistance / Strengthening: <strong>Small-to-moderate reduction</strong> ($\text{SMD} = -0.38$).</li>
-</ul>
-</li>
-<li><strong>Long-term Equivalence:</strong> Differences diminish at 12 months; general physical activity yields comparable long-term functional recovery.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Pain Intensity:</strong>
+            - Motor Control Exercise: <strong>Moderate reduction</strong> ($\text{SMD} = -0.45$, 95% CI -0.61 to -0.29).
+            - Resistance / Strengthening: <strong>Moderate reduction</strong> ($\text{SMD} = -0.42$).
+            - Aerobic Exercise: <strong>Small reduction</strong> ($\text{SMD} = -0.28$).
+            - Stretching / Flexibility: <strong>Small reduction</strong> ($\text{SMD} = -0.25$).
+        - <strong>Disability / Function:</strong>
+            - Motor Control Exercise: <strong>Moderate reduction</strong> ($\text{SMD} = -0.41$).
+            - Resistance / Strengthening: <strong>Small-to-moderate reduction</strong> ($\text{SMD} = -0.38$).
+        - <strong>Long-term Equivalence:</strong> Differences diminish at 12 months; general physical activity yields comparable long-term functional recovery.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate quality | Motor control (SMD -0.45) &amp; Resistance (SMD -0.42) have slightly higher short-term effect sizes than aerobic (SMD -0.28) | Equivalence achieved at 12 months</code>.</li>
 </ul>
@@ -744,14 +728,10 @@ hr {
 <li><strong>Citation:</strong> <em>Arthritis Care Res</em>, 68(12):1832–1842.</li>
 <li><strong>Design &amp; Sample:</strong> Systematic review &amp; meta-analysis of 15 RCTs ($N = 1,388$).</li>
 <li><strong>Evidence Quality:</strong> Moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Objectively Measured Physical Activity (Accelerometry):</strong><ul>
-<li>Interventions specifically targeting daily physical activity: <strong>Moderate increase</strong> (Mean Difference $\text{MD} = +1,210\text{ steps/day}$, 95% CI 479 to 1,941).</li>
-<li>Routine supervised clinical exercise therapy: <strong>NO significant change</strong> in daily step count or habitual activity levels.</li>
-</ul>
-</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Objectively Measured Physical Activity (Accelerometry):</strong>
+            - Interventions specifically targeting daily physical activity: <strong>Moderate increase</strong> (Mean Difference $\text{MD} = +1,210\text{ steps/day}$, 95% CI 479 to 1,941).
+            - Routine supervised clinical exercise therapy: <strong>NO significant change</strong> in daily step count or habitual activity levels.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate quality | Clinical exercise does NOT automatically increase daily physical activity | Interventions targeting daily habits increase steps by +1,210 steps/day | Accelerometry (4-7 days) required for objective tracking</code>.</li>
 </ul>
@@ -760,11 +740,9 @@ hr {
 <ul>
 <li><strong>Citation:</strong> <em>Musculoskelet Care</em>, 15(4):413–421.</li>
 <li><strong>Evidence Quality:</strong> Clinical framework &amp; mechanistic synthesis.</li>
-<li><strong>Core Findings for MCQ:</strong><ul>
-<li><strong>Exercise-Induced Hypoalgesia (EIH):</strong> Healthy individuals experience reduced pain sensitivity post-exercise via endogenous opioid/endocannabinoid release. Patients with central sensitization often display <strong>dysfunctional EIH</strong> (hyperalgesia/flare-up post-exercise).</li>
-<li><strong>Clinical Strategy:</strong> De-emphasize biomechanical alignment and tissue damage; emphasize safe movement, graded exposure, and nervous system desensitization with very low initial thresholds.</li>
-</ul>
-</li>
+<li><strong>Core Findings for MCQ:</strong>
+        - <strong>Exercise-Induced Hypoalgesia (EIH):</strong> Healthy individuals experience reduced pain sensitivity post-exercise via endogenous opioid/endocannabinoid release. Patients with central sensitization often display <strong>dysfunctional EIH</strong> (hyperalgesia/flare-up post-exercise).
+        - <strong>Clinical Strategy:</strong> De-emphasize biomechanical alignment and tissue damage; emphasize safe movement, graded exposure, and nervous system desensitization with very low initial thresholds.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Central sensitization causes dysfunctional EIH (post-exercise hyperalgesia) | Exercise acts via central neuro-desensitization, NOT tissue biomechanical fixing</code>.</li>
 </ul>
@@ -773,9 +751,9 @@ hr {
 <p><strong>Citation:</strong> Wieland LS, Skoetz N, Pilkington K, Vempati R, D'Adamo CR, Berman BM. <em>Yoga treatment for chronic non-specific low back pain.</em> Cochrane Database Syst Rev. 2017 Jan 12;1(1):CD010671.
 - <strong>Evidence Quality:</strong> <strong>Low-to-moderate quality</strong> across 12 RCTs ($N=1,080$).
 - <strong>Quantified Findings:</strong>
-  - Back-specific function: Moderate improvement at 3 months ($ ext{SMD} = -0.44$, 95% CI -0.66 to -0.22).
-  - Pain intensity: Small-to-moderate reduction ($  ext{MD} = -4.55/100 ext{ mm}$ at 3m; $-7.81/100$ at 6m).
-  - Clinically <strong>equivalent to other active physical therapy exercise programs</strong>; superior to non-exercise educational control.
+    - Back-specific function: Moderate improvement at 3 months ($   ext{SMD} = -0.44$, 95% CI -0.66 to -0.22).
+    - Pain intensity: Small-to-moderate reduction ($    ext{MD} = -4.55/100 ext{ mm}$ at 3m; $-7.81/100$ at 6m).
+    - Clinically <strong>equivalent to other active physical therapy exercise programs</strong>; superior to non-exercise educational control.
 - <strong>⚡ MCQ Takeaway:</strong> Low-to-moderate evidence for small-to-moderate pain and functional improvements; equivalent to standard PT exercise.</p>
 <hr />
 <h2 id="4-passive-modalities-manual-therapy-neuromodulation">4. Passive Modalities, Manual Therapy &amp; Neuromodulation</h2>
@@ -785,12 +763,10 @@ hr {
 <li><strong>Citation:</strong> <em>Cochrane Database Syst Rev</em>, (3):CD009169.</li>
 <li><strong>Design &amp; Sample:</strong> 7 RCTs ($N = 362$).</li>
 <li><strong>Evidence Quality:</strong> Low-to-moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Pain Intensity vs. Placebo/Sham:</strong> <strong>No clinically meaningful difference</strong> ($\text{MD} = 2.16\text{ mm}$ on 100mm VAS, 95% CI -4.66 to 8.98).</li>
-<li><strong>Disability vs. Placebo/Sham:</strong> <strong>No statistically significant difference</strong> ($\text{MD} = 0.41$ on 0–24 Roland-Morris scale).</li>
-<li><strong>Clinical Verdict:</strong> <strong>NO supportive evidence; Therapeutic ultrasound is INEFFECTIVE and NOT recommended.</strong></li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Pain Intensity vs. Placebo/Sham:</strong> <strong>No clinically meaningful difference</strong> ($\text{MD} = 2.16\text{ mm}$ on 100mm VAS, 95% CI -4.66 to 8.98).
+        - <strong>Disability vs. Placebo/Sham:</strong> <strong>No statistically significant difference</strong> ($\text{MD} = 0.41$ on 0–24 Roland-Morris scale).
+        - <strong>Clinical Verdict:</strong> <strong>NO supportive evidence; Therapeutic ultrasound is INEFFECTIVE and NOT recommended.</strong></li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>🚨 CLASSIC NEGATIVE TRAP: Low-to-moderate quality | NO evidence of benefit over sham (MD 2.16mm) | INEFFECTIVE and NOT recommended for chronic LBP</code>.</li>
 </ul>
@@ -800,13 +776,11 @@ hr {
 <li><strong>Citation:</strong> <em>Spine / Cochrane Database Syst Rev</em>, 36(13):E825–46.</li>
 <li><strong>Design &amp; Sample:</strong> 26 RCTs ($N = 6,070$).</li>
 <li><strong>Evidence Quality:</strong> High-to-moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Short-term Pain Relief (1 month):</strong> <strong>Small reduction</strong> ($\text{MD} = -4.5\text{ mm}$ on 100mm VAS, 95% CI -7.3 to -1.7).</li>
-<li><strong>Short-term Disability (1 month):</strong> <strong>Small reduction</strong> ($\text{MD} = -2.1\text{ points}$ on 0–100 scale).</li>
-<li><strong>Equivalence:</strong> SMT is <strong>equivalent</strong> to active exercise therapy, standard physiotherapy, and usual medical care. It is <strong>NOT superior</strong>.</li>
-<li><strong>Long-term Follow-up (12 months):</strong> <strong>No statistically significant difference</strong> in pain or disability compared to other active therapies.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Short-term Pain Relief (1 month):</strong> <strong>Small reduction</strong> ($\text{MD} = -4.5\text{ mm}$ on 100mm VAS, 95% CI -7.3 to -1.7).
+        - <strong>Short-term Disability (1 month):</strong> <strong>Small reduction</strong> ($\text{MD} = -2.1\text{ points}$ on 0–100 scale).
+        - <strong>Equivalence:</strong> SMT is <strong>equivalent</strong> to active exercise therapy, standard physiotherapy, and usual medical care. It is <strong>NOT superior</strong>.
+        - <strong>Long-term Follow-up (12 months):</strong> <strong>No statistically significant difference</strong> in pain or disability compared to other active therapies.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>High-to-moderate quality | Small short-term effect on pain (MD -4.5mm) and disability (MD -2.1) | Equivalent to exercise and PT, NOT superior | No long-term advantage</code>.</li>
 </ul>
@@ -817,11 +791,9 @@ hr {
 <li><strong>Design &amp; Sample:</strong> 0 high-quality RCTs meeting inclusion criteria; narrative review.</li>
 <li><strong>Evidence Quality:</strong> <strong>Very low quality / INCONCLUSIVE</strong>.</li>
 <li><strong>Clinical Verdict:</strong> Formal evidence from randomized trials is <strong>inconclusive</strong>. TENS is justified as a pragmatic, low-risk empirical trial in individual patients, but definitive Cochrane confirmation of efficacy is lacking.</li>
-<li><strong>Neurobiology (from Sluka 2016):</strong><ul>
-<li><strong>High-frequency TENS ($&gt;50\text{ Hz}$):</strong> Activates large $A\beta$ fibers $\rightarrow$ stimulates <strong>$\delta$-opioid receptors</strong> in spinal dorsal horn and RVM.</li>
-<li><strong>Low-frequency TENS ($&lt;10\text{ Hz}$ / acupuncture-like):</strong> Stimulates motor and $A\delta$ fibers $\rightarrow$ stimulates <strong>$\mu$-opioid receptors</strong> in spinal cord and brainstem.</li>
-</ul>
-</li>
+<li><strong>Neurobiology (from Sluka 2016):</strong>
+        - <strong>High-frequency TENS ($&gt;50\text{ Hz}$):</strong> Activates large $A\beta$ fibers $\rightarrow$ stimulates <strong>$\delta$-opioid receptors</strong> in spinal dorsal horn and RVM.
+        - <strong>Low-frequency TENS ($&lt;10\text{ Hz}$ / acupuncture-like):</strong> Stimulates motor and $A\delta$ fibers $\rightarrow$ stimulates <strong>$\mu$-opioid receptors</strong> in spinal cord and brainstem.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Very low / INCONCLUSIVE Cochrane evidence in phantom limb pain | Neurobiology: High-freq TENS = δ-opioid receptors; Low-freq TENS = μ-opioid receptors</code>.</li>
 </ul>
@@ -831,17 +803,13 @@ hr {
 <li><strong>Citation:</strong> <em>J Pain</em>, 14(1):3–13.</li>
 <li><strong>Design &amp; Sample:</strong> Systematic review &amp; meta-analysis of 6 RCTs ($N = 180$) in CRPS I and Phantom Limb Pain.</li>
 <li><strong>Evidence Quality:</strong> Moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Pain Intensity &amp; Disability:</strong> <strong>Large effect size</strong> (Hedges' $g = 0.81$, 95% CI 0.42–1.20) favoring sequential GMI over standard medical care or usual physiotherapy.</li>
-<li><strong>Sequential Order Rule:</strong> Benefits occur <strong>ONLY when the 3 stages are delivered sequentially</strong>:<ol>
-<li><em>Implicit Motor Imagery:</em> Left/Right Laterality Recognition.</li>
-<li><em>Explicit Motor Imagery:</em> Imagined movements.</li>
-<li><em>Mirror Therapy:</em> Visual feedback of unaffected limb.</li>
-</ol>
-</li>
-<li><strong>Sequence Disruption:</strong> Introducing mirror therapy without prior implicit motor training can provoke symptom flares and increase cortical disorganization.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Pain Intensity &amp; Disability:</strong> <strong>Large effect size</strong> (Hedges' $g = 0.81$, 95% CI 0.42–1.20) favoring sequential GMI over standard medical care or usual physiotherapy.
+        - <strong>Sequential Order Rule:</strong> Benefits occur <strong>ONLY when the 3 stages are delivered sequentially</strong>:
+            1. <em>Implicit Motor Imagery:</em> Left/Right Laterality Recognition.
+            2. <em>Explicit Motor Imagery:</em> Imagined movements.
+            3. <em>Mirror Therapy:</em> Visual feedback of unaffected limb.
+        - <strong>Sequence Disruption:</strong> Introducing mirror therapy without prior implicit motor training can provoke symptom flares and increase cortical disorganization.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate quality | Large effect size (g = 0.81) for pain &amp; disability in CRPS I and phantom pain | Efficacy strictly depends on sequence: (1) Laterality → (2) Motor Imagery → (3) Mirror Therapy</code>.</li>
 </ul>
@@ -860,13 +828,11 @@ hr {
 <li><strong>Citation:</strong> <em>BMJ</em>, 350:h444 / <em>Cochrane Database Syst Rev</em>, (9):CD000963.</li>
 <li><strong>Design &amp; Sample:</strong> 41 RCTs ($N = 6,858$ adults with chronic low back pain).</li>
 <li><strong>Evidence Quality:</strong> Moderate-to-high quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Pain Reduction (at $&gt;12\text{ months}$ vs. Usual Care):</strong> <strong>Moderate effect</strong> ($\text{SMD} = -0.51$, 95% CI -0.67 to -0.34).</li>
-<li><strong>Pain Reduction (at $&gt;12\text{ months}$ vs. Physical Treatments Alone):</strong> <strong>Small-to-moderate effect</strong> ($\text{SMD} = -0.21$).</li>
-<li><strong>Disability Reduction (at $&gt;12\text{ months}$ vs. Physical Treatments Alone):</strong> <strong>Small-to-moderate effect</strong> ($\text{SMD} = -0.23$).</li>
-<li><strong>Work Status / Return to Work (at $&gt;12\text{ months}$ vs. Physical Treatments Alone):</strong> <strong>Significantly higher odds of working</strong> (Odds Ratio $\text{OR} = 1.87$, 95% CI 1.39 to 2.53).</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Pain Reduction (at $&gt;12\text{ months}$ vs. Usual Care):</strong> <strong>Moderate effect</strong> ($\text{SMD} = -0.51$, 95% CI -0.67 to -0.34).
+        - <strong>Pain Reduction (at $&gt;12\text{ months}$ vs. Physical Treatments Alone):</strong> <strong>Small-to-moderate effect</strong> ($\text{SMD} = -0.21$).
+        - <strong>Disability Reduction (at $&gt;12\text{ months}$ vs. Physical Treatments Alone):</strong> <strong>Small-to-moderate effect</strong> ($\text{SMD} = -0.23$).
+        - <strong>Work Status / Return to Work (at $&gt;12\text{ months}$ vs. Physical Treatments Alone):</strong> <strong>Significantly higher odds of working</strong> (Odds Ratio $\text{OR} = 1.87$, 95% CI 1.39 to 2.53).</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate-to-high quality | Multidisciplinary rehab is superior to monodisciplinary PT specifically at LONG-TERM (&gt;12 months) follow-up | Significantly increases return to work (OR 1.87)</code>.</li>
 </ul>
@@ -876,11 +842,9 @@ hr {
 <li><strong>Citation:</strong> <em>Cochrane Database Syst Rev</em>, (8):CD001822.</li>
 <li><strong>Design &amp; Sample:</strong> 23 RCTs ($N = 3,676$ workers with back pain).</li>
 <li><strong>Evidence Quality:</strong> Moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Sick Leave Days at 12 Months:</strong> <strong>Significant reduction</strong> (Mean Difference $\text{MD} = -45\text{ sick leave days}$, 95% CI -72 to -18) in subacute/chronic workers compared to usual care.</li>
-<li><strong>Essential Component:</strong> Physical conditioning is effective <strong>only when workplace visits, ergonomics, and cognitive-behavioral work simulation are incorporated</strong>.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Sick Leave Days at 12 Months:</strong> <strong>Significant reduction</strong> (Mean Difference $\text{MD} = -45\text{ sick leave days}$, 95% CI -72 to -18) in subacute/chronic workers compared to usual care.
+        - <strong>Essential Component:</strong> Physical conditioning is effective <strong>only when workplace visits, ergonomics, and cognitive-behavioral work simulation are incorporated</strong>.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate quality | Reduces sick leave by average 45 days at 12 months in subacute/chronic LBP | Must include cognitive-behavioral work simulation and workplace integration</code>.</li>
 </ul>
@@ -890,10 +854,8 @@ hr {
 <li><strong>Citation:</strong> <em>J Rehabil Med</em>, 42(3):193–205.</li>
 <li><strong>Design &amp; Sample:</strong> Systematic review &amp; meta-analysis of 23 RCTs ($N = 3,614$).</li>
 <li><strong>Evidence Quality:</strong> Moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Work Disability / Days Off Work:</strong> <strong>Small-to-moderate reduction</strong> ($\text{SMD} = -0.38$). High-intensity functional work conditioning outperformed low-intensity general exercise for work retention.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Work Disability / Days Off Work:</strong> <strong>Small-to-moderate reduction</strong> ($\text{SMD} = -0.38$). High-intensity functional work conditioning outperformed low-intensity general exercise for work retention.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate quality | Work disability reduced (SMD -0.38) | High-intensity work-simulated exercise &gt; Low-intensity general exercise for RTW</code>.</li>
 </ul>
@@ -903,10 +865,8 @@ hr {
 <li><strong>Citation:</strong> <em>Man Ther</em>, 18(1):4–25.</li>
 <li><strong>Design &amp; Sample:</strong> Systematic review of 13 RCTs ($N = 2,154$).</li>
 <li><strong>Evidence Quality:</strong> Moderate quality.</li>
-<li><strong>Core Findings for MCQ:</strong><ul>
-<li>Targeting workers in the <strong>post-acute / subacute window (4–12 weeks of sick leave)</strong> with intensive functional restoration programs prevents long-term chronification and disability compensation dependence.</li>
-</ul>
-</li>
+<li><strong>Core Findings for MCQ:</strong>
+        - Targeting workers in the <strong>post-acute / subacute window (4–12 weeks of sick leave)</strong> with intensive functional restoration programs prevents long-term chronification and disability compensation dependence.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate quality | Optimal intervention window: Subacute 4–12 weeks off work | Intensive functional restoration prevents long-term disability transition</code>.</li>
 </ul>
@@ -916,11 +876,9 @@ hr {
 <li><strong>Citation:</strong> <em>Cochrane Database Syst Rev</em>, (2):CD006073.</li>
 <li><strong>Design &amp; Sample:</strong> 5 RCTs ($N = 619$ hip and knee arthroplasty patients).</li>
 <li><strong>Evidence Quality:</strong> Moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Short-term Functional Activity:</strong> Inpatient multidisciplinary rehab produces <strong>small-to-moderate temporary improvements</strong> in complex patients.</li>
-<li><strong>Long-term Functional Recovery (12 months):</strong> <strong>NO statistically significant difference</strong> compared to routine outpatient / home-based physiotherapy.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Short-term Functional Activity:</strong> Inpatient multidisciplinary rehab produces <strong>small-to-moderate temporary improvements</strong> in complex patients.
+        - <strong>Long-term Functional Recovery (12 months):</strong> <strong>NO statistically significant difference</strong> compared to routine outpatient / home-based physiotherapy.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate quality | Inpatient multidisciplinary rehab post-arthroplasty yields short-term gains, but EQUIVALENT to home-based PT at 12 months</code>.</li>
 </ul>
@@ -929,12 +887,10 @@ hr {
 <ul>
 <li><strong>Citation:</strong> <em>Am Psychol</em>, 69(2):119–30.</li>
 <li><strong>Evidence Quality:</strong> Landmark historical and outcomes synthesis.</li>
-<li><strong>Core Distinction for MCQ:</strong><ul>
-<li><strong>Multidisciplinary:</strong> Healthcare professionals from different disciplines evaluate the patient independently; treatment occurs in parallel silos with separate goals.</li>
-<li><strong>Interdisciplinary:</strong> Healthcare professionals operate as a single coordinated team with face-to-face team conferencing, shared treatment goals, and integrated biopsychosocial execution.</li>
-<li><strong>Outcomes:</strong> True interdisciplinary care yields superior clinical outcomes, lower medication use, fewer surgeries, and major cost savings.</li>
-</ul>
-</li>
+<li><strong>Core Distinction for MCQ:</strong>
+        - <strong>Multidisciplinary:</strong> Healthcare professionals from different disciplines evaluate the patient independently; treatment occurs in parallel silos with separate goals.
+        - <strong>Interdisciplinary:</strong> Healthcare professionals operate as a single coordinated team with face-to-face team conferencing, shared treatment goals, and integrated biopsychosocial execution.
+        - <strong>Outcomes:</strong> True interdisciplinary care yields superior clinical outcomes, lower medication use, fewer surgeries, and major cost savings.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Multidisciplinary = Parallel silos with separate goals | Interdisciplinary = Integrated team with shared goals and team conferencing (superior outcomes &amp; cost savings)</code>.</li>
 </ul>
@@ -946,14 +902,12 @@ hr {
 <li><strong>Citation:</strong> <em>Clin J Pain</em>, 29(5):450–60.</li>
 <li><strong>Design &amp; Sample:</strong> 10 RCTs ($N = 967$).</li>
 <li><strong>Evidence Quality:</strong> Moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Pain Intensity (Short-term $\le 3\text{m}$):</strong> <strong>Moderate reduction</strong> ($\text{SMD} = -0.48$, 95% CI -0.65 to -0.31).</li>
-<li><strong>Pain Intensity (Long-term 12m):</strong> <strong>Small-to-moderate reduction</strong> ($\text{SMD} = -0.33$).</li>
-<li><strong>Disability / Function (Short-term):</strong> <strong>Moderate reduction</strong> ($\text{SMD} = -0.47$).</li>
-<li><strong>Disability / Function (Long-term 12m):</strong> <strong>Small-to-moderate reduction</strong> ($\text{SMD} = -0.35$).</li>
-<li><strong>Comparison:</strong> Efficacy is <strong>equivalent</strong> to standard active exercise therapy.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Pain Intensity (Short-term $\le 3\text{m}$):</strong> <strong>Moderate reduction</strong> ($\text{SMD} = -0.48$, 95% CI -0.65 to -0.31).
+        - <strong>Pain Intensity (Long-term 12m):</strong> <strong>Small-to-moderate reduction</strong> ($\text{SMD} = -0.33$).
+        - <strong>Disability / Function (Short-term):</strong> <strong>Moderate reduction</strong> ($\text{SMD} = -0.47$).
+        - <strong>Disability / Function (Long-term 12m):</strong> <strong>Small-to-moderate reduction</strong> ($\text{SMD} = -0.35$).
+        - <strong>Comparison:</strong> Efficacy is <strong>equivalent</strong> to standard active exercise therapy.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate quality | Moderate short-term effect on pain (SMD -0.48) and disability (SMD -0.47) | Small-to-moderate long-term durability | Equivalent to active exercise</code>.</li>
 </ul>
@@ -963,11 +917,9 @@ hr {
 <li><strong>Citation:</strong> <em>Medicine (Baltimore)</em>, 94(4):e383.</li>
 <li><strong>Design &amp; Sample:</strong> 14 RCTs ($N = 824$).</li>
 <li><strong>Evidence Quality:</strong> Low-to-moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Pain &amp; Disability:</strong> Significant <strong>small-to-moderate reductions</strong> compared to minimal intervention or usual care.</li>
-<li><strong>Comparison with Other Exercises:</strong> <strong>No significant difference</strong> compared to general strengthening or motor control exercises.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Pain &amp; Disability:</strong> Significant <strong>small-to-moderate reductions</strong> compared to minimal intervention or usual care.
+        - <strong>Comparison with Other Exercises:</strong> <strong>No significant difference</strong> compared to general strengthening or motor control exercises.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Low-to-moderate quality | Small-to-moderate effect on pain and disability | Effective, but NOT superior to other forms of active exercise</code>.</li>
 </ul>
@@ -977,12 +929,10 @@ hr {
 <li><strong>Citation:</strong> <em>BMC Complement Altern Med</em>, 12:162.</li>
 <li><strong>Design &amp; Sample:</strong> 3 RCTs ($N = 334$).</li>
 <li><strong>Evidence Quality:</strong> Low-to-moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Pain Acceptance &amp; Emotional Wellbeing:</strong> <strong>Moderate short-term improvement</strong>.</li>
-<li><strong>Pain Intensity:</strong> <strong>Small / Borderline non-significant</strong> reduction.</li>
-<li><strong>Disability:</strong> <strong>Small-to-moderate</strong> short-term reduction.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Pain Acceptance &amp; Emotional Wellbeing:</strong> <strong>Moderate short-term improvement</strong>.
+        - <strong>Pain Intensity:</strong> <strong>Small / Borderline non-significant</strong> reduction.
+        - <strong>Disability:</strong> <strong>Small-to-moderate</strong> short-term reduction.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Low-to-moderate quality | Primary benefits are in PAIN ACCEPTANCE and emotional wellbeing | Small/borderline effect on pain intensity</code>.</li>
 </ul>
@@ -992,11 +942,9 @@ hr {
 <li><strong>Citation:</strong> <em>BMC Musculoskelet Disord</em>, 15:286.</li>
 <li><strong>Design &amp; Sample:</strong> 15 RCTs ($N = 1,502$).</li>
 <li><strong>Evidence Quality:</strong> Low-to-moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Pain Intensity:</strong> <strong>Small-to-moderate reduction</strong> (Mean Difference $\text{MD} = -12.91\text{ mm}$ on 100mm VAS, 95% CI -20.00 to -5.82).</li>
-<li><strong>Disability:</strong> <strong>Small-to-moderate reduction</strong> ($\text{MD} = -4.10$ on 0–100 scale).</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Pain Intensity:</strong> <strong>Small-to-moderate reduction</strong> (Mean Difference $\text{MD} = -12.91\text{ mm}$ on 100mm VAS, 95% CI -20.00 to -5.82).
+        - <strong>Disability:</strong> <strong>Small-to-moderate reduction</strong> ($\text{MD} = -4.10$ on 0–100 scale).</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Low-to-moderate quality | Statistically significant short-term pain relief (MD -12.91mm) and disability reduction (MD -4.10) over sham/control</code>.</li>
 </ul>
@@ -1005,12 +953,10 @@ hr {
 <ul>
 <li><strong>Citation:</strong> <em>Spine</em>, 36(21 Suppl):S120–30.</li>
 <li><strong>Evidence Quality:</strong> Comparative systematic review &amp; consensus synthesis.</li>
-<li><strong>Outcome Summary for MCQ:</strong><ul>
-<li><strong>Exercise Therapy:</strong> <strong>Only modality</strong> with robust, consistent evidence for long-term reduction in disability and recurrence prevention.</li>
-<li><strong>Acupuncture:</strong> Evidence for <strong>short-term pain relief only</strong> in chronic LBP; no durable effect on disability.</li>
-<li><strong>Spinal Manipulation:</strong> Evidence for <strong>short-term pain relief and functional improvement</strong>; equivalent to exercise, but no superior long-term durability.</li>
-</ul>
-</li>
+<li><strong>Outcome Summary for MCQ:</strong>
+        - <strong>Exercise Therapy:</strong> <strong>Only modality</strong> with robust, consistent evidence for long-term reduction in disability and recurrence prevention.
+        - <strong>Acupuncture:</strong> Evidence for <strong>short-term pain relief only</strong> in chronic LBP; no durable effect on disability.
+        - <strong>Spinal Manipulation:</strong> Evidence for <strong>short-term pain relief and functional improvement</strong>; equivalent to exercise, but no superior long-term durability.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Exercise is the ONLY conservative therapy consistently showing durable LONG-TERM disability reduction | SMT &amp; Acupuncture provide short-term pain relief only</code>.</li>
 </ul>
@@ -1022,12 +968,10 @@ hr {
 <li><strong>Citation:</strong> <em>Cochrane Database Syst Rev</em>, 2:CD010853.</li>
 <li><strong>Design &amp; Sample:</strong> 18 RCTs ($N = 739$ adults with CRPS Types I and II).</li>
 <li><strong>Evidence Quality:</strong> Low-to-moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Graded Motor Imagery (GMI) &amp; Mirror Therapy:</strong> <strong>Moderate-quality evidence</strong> for clinically meaningful reductions in pain and disability in chronic CRPS Type I.</li>
-<li><strong>Tactile Desensitization &amp; Sensory Discrimination Training:</strong> Promising evidence for reducing mechanical allodynia.</li>
-<li><strong>Passive Manual Therapy:</strong> Aggressive, pain-provoking passive stretching is <strong>contraindicated</strong> during acute inflammatory/warm CRPS flares.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Graded Motor Imagery (GMI) &amp; Mirror Therapy:</strong> <strong>Moderate-quality evidence</strong> for clinically meaningful reductions in pain and disability in chronic CRPS Type I.
+        - <strong>Tactile Desensitization &amp; Sensory Discrimination Training:</strong> Promising evidence for reducing mechanical allodynia.
+        - <strong>Passive Manual Therapy:</strong> Aggressive, pain-provoking passive stretching is <strong>contraindicated</strong> during acute inflammatory/warm CRPS flares.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate-quality evidence for GMI and Mirror Therapy in chronic CRPS I | Tactile discrimination reduces allodynia | Aggressive passive stretch is contraindicated in acute flares</code>.</li>
 </ul>
@@ -1037,11 +981,9 @@ hr {
 <li><strong>Citation:</strong> <em>Cochrane Database Syst Rev</em>, (3):CD011118.</li>
 <li><strong>Design &amp; Sample:</strong> 8 RCTs ($N = 373$ children and adolescents aged 8–18 years).</li>
 <li><strong>Evidence Quality:</strong> Moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>$\ge 50\%$ Pain Reduction Post-treatment:</strong> <strong>Moderate-to-large effect</strong> (Risk Ratio $\text{RR} = 2.47$, 95% CI 1.30 to 4.70) favoring internet CBT over waitlist/control.</li>
-<li><strong>Target Conditions:</strong> Highly effective for <strong>headache and recurrent abdominal/musculoskeletal pain</strong>.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>$\ge 50\%$ Pain Reduction Post-treatment:</strong> <strong>Moderate-to-large effect</strong> (Risk Ratio $\text{RR} = 2.47$, 95% CI 1.30 to 4.70) favoring internet CBT over waitlist/control.
+        - <strong>Target Conditions:</strong> Highly effective for <strong>headache and recurrent abdominal/musculoskeletal pain</strong>.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate quality | Internet CBT significantly increases odds of ≥50% pain reduction (RR 2.47) in pediatric headache and recurrent abdominal/MSK pain</code>.</li>
 </ul>
@@ -1051,12 +993,10 @@ hr {
 <li><strong>Citation:</strong> <em>Cochrane Database Syst Rev</em>, (4):CD006993.</li>
 <li><strong>Design &amp; Sample:</strong> 35 RCTs ($N = 2,701$ parents of children with chronic illness/pain).</li>
 <li><strong>Evidence Quality:</strong> Moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong><ul>
-<li><strong>Parental Distress (Anxiety / Depressive symptoms):</strong> <strong>Small-to-moderate reduction</strong> post-treatment ($\text{SMD} = -0.27$, 95% CI -0.43 to -0.11).</li>
-<li><strong>Parental Solicitousness:</strong> <strong>Moderate reduction</strong> in protective, pain-reinforcing parenting behaviors.</li>
-<li><strong>Child Functioning &amp; School Attendance:</strong> <strong>Moderate indirect improvement</strong>; reducing parental solicitousness directly decreases child disability and promotes Return to School (RTS).</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Effect Sizes:</strong>
+        - <strong>Parental Distress (Anxiety / Depressive symptoms):</strong> <strong>Small-to-moderate reduction</strong> post-treatment ($\text{SMD} = -0.27$, 95% CI -0.43 to -0.11).
+        - <strong>Parental Solicitousness:</strong> <strong>Moderate reduction</strong> in protective, pain-reinforcing parenting behaviors.
+        - <strong>Child Functioning &amp; School Attendance:</strong> <strong>Moderate indirect improvement</strong>; reducing parental solicitousness directly decreases child disability and promotes Return to School (RTS).</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate quality | Interventions targeting parents reduce parental distress (SMD -0.27) and solicitousness | Directly improves child functioning and school attendance</code>.</li>
 </ul>
@@ -1065,13 +1005,11 @@ hr {
 <ul>
 <li><strong>Citation:</strong> <em>Br J Anaesth</em>, 101(1):111–20 &amp; <em>J Pain</em>, 12(3 Suppl 1):S3–S13.</li>
 <li><strong>Evidence Quality:</strong> Geriatric pain management consensus.</li>
-<li><strong>Core Clinical Rules for MCQ:</strong><ul>
-<li><strong>Pharmacokinetics / Pharmacodynamics:</strong> Decreased renal clearance (GFR) and hepatic CYP450 metabolism $\rightarrow$ heightened drug accumulation and toxicity.</li>
-<li><strong>NSAIDs:</strong> Severe risks of GI ulceration/bleeding, acute renal failure, worsening hypertension, and congestive heart failure.</li>
-<li><strong>Opioids &amp; TCAs:</strong> Severe risks of sedation, cognitive impairment, delirium, and falls. TCAs cause <strong>cardiac conduction delays (QT prolongation)</strong> and strong anticholinergic side effects.</li>
-<li><strong>Assessment Hierarchy:</strong> (1) Patient self-report (VRS/NRS) $\rightarrow$ (2) Underlying pathology/known painful conditions $\rightarrow$ (3) Observable pain behaviors $\rightarrow$ (4) Caregiver proxy reporting $\rightarrow$ (5) Empirical analgesic trial.</li>
-</ul>
-</li>
+<li><strong>Core Clinical Rules for MCQ:</strong>
+        - <strong>Pharmacokinetics / Pharmacodynamics:</strong> Decreased renal clearance (GFR) and hepatic CYP450 metabolism $\rightarrow$ heightened drug accumulation and toxicity.
+        - <strong>NSAIDs:</strong> Severe risks of GI ulceration/bleeding, acute renal failure, worsening hypertension, and congestive heart failure.
+        - <strong>Opioids &amp; TCAs:</strong> Severe risks of sedation, cognitive impairment, delirium, and falls. TCAs cause <strong>cardiac conduction delays (QT prolongation)</strong> and strong anticholinergic side effects.
+        - <strong>Assessment Hierarchy:</strong> (1) Patient self-report (VRS/NRS) $\rightarrow$ (2) Underlying pathology/known painful conditions $\rightarrow$ (3) Observable pain behaviors $\rightarrow$ (4) Caregiver proxy reporting $\rightarrow$ (5) Empirical analgesic trial.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Non-pharmacological therapies preferred in elderly | NSAIDs = GI/Renal/Cardio toxicity | TCAs = QT prolongation &amp; anticholinergic falls risk | Assessment hierarchy starts with self-report</code>.</li>
 </ul>
@@ -1081,19 +1019,15 @@ hr {
 <li><strong>Citation:</strong> <em>BMC Geriatr</em>, 14:138. DOI: 10.1186/1471-2318-14-138.</li>
 <li><strong>Design &amp; Sample:</strong> Systematic review of systematic reviews (meta-review) evaluating 28 observational pain assessment tools across 23 reviews (8 providing extractable psychometric data).</li>
 <li><strong>Evidence Quality:</strong> Moderate quality meta-review.</li>
-<li><strong>Key Evaluated Tools:</strong><ul>
-<li><strong>PAINAD</strong> (<em>Pain Assessment in Advanced Dementia</em>): 5 items (Breathing, Negative vocalization, Facial expression, Body language, Consolability); rapid (2–5 min), high inter-rater reliability, widely used in clinical nursing.</li>
-<li><strong>MOBID-2</strong> (<em>Mobility-Observed Information Dementia Pain Scale</em>): Evaluates pain during active and guided movements across different body parts; highly sensitive to musculoskeletal pain.</li>
-<li><strong>PACSLAC</strong> (<em>Pain Assessment Checklist for Seniors with Limited Ability to Communicate</em>): Comprehensive checklist (60 items across 4 subscales); high validity, but more time-consuming.</li>
-<li><strong>Abbey Pain Scale &amp; DOLOPLUS-2:</strong> Widely cited European observational scales; variable reporting of psychometric rigor.</li>
-</ul>
-</li>
-<li><strong>Core Findings for MCQ:</strong><ul>
-<li><strong>No Single Gold Standard:</strong> Due to variability in study quality and lack of an objective reference standard in non-verbal patients, <strong>no single tool can be definitively recommended as superior</strong> over all others.</li>
-<li><strong>Behavioral vs. Physiological:</strong> Autonomic/physiological signs (HR, BP) are <strong>unreliable and non-specific</strong>; validated observational behavioral tools are mandatory.</li>
-<li><strong>Movement-Based Observation:</strong> Pain behaviors are significantly more apparent during <strong>guided movement/nursing care</strong> (as in MOBID-2) than at rest.</li>
-</ul>
-</li>
+<li><strong>Key Evaluated Tools:</strong>
+        - <strong>PAINAD</strong> (<em>Pain Assessment in Advanced Dementia</em>): 5 items (Breathing, Negative vocalization, Facial expression, Body language, Consolability); rapid (2–5 min), high inter-rater reliability, widely used in clinical nursing.
+        - <strong>MOBID-2</strong> (<em>Mobility-Observed Information Dementia Pain Scale</em>): Evaluates pain during active and guided movements across different body parts; highly sensitive to musculoskeletal pain.
+        - <strong>PACSLAC</strong> (<em>Pain Assessment Checklist for Seniors with Limited Ability to Communicate</em>): Comprehensive checklist (60 items across 4 subscales); high validity, but more time-consuming.
+        - <strong>Abbey Pain Scale &amp; DOLOPLUS-2:</strong> Widely cited European observational scales; variable reporting of psychometric rigor.</li>
+<li><strong>Core Findings for MCQ:</strong>
+        - <strong>No Single Gold Standard:</strong> Due to variability in study quality and lack of an objective reference standard in non-verbal patients, <strong>no single tool can be definitively recommended as superior</strong> over all others.
+        - <strong>Behavioral vs. Physiological:</strong> Autonomic/physiological signs (HR, BP) are <strong>unreliable and non-specific</strong>; validated observational behavioral tools are mandatory.
+        - <strong>Movement-Based Observation:</strong> Pain behaviors are significantly more apparent during <strong>guided movement/nursing care</strong> (as in MOBID-2) than at rest.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Meta-review of 28 tools | NO SINGLE TOOL can be recommended as the universal gold standard | Behavioral observation during movement (MOBID-2/PAINAD) &gt;&gt; Physiological signs</code>.</li>
 </ul>
@@ -1103,12 +1037,10 @@ hr {
 <li><strong>Citation:</strong> <em>Pain</em>, 155(8):1448–58. DOI: 10.1016/j.pain.2014.04.016.</li>
 <li><strong>Design &amp; Sample:</strong> Systematic review of 30 studies ($N = 3,428$ pediatric patients) evaluating body outlines/maps.</li>
 <li><strong>Evidence Quality:</strong> Moderate quality.</li>
-<li><strong>Core Findings for MCQ:</strong><ul>
-<li><strong>Age Threshold:</strong> Pain body maps and localization tools demonstrate robust validity, reliability, and clinical utility in children aged <strong>$\ge 4\text{ to }5\text{ years}$</strong>.</li>
-<li><strong>Below Age 4:</strong> Children lack the developmental spatial awareness and self-to-diagram body projection required to accurately map pain location.</li>
-<li><strong>Electronic vs. Paper:</strong> Electronic/tablet-based body maps demonstrate equal or higher completion rates, reliability, and child acceptability compared to paper drawings.</li>
-</ul>
-</li>
+<li><strong>Core Findings for MCQ:</strong>
+        - <strong>Age Threshold:</strong> Pain body maps and localization tools demonstrate robust validity, reliability, and clinical utility in children aged <strong>$\ge 4\text{ to }5\text{ years}$</strong>.
+        - <strong>Below Age 4:</strong> Children lack the developmental spatial awareness and self-to-diagram body projection required to accurately map pain location.
+        - <strong>Electronic vs. Paper:</strong> Electronic/tablet-based body maps demonstrate equal or higher completion rates, reliability, and child acceptability compared to paper drawings.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Moderate quality | Pediatric body maps are valid &amp; reliable from age 4–5 years and up | Under age 4 cannot reliably map pain | Electronic maps equal or superior to paper</code>.</li>
 </ul>
@@ -1117,17 +1049,13 @@ hr {
 <ul>
 <li><strong>Citation:</strong> <em>J Pediatr Nurs</em>, 30(2):e71–80. DOI: 10.1016/j.pedn.2014.09.006.</li>
 <li><strong>Design &amp; Sample:</strong> Critical narrative and psychometric review of infant pain tools.</li>
-<li><strong>Core Validated Infant Tools for MCQ:</strong><ul>
-<li><strong>FLACC</strong> (<em>Face, Legs, Activity, Cry, Consolability</em>): Validated in infants and non-verbal children aged 2 months to 7 years.</li>
-<li><strong>NIPS</strong> (<em>Neonatal Infant Pain Scale</em>): Evaluates facial expression, cry, breathing, arms, legs, state of arousal in preterm and term neonates.</li>
-<li><strong>PIPP</strong> (<em>Premature Infant Pain Profile</em>): Incorporates contextual gestational age and behavioral state with physiological (HR, $SpO_2$) and facial cues.</li>
-</ul>
-</li>
-<li><strong>Core Findings for MCQ:</strong><ul>
-<li>Behavioral responses (facial grimacing, crying, posturing) are more sensitive and specific than autonomic parameters alone.</li>
-<li><strong>Neurodevelopmental Impact:</strong> Inadequately treated repetitive acute pain in neonates produces persistent neuroarchitectural alterations in dorsal horn somatosensory processing and heightened pain sensitivity later in life.</li>
-</ul>
-</li>
+<li><strong>Core Validated Infant Tools for MCQ:</strong>
+        - <strong>FLACC</strong> (<em>Face, Legs, Activity, Cry, Consolability</em>): Validated in infants and non-verbal children aged 2 months to 7 years.
+        - <strong>NIPS</strong> (<em>Neonatal Infant Pain Scale</em>): Evaluates facial expression, cry, breathing, arms, legs, state of arousal in preterm and term neonates.
+        - <strong>PIPP</strong> (<em>Premature Infant Pain Profile</em>): Incorporates contextual gestational age and behavioral state with physiological (HR, $SpO_2$) and facial cues.</li>
+<li><strong>Core Findings for MCQ:</strong>
+        - Behavioral responses (facial grimacing, crying, posturing) are more sensitive and specific than autonomic parameters alone.
+        - <strong>Neurodevelopmental Impact:</strong> Inadequately treated repetitive acute pain in neonates produces persistent neuroarchitectural alterations in dorsal horn somatosensory processing and heightened pain sensitivity later in life.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>FLACC, NIPS, PIPP are validated infant tools | Behavioral cues &gt; Autonomic signs alone | Untreated neonatal pain permanently alters nociceptive circuitry</code>.</li>
 </ul>
@@ -1157,21 +1085,17 @@ hr {
 <li><strong>Citation:</strong> <em>CMAJ</em>, 188(14):E352–E361. DOI: 10.1503/cmaj.151276.</li>
 <li><strong>Design &amp; Sample:</strong> Systematic review and meta-analysis of 30 observational studies ($N = 19,813$ patients).</li>
 <li><strong>Evidence Quality:</strong> High-to-moderate quality.</li>
-<li><strong>Outcome-by-Outcome Quantified Predictors (Pooled Odds Ratios):</strong><ul>
-<li><strong>Axillary Lymph Node Dissection (ALND):</strong> <strong>$\text{OR} = 2.41$</strong> (95% CI 1.73–3.35) — <strong>STRONGEST INDEPENDENT PREDICTOR</strong> due to direct intercostobrachial nerve traction/trauma.</li>
-<li><strong>Younger Age:</strong> <strong>$\text{OR} = 1.36$</strong> per 10-year decrement (95% CI 1.24–1.48) — Younger age significantly <em>increases</em> risk of persistent pain.</li>
-<li><strong>Radiotherapy:</strong> <strong>$\text{OR} = 1.35$</strong> (95% CI 1.16–1.57) — Increases fibrosis and microvascular nerve ischemia.</li>
-<li><strong>Preoperative Pain (Any):</strong> <strong>$\text{OR} = 1.29$</strong> (95% CI 1.01–1.64).</li>
-<li><strong>Greater Acute Postoperative Pain:</strong> <strong>$\text{OR} = 1.16$</strong> for every 1-cm increment on a 10-cm VAS (95% CI 1.03–1.30).</li>
-</ul>
-</li>
-<li><strong>Factors with NO Significant Association (Classic MCQ Traps):</strong><ul>
-<li><strong>Type of breast surgery:</strong> Mastectomy vs. breast-conserving lumpectomy has <strong>NO significant difference</strong> in persistent pain risk!</li>
-<li><strong>Chemotherapy:</strong> <strong>No significant association</strong>.</li>
-<li><strong>Endocrine / Hormone Therapy:</strong> <strong>No significant association</strong>.</li>
-<li><strong>Body Mass Index (BMI):</strong> <strong>No significant association</strong>.</li>
-</ul>
-</li>
+<li><strong>Outcome-by-Outcome Quantified Predictors (Pooled Odds Ratios):</strong>
+        - <strong>Axillary Lymph Node Dissection (ALND):</strong> <strong>$\text{OR} = 2.41$</strong> (95% CI 1.73–3.35) — <strong>STRONGEST INDEPENDENT PREDICTOR</strong> due to direct intercostobrachial nerve traction/trauma.
+        - <strong>Younger Age:</strong> <strong>$\text{OR} = 1.36$</strong> per 10-year decrement (95% CI 1.24–1.48) — Younger age significantly <em>increases</em> risk of persistent pain.
+        - <strong>Radiotherapy:</strong> <strong>$\text{OR} = 1.35$</strong> (95% CI 1.16–1.57) — Increases fibrosis and microvascular nerve ischemia.
+        - <strong>Preoperative Pain (Any):</strong> <strong>$\text{OR} = 1.29$</strong> (95% CI 1.01–1.64).
+        - <strong>Greater Acute Postoperative Pain:</strong> <strong>$\text{OR} = 1.16$</strong> for every 1-cm increment on a 10-cm VAS (95% CI 1.03–1.30).</li>
+<li><strong>Factors with NO Significant Association (Classic MCQ Traps):</strong>
+        - <strong>Type of breast surgery:</strong> Mastectomy vs. breast-conserving lumpectomy has <strong>NO significant difference</strong> in persistent pain risk!
+        - <strong>Chemotherapy:</strong> <strong>No significant association</strong>.
+        - <strong>Endocrine / Hormone Therapy:</strong> <strong>No significant association</strong>.
+        - <strong>Body Mass Index (BMI):</strong> <strong>No significant association</strong>.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>ALND is strongest predictor (OR 2.41) | Younger age INCREASES risk (OR 1.36/decade) | Radiotherapy (OR 1.35) &amp; acute pain (OR 1.16/cm) increase risk | Surgery type (mastectomy vs lumpectomy) &amp; Chemo have NO EFFECT</code>.</li>
 </ul>
@@ -1181,15 +1105,11 @@ hr {
 <li><strong>Citation:</strong> <em>Clin Rehabil</em>, 28(7):669–86. DOI: 10.1177/0269215513512217.</li>
 <li><strong>Design &amp; Sample:</strong> Systematic review of 13 studies evaluating 11 pain measurement tools in central nervous system disorders.</li>
 <li><strong>Evidence Quality:</strong> Moderate quality.</li>
-<li><strong>Core Findings for MCQ:</strong><ul>
-<li><strong>Psychometric Deficits:</strong> Few pain tools have been adequately tested for reliability and responsiveness specifically in central neurological conditions.</li>
-<li><strong>Hemispheric Stroke Tool Selection Rule:</strong><ul>
-<li><strong>Right-hemisphere lesions</strong> (visuospatial deficits, unilateral neglect, body schema distortion): Patients perform poorly on visual scales; <strong>prefer verbal rating scales (VRS) or written descriptors</strong>.</li>
-<li><strong>Left-hemisphere lesions</strong> (aphasia, verbal communication impairment): Patients cannot use verbal/written scales; <strong>prefer numeric (NRS), visual (VAS), or pictorial/faces scales</strong>.</li>
-</ul>
-</li>
-</ul>
-</li>
+<li><strong>Core Findings for MCQ:</strong>
+        - <strong>Psychometric Deficits:</strong> Few pain tools have been adequately tested for reliability and responsiveness specifically in central neurological conditions.
+        - <strong>Hemispheric Stroke Tool Selection Rule:</strong>
+            - <strong>Right-hemisphere lesions</strong> (visuospatial deficits, unilateral neglect, body schema distortion): Patients perform poorly on visual scales; <strong>prefer verbal rating scales (VRS) or written descriptors</strong>.
+            - <strong>Left-hemisphere lesions</strong> (aphasia, verbal communication impairment): Patients cannot use verbal/written scales; <strong>prefer numeric (NRS), visual (VAS), or pictorial/faces scales</strong>.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Neurological pain tools lack robust psychometric testing | Right brain lesion / neglect = Use VERBAL scales (avoid visual) | Left brain lesion / aphasia = Use VISUAL/NUMERIC scales (avoid verbal)</code>.</li>
 </ul>
@@ -1198,11 +1118,9 @@ hr {
 <ul>
 <li><strong>Citation:</strong> <em>Curr Opin Anaesthesiol</em>, 28(5):565–9. DOI: 10.1097/ACO.0000000000000225.</li>
 <li><strong>Evidence Quality:</strong> Clinical practice and health policy review.</li>
-<li><strong>Core Findings for MCQ:</strong><ul>
-<li>Treating pain strictly as the "fifth vital sign" using solitary 0–10 Numeric Rating Scales led to over-reliance on opioid prescribing and failed to evaluate physical recovery.</li>
-<li>Acute pain assessment must evaluate <strong>functional interference</strong> (e.g., ability to deep breathe, cough, ambulate, and sleep) rather than pursuing a zero pain score at rest.</li>
-</ul>
-</li>
+<li><strong>Core Findings for MCQ:</strong>
+        - Treating pain strictly as the "fifth vital sign" using solitary 0–10 Numeric Rating Scales led to over-reliance on opioid prescribing and failed to evaluate physical recovery.
+        - Acute pain assessment must evaluate <strong>functional interference</strong> (e.g., ability to deep breathe, cough, ambulate, and sleep) rather than pursuing a zero pain score at rest.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Solitary 0–10 numeric scores at rest are insufficient | Must assess pain on movement and functional capacity (coughing, ambulation, ADLs)</code>.</li>
 </ul>
@@ -1211,11 +1129,9 @@ hr {
 <ul>
 <li><strong>Citation:</strong> <em>Clin J Pain</em>, 28(7):643–54. DOI: 10.1097/AJP.0b013e31823bb35c.</li>
 <li><strong>Design &amp; Sample:</strong> Methodological and psychometric review of accelerometry and activity monitors in chronic pain.</li>
-<li><strong>Core Findings for MCQ:</strong><ul>
-<li><strong>Subjective vs. Objective Discordance:</strong> Self-report diaries and questionnaires correlate <strong>poorly</strong> with objective accelerometry; patients with high pain catastrophizing and fear-avoidance systematically overestimate or underestimate their true physical activity.</li>
-<li><strong>Monitoring Duration:</strong> A minimum of <strong>4 to 7 consecutive days</strong> (including weekdays and weekends) of triaxial accelerometry is required to achieve reliable, representative physical activity profiling.</li>
-</ul>
-</li>
+<li><strong>Core Findings for MCQ:</strong>
+        - <strong>Subjective vs. Objective Discordance:</strong> Self-report diaries and questionnaires correlate <strong>poorly</strong> with objective accelerometry; patients with high pain catastrophizing and fear-avoidance systematically overestimate or underestimate their true physical activity.
+        - <strong>Monitoring Duration:</strong> A minimum of <strong>4 to 7 consecutive days</strong> (including weekdays and weekends) of triaxial accelerometry is required to achieve reliable, representative physical activity profiling.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Self-reports correlate poorly with objective activity | Valid accelerometry requires 4 to 7 consecutive days of continuous measurement</code>.</li>
 </ul>
@@ -1225,12 +1141,10 @@ hr {
 <li><strong>Citation:</strong> <em>Man Ther</em>, 16(4):302–8 &amp; 17(4):336–44.</li>
 <li><strong>Design &amp; Sample:</strong> Delphi consensus and clinical validation studies ($N = 464$) establishing clinical criteria for mechanism-based pain classification.</li>
 <li><strong>Evidence Quality:</strong> High-to-moderate clinical validity.</li>
-<li><strong>The Three Mechanism Clusters for MCQ:</strong><ol>
-<li><strong>Nociceptive Pain:</strong> Clear anatomical proportionality between pain and mechanical stress; intermittent/sharp with movement, dull ache at rest; absence of dysesthesias; identifiable aggravating/easing mechanical factors.</li>
-<li><strong>Peripheral Neuropathic Pain:</strong> Pain in dermatomal or cutaneous nerve distribution; history of nerve injury or compression; sensory abnormalities (allodynia, hyperalgesia, numbness) mapped to nerve territory; positive neural provocation tests (SLR, Upper Limb Neurodynamic Tests).</li>
-<li><strong>Central Sensitization Pain:</strong> Disproportionate, non-mechanical, unpredictable pain pattern; widespread neuroanatomical distribution (non-dermatomal); diffuse tenderness to light palpation; high association with maladaptive psychosocial factors (catastrophizing, distress) and central symptoms (fatigue, sleep disturbance, hyperreactivity to sensory stimuli).</li>
-</ol>
-</li>
+<li><strong>The Three Mechanism Clusters for MCQ:</strong>
+        1. <strong>Nociceptive Pain:</strong> Clear anatomical proportionality between pain and mechanical stress; intermittent/sharp with movement, dull ache at rest; absence of dysesthesias; identifiable aggravating/easing mechanical factors.
+        2. <strong>Peripheral Neuropathic Pain:</strong> Pain in dermatomal or cutaneous nerve distribution; history of nerve injury or compression; sensory abnormalities (allodynia, hyperalgesia, numbness) mapped to nerve territory; positive neural provocation tests (SLR, Upper Limb Neurodynamic Tests).
+        3. <strong>Central Sensitization Pain:</strong> Disproportionate, non-mechanical, unpredictable pain pattern; widespread neuroanatomical distribution (non-dermatomal); diffuse tenderness to light palpation; high association with maladaptive psychosocial factors (catastrophizing, distress) and central symptoms (fatigue, sleep disturbance, hyperreactivity to sensory stimuli).</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Nociceptive = Clear mechanical/anatomical proportionality | Peripheral Neuropathic = Dermatomal/nerve distribution + neurodynamic findings | Central Sensitization = Disproportionate, widespread, non-mechanical + hyperreactivity</code>.</li>
 </ul>
@@ -1239,13 +1153,11 @@ hr {
 <ul>
 <li><strong>Citation:</strong> <em>Pain</em>, 157(8):1599–606. DOI: 10.1097/j.pain.0000000000000600.</li>
 <li><strong>Evidence Quality:</strong> IASP NeuPSIG International Consensus Classification.</li>
-<li><strong>Diagnostic Grading Steps (Essential for MCQ):</strong><ul>
-<li><strong>Step 1:</strong> Pain with a distinct neuroanatomically plausible distribution + History suggestive of a relevant neurological lesion or disease.</li>
-<li><strong>Possible Neuropathic Pain:</strong> Satisfies Step 1 (History + Neuroanatomical distribution). <em>No clinical examination yet required.</em></li>
-<li><strong>Probable Neuropathic Pain:</strong> Satisfies Step 1 + Demonstration of distinct sensory signs (positive or negative sensory signs like hypoesthesia, allodynia, pinprick hyperalgesia) confined to the neuroanatomical distribution of the lesion during clinical examination.</li>
-<li><strong>Definite Neuropathic Pain:</strong> Satisfies Step 1 + Step 2 + Objective confirmatory diagnostic test proving the lesion/disease (e.g., MRI showing nerve root compression, biopsy showing small fiber neuropathy, EMG/nerve conduction studies, surgical confirmation).</li>
-</ul>
-</li>
+<li><strong>Diagnostic Grading Steps (Essential for MCQ):</strong>
+        - <strong>Step 1:</strong> Pain with a distinct neuroanatomically plausible distribution + History suggestive of a relevant neurological lesion or disease.
+        - <strong>Possible Neuropathic Pain:</strong> Satisfies Step 1 (History + Neuroanatomical distribution). <em>No clinical examination yet required.</em>
+        - <strong>Probable Neuropathic Pain:</strong> Satisfies Step 1 + Demonstration of distinct sensory signs (positive or negative sensory signs like hypoesthesia, allodynia, pinprick hyperalgesia) confined to the neuroanatomical distribution of the lesion during clinical examination.
+        - <strong>Definite Neuropathic Pain:</strong> Satisfies Step 1 + Step 2 + Objective confirmatory diagnostic test proving the lesion/disease (e.g., MRI showing nerve root compression, biopsy showing small fiber neuropathy, EMG/nerve conduction studies, surgical confirmation).</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Possible = Plausible history + Anatomical distribution | Probable = Adds clinical sensory examination signs | Definite = Adds objective diagnostic confirmation (EMG/MRI/Biopsy)</code>.</li>
 </ul>
@@ -1254,12 +1166,10 @@ hr {
 <ul>
 <li><strong>Citations:</strong> <em>Neurosci Biobehav Rev</em>, 39:61–78 &amp; <em>Eur J Pain</em>, 21(5):769–86.</li>
 <li><strong>Evidence Quality:</strong> Systematic reviews of functional neuroimaging and structural morphometry.</li>
-<li><strong>Key Neural Circuitry for MCQ:</strong><ul>
-<li><strong>Fear-Avoidance Brain Circuit:</strong> Pain-related fear and perceived threat activate the <strong>Amygdala</strong> and <strong>Dorsal Anterior Cingulate Cortex (dACC)</strong>, disrupting normal prefrontal inhibitory control.</li>
-<li><strong>Reward Deficiency Syndrome:</strong> Chronic pain impairs dopaminergic signaling in the <strong>Nucleus Accumbens (ventral striatum)</strong> and <strong>ventromedial prefrontal cortex (vmPFC)</strong>, leading to anhedonia and loss of reward-driven active behavior.</li>
-<li><strong>Catastrophizing &amp; Structural Morphometry (Malfliet 2017):</strong> High pain catastrophizing is directly associated with <strong>reduced gray matter volume in the dorsolateral prefrontal cortex (DLPFC)</strong> (impairing top-down pain gating) and hyperactivity in the default mode network (DMN) during rest.</li>
-</ul>
-</li>
+<li><strong>Key Neural Circuitry for MCQ:</strong>
+        - <strong>Fear-Avoidance Brain Circuit:</strong> Pain-related fear and perceived threat activate the <strong>Amygdala</strong> and <strong>Dorsal Anterior Cingulate Cortex (dACC)</strong>, disrupting normal prefrontal inhibitory control.
+        - <strong>Reward Deficiency Syndrome:</strong> Chronic pain impairs dopaminergic signaling in the <strong>Nucleus Accumbens (ventral striatum)</strong> and <strong>ventromedial prefrontal cortex (vmPFC)</strong>, leading to anhedonia and loss of reward-driven active behavior.
+        - <strong>Catastrophizing &amp; Structural Morphometry (Malfliet 2017):</strong> High pain catastrophizing is directly associated with <strong>reduced gray matter volume in the dorsolateral prefrontal cortex (DLPFC)</strong> (impairing top-down pain gating) and hyperactivity in the default mode network (DMN) during rest.</li>
 <li><strong>⚡ MCQ Memorization Formula:</strong><br />
 <code>Threat/Fear = Amygdala + dACC hyperactivity | Chronic inactivity = Nucleus Accumbens reward signaling deficiency | High Catastrophizing = DLPFC gray matter thinning + impaired top-down descending inhibition</code>.</li>
 </ul>
@@ -1323,140 +1233,88 @@ hr {
 <hr />
 <h2 id="10-top-20-efic-mcq-distractor-traps-rules">10. Top 20 EFIC MCQ Distractor Traps &amp; Rules</h2>
 <ol>
-<li><strong>The Acceptance &amp; Mindfulness Trap (Veehof 2016):</strong><ul>
-<li><em>Trap:</em> "Acceptance- and mindfulness-based interventions demonstrate high-quality evidence for moderate reductions in pain intensity."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Evidence quality is <strong>low-to-high</strong>. Effect on pain intensity is <strong>small</strong> ($\text{SMD} = 0.37$). <strong>Moderate effects</strong> occur ONLY on <strong>pain interference</strong> ($\text{SMD} = 0.62$) and <strong>anxiety</strong> ($\text{SMD} = 0.51$).</li>
-</ul>
-</li>
-<li><strong>The Ultrasound Trap (Ebadi 2014):</strong><ul>
-<li><em>Trap:</em> "Cochrane reviews recommend therapeutic ultrasound as an effective adjunctive treatment for chronic low back pain."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Cochrane review found NO evidence of benefit over sham. Ultrasound is <strong>ineffective and not recommended</strong>.</li>
-</ul>
-</li>
-<li><strong>The SMT Superiority Trap (Rubinstein 2011):</strong><ul>
-<li><em>Trap:</em> "Spinal manipulative therapy (SMT) is clinically superior to exercise therapy for chronic low back pain."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> SMT produces small short-term improvements that are <strong>equivalent</strong> to exercise and standard medical care, NOT superior.</li>
-</ul>
-</li>
-<li><strong>The GMI Sequence Trap (Bowering 2013):</strong><ul>
-<li><em>Trap:</em> "In severe CRPS, mirror therapy should be instituted immediately to provide rapid visual cortical feedback."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> GMI must follow the strict sequential order: (1) Laterality recognition $\rightarrow$ (2) Imagined movements $\rightarrow$ (3) Mirror therapy. Disrupting the sequence worsens symptoms.</li>
-</ul>
-</li>
-<li><strong>The Multidisciplinary Durability Trap (Kamper 2015):</strong><ul>
-<li><em>Trap:</em> "Multidisciplinary biopsychosocial rehabilitation shows its greatest advantage over physical therapy in the first 2 to 4 weeks of treatment."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Multidisciplinary rehab shows its primary advantage in <strong>long-term follow-up ($&gt;12\text{ months}$)</strong>, specifically for sustained return to work ($\text{OR} = 1.87$) and reduced sick leave.</li>
-</ul>
-</li>
-<li><strong>The Education Equivalence Trap (Engers 2008):</strong><ul>
-<li><em>Trap:</em> "Brief educational booklets (like <em>The Back Book</em>) are equally effective for acute and chronic low back pain."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Brief advice is effective for <em>acute</em> LBP, but <strong>ineffective</strong> for <em>chronic</em> LBP (which requires intensive, structured biopsychosocial education).</li>
-</ul>
-</li>
-<li><strong>The Standalone PNE Trap (Moseley 2015, Geneen 2015):</strong><ul>
-<li><em>Trap:</em> "Pain Neuroscience Education delivered as a standalone lecture is sufficient to eliminate chronic pain-related disability."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Standalone PNE improves knowledge and catastrophizing, but has minimal impact on disability unless paired with <strong>active movement and functional exposure</strong>.</li>
-</ul>
-</li>
-<li><strong>The Nocebo Mechanism Trap (Petersen 2014):</strong><ul>
-<li><em>Trap:</em> "Nocebo hyperalgesia is purely a psychological construct with no identifiable neurochemical basis."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Nocebo hyperalgesia has a moderate-to-large effect size ($g = 0.63$), is biochemically mediated by the <strong>Cholecystokinin (CCK)</strong> system, and is blocked by <strong>proglumide</strong>.</li>
-</ul>
-</li>
-<li><strong>The Exercise Superiority Trap (Searle 2015, Geneen 2017):</strong><ul>
-<li><em>Trap:</em> "Specific core motor control exercise is proven to be substantially superior to all other exercise forms for long-term chronic back pain relief."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Motor control and resistance exercises show slightly higher short-term effects, but long-term outcomes (12 months) are broadly equivalent across active exercise modalities.</li>
-</ul>
-</li>
-<li><strong>The Graded Activity vs. Exposure Trap (Macedo 2010):</strong><ul>
-<li><em>Trap:</em> "Graded Activity and Graded Exposure operate on the identical psychological mechanism."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Graded Activity uses <strong>operant conditioning (quota-based pacing)</strong>. Graded Exposure uses <strong>cognitive-behavioral in-vivo threat disconfirmation (fear hierarchies / PHODA)</strong>.</li>
-</ul>
-</li>
-<li><strong>The Pediatric Solicitousness Trap (Eccleston 2015):</strong><ul>
-<li><em>Trap:</em> "Treating the child with chronic pain is sufficient; parental responses have no measurable impact on clinical outcomes."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Parental solicitousness directly maintains child disability; parent-targeted psychological interventions significantly reduce parental distress ($\text{SMD} = -0.27$) and improve child school attendance.</li>
-</ul>
-</li>
-<li><strong>The TENS in Phantom Limb Trap (Johnson 2015):</strong><ul>
-<li><em>Trap:</em> "Cochrane reviews confirm high-quality proof that TENS completely resolves phantom limb pain."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Cochrane reviews classify RCT evidence for TENS in phantom limb pain as <strong>inconclusive</strong>.</li>
-</ul>
-</li>
-<li><strong>The NSAID in Neuropathic Pain Trap:</strong><ul>
-<li><em>Trap:</em> "High-dose NSAIDs are recommended as first-line therapy for neuropathic pain and central sensitization."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> NSAIDs target peripheral prostaglandins; they have no efficacy in neuropathic pain or central sensitization and carry severe gastrointestinal and renal risks.</li>
-</ul>
-</li>
-<li><strong>The Dementia Pain Measurement Trap (Lichtner 2014, Herr 2011):</strong><ul>
-<li><em>Trap:</em> "In patients with severe Alzheimer's dementia, heart rate and blood pressure fluctuations are superior to behavioral observation tools."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Autonomic signs are non-specific and habituate; validated observational scales (<strong>PAINAD</strong>, <strong>MOBID-2</strong>, <strong>Abbey</strong>) are gold standard when self-report fails.</li>
-</ul>
-</li>
-<li><strong>The Inpatient Arthroplasty Rehab Trap (Khan 2008):</strong><ul>
-<li><em>Trap:</em> "All post-total knee arthroplasty patients should undergo routine inpatient multidisciplinary rehabilitation for superior 1-year outcomes."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Routine inpatient multidisciplinary rehabilitation does not outperform home-based exercise at 12 months.</li>
-</ul>
-</li>
-<li><strong>The Daily Activity Assumption Trap (Oliveira 2016):</strong><ul>
-<li><em>Trap:</em> "Patients who complete 3 physical therapy exercise sessions a week automatically increase their daily physical activity levels."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Standard exercise therapy does not change habitual daily physical activity unless daily behavioral pacing and tracking are explicitly prescribed.</li>
-</ul>
-</li>
-<li><strong>The Dementia Gold Standard Trap (Lichtner 2014):</strong><ul>
-<li><em>Trap:</em> "The PAINAD scale has been confirmed as the definitive gold standard observational instrument across all dementia populations."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Meta-review of 28 tools demonstrates that <strong>NO single tool can be recommended as a universal gold standard</strong> due to widespread psychometric variability.</li>
-</ul>
-</li>
-<li><strong>The Post-Surgical Risk Factor Trap (Wang 2016):</strong><ul>
-<li><em>Trap:</em> "Mastectomy carries a significantly higher risk of persistent post-surgical pain than breast-conserving lumpectomy, and older age is a risk factor."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Surgical type (mastectomy vs. lumpectomy) and chemotherapy have <strong>no significant association</strong> with persistent pain. <strong>Younger age</strong> increases risk ($\text{OR} = 1.36$ per decade younger), and <strong>axillary lymph node dissection (ALND)</strong> is the strongest predictor ($\text{OR} = 2.41$).</li>
-</ul>
-</li>
-<li><strong>The Neurological Scale Selection Trap (Tyson 2013):</strong><ul>
-<li><em>Trap:</em> "Patients with right-hemisphere stroke lesions perform best on visual analog and pictorial scales."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Right-hemisphere stroke patients frequently suffer from spatial neglect and visual distortion; they perform better on <strong>verbal rating scales (VRS)</strong>. Patients with left-hemisphere stroke (aphasia) perform better on <strong>visual or numeric scales</strong>.</li>
-</ul>
+<li><strong>The Acceptance &amp; Mindfulness Trap (Veehof 2016):</strong>
+        - <em>Trap:</em> "Acceptance- and mindfulness-based interventions demonstrate high-quality evidence for moderate reductions in pain intensity."
+        - <em>Reality:</em> <strong>FALSE.</strong> Evidence quality is <strong>low-to-high</strong>. Effect on pain intensity is <strong>small</strong> ($\text{SMD} = 0.37$). <strong>Moderate effects</strong> occur ONLY on <strong>pain interference</strong> ($\text{SMD} = 0.62$) and <strong>anxiety</strong> ($\text{SMD} = 0.51$).</li>
+<li><strong>The Ultrasound Trap (Ebadi 2014):</strong>
+        - <em>Trap:</em> "Cochrane reviews recommend therapeutic ultrasound as an effective adjunctive treatment for chronic low back pain."
+        - <em>Reality:</em> <strong>FALSE.</strong> Cochrane review found NO evidence of benefit over sham. Ultrasound is <strong>ineffective and not recommended</strong>.</li>
+<li><strong>The SMT Superiority Trap (Rubinstein 2011):</strong>
+        - <em>Trap:</em> "Spinal manipulative therapy (SMT) is clinically superior to exercise therapy for chronic low back pain."
+        - <em>Reality:</em> <strong>FALSE.</strong> SMT produces small short-term improvements that are <strong>equivalent</strong> to exercise and standard medical care, NOT superior.</li>
+<li><strong>The GMI Sequence Trap (Bowering 2013):</strong>
+        - <em>Trap:</em> "In severe CRPS, mirror therapy should be instituted immediately to provide rapid visual cortical feedback."
+        - <em>Reality:</em> <strong>FALSE.</strong> GMI must follow the strict sequential order: (1) Laterality recognition $\rightarrow$ (2) Imagined movements $\rightarrow$ (3) Mirror therapy. Disrupting the sequence worsens symptoms.</li>
+<li><strong>The Multidisciplinary Durability Trap (Kamper 2015):</strong>
+        - <em>Trap:</em> "Multidisciplinary biopsychosocial rehabilitation shows its greatest advantage over physical therapy in the first 2 to 4 weeks of treatment."
+        - <em>Reality:</em> <strong>FALSE.</strong> Multidisciplinary rehab shows its primary advantage in <strong>long-term follow-up ($&gt;12\text{ months}$)</strong>, specifically for sustained return to work ($\text{OR} = 1.87$) and reduced sick leave.</li>
+<li><strong>The Education Equivalence Trap (Engers 2008):</strong>
+        - <em>Trap:</em> "Brief educational booklets (like <em>The Back Book</em>) are equally effective for acute and chronic low back pain."
+        - <em>Reality:</em> <strong>FALSE.</strong> Brief advice is effective for <em>acute</em> LBP, but <strong>ineffective</strong> for <em>chronic</em> LBP (which requires intensive, structured biopsychosocial education).</li>
+<li><strong>The Standalone PNE Trap (Moseley 2015, Geneen 2015):</strong>
+        - <em>Trap:</em> "Pain Neuroscience Education delivered as a standalone lecture is sufficient to eliminate chronic pain-related disability."
+        - <em>Reality:</em> <strong>FALSE.</strong> Standalone PNE improves knowledge and catastrophizing, but has minimal impact on disability unless paired with <strong>active movement and functional exposure</strong>.</li>
+<li><strong>The Nocebo Mechanism Trap (Petersen 2014):</strong>
+        - <em>Trap:</em> "Nocebo hyperalgesia is purely a psychological construct with no identifiable neurochemical basis."
+        - <em>Reality:</em> <strong>FALSE.</strong> Nocebo hyperalgesia has a moderate-to-large effect size ($g = 0.63$), is biochemically mediated by the <strong>Cholecystokinin (CCK)</strong> system, and is blocked by <strong>proglumide</strong>.</li>
+<li><strong>The Exercise Superiority Trap (Searle 2015, Geneen 2017):</strong>
+        - <em>Trap:</em> "Specific core motor control exercise is proven to be substantially superior to all other exercise forms for long-term chronic back pain relief."
+        - <em>Reality:</em> <strong>FALSE.</strong> Motor control and resistance exercises show slightly higher short-term effects, but long-term outcomes (12 months) are broadly equivalent across active exercise modalities.</li>
+<li><strong>The Graded Activity vs. Exposure Trap (Macedo 2010):</strong>
+        - <em>Trap:</em> "Graded Activity and Graded Exposure operate on the identical psychological mechanism."
+        - <em>Reality:</em> <strong>FALSE.</strong> Graded Activity uses <strong>operant conditioning (quota-based pacing)</strong>. Graded Exposure uses <strong>cognitive-behavioral in-vivo threat disconfirmation (fear hierarchies / PHODA)</strong>.</li>
+<li><strong>The Pediatric Solicitousness Trap (Eccleston 2015):</strong>
+        - <em>Trap:</em> "Treating the child with chronic pain is sufficient; parental responses have no measurable impact on clinical outcomes."
+        - <em>Reality:</em> <strong>FALSE.</strong> Parental solicitousness directly maintains child disability; parent-targeted psychological interventions significantly reduce parental distress ($\text{SMD} = -0.27$) and improve child school attendance.</li>
+<li><strong>The TENS in Phantom Limb Trap (Johnson 2015):</strong>
+        - <em>Trap:</em> "Cochrane reviews confirm high-quality proof that TENS completely resolves phantom limb pain."
+        - <em>Reality:</em> <strong>FALSE.</strong> Cochrane reviews classify RCT evidence for TENS in phantom limb pain as <strong>inconclusive</strong>.</li>
+<li><strong>The NSAID in Neuropathic Pain Trap:</strong>
+        - <em>Trap:</em> "High-dose NSAIDs are recommended as first-line therapy for neuropathic pain and central sensitization."
+        - <em>Reality:</em> <strong>FALSE.</strong> NSAIDs target peripheral prostaglandins; they have no efficacy in neuropathic pain or central sensitization and carry severe gastrointestinal and renal risks.</li>
+<li><strong>The Dementia Pain Measurement Trap (Lichtner 2014, Herr 2011):</strong>
+        - <em>Trap:</em> "In patients with severe Alzheimer's dementia, heart rate and blood pressure fluctuations are superior to behavioral observation tools."
+        - <em>Reality:</em> <strong>FALSE.</strong> Autonomic signs are non-specific and habituate; validated observational scales (<strong>PAINAD</strong>, <strong>MOBID-2</strong>, <strong>Abbey</strong>) are gold standard when self-report fails.</li>
+<li><strong>The Inpatient Arthroplasty Rehab Trap (Khan 2008):</strong>
+        - <em>Trap:</em> "All post-total knee arthroplasty patients should undergo routine inpatient multidisciplinary rehabilitation for superior 1-year outcomes."
+        - <em>Reality:</em> <strong>FALSE.</strong> Routine inpatient multidisciplinary rehabilitation does not outperform home-based exercise at 12 months.</li>
+<li><strong>The Daily Activity Assumption Trap (Oliveira 2016):</strong>
+        - <em>Trap:</em> "Patients who complete 3 physical therapy exercise sessions a week automatically increase their daily physical activity levels."
+        - <em>Reality:</em> <strong>FALSE.</strong> Standard exercise therapy does not change habitual daily physical activity unless daily behavioral pacing and tracking are explicitly prescribed.</li>
+<li><strong>The Dementia Gold Standard Trap (Lichtner 2014):</strong>
+        - <em>Trap:</em> "The PAINAD scale has been confirmed as the definitive gold standard observational instrument across all dementia populations."
+        - <em>Reality:</em> <strong>FALSE.</strong> Meta-review of 28 tools demonstrates that <strong>NO single tool can be recommended as a universal gold standard</strong> due to widespread psychometric variability.</li>
+<li><strong>The Post-Surgical Risk Factor Trap (Wang 2016):</strong>
+        - <em>Trap:</em> "Mastectomy carries a significantly higher risk of persistent post-surgical pain than breast-conserving lumpectomy, and older age is a risk factor."
+        - <em>Reality:</em> <strong>FALSE.</strong> Surgical type (mastectomy vs. lumpectomy) and chemotherapy have <strong>no significant association</strong> with persistent pain. <strong>Younger age</strong> increases risk ($\text{OR} = 1.36$ per decade younger), and <strong>axillary lymph node dissection (ALND)</strong> is the strongest predictor ($\text{OR} = 2.41$).</li>
+<li><strong>The Neurological Scale Selection Trap (Tyson 2013):</strong>
+        - <em>Trap:</em> "Patients with right-hemisphere stroke lesions perform best on visual analog and pictorial scales."
+        - <em>Reality:</em> <strong>FALSE.</strong> Right-hemisphere stroke patients frequently suffer from spatial neglect and visual distortion; they perform better on <strong>verbal rating scales (VRS)</strong>. Patients with left-hemisphere stroke (aphasia) perform better on <strong>visual or numeric scales</strong>.</li>
+<li>
+<p><strong>The Possible Neuropathic Pain Trap (Finnerup 2016):</strong>
+        - <em>Trap:</em> "Diagnosing 'Possible Neuropathic Pain' requires objective confirmatory tests such as EMG or nerve biopsy."
+        - <em>Reality:</em> <strong>FALSE.</strong> 'Possible' requires only a plausible history and neuroanatomically compatible distribution. Clinical sensory signs make it 'Probable'. Confirmatory diagnostic tests are required for 'Definite'.</p>
 </li>
 <li>
-<p><strong>The Possible Neuropathic Pain Trap (Finnerup 2016):</strong></p>
-<ul>
-<li><em>Trap:</em> "Diagnosing 'Possible Neuropathic Pain' requires objective confirmatory tests such as EMG or nerve biopsy."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> 'Possible' requires only a plausible history and neuroanatomically compatible distribution. Clinical sensory signs make it 'Probable'. Confirmatory diagnostic tests are required for 'Definite'.</li>
-</ul>
+<p><strong>The Electronic Activity Feedback Trap (Oliveira 2018):</strong>
+        - <em>Trap:</em> "Providing chronic MSK pain patients with wearable activity trackers and smartphone feedback apps is an effective standalone intervention to reduce pain and disability."
+        - <em>Reality:</em> <strong>FALSE.</strong> Meta-analysis (Arch Phys Med Rehabil 2018) shows electronic feedback alone is <strong>ineffective</strong> in reducing pain or disability without clinician-led behavioral pacing and counseling.</p>
 </li>
-<li>
-<p><strong>The Electronic Activity Feedback Trap (Oliveira 2018):</strong></p>
-<ul>
-<li><em>Trap:</em> "Providing chronic MSK pain patients with wearable activity trackers and smartphone feedback apps is an effective standalone intervention to reduce pain and disability."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Meta-analysis (Arch Phys Med Rehabil 2018) shows electronic feedback alone is <strong>ineffective</strong> in reducing pain or disability without clinician-led behavioral pacing and counseling.</li>
-</ul>
-</li>
-<li><strong>The Exercise in Central Sensitization Trap (Lima 2017, Sluka 2018):</strong><ul>
-<li><em>Trap:</em> "Intense exercise always produces exercise-induced hypoalgesia regardless of the patient's pain mechanism."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> In patients with central sensitization (fibromyalgia, CWP), unaccustomed or vigorous eccentric exercise causes <strong>exercise-induced hyperalgesia</strong> (flare-up) due to deficient descending inhibition (impaired CPM) and heightened dorsal horn excitability. Prescription must start with low-intensity aerobic or submaximal isometrics ($20\text{–}25\%$ MVC).</li>
-</ul>
-</li>
-<li><strong>The Cancer Pain Recurrence Trap (De Groef 2019):</strong><ul>
-<li><em>Trap:</em> "Any persistent musculoskeletal or neuropathic pain after breast cancer treatment should be presumed to indicate cancer recurrence and exercise should be ceased."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Persistent pain after cancer (PPAC) is common (~30–50%) due to surgical trauma, radiation fibrosis, aromatase inhibitors, and CIPN. Supervised exercise is safe and effective; PNE must explicitly reassure patients that non-tumoral altered neurobiology explains persistent symptoms.</li>
-</ul>
-</li>
-<li><strong>The Pediatric Return-to-School Trap (Harrison 2019):</strong><ul>
-<li><em>Trap:</em> "Children with chronic pain should remain absent from school until their pain score drops below 3/10."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Best-evidence pediatric rehabilitation is <strong>function-first</strong>; school attendance is prioritized regardless of pain intensity via structured graded return-to-school (RTS) plans. Waiting for pain resolution promotes severe social disability and isolation.</li>
-</ul>
-</li>
-<li><strong>The Community Dementia Agitation Trap (Bullock 2019):</strong><ul>
-<li><em>Trap:</em> "Antipsychotic medications are first-line for new-onset agitation and behavioral disturbance in dementia patients."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Agitation is frequently an atypical manifestation of untreated physical pain. A structured stepwise pain management protocol (STA-OP, starting with scheduled paracetamol) significantly reduces behavioral agitation without antipsychotic risks.</li>
-</ul>
-</li>
-<li><strong>The Contextual Factors Trap (Testa &amp; Rossettini 2016):</strong><ul>
-<li><em>Trap:</em> "Placebo effects in physiotherapy are illusory noise that clinicians should ignore or attempt to eliminate."</li>
-<li><em>Reality:</em> <strong>FALSE.</strong> Contextual factors trigger real, measurable neurobiological analgesia ($g \approx 0.5\text{–}0.7$) mediated by endogenous opioids and endocannabinoids. Clinicians have an ethical responsibility to maximize positive contextual cues while avoiding deceit.</li>
-</ul>
-</li>
+<li><strong>The Exercise in Central Sensitization Trap (Lima 2017, Sluka 2018):</strong>
+        - <em>Trap:</em> "Intense exercise always produces exercise-induced hypoalgesia regardless of the patient's pain mechanism."
+        - <em>Reality:</em> <strong>FALSE.</strong> In patients with central sensitization (fibromyalgia, CWP), unaccustomed or vigorous eccentric exercise causes <strong>exercise-induced hyperalgesia</strong> (flare-up) due to deficient descending inhibition (impaired CPM) and heightened dorsal horn excitability. Prescription must start with low-intensity aerobic or submaximal isometrics ($20\text{–}25\%$ MVC).</li>
+<li><strong>The Cancer Pain Recurrence Trap (De Groef 2019):</strong>
+        - <em>Trap:</em> "Any persistent musculoskeletal or neuropathic pain after breast cancer treatment should be presumed to indicate cancer recurrence and exercise should be ceased."
+        - <em>Reality:</em> <strong>FALSE.</strong> Persistent pain after cancer (PPAC) is common (~30–50%) due to surgical trauma, radiation fibrosis, aromatase inhibitors, and CIPN. Supervised exercise is safe and effective; PNE must explicitly reassure patients that non-tumoral altered neurobiology explains persistent symptoms.</li>
+<li><strong>The Pediatric Return-to-School Trap (Harrison 2019):</strong>
+        - <em>Trap:</em> "Children with chronic pain should remain absent from school until their pain score drops below 3/10."
+        - <em>Reality:</em> <strong>FALSE.</strong> Best-evidence pediatric rehabilitation is <strong>function-first</strong>; school attendance is prioritized regardless of pain intensity via structured graded return-to-school (RTS) plans. Waiting for pain resolution promotes severe social disability and isolation.</li>
+<li><strong>The Community Dementia Agitation Trap (Bullock 2019):</strong>
+        - <em>Trap:</em> "Antipsychotic medications are first-line for new-onset agitation and behavioral disturbance in dementia patients."
+        - <em>Reality:</em> <strong>FALSE.</strong> Agitation is frequently an atypical manifestation of untreated physical pain. A structured stepwise pain management protocol (STA-OP, starting with scheduled paracetamol) significantly reduces behavioral agitation without antipsychotic risks.</li>
+<li><strong>The Contextual Factors Trap (Testa &amp; Rossettini 2016):</strong>
+        - <em>Trap:</em> "Placebo effects in physiotherapy are illusory noise that clinicians should ignore or attempt to eliminate."
+        - <em>Reality:</em> <strong>FALSE.</strong> Contextual factors trigger real, measurable neurobiological analgesia ($g \approx 0.5\text{–}0.7$) mediated by endogenous opioids and endocannabinoids. Clinicians have an ethical responsibility to maximize positive contextual cues while avoiding deceit.</li>
 </ol>
 
 <div class="footer">

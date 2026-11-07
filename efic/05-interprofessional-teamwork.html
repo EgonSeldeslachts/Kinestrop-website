@@ -217,14 +217,14 @@ p {
 }
 
 ul, ol {
-    margin-top: 0.3em;
-    margin-bottom: 1.2em;
-    padding-left: 26px;
+    margin-top: 0.4em;
+    margin-bottom: 1.3em;
+    padding-left: 28px;
 }
 
 li {
-    margin-bottom: 0.45em;
-    line-height: 1.6;
+    margin-bottom: 0.55em;
+    line-height: 1.65;
 }
 
 li > p {
@@ -237,47 +237,73 @@ li > p:last-child {
 
 ul > li::marker {
     color: var(--brand-secondary);
+    font-size: 1.1em;
 }
 
 ol > li::marker {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--brand-secondary);
 }
 
+/* Level 2 Sub-lists (Onderverdelingen) */
 ul ul, ol ul {
-    margin-top: 0.4em;
-    margin-bottom: 0.6em;
-    padding-left: 20px;
-    border-left: 2px solid var(--border-subtle);
-    list-style-type: circle;
+    margin-top: 0.5em;
+    margin-bottom: 0.75em;
+    margin-left: 6px;
+    padding-left: 26px;
+    border-left: 3px solid #38BDF8;
+    list-style-type: disc;
 }
 
 ul ol, ol ol {
-    margin-top: 0.4em;
-    margin-bottom: 0.6em;
-    padding-left: 20px;
-    border-left: 2px solid var(--border-subtle);
+    margin-top: 0.5em;
+    margin-bottom: 0.75em;
+    margin-left: 6px;
+    padding-left: 26px;
+    border-left: 3px solid #38BDF8;
     list-style-type: lower-alpha;
 }
 
-ul ul > li::marker, ol ul > li::marker {
-    color: var(--text-muted);
+ul ul > li, ol ul > li, ul ol > li, ol ol > li {
+    margin-bottom: 0.45em;
+    font-size: 0.97em;
+    color: #1E293B;
 }
 
+ul ul > li::marker, ol ul > li::marker {
+    color: #0284C7;
+    font-size: 0.9em;
+}
+
+ul ol > li::marker, ol ol > li::marker {
+    color: #0284C7;
+    font-weight: 600;
+}
+
+/* Level 3 Sub-sub-lists */
 ul ul ul, ol ul ul, ul ol ul, ol ol ul {
-    margin-top: 0.3em;
-    margin-bottom: 0.5em;
-    padding-left: 18px;
-    border-left: 2px solid var(--border-strong);
-    list-style-type: square;
+    margin-top: 0.4em;
+    margin-bottom: 0.6em;
+    margin-left: 8px;
+    padding-left: 24px;
+    border-left: 2px dashed #94A3B8;
+    list-style-type: circle;
+}
+
+ul ul ul > li, ol ul ul > li, ul ol ul > li, ol ol ul > li {
+    margin-bottom: 0.35em;
+    font-size: 0.94em;
+    color: #334155;
 }
 
 ul ul ul > li::marker, ol ul ul > li::marker {
-    color: #94A3B8;
+    color: #64748B;
+    font-size: 0.85em;
 }
 
 li:has(> ul), li:has(> ol) {
-    margin-bottom: 0.75em;
+    margin-top: 0.5em;
+    margin-bottom: 0.9em;
 }
 
 table {
@@ -461,10 +487,12 @@ hr {
 <h3 id="paper-35-gatchel-et-al-2014-interdisciplinary-chronic-pain-management">📄 Paper 35: Gatchel et al. (2014) — Interdisciplinary Chronic Pain Management</h3>
 <p><strong>Citation:</strong> Gatchel RJ, McGeary DD, McGeary CA, Lippe B. <em>Interdisciplinary chronic pain management: past, present, and future.</em> Am Psychol. 2014;69(2):119-30.</p>
 <ul>
-<li><strong>Core Distinctions:</strong></li>
+<li><strong>Core Distinctions:</strong><ul>
 <li><em>Multidisciplinary programs</em> often fail to produce durable behavioral change because each clinician operates from their own biomedical or disciplinary silo, leaving the patient to reconcile contradictory advice.</li>
 <li><em>Interdisciplinary pain rehabilitation programs (IPRPs)</em> conduct regular face-to-face team meetings where conflicting messages (e.g., medical advice to rest vs. physical therapy advice to move) are resolved <em>before</em> communicating with the patient.</li>
 <li>Delivers significant reductions in opioid dependency, dramatic decreases in spinal surgeries, and durable return to work.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="2-interprofessional-communication-clinical-handover-curriculum-51">2. Interprofessional Communication &amp; Clinical Handover (Curriculum 5.1)</h2>
@@ -477,22 +505,24 @@ hr {
 <h3 id="b-resolving-conflicting-health-advice-protecting-the-therapeutic-alliance">B. Resolving Conflicting Health Advice &amp; Protecting the Therapeutic Alliance</h3>
 <ul>
 <li>A primary iatrogenic cause of pain chronification is <strong>conflicting clinical information</strong> (e.g., radiologist reports severe degenerative disc disease, surgeon recommends spinal fusion, and physical therapist encourages active bending).</li>
-<li><strong>Clinical Best Practice:</strong></li>
+<li><strong>Clinical Best Practice:</strong><ol>
 <li><em>Acknowledge and Validate:</em> Validate the patient's confusion without attacking the other clinician's integrity (<em>"I can understand why hearing different things has made you feel anxious"</em>).</li>
 <li><em>Recontextualize Findings:</em> Frame imaging findings as normal age-related changes (like grey hair on the inside) that do not dictate physical capacity.</li>
 <li><em>Proactive Direct Interprofessional Contact:</em> Directly contact the referring physician or surgeon to align on consistent, reassuring rehabilitation goals.</li>
+</ol>
+</li>
 </ul>
 <hr />
 <h2 id="3-shared-decision-making-sdm-in-pain-management-curriculum-51">3. Shared Decision Making (SDM) in Pain Management (Curriculum 5.1)</h2>
 <h3 id="a-the-3-step-clinical-model-of-shared-decision-making-elwyn-et-al-2012">A. The 3-Step Clinical Model of Shared Decision Making (Elwyn et al. 2012)</h3>
 <p>Shared decision making is an ethical and clinical necessity in preference-sensitive chronic pain care:
 1. <strong>Step 1: Choice Talk (Establishing that a choice exists):</strong>
-   - The clinician explicitly informs the patient that multiple legitimate management options exist, and that their personal values and preferences are essential in guiding the decision (<em>"There is no single 'magic fix' for chronic back pain; there are several paths we can take, and your goals will determine the best choice"</em>).
+    - The clinician explicitly informs the patient that multiple legitimate management options exist, and that their personal values and preferences are essential in guiding the decision (<em>"There is no single 'magic fix' for chronic back pain; there are several paths we can take, and your goals will determine the best choice"</em>).
 2. <strong>Step 2: Option Talk (Comparing alternatives):</strong>
-   - The clinician provides balanced, evidence-based information regarding the risks, benefits, uncertainties, and commitments of each option (e.g., active exercise therapy + PNE vs. spinal injection vs. surgical consultation).
-   - Use of standardized <strong>Patient Decision Aids (PDAs)</strong> to quantify absolute risks and benefits.
+    - The clinician provides balanced, evidence-based information regarding the risks, benefits, uncertainties, and commitments of each option (e.g., active exercise therapy + PNE vs. spinal injection vs. surgical consultation).
+    - Use of standardized <strong>Patient Decision Aids (PDAs)</strong> to quantify absolute risks and benefits.
 3. <strong>Step 3: Decision Talk (Reaching an agreed path):</strong>
-   - Eliciting what matters most to the patient (returning to work, playing with children, reducing medication side effects) and supporting them to choose and commit to a personalized treatment plan.</p>
+    - Eliciting what matters most to the patient (returning to work, playing with children, reducing medication side effects) and supporting them to choose and commit to a personalized treatment plan.</p>
 <hr />
 <h2 id="4-reflective-practice-supervision-continuing-professional-development-curriculum-51">4. Reflective Practice, Supervision &amp; Continuing Professional Development (Curriculum 5.1)</h2>
 <h3 id="a-reflective-practice-frameworks-gibbs-reflective-cycle">A. Reflective Practice Frameworks (Gibbs' Reflective Cycle)</h3>

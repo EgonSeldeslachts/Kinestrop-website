@@ -217,14 +217,14 @@ p {
 }
 
 ul, ol {
-    margin-top: 0.3em;
-    margin-bottom: 1.2em;
-    padding-left: 26px;
+    margin-top: 0.4em;
+    margin-bottom: 1.3em;
+    padding-left: 28px;
 }
 
 li {
-    margin-bottom: 0.45em;
-    line-height: 1.6;
+    margin-bottom: 0.55em;
+    line-height: 1.65;
 }
 
 li > p {
@@ -237,47 +237,73 @@ li > p:last-child {
 
 ul > li::marker {
     color: var(--brand-secondary);
+    font-size: 1.1em;
 }
 
 ol > li::marker {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--brand-secondary);
 }
 
+/* Level 2 Sub-lists (Onderverdelingen) */
 ul ul, ol ul {
-    margin-top: 0.4em;
-    margin-bottom: 0.6em;
-    padding-left: 20px;
-    border-left: 2px solid var(--border-subtle);
-    list-style-type: circle;
+    margin-top: 0.5em;
+    margin-bottom: 0.75em;
+    margin-left: 6px;
+    padding-left: 26px;
+    border-left: 3px solid #38BDF8;
+    list-style-type: disc;
 }
 
 ul ol, ol ol {
-    margin-top: 0.4em;
-    margin-bottom: 0.6em;
-    padding-left: 20px;
-    border-left: 2px solid var(--border-subtle);
+    margin-top: 0.5em;
+    margin-bottom: 0.75em;
+    margin-left: 6px;
+    padding-left: 26px;
+    border-left: 3px solid #38BDF8;
     list-style-type: lower-alpha;
 }
 
-ul ul > li::marker, ol ul > li::marker {
-    color: var(--text-muted);
+ul ul > li, ol ul > li, ul ol > li, ol ol > li {
+    margin-bottom: 0.45em;
+    font-size: 0.97em;
+    color: #1E293B;
 }
 
+ul ul > li::marker, ol ul > li::marker {
+    color: #0284C7;
+    font-size: 0.9em;
+}
+
+ul ol > li::marker, ol ol > li::marker {
+    color: #0284C7;
+    font-weight: 600;
+}
+
+/* Level 3 Sub-sub-lists */
 ul ul ul, ol ul ul, ul ol ul, ol ol ul {
-    margin-top: 0.3em;
-    margin-bottom: 0.5em;
-    padding-left: 18px;
-    border-left: 2px solid var(--border-strong);
-    list-style-type: square;
+    margin-top: 0.4em;
+    margin-bottom: 0.6em;
+    margin-left: 8px;
+    padding-left: 24px;
+    border-left: 2px dashed #94A3B8;
+    list-style-type: circle;
+}
+
+ul ul ul > li, ol ul ul > li, ul ol ul > li, ol ol ul > li {
+    margin-bottom: 0.35em;
+    font-size: 0.94em;
+    color: #334155;
 }
 
 ul ul ul > li::marker, ol ul ul > li::marker {
-    color: #94A3B8;
+    color: #64748B;
+    font-size: 0.85em;
 }
 
 li:has(> ul), li:has(> ol) {
-    margin-bottom: 0.75em;
+    margin-top: 0.5em;
+    margin-bottom: 0.9em;
 }
 
 table {
