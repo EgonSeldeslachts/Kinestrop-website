@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <base href="/efic/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0F172A">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json">
+
+    <title>09. Farmacologie, Neurobiologie & Sensorische Fenotypering — EFIC Diploma Study Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+
+:root {
+    --brand-primary: #0F172A;
+    --brand-secondary: #0284C7;
+    --brand-accent: #0284C7;
+    --surface-bg: #F8FAFC;
+    --surface-card: #FFFFFF;
+    --text-main: #1E293B;
+    --text-muted: #64748B;
+    --border-subtle: #E2E8F0;
+    --border-strong: #CBD5E1;
+    --highlight-bg: #EFF6FF;
+    --success-bg: #F0FDF4;
+    --success-text: #166534;
+    --warning-bg: #FFFBEB;
+    --warning-text: #B45309;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--surface-bg);
+    color: var(--text-main);
+    line-height: 1.7;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background: #0F172A;
+    color: #F8FAFC;
+    padding: 16px 24px;
+    border-bottom: 2px solid #0284C7;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.top-bar-content {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.brand-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+}
+
+.brand-badge span {
+    background: #0284C7;
+    color: #FFFFFF;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-print {
+    background: #1E293B;
+    color: #E2E8F0;
+    border: 1px solid #334155;
+    padding: 7px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-print:hover {
+    background: #0284C7;
+    color: #FFFFFF;
+    border-color: #0284C7;
+}
+
+.nav-container {
+    background: #1E293B;
+    border-bottom: 1px solid #334155;
+    padding: 6px 24px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.study-nav {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    gap: 6px;
+}
+
+.nav-link {
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.15s ease;
+}
+
+.nav-link:hover {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-link.active {
+    color: #38BDF8;
+    background: rgba(56, 189, 248, 0.12);
+    font-weight: 600;
+}
+
+.main-container {
+    max-width: 1100px;
+    margin: 32px auto 64px auto;
+    background: var(--surface-card);
+    padding: 48px 56px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.06), 0 1px 4px rgba(15, 23, 42, 0.04);
+    border: 1px solid var(--border-subtle);
+}
+
+.wide-content .main-container {
+    max-width: 1350px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--brand-primary);
+    line-height: 1.3;
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-top: 0.2em;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--border-subtle);
+    color: #0F172A;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+    color: #1E293B;
+}
+
+h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #0369A1;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1.1em;
+}
+
+ul, ol {
+    margin-top: 0.4em;
+    margin-bottom: 1.3em;
+    padding-left: 28px;
+}
+
+li {
+    margin-bottom: 0.55em;
+    line-height: 1.65;
+}
+
+li > p {
+    margin-bottom: 0.35em;
+}
+
+li > p:last-child {
+    margin-bottom: 0;
+}
+
+ul > li::marker {
+    color: var(--brand-secondary);
+    font-size: 1.1em;
+}
+
+ol > li::marker {
+    font-weight: 700;
+    color: var(--brand-secondary);
+}
+
+/* Level 2 Sub-lists (Onderverdelingen) */
+ul ul, ol ul {
+    margin-top: 0.5em;
+    margin-bottom: 0.75em;
+    margin-left: 6px;
+    padding-left: 26px;
+    border-left: 3px solid #38BDF8;
+    list-style-type: disc;
+}
+
+ul ol, ol ol {
+    margin-top: 0.5em;
+    margin-bottom: 0.75em;
+    margin-left: 6px;
+    padding-left: 26px;
+    border-left: 3px solid #38BDF8;
+    list-style-type: lower-alpha;
+}
+
+ul ul > li, ol ul > li, ul ol > li, ol ol > li {
+    margin-bottom: 0.45em;
+    font-size: 0.97em;
+    color: #1E293B;
+}
+
+ul ul > li::marker, ol ul > li::marker {
+    color: #0284C7;
+    font-size: 0.9em;
+}
+
+ul ol > li::marker, ol ol > li::marker {
+    color: #0284C7;
+    font-weight: 600;
+}
+
+/* Level 3 Sub-sub-lists */
+ul ul ul, ol ul ul, ul ol ul, ol ol ul {
+    margin-top: 0.4em;
+    margin-bottom: 0.6em;
+    margin-left: 8px;
+    padding-left: 24px;
+    border-left: 2px dashed #94A3B8;
+    list-style-type: circle;
+}
+
+ul ul ul > li, ol ul ul > li, ul ol ul > li, ol ol ul > li {
+    margin-bottom: 0.35em;
+    font-size: 0.94em;
+    color: #334155;
+}
+
+ul ul ul > li::marker, ol ul ul > li::marker {
+    color: #64748B;
+    font-size: 0.85em;
+}
+
+li:has(> ul), li:has(> ol) {
+    margin-top: 0.5em;
+    margin-bottom: 0.9em;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 24px 0 32px 0;
+    font-size: 13.5px;
+    line-height: 1.55;
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px 14px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+th {
+    background-color: #0F172A;
+    color: #FFFFFF;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 13px;
+    border-bottom: 2px solid #0284C7;
+}
+
+tr:nth-child(even) td {
+    background-color: #F8FAFC;
+}
+
+tr:hover td {
+    background-color: #F0F9FF;
+}
+
+blockquote {
+    margin: 20px 0;
+    padding: 14px 20px;
+    background: #F0F9FF;
+    border-left: 4px solid #0284C7;
+    border-radius: 0 8px 8px 0;
+    color: #0369A1;
+    font-style: normal;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.88em;
+    background: #F1F5F9;
+    color: #0F172A;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid #E2E8F0;
+}
+
+pre {
+    background: #0F172A;
+    color: #F8FAFC;
+    padding: 16px 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 13.5px;
+    line-height: 1.6;
+}
+
+pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    border: none;
+}
+
+a {
+    color: #0284C7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0369A1;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border-subtle);
+    margin: 36px 0;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+@media print {
+    body { background: #FFFFFF; font-size: 11pt; }
+    .top-bar, .nav-container, .btn-print, .footer { display: none !important; }
+    .main-container { max-width: 100% !important; margin: 0 !important; padding: 0 !important; border: none !important; box-shadow: none !important; }
+    table { font-size: 9pt !important; page-break-inside: auto; }
+    tr { page-break-inside: avoid; page-break-after: auto; }
+    th { background-color: #E2E8F0 !important; color: #000000 !important; }
+    h1, h2, h3 { page-break-after: avoid; }
+}
+
+    </style>
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="top-bar-content">
+        <div class="brand-badge">
+            <span>EFIC® EDPP</span> European Diploma in Pain Physiotherapy
+        </div>
+        <div class="actions">
+            <button class="btn-print" onclick="window.print()">
+                Print / Save as PDF
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="nav-container">
+<nav class="study-nav"><a href="/efic/README.html" class="nav-link">Hub Overview</a><a href="/efic/00-curriculum-breakdown.html" class="nav-link">00. Curriculum</a><a href="/efic/01-iasp-taxonomy-master-sheet.html" class="nav-link">01a. Taxonomy</a><a href="/efic/01-pain-science-and-knowledge.html" class="nav-link">01b. Pain Science</a><a href="/efic/02-assessment-and-measurement.html" class="nav-link">02. Assessment</a><a href="/efic/03-principles-of-treatment.html" class="nav-link">03. Treatment</a><a href="/efic/04-special-populations.html" class="nav-link">04. Populations</a><a href="/efic/05-interprofessional-teamwork.html" class="nav-link">05. Interprofessional</a><a href="/efic/05-mcq-high-yield-quick-reference.html" class="nav-link">MCQ Bible</a><a href="/efic/06-treatment-evidence-master-table.html" class="nav-link">06. Master Table</a><a href="/efic/07-zotero-complete-reading-list-inventory.html" class="nav-link">07. Reading List & Textbooks</a><a href="/efic/08-clinical-assessment-and-red-flags.html" class="nav-link">08. Clinical & Red Flags</a><a href="/efic/09-pharmacology-and-sensory-phenotyping.html" class="nav-link active">09. Pharmacology & Phenotyping</a></nav>
+</div>
+
+<main class="main-container">
+<h1 id="09-farmacologie-neurobiologie-sensorische-fenotypering">09. Farmacologie, Neurobiologie &amp; Sensorische Fenotypering</h1>
+<blockquote>
+<p><strong>EFIC® European Diploma in Pain Physiotherapy — Advanced Clinical Science</strong><br />
+<em>Curriculum Referenties: Sectie 1.1.3 (Transductie, Receptoren &amp; Neurotransmitters), Sectie 2.1.9 (QST &amp; Fenotypering), Sectie 3.9.3 &amp; 3.9.4 (Farmacologische Categorieën &amp; Multidisciplinaire Integratie).</em></p>
+</blockquote>
+<hr />
+<h2 id="1-waarom-moet-een-gespecialiseerd-kinesitherapeut-farmacologie-begrijpen">1. Waarom Moet een Gespecialiseerd Kinesitherapeut Farmacologie Begrijpen?</h2>
+<p>Als gespecialiseerd kinesitherapeut schrijf je zelf geen medicatie voor, maar in een moderne interprofessionele pijnzorg (EFIC-standaard) ben jij vaak de zorgverlener die de patiënt het meest frequent en langdurig ziet. </p>
+<p><strong>Klinische noodzaak op kine-niveau:</strong>
+1. <strong>Onderscheid tussen behandelrespons en medicatie-effect:</strong> Verbetert de patiënt door jouw actieve oefentherapie of door de start van een SNRI? Of stagneert de patiënt door sedatie, duizeligheid of spierzwakte als bijwerking van pregabaline?
+2. <strong>Klinische fenotypering en gerichte terugkoppeling naar de arts:</strong> Wanneer een patiënt tijdens jouw manueel of sensorisch onderzoek duidelijke dynamische mechanische allodynie (kwastje) of een deficiënte dalende inhibitie (CPM) vertoont, kun je evidence-based overleggen met de huisarts of specialist over een rationele farmacologische switch.
+3. <strong>Herkennen van gecontra-indiceerde of schadelijke medicatie:</strong> Patiënten met nociplastische pijn (fibromyalgie, chronische primaire lage rugpijn) die vastzitten op hoge dosissen sterke opioïden of chronische NSAIDs lopen risico op orgaanschade en <em>Opioid-Induced Hyperalgesia (OIH)</em> zonder enig neurobiologisch voordeel.
+4. <strong>Therapietrouw en nocebo-reductie:</strong> Angst voor bijwerkingen verminderen en uitleggen <em>waarom</em> een antidepressivum wordt voorgeschreven (niet omdat "het tussen de oren zit", maar om het lichaamseigen ruggenmerg-remsysteem aan te zetten).</p>
+<hr />
+<h2 id="2-neurobiologie-van-pijnmedicatie-banen-cascades-receptoren">2. Neurobiologie van Pijnmedicatie: Banen, Cascades &amp; Receptoren</h2>
+<pre><code class="language-mermaid">flowchart TD
+    subgraph PERIPHERY [&quot;Periferie: Nociceptor Terminal&quot;]
+        TRPV1[&quot;TRPV1 / Nav Kanalen (Ectopische vuren)&quot;]
+        CAPS[&quot;Capsaïcine 8% &amp; Lidocaïne 5%&quot;] -.-&gt;|Blokkeert / Defunctionaliseert| TRPV1
+        NSAID[&quot;NSAIDs&quot;] -.-&gt;|Remt COX-1/2 &amp; PGE2| INFLAM[&quot;Lokale Inflammatie (Nociceptief)&quot;]
+    end
+
+    subgraph DORSAL_HORN [&quot;Dorsale Hoorn (Substantia Gelatinosa)&quot;]
+        VGCC[&quot;Voltage-Gated Ca2+ Kanalen (alpha-2-delta)&quot;]
+        GABA[&quot;Pregabaline / Gabapentine&quot;] -.-&gt;|Bindt alpha-2-delta subunit| VGCC
+        VGCC -.-&gt;|Verlaagt influx| GLUT[&quot;Glutamaat &amp; Substance P Release&quot;]
+        NMDA[&quot;Postsynaptisch NMDA &amp; AMPA Receptor&quot;]
+    end
+
+    subgraph DESCENDING [&quot;Dalend Inhibitoir Systeem (PAG-RVM)&quot;]
+        PAG[&quot;Periaqueductal Gray (PAG)&quot;] --&gt; RVM[&quot;Rostral Ventromedial Medulla (RVM)&quot;]
+        RVM --&gt;|DLF Baan: NA &amp; 5-HT| ALPHA2[&quot;Presynaptische alpha-2 Adrenerge Receptoren&quot;]
+        SNRI[&quot;Duloxetine / Milnacipran / Amitriptyline&quot;] -.-&gt;|Blokkeert NET &amp; SERT heropname| ALPHA2
+        ALPHA2 -.-&gt;|Hyperpolariseert &amp; remt| DORSAL_HORN
+    end
+</code></pre>
+<hr />
+<h3 id="a-de-dalende-monoaminerge-remsystemen-snris-tcas">A. De Dalende Monoaminerge Remsystemen (SNRIs &amp; TCAs)</h3>
+<ul>
+<li><strong>Voorbeelden:</strong> Duloxetine (<em>Cymbalta</em>), Milnacipran, Venlafaxine (hoge dosis), Amitriptyline (<em>Redomex</em>).</li>
+<li><strong>De anatomische baan:</strong><ol>
+<li>Het dalende pijndempende netwerk ontspringt in het <strong>Periaqueductal Gray (PAG)</strong> in het mesencephalon.</li>
+<li>Het PAG projecteert naar de <strong>Rostral Ventromedial Medulla (RVM)</strong> en de <strong>Locus Coeruleus (LC)</strong> in de hersenstam.</li>
+<li>Vanuit de LC en RVM lopen axonen via het <strong>Dorsolateraal Funiculus (DLF)</strong> omlaag naar de dorsale hoorn van het ruggenmerg (lamina I, II en V van Rexed).</li>
+<li>Deze dalende vezels geven <strong>Noradrenaline (NA)</strong> en <strong>Serotonine (5-HT)</strong> af in de synaptische spleet van de dorsale hoorn.</li>
+</ol>
+</li>
+<li><strong>Het cellulaire werkingsmechanisme:</strong><ul>
+<li><strong>Noradrenaline</strong> bindt postsynaptisch en presynaptisch op <strong>$\alpha_2$-adrenerge receptoren</strong> op nociceptieve projectie-neuronen en primaire afferenten.</li>
+<li>Dit activeert een $G_i$-eiwit gekoppelde cascade die de calciuminflux remt en de kaliumconductie ($K^+$ efflux) verhoogt $\rightarrow$ <strong>hyperpolarisatie van het spinale neuron</strong>. Het nociceptieve signaal wordt gedempt voordat het via de tractus spinothalamicus naar de cortex kan opstijgen.</li>
+<li><strong>Waarom SNRIs en TCAs wél werken en zuivere SSRIs (zoals paroxetine of sertraline) NIET:</strong><ul>
+<li>De krachtigste fysiologische pijndemping in het ruggenmerg verloopt via <strong>noradrenaline</strong> ($\alpha_2$-receptoren). </li>
+<li>Serotonine is bidirectioneel: het kan remmen via $5\text{-HT}_{1A}$-receptoren, maar kan via $5\text{-HT}_2$- en $5\text{-HT}_3$-receptoren juist pijn <em>faciliteren</em> (centrale facilitatie).</li>
+<li>Zuivere SSRIs verhogen alleen serotonine en missen de noradrenerge stimulatie; SNRIs en TCAs remmen zowel de serotonine-transporter (SERT) als de noradrenaline-transporter (NET), waardoor er een hoge concentratie noradrenaline in de dorsale hoorn blijft.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Amitriptyline (TCA) surplus:</strong><ul>
+<li>Remt NET en SERT, maar blokkeert tevens postsynaptische muscarine-, histamine- ($H_1$), en $\alpha_1$-adrenerge receptoren.</li>
+<li>Dit verklaart de sedatieve werking (gunstig bij ernstige insomnie in lage dosis 10–25 mg) én de anticholinerge bijwerkingen (droge mond, obstipatie, tachycardie).</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="b-presynaptische-calciumkanaal-modulatoren-alpha_2delta-liganden-gabapentinoiden">B. Presynaptische Calciumkanaal-Modulatoren ($\alpha_2\delta$-Liganden / Gabapentinoïden)</h3>
+<ul>
+<li><strong>Voorbeelden:</strong> Pregabaline (<em>Lyrica</em>), Gabapentine (<em>Neurontin</em>).</li>
+<li><strong>De misvatting:</strong> Ondanks de naam binden deze stoffen <strong>niet</strong> aan GABA-receptoren en beïnvloeden ze de GABA-afgifte of heropname niet direct.</li>
+<li><strong>Het cellulaire werkingsmechanisme:</strong><ol>
+<li>Bij perifere zenuwschade of langdurige nociceptieve bombardementen treedt er een <em>upregulatie</em> op van <strong>voltage-gated calciumkanalen (VGCCs)</strong> op de presynaptische terminals van primaire afferenten in de dorsale hoorn.</li>
+<li>Pregabaline en gabapentine binden selectief aan het <strong>$\alpha_2\delta\text{-1}$ (alpha-2-delta-1) hulpeiwit</strong> van deze presynaptische $N$- en $P/Q$-type calciumkanalen.</li>
+<li>Door deze binding vermindert het transport van calciumkanalen naar de membraan en vermindert de influx van $Ca^{2+}$ wanneer een actiepotentiaal de zenuwterminal bereikt.</li>
+<li>Omdat vesikelfusie afhankelijk is van calcium, leidt dit tot een directe <strong>vermindering van de afgifte van exciterende neurotransmitters: glutamaat, Substance P en CGRP</strong>.</li>
+<li><strong>Gevolg:</strong> Vermindering van <em>wind-up</em>, uittekenen van temporale summatie en afname van de prikkeling van tweede-orde wijd-dynamische-range (WDR) neuronen.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="c-topische-perifere-transductie-geleidingsblokkers">C. Topische Perifere Transductie- &amp; Geleidingsblokkers</h3>
+<ul>
+<li><strong>Capsaïcine 8% dermale pleister (<em>Qutenza</em>):</strong><ul>
+<li><strong>Target:</strong> <strong>TRPV1-receptoren</strong> (Transient Receptor Potential Vanilloid 1) op niet-gemyeliniseerde polymodale C-vezels.</li>
+<li><strong>Mechanisme:</strong> Eerst ontstaat een intense stimulatie van TRPV1 met massale calcium-influx $\rightarrow$ felle branderige sensatie (erytheem en tachycardie). Door de aanhoudende overbelasting met calcium treedt echter mitochondriaal falen en osmotische zwelling op van de perifere zenuweindigingen.</li>
+<li><strong>Resultaat:</strong> <em>Defunctionalization</em> en tijdelijke <strong>retractie van de epidermale zenuwvezels</strong>. De perifere nociceptor sterft tijdelijk lokaal af en regenereert pas na 8 tot 12 weken. Gedurende die tijd is er een drastische reductie van perifere nociceptieve input.</li>
+</ul>
+</li>
+<li><strong>Lidocaïne 5% pleister (<em>Versatis</em>):</strong><ul>
+<li><strong>Target:</strong> <strong>Voltage-gated natriumkanalen (Nav1.7, Nav1.8)</strong>.</li>
+<li><strong>Mechanisme:</strong> Niet-systemische, puur lokale blokkade van natriumkanalen op overgevoelige perifere zenuweindigingen en ectopische pacemakers. Het remt de generatie van spontane actiepotentialen zonder een algeheel sensibel blok (geen volledige verdoving van de huid).</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="d-waarom-nsaids-falen-bij-nociplastische-pijn-fibromyalgie-clbp">D. Waarom NSAIDs Falen bij Nociplastische Pijn (Fibromyalgie / CLBP)</h3>
+<ul>
+<li><strong>Mechanisme van NSAIDs:</strong> Remming van de cyclo-oxygenase enzymen (<strong>COX-1 en COX-2</strong>), waardoor de synthese van <strong>Prostaglandine $E_2$ ($PGE_2$)</strong> en prostacyclines uit arachidonzuur geblokkeerd wordt.</li>
+<li><strong>Waarom effectief bij acuut/inflammatoir weefselletsel:</strong> $PGE_2$ bindt aan EP-receptoren op de perifere nociceptor en verlaagt via protein kinase A (PKA) de drempel van TRPV1- en Nav1.8-kanalen (<em>perifere sensitisatie</em>). Door $PGE_2$ te verlagen stijgt de prikkeldrempel weer naar normaal.</li>
+<li><strong>Waarom volstrekt zinloos bij nociplastische pijn (EULAR / NICE):</strong><ul>
+<li>Bij nociplastische aandoeningen zoals fibromyalgie is er <strong>geen sprake van verhoogde perifere prostaglandine-aanmaak of weefselinflammatie</strong>.</li>
+<li>De pathologie zetelt in een veranderde centrale signaalverwerking in het ruggenmerg en de cortex (falende descenderende banen, neuro-inflammatie via microgliacellen, corticale salience).</li>
+<li>NSAIDs hebben <strong>geen centrale werking op spinale monoamines of calciumkanalen</strong>. Ze leveren 0% neurobiologisch voordeel, maar verhogen wel het risico op maagzweren, nierfunctiestoornissen en cardiovasculaire complicaties.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="e-waarom-opioiden-falen-en-schaden-bij-chronische-primaire-pijn">E. Waarom Opioïden Falen en Schaden bij Chronische Primaire Pijn</h3>
+<ul>
+<li><strong>Mechanisme van Opioïden:</strong> Binding aan <strong>$\mu$-opioïdreceptoren (MOR)</strong> in het ruggenmerg, periaqueductal gray en limbisch systeem. Dit remt adenylaatcyclase en opent $K^+$-kanalen.</li>
+<li><strong>De paradox bij chronische toediening:</strong><ol>
+<li><strong>Receptordesensitisatie &amp; Downregulatie:</strong> Continue blootstelling leidt tot $\beta$-arrestine binding, internalisatie van MOR en receptorverlies $\rightarrow$ <em>Tolerantie</em> (steeds hogere dosis nodig).</li>
+<li><strong>Opioid-Induced Hyperalgesia (OIH):</strong> Opioïden (zoals morfine en oxycodon) binden niet alleen op opioïdreceptoren, maar ook op <strong>Toll-Like Receptor 4 (TLR4)</strong> op spinale <strong>microgliacellen</strong>.</li>
+<li>Dit activeert microglia tot de productie van inflammatoire cytokines (IL-1$\beta$, TNF-$\alpha$, BDNF). <strong>Brain-Derived Neurotrophic Factor (BDNF)</strong> zorgt voor een downregulatie van de KCC2-chloride-cotransporter in de dorsale hoorn $\rightarrow$ GABA en glycine verliezen hun remmende werking en worden zélf exciterend!</li>
+<li><strong>Gevolg:</strong> De patiënt wordt met elke verhoging van het opioïd <strong>objectief gevoeliger voor pijn</strong> (dalende pijndrempels, diffuse allodynie).</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h2 id="3-evidence-based-sensorische-fenotypering-welke-klinische-tekenen-voorspellen-welke-medicatie">3. Evidence-Based Sensorische Fenotypering: Welke Klinische Tekenen Voorspellen Welke Medicatie?</h2>
+<p>De moderne pijnwetenschap (o.a. Baron et al., <em>Lancet Neurology</em> 2017; Rolke et al., DFNS) stelt dat we niet moeten behandelen op basis van een etiologische diagnose (zoals "diabetische neuropathie" of "fibromyalgie"), maar op basis van het <strong>onderliggende sensorische fenotype</strong>.</p>
+<p>Als kinesitherapeut kun je dit fenotype direct herkennen in de anamnese en tijdens het klinisch sensorisch onderzoek.</p>
+<pre><code class="language-mermaid">flowchart TD
+    PATIENT[&quot;Patiënt met Chronische Pijn&quot;] --&gt; PHENO{&quot;Klinisch / Sensorisch Fenotype?&quot;}
+
+    PHENO --&gt;|Fenotype 1: Punctate &amp; Dynamische Allodynie| F1[&quot;Sensorische Winst: Wind-up &amp; Hyperalgesie&quot;]
+    PHENO --&gt;|Fenotype 2: Doffe, diffuse pijn + Falende CPM + Slaapstoornis| F2[&quot;Dalende Remsysteem Falen&quot;]
+    PHENO --&gt;|Fenotype 3: Gelokaliseerd branden + Hitte-allodynie| F3[&quot;Prikkelbare Nociceptor / TRPV1&quot;]
+    PHENO --&gt;|Fenotype 4: Schietende, paroxismale elektrische stoten| F4[&quot;Ectopische Natriumkanaal-vuren&quot;]
+
+    F1 ==&gt; DRUG1[&quot;Pregabaline / Gabapentine (alpha-2-delta ligand)&quot;]
+    F2 ==&gt; DRUG2[&quot;Duloxetine / Milnacipran (SNRI) of Amitriptyline&quot;]
+    F3 ==&gt; DRUG3[&quot;Capsaïcine 8% of Lidocaïne 5% pleister&quot;]
+    F4 ==&gt; DRUG4[&quot;Carbamazepine / Oxcarbazepine (Nav blokker)&quot;]
+</code></pre>
+<hr />
+<h3 id="overzichtstabel-klinisch-teken-rightarrow-neurobiologisch-mechanisme-rightarrow-logische-medicatie">Overzichtstabel: Klinisch Teken $\rightarrow$ Neurobiologisch Mechanisme $\rightarrow$ Logische Medicatie</h3>
+<table>
+<thead>
+<tr>
+<th>Klinisch / Anamnestisch Teken (Kine-onderzoek)</th>
+<th>Onderliggend Neurobiologisch Mechanisme</th>
+<th>Test / Bedside Evaluatie</th>
+<th>Meest Logische Medicatieklasse</th>
+<th>Richtlijn Referentie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dynamische mechanische allodynie</strong> (aanraking van kleding, laken of wattenstaafje doet hevig pijn)</td>
+<td>A-bèta vezels maken abnormale functionele synapsen op nociceptieve spinale projectieneuronen via dorsale hoorn excitatie (<em>central sensitization</em>).</td>
+<td>Zachte borstel (SENSELab brush), wattenstaafje of gaasje 3x licht strijken. Pijnscore $\ge 1/10$ = allodynie.</td>
+<td><strong>Pregabaline</strong> of <strong>Gabapentine</strong> (remt presynaptische glutamaatafgifte)</td>
+<td>Baron et al. 2017; EFIC Neuropathic Pain</td>
+</tr>
+<tr>
+<td><strong>Temporale summatie / Wind-up</strong> (herhaalde prikkeling met zelfde intensiteit wordt progressief pijnlijker)</td>
+<td>C-vezel activiteit stapelt glutamaat op $\rightarrow$ magnesiumblok van <strong>NMDA-receptoren</strong> verdwijnt $\rightarrow$ intracellulaire $Ca^{2+}$-explosie in WDR-neuronen.</td>
+<td>Punctate pinprick (tandenstoker / von Frey 256 mN) 10x tikken aan 1 Hz; pijn stijgt significant t.o.v. eerste tik.</td>
+<td><strong>Pregabaline</strong> of eventueel NMDA-antagonist (<strong>Ketamine</strong> derdelijns)</td>
+<td>DFNS Protocol; Rolke et al. 2006</td>
+</tr>
+<tr>
+<td><strong>Deficiënte Conditioned Pain Modulation (CPM)</strong> + wijdverspreide zeurende pijn en vermoeidheid</td>
+<td><strong>Falen van de dalende monoaminerge inhibitie</strong> vanuit PAG-RVM; gebrek aan noradrenaline en serotonine in het ruggenmerg.</td>
+<td><em>Conditioned Pain Modulation test:</em> Drukpijndrempel (PPT) op trapezius of quadriceps meten vóór en tijdens een heterotope conditionerende koudeprikkel (hand in ijswater $4^\circ\text{C}$). Geen stijging van PPT = falende CPM.</td>
+<td><strong>Duloxetine</strong> of <strong>Milnacipran (SNRI)</strong> (verhoogt synaptisch NA en 5-HT)</td>
+<td>Yarnitsky et al. 2012; EULAR Fibromyalgia 2017</td>
+</tr>
+<tr>
+<td><strong>Ernstige insomnie met frequente nachtelijke ontwakingen</strong> bij diffuse nociplastische pijn</td>
+<td>Tekort aan trage-golf slaap (fase 3/4 non-REM) door hyperarousal en verlaagde monoaminerge tonus.</td>
+<td>Slaapdagboek, PSQI (Pittsburgh Sleep Quality Index) score $&gt;8$.</td>
+<td><strong>Lage dosis Amitriptyline</strong> (10–25 mg 's avonds) of <strong>Pregabaline</strong></td>
+<td>NICE CG193; EULAR 2017</td>
+</tr>
+<tr>
+<td><strong>Strikt gelokaliseerde brandende pijn met warmte-hyperalgesie</strong> (bv. postherpetische neuralgie, litteken)</td>
+<td><strong>Irritable nociceptor:</strong> Geïsoleerde perifere overexpressie van <strong>TRPV1-receptoren</strong> en Nav-kanalen op intact gebleven C-nociceptoren.</td>
+<td>Warm water of warme rol ($40\text{–}45^\circ\text{C}$) veroorzaakt felle brandende pijn; <em>Warm Pain Threshold</em> verlaagd bij QST.</td>
+<td><strong>Capsaïcine 8% pleister</strong> (<em>Qutenza</em>) of <strong>Lidocaïne 5% pleister</strong></td>
+<td>NeuPSIG Guidelines; Finnerup et al. 2016</td>
+</tr>
+<tr>
+<td><strong>Paroxismale, schietende elektrische schokken</strong> (bv. trigeminusneuralgie, radiculopathie met lancinerende pijn)</td>
+<td>Ectopische hoogfrequente ontladingen (<em>burst firing</em>) door abnormale clustering van <strong>voltage-gated natriumkanalen</strong> ter hoogte van zenuwletsel/compressie.</td>
+<td>Spontane, niet-uitgelokte flitsen van intense schietende pijn in een anatomisch dermatoom/zenuwgebied.</td>
+<td><strong>Carbamazepine</strong> of <strong>Oxcarbazepine</strong> (selectieve Nav-kanaal blokkers)</td>
+<td>EFIC Neuropathic Guidelines; Cruccu et al.</td>
+</tr>
+<tr>
+<td><strong>Objectieve thermische hypo-esthesie</strong> (geen koude of warmte voelen) met brandende rustpijn</td>
+<td><strong>Deafferentiatie / Axonaal verlies van dunne A-delta en C-vezels</strong> (bv. Small Fiber Neuropathy).</td>
+<td>Koude roller ($20^\circ\text{C}$) of Tip-Therm voelt lauw of neutraal; QST toont $Z &lt; -2.0$ voor CDT en WDT. Normaal EMG/NCS.</td>
+<td>Combinatietherapie: <strong>SNRI (Duloxetine)</strong> + eventueel Gabapentinoïde</td>
+<td>Tesfaye et al. 2011; EFIC SFN</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-de-rol-van-de-kinesitherapeut-in-multidisciplinair-medicatiemanagement">4. De Rol van de Kinesitherapeut in Multidisciplinair Medicatiemanagement</h2>
+<p>Wat communiceer je concreet met de voorschrijvend arts?</p>
+<h3 id="scenario-a-de-patient-op-chronische-hoge-dosis-opioiden-bij-fibromyalgie">Scenario A: De Patiënt op Chronische Hoge Dosis Opioïden bij Fibromyalgie</h3>
+<ul>
+<li><strong>Klinische observatie:</strong> Patiënt rapporteert diffuse pijn over het hele lichaam, ernstige vermoeidheid, cognitieve traagheid en toenemende pijngevoeligheid ondanks stijgende dosissen oxycodon.</li>
+<li><strong>Biologische redenering:</strong> Waarschijnlijk sprake van <em>Opioid-Induced Hyperalgesia (OIH)</em> door microgliale TLR4-activatie.</li>
+<li><strong>Kinesitherapeutische actie:</strong> Adviseer in het multidisciplinair overleg een geleidelijke afbouw (<em>tapering</em>) onder medische begeleiding, gekoppeld aan pacing en lage-intensiteit aerobe training.</li>
+</ul>
+<h3 id="scenario-b-de-patient-met-geisoleerde-allodynie-na-rugoperatie-fbss">Scenario B: De Patiënt met Geïsoleerde Allodynie na Rugoperatie (FBSS)</h3>
+<ul>
+<li><strong>Klinische observatie:</strong> Na laminectomie heeft de patiënt een brandende strook op het laterale onderbeen (L5). Lichte aanraking van de broekspijp lokt felle pijn uit (dynamische allodynie).</li>
+<li><strong>Biologische redenering:</strong> Perifere neuropathische zenuwbeschadiging met spinale centrale sensitisatie (spinale calciumkanaal-overactiviteit).</li>
+<li><strong>Kinesitherapeutische actie:</strong> Wijs de arts op de aanwezige allodynie (DN4 $\ge 4$). Een gabapentinoïde (pregabaline) of topicale pleister is biologisch rationeeler dan het voorschrijven van ontstekingsremmers of paracetamol.</li>
+</ul>
+<hr />
+<h2 id="5-kernboodschappen-voor-het-efic-examen-praktijk">5. Kernboodschappen voor het EFIC Examen &amp; Praktijk</h2>
+<ol>
+<li><strong>EULAR 2017 &amp; NICE 2021 Fibromyalgie:</strong><ul>
+<li><strong>Sterke aanbeveling:</strong> Oefentherapie (aerobic + strength).</li>
+<li><strong>Toegelaten tweedelijns medicatie:</strong> Duloxetine, Milnacipran, Pregabaline, lage dosis Amitriptyline.</li>
+<li><strong>Gecontra-indiceerd / Afgeraden:</strong> Sterke opioïden, NSAIDs, corticosteroïden.</li>
+</ul>
+</li>
+<li><strong>Small Fiber Neuropathy (SFN):</strong><ul>
+<li>A-delta en C-vezels aangedaan $\rightarrow$ QST afwijkend voor CDT/WDT.</li>
+<li><strong>EMG, conventionele zenuwgeleiding (NCS) en H-reflex zijn 100% normaal</strong> (omdat zij uitsluitend A-alfa en A-bèta vezels meten).</li>
+</ul>
+</li>
+<li><strong>QST Interpretatie (DFNS):</strong><ul>
+<li>Alleen betrouwbaar via <strong>gestandaardiseerd protocol</strong>, <strong>Z-score transformatie</strong> t.o.v. normatieve data gecorrigeerd voor leeftijd/geslacht, en <strong>intra-individuele controle (aangedane vs. niet-aangedane zijde)</strong>.</li>
+</ul>
+</li>
+<li><strong>Whiplash Predictiemodel (Sterling):</strong><ul>
+<li>Slechte prognose voorspeld door: Hoge initiële pijn ($\ge 5.5/10$), hoge NDI ($\ge 30-40\%$), <strong>Cold Hyperalgesia</strong>, PTSS (IES-R $\ge 33$) en WAD Graad III.</li>
+<li><strong>GEEN voorspellers:</strong> Mechanische botsingsfactoren (snelheid, richting) en radiologische bevindingen (lordoseverlies).</li>
+</ul>
+</li>
+<li><strong>Health Literacy Screening:</strong><ul>
+<li>Praktische eerstelijns gouden standaard: <strong>Single Item Literacy Screener (SILS)</strong> / NHS vraag (<em>"How often do you need someone to help you read hospital/health materials?"</em>) en de communicatieve <strong>Teach-Back methode</strong>.</li>
+</ul>
+</li>
+</ol>
+
+<div class="footer">
+    EFIC® European Diploma in Pain Physiotherapy — Study Hub (Exam Target: Nov 13th)
+</div>
+</main>
+
+    <script src="search.js" defer></script>
+</body>
+</html>
