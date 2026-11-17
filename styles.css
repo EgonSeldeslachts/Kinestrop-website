@@ -668,9 +668,34 @@ body:has(.specialization-subnav-bar) .hero-section {
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
   margin-bottom: 2.5rem;
+}
+
+.hero-scroll-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  padding: 0.5rem 0.25rem;
+}
+
+.hero-scroll-link:hover {
+  color: var(--brand-secondary);
+}
+
+.hero-scroll-link svg {
+  color: var(--brand-secondary);
+  transition: transform var(--transition-fast);
+}
+
+.hero-scroll-link:hover svg {
+  transform: translateY(2px);
 }
 
 .hero-trust-bar {
@@ -909,13 +934,24 @@ body:has(.specialization-subnav-bar) .hero-section {
   width: 100%;
 }
 
+.vision-quote-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #38BDF8;
+  margin-bottom: 0.85rem;
+}
+
+.vision-quote-banner p.vision-quote-text,
 .vision-quote-banner blockquote {
   font-family: var(--font-heading);
   font-size: clamp(1.1rem, 2vw, 1.35rem);
   font-weight: 500;
   line-height: 1.65;
   max-width: 740px;
-  margin: 0 auto 1.25rem;
+  margin: 0 auto;
   color: #FFFFFF;
 }
 
@@ -1889,6 +1925,13 @@ body:has(.specialization-subnav-bar) .hero-section {
     font-size: 0.95rem;
   }
 
+  .hero-scroll-link {
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 0.35rem 0.5rem;
+    text-align: center;
+  }
+
   .hero-trust-bar {
     order: 6;
     flex-direction: column;
@@ -1933,6 +1976,7 @@ body:has(.specialization-subnav-bar) .hero-section {
     border-radius: var(--radius-md);
   }
 
+  .vision-quote-banner p.vision-quote-text,
   .vision-quote-banner blockquote {
     font-size: 1.0rem;
     line-height: 1.55;
