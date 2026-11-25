@@ -422,8 +422,8 @@
                 <span class="tag">Postgraduaat Manuele Therapie (UGent)</span>
                 <span class="tag">Chronische pijn & pijneducatie</span>
                 <span class="tag">Slaapcoaching (CBT-I &amp; ACT principes)</span>
-                <span class="tag">Pain Program OS Mentorship</span>
-                <span class="tag">Upper Limb: Wrist & Hand</span>
+                <span class="tag">EFIC European Diploma in Pain Physiotherapy (in progress)</span>
+                <span class="tag">Internationaal mentorschap (complexe pijn)</span>
               </div>
 
               <div class="team-engagement">
@@ -621,17 +621,22 @@
             </button>
             <div class="faq-answer">
               <p>Ja, huisbezoeken zijn mogelijk wanneer het om medische of fysieke redenen niet lukt om naar de praktijk te komen. We komen aan huis binnen onze vaste zone in Gent, zoals aangeduid op onderstaande kaart.</p>
-              <div class="faq-map-container">
-                <iframe 
-                  src="https://www.google.com/maps/d/embed?mid=188m9L7TONj9eIHx2U1THp-Ruv6ZNaUA" 
-                  width="100%" 
-                  height="380" 
-                  style="border:0;" 
-                  allowfullscreen="" 
-                  loading="lazy" 
-                  referrerpolicy="no-referrer-when-downgrade" 
-                  title="Werkingsgebied huisbezoeken Kine Strop Gent">
-                </iframe>
+              <div class="faq-map-container" id="faqMapContainer" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: var(--radius-md); min-height: 280px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem 1.5rem;">
+                <div style="max-width: 480px;">
+                  <div style="font-size: 2rem; margin-bottom: 0.5rem;">🗺️</div>
+                  <h4 style="font-size: 1.1rem; color: #1E293B; margin-bottom: 0.5rem; font-family: var(--font-heading);">Interactieve zonekaart huisbezoeken</h4>
+                  <p style="font-size: 0.88rem; color: #64748B; margin-bottom: 1.25rem; line-height: 1.5;">
+                    Om je privacy te beschermen wordt deze Google Kaart pas geladen na jouw klik. Je kunt de kaart ook rechtstreeks in Google Maps openen.
+                  </p>
+                  <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                    <button type="button" class="btn btn-primary" id="loadMapBtn" style="font-size: 0.85rem; padding: 8px 16px;">
+                      Interactieve kaart laden
+                    </button>
+                    <a href="https://www.google.com/maps/d/viewer?mid=188m9L7TONj9eIHx2U1THp-Ruv6ZNaUA" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 0.85rem; padding: 8px 16px;">
+                      Openen in Google Maps ↗
+                    </a>
+                  </div>
+                </div>
               </div>
               <p class="faq-map-note">
                 <em>Valt jouw adres net buiten deze zone of twijfel je?</em> Neem gerust even <a href="#contact">contact met ons op</a> om te overleggen. Je kunt de kaart ook <a href="https://www.google.com/maps/d/viewer?mid=188m9L7TONj9eIHx2U1THp-Ruv6ZNaUA" target="_blank" rel="noopener noreferrer">in een groter venster bekijken ↗</a>.
@@ -768,6 +773,7 @@
             <li><a href="#faq">Veelgestelde vragen</a></li>
             <li><a href="/dagboek/" style="color: #38bdf8; font-weight: 500;">Dagelijkse Check-in (Pacing)</a></li>
             <li><a href="/pacingdagboek/" style="color: #38bdf8; font-weight: 500;">Pacingdagboek (Werkboek praktijk)</a></li>
+            <li><a href="privacy.html" style="color: #ffffff; text-decoration: underline; font-weight: 500;">Privacyverklaring (GDPR)</a></li>
             <li><a href="https://www.groepspraktijk.gent/" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.85);">Groepspraktijk Gent ↗</a></li>
           </ul>
         </div>
@@ -802,7 +808,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Kine Strop Kinesitherapie Gent. Alle rechten voorbehouden. • <a href="/dagboek/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#FFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Patiëntendagboek</a></p>
+        <p>&copy; 2026 Kine Strop Kinesitherapie Gent. Alle rechten voorbehouden. • <a href="/dagboek/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#FFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Patiëntendagboek</a> • <a href="privacy.html" style="color: rgba(255,255,255,0.7); text-decoration: underline;">Privacyverklaring (GDPR)</a></p>
         <p style="font-size: 0.825rem;"><a href="https://www.google.com/maps/dir/?api=1&destination=Sint-Coletastraat+9,+9000+Gent" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.7); text-decoration: none;">Sint-Coletastraat 9, 9000 Gent</a></p>
       </div>
     </div>

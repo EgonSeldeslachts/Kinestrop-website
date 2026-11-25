@@ -243,6 +243,29 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // GDPR-compliant Two-Click Google Maps Loading
+  const loadMapBtn = document.getElementById('loadMapBtn');
+  const faqMapContainer = document.getElementById('faqMapContainer');
+  if (loadMapBtn && faqMapContainer) {
+    loadMapBtn.addEventListener('click', () => {
+      faqMapContainer.innerHTML = `
+        <iframe 
+          src="https://www.google.com/maps/d/embed?mid=188m9L7TONj9eIHx2U1THp-Ruv6ZNaUA" 
+          width="100%" 
+          height="380" 
+          style="border:0; border-radius: var(--radius-md);" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade" 
+          title="Werkingsgebied huisbezoeken Kine Strop Gent">
+        </iframe>
+      `;
+      faqMapContainer.style.padding = '0';
+      faqMapContainer.style.background = 'transparent';
+      faqMapContainer.style.minHeight = '380px';
+    });
+  }
 });
 
 // Appointment Booking Helper Function
