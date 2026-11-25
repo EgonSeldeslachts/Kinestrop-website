@@ -450,33 +450,63 @@ hr {
 <hr />
 <h2 id="1-waarom-moet-een-gespecialiseerd-kinesitherapeut-farmacologie-begrijpen">1. Waarom Moet een Gespecialiseerd Kinesitherapeut Farmacologie Begrijpen?</h2>
 <p>Als gespecialiseerd kinesitherapeut schrijf je zelf geen medicatie voor, maar in een moderne interprofessionele pijnzorg (EFIC-standaard) ben jij vaak de zorgverlener die de patiënt het meest frequent en langdurig ziet. </p>
-<p><strong>Klinische noodzaak op kine-niveau:</strong>
-1. <strong>Onderscheid tussen behandelrespons en medicatie-effect:</strong> Verbetert de patiënt door jouw actieve oefentherapie of door de start van een SNRI? Of stagneert de patiënt door sedatie, duizeligheid of spierzwakte als bijwerking van pregabaline?
-2. <strong>Klinische fenotypering en gerichte terugkoppeling naar de arts:</strong> Wanneer een patiënt tijdens jouw manueel of sensorisch onderzoek duidelijke dynamische mechanische allodynie (kwastje) of een deficiënte dalende inhibitie (CPM) vertoont, kun je evidence-based overleggen met de huisarts of specialist over een rationele farmacologische switch.
-3. <strong>Herkennen van gecontra-indiceerde of schadelijke medicatie:</strong> Patiënten met nociplastische pijn (fibromyalgie, chronische primaire lage rugpijn) die vastzitten op hoge dosissen sterke opioïden of chronische NSAIDs lopen risico op orgaanschade en <em>Opioid-Induced Hyperalgesia (OIH)</em> zonder enig neurobiologisch voordeel.
-4. <strong>Therapietrouw en nocebo-reductie:</strong> Angst voor bijwerkingen verminderen en uitleggen <em>waarom</em> een antidepressivum wordt voorgeschreven (niet omdat "het tussen de oren zit", maar om het lichaamseigen ruggenmerg-remsysteem aan te zetten).</p>
+<p><strong>Klinische noodzaak op kine-niveau:</strong></p>
+<ol>
+<li><strong>Onderscheid tussen behandelrespons en medicatie-effect:</strong> Verbetert de patiënt door jouw actieve oefentherapie of door de start van een SNRI? Of stagneert de patiënt door sedatie, duizeligheid of spierzwakte als bijwerking van pregabaline?</li>
+<li><strong>Klinische fenotypering en gerichte terugkoppeling naar de arts:</strong> Wanneer een patiënt tijdens jouw manueel of sensorisch onderzoek duidelijke dynamische mechanische allodynie (kwastje) of een deficiënte dalende inhibitie (CPM) vertoont, kun je evidence-based overleggen met de huisarts of specialist over een rationele farmacologische switch.</li>
+<li><strong>Herkennen van gecontra-indiceerde of schadelijke medicatie:</strong> Patiënten met nociplastische pijn (fibromyalgie, chronische primaire lage rugpijn) die vastzitten op hoge dosissen sterke opioïden of chronische NSAIDs lopen risico op orgaanschade en <em>Opioid-Induced Hyperalgesia (OIH)</em> zonder enig neurobiologisch voordeel.</li>
+<li><strong>Therapietrouw en nocebo-reductie:</strong> Angst voor bijwerkingen verminderen en uitleggen <em>waarom</em> een antidepressivum wordt voorgeschreven (niet omdat "het tussen de oren zit", maar om het lichaamseigen ruggenmerg-remsysteem aan te zetten).</li>
+</ol>
 <hr />
 <h2 id="2-neurobiologie-van-pijnmedicatie-banen-cascades-receptoren">2. Neurobiologie van Pijnmedicatie: Banen, Cascades &amp; Receptoren</h2>
-<pre><code class="language-mermaid">flowchart TD
-    subgraph PERIPHERY [&quot;Periferie: Nociceptor Terminal&quot;]
-        TRPV1[&quot;TRPV1 / Nav Kanalen (Ectopische vuren)&quot;]
-        CAPS[&quot;Capsaïcine 8% &amp; Lidocaïne 5%&quot;] -.-&gt;|Blokkeert / Defunctionaliseert| TRPV1
-        NSAID[&quot;NSAIDs&quot;] -.-&gt;|Remt COX-1/2 &amp; PGE2| INFLAM[&quot;Lokale Inflammatie (Nociceptief)&quot;]
-    end
-
-    subgraph DORSAL_HORN [&quot;Dorsale Hoorn (Substantia Gelatinosa)&quot;]
-        VGCC[&quot;Voltage-Gated Ca2+ Kanalen (alpha-2-delta)&quot;]
-        GABA[&quot;Pregabaline / Gabapentine&quot;] -.-&gt;|Bindt alpha-2-delta subunit| VGCC
-        VGCC -.-&gt;|Verlaagt influx| GLUT[&quot;Glutamaat &amp; Substance P Release&quot;]
-        NMDA[&quot;Postsynaptisch NMDA &amp; AMPA Receptor&quot;]
-    end
-
-    subgraph DESCENDING [&quot;Dalend Inhibitoir Systeem (PAG-RVM)&quot;]
-        PAG[&quot;Periaqueductal Gray (PAG)&quot;] --&gt; RVM[&quot;Rostral Ventromedial Medulla (RVM)&quot;]
-        RVM --&gt;|DLF Baan: NA &amp; 5-HT| ALPHA2[&quot;Presynaptische alpha-2 Adrenerge Receptoren&quot;]
-        SNRI[&quot;Duloxetine / Milnacipran / Amitriptyline&quot;] -.-&gt;|Blokkeert NET &amp; SERT heropname| ALPHA2
-        ALPHA2 -.-&gt;|Hyperpolariseert &amp; remt| DORSAL_HORN
-    end
+<pre><code>┌────────────────────────────────────────────────────────────────────────────────────────┐
+│             NEUROBIOLOGIE VAN PIJNMEDICATIE: BANEN, CASCADES &amp; RECEPTOREN              │
+└───────────────────────────────────────────┬────────────────────────────────────────────┘
+                                            │
+                                            ▼
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│ 1. DALEND INHIBITOIR MONOAMINERG SYSTEEM (PAG - RVM - DLF)                             │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│  Periaqueductal Gray (PAG) ──► Rostral Ventromedial Medulla (RVM) &amp; Locus Coeruleus    │
+│                                                │                                       │
+│                                                ▼ (Dorsolateraal Funiculus / DLF)       │
+│                                  Noradrenaline (NA) &amp; Serotonine (5-HT)                │
+│                                                │                                       │
+│    [ Duloxetine / Milnacipran (SNRI) ] ────────┴──► Blokkeert NET &amp; SERT heropname     │
+│    [ Amitriptyline (TCA)             ]              Verhoogt synaptisch NA &amp; 5-HT      │
+└───────────────────────────────────────────┬────────────────────────────────────────────┘
+                                            │
+                                            ▼ Activeert presynaptische α2-receptoren
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│ 2. DORSALE HOORN (RUGGENMERG): SYNAPTISCHE TRANSMISSIE &amp; MODULATIE                     │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│  Presynaptische N- &amp; P/Q-Type Ca²⁺ Kanalen (α2δ-1 subunit)                             │
+│     │                                                                                  │
+│     ├─► [ Pregabaline / Gabapentine ] ──► Bindt selectief op α2δ-1 hulpeiwit           │
+│     │                                     Vermindert Ca²⁺-influx bij actiepotentiaal   │
+│     ▼                                                                                  │
+│  Vesikelfusie &amp; Neurotransmitter Release geremd:                                       │
+│     • Glutamaat ↓   • Substance P ↓   • CGRP ↓                                         │
+│     │                                                                                  │
+│     ▼                                                                                  │
+│  Postsynaptisch Tweede-Orde Projectieneuron (Lamina I / V - WDR Neuron):               │
+│     • Remming van NMDA &amp; AMPA receptoren ──► Vermindert &quot;Wind-up&quot; &amp; centrale excitatie │
+│     • α2-activatie opent K⁺-kanalen      ──► Hyperpolarisatie (remt tractus spinoth.)  │
+└───────────────────────────────────────────▲────────────────────────────────────────────┘
+                                            │
+                                            │ Nociceptieve input via Aδ- en C-vezels
+┌───────────────────────────────────────────┴────────────────────────────────────────────┐
+│ 3. PERIFERIE: NOCICEPTOR TERMINAL &amp; WEEFSEL-TRANSDUCTIE                                │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│  LOKALE INFLAMMATIE (Nociceptief)            │ OVERGEVOELIGE ZENUWTERMINAL (Neuropath) │
+│  • Arachidonzuur ──[COX-1/2]──► PGE₂ / PGI₂  │ • Ectopische Nav1.7 / Nav1.8 pacemakers │
+│  • PGE₂ sensibiliseert TRPV1 &amp; Nav-kanalen   │ • Overexpressie TRPV1 op C-vezels       │
+│  ─────────────────────────────────────────── ┼──────────────────────────────────────── │
+│  [ NSAIDs (Ibuprofen / Naproxen) ]           │ [ Lidocaïne 5% Pleister (Versatis) ]    │
+│     Remt COX-1 &amp; COX-2 synthese              │    Blokkeert lokale Nav-kanalen         │
+│     (Effectief bij inflammatoire weefsel-    │ [ Capsaïcine 8% Pleister (Qutenza) ]    │
+│      pijn; 0% effect bij nociplastisch!)     │    TRPV1-overload ──► Zenuwretractie    │
+└──────────────────────────────────────────────┴─────────────────────────────────────────┘
 </code></pre>
 <hr />
 <h3 id="a-de-dalende-monoaminerge-remsystemen-snris-tcas">A. De Dalende Monoaminerge Remsystemen (SNRIs &amp; TCAs)</h3>
@@ -563,18 +593,43 @@ hr {
 <h2 id="3-evidence-based-sensorische-fenotypering-welke-klinische-tekenen-voorspellen-welke-medicatie">3. Evidence-Based Sensorische Fenotypering: Welke Klinische Tekenen Voorspellen Welke Medicatie?</h2>
 <p>De moderne pijnwetenschap (o.a. Baron et al., <em>Lancet Neurology</em> 2017; Rolke et al., DFNS) stelt dat we niet moeten behandelen op basis van een etiologische diagnose (zoals "diabetische neuropathie" of "fibromyalgie"), maar op basis van het <strong>onderliggende sensorische fenotype</strong>.</p>
 <p>Als kinesitherapeut kun je dit fenotype direct herkennen in de anamnese en tijdens het klinisch sensorisch onderzoek.</p>
-<pre><code class="language-mermaid">flowchart TD
-    PATIENT[&quot;Patiënt met Chronische Pijn&quot;] --&gt; PHENO{&quot;Klinisch / Sensorisch Fenotype?&quot;}
-
-    PHENO --&gt;|Fenotype 1: Punctate &amp; Dynamische Allodynie| F1[&quot;Sensorische Winst: Wind-up &amp; Hyperalgesie&quot;]
-    PHENO --&gt;|Fenotype 2: Doffe, diffuse pijn + Falende CPM + Slaapstoornis| F2[&quot;Dalende Remsysteem Falen&quot;]
-    PHENO --&gt;|Fenotype 3: Gelokaliseerd branden + Hitte-allodynie| F3[&quot;Prikkelbare Nociceptor / TRPV1&quot;]
-    PHENO --&gt;|Fenotype 4: Schietende, paroxismale elektrische stoten| F4[&quot;Ectopische Natriumkanaal-vuren&quot;]
-
-    F1 ==&gt; DRUG1[&quot;Pregabaline / Gabapentine (alpha-2-delta ligand)&quot;]
-    F2 ==&gt; DRUG2[&quot;Duloxetine / Milnacipran (SNRI) of Amitriptyline&quot;]
-    F3 ==&gt; DRUG3[&quot;Capsaïcine 8% of Lidocaïne 5% pleister&quot;]
-    F4 ==&gt; DRUG4[&quot;Carbamazepine / Oxcarbazepine (Nav blokker)&quot;]
+<pre><code>┌────────────────────────────────────────────────────────────────────────────────────────┐
+│        KLINISCHE SENSORISCHE FENOTYPERING — BESLISBOOM VOOR MEDICATIEKEUZE             │
+│            (Baron et al. Lancet Neurol 2017; Rolke et al. DFNS; EFIC Standaard)        │
+└───────────────────────────────────────────┬────────────────────────────────────────────┘
+                                            │
+                                            ▼
+                  ┌───────────────────────────────────────────────────┐
+                  │ PATIËNT MET CHRONISCHE PIJN: SENSORISCH ONDERZOEK │
+                  └─────────────────────────┬─────────────────────────┘
+                                            │
+         ┌──────────────────┬───────────────┴───────────────┬──────────────────┐
+         │                  │                               │                  │
+         ▼                  ▼                               ▼                  ▼
+┌─────────────────┐┌─────────────────┐              ┌─────────────────┐┌─────────────────┐
+│   FENOTYPE 1    ││   FENOTYPE 2    │              │   FENOTYPE 3    ││   FENOTYPE 4    │
+│ Sensorische     ││ Falende Dalende │              │ Prikkelbare     ││ Ectopische      │
+│ Winst (Spinaal) ││ Pijninhibitie   │              │ Nociceptor      ││ Pacemakers      │
+├─────────────────┤├─────────────────┤              ├─────────────────┤├─────────────────┤
+│ • Dynamische    ││ • Doffe, diffuse│              │ • Strikt lokaal ││ • Schietende,   │
+│   mechanische   ││   zeurende pijn │              │   brandende pijn││   paroxismale   │
+│   allodynie     ││ • Deficiënte CPM│              │ • Warmte-       ││   stroomstoten  │
+│   (kwastje/gaas)││   (geen drempel-│              │   hyperalgesie  ││ • Lancinerende  │
+│ • Temporale     ││   stijging bij  │              │   (warmterol)   ││   flitsen langs │
+│   summatie      ││   ijswatertest) │              │ • Intact koud/  ││   zenuwtraject  │
+│   (pinprick 1Hz)││ • Slaapstoornis │              │   tactiel gevoel││                 │
+│   (wind-up)     ││   (trage-golf ↓)│              │                 ││                 │
+├─────────────────┤├─────────────────┤              ├─────────────────┤├─────────────────┤
+│ NEUROBIOLOGIE:  ││ NEUROBIOLOGIE:  │              │ NEUROBIOLOGIE:  ││ NEUROBIOLOGIE:  │
+│ Spinale VGCC-   ││ Tekort aan      │              │ Perifere TRPV1- ││ Ectopische Nav- │
+│ upregulatie &amp;   ││ noradrenaline &amp; │              │ overexpressie &amp; ││ kanaalclusters  │
+│ NMDA-activatie  ││ serotonine      │              │ lokale sensitis.││ (burst firing)  │
+├─────────────────┤├─────────────────┤              ├─────────────────┤├─────────────────┤
+│ EERSTE KEUZE:   ││ EERSTE KEUZE:   │              │ EERSTE KEUZE:   ││ EERSTE KEUZE:   │
+│ Pregabaline     ││ Duloxetine /    │              │ Capsaïcine 8%   ││ Carbamazepine   │
+│ Gabapentine     ││ Milnacipran     │              │ of Lidocaïne 5% ││ Oxcarbazepine   │
+│ (α2δ-ligand)    ││ Amitriptyline   │              │ (topicale patch)││ (Nav-blokkers)  │
+└─────────────────┘└─────────────────┘              └─────────────────┘└─────────────────┘
 </code></pre>
 <hr />
 <h3 id="overzichtstabel-klinisch-teken-rightarrow-neurobiologisch-mechanisme-rightarrow-logische-medicatie">Overzichtstabel: Klinisch Teken $\rightarrow$ Neurobiologisch Mechanisme $\rightarrow$ Logische Medicatie</h3>
